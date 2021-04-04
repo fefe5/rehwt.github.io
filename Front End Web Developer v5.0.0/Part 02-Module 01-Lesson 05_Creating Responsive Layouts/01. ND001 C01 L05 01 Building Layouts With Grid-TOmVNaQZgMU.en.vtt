@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.280 --> 00:00:04.334
+It's time to bring it all together.
+
+00:00:04.334 --> 00:00:10.004
+So far we have learned how CSS grid can help us create layouts for entire web pages,
+
+00:00:10.005 --> 00:00:15.585
+and how flexbox can be used to style the individual components that make up that layout.
+
+00:00:15.585 --> 00:00:21.500
+Now we're going to sew it altogether into a beautiful and harmonious full web design.
+
+00:00:21.500 --> 00:00:24.990
+Building layouts with grid is fairly easy once you get the hang of it.
+
+00:00:24.989 --> 00:00:26.594
+So without further ado,
+
+00:00:26.594 --> 00:00:30.549
+let's jump into creating layouts with CSS grid.
+

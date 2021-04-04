@@ -1,0 +1,223 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.639 --> 00:00:06.569
+The first thing I want to do is go over our environment a little bit.
+
+00:00:06.570 --> 00:00:10.919
+So now what we have is an index.html page,
+
+00:00:10.919 --> 00:00:16.394
+that's linked to a separate style.css page which is here.
+
+00:00:16.394 --> 00:00:21.219
+On the style.css, you can see we've set up our main grid.
+
+00:00:21.219 --> 00:00:24.989
+We've assigned our grid areas,
+
+00:00:25.399 --> 00:00:33.409
+and we've added a link to a second page which is post.html.
+
+00:00:33.409 --> 00:00:35.500
+If we follow that link in the browser,
+
+00:00:35.500 --> 00:00:39.018
+we see it takes us to our second page which has a different layout,
+
+00:00:39.018 --> 00:00:41.359
+but also using CSS grid.
+
+00:00:41.359 --> 00:00:45.329
+This is using the html from post html,
+
+00:00:45.329 --> 00:00:50.379
+which links here to its own CSS page called blog.css.
+
+00:00:50.380 --> 00:00:53.645
+The CSS for that can be found here on blog.css,
+
+00:00:53.645 --> 00:00:56.000
+where you can see we've also set up our grid,
+
+00:00:56.000 --> 00:00:57.715
+as well as our grid area.
+
+00:00:57.715 --> 00:00:59.880
+Coming back to our homepage,
+
+00:00:59.880 --> 00:01:02.625
+up until now, mostly what we've done is,
+
+00:01:02.625 --> 00:01:08.299
+we've stuck just these texts here inside of each element that makes up the grid.
+
+00:01:08.299 --> 00:01:10.864
+But instead of just doing that, really,
+
+00:01:10.864 --> 00:01:12.724
+when you're programming for development,
+
+00:01:12.724 --> 00:01:16.189
+what you're going do is you're going to nest elements inside of it.
+
+00:01:16.189 --> 00:01:19.204
+So here we have our div class header box.
+
+00:01:19.204 --> 00:01:22.730
+So let's make a real header for a demo blog.
+
+00:01:22.730 --> 00:01:26.135
+Let's say I want to make a blog about how beautiful nature is.
+
+00:01:26.135 --> 00:01:29.500
+I might create an h1 tag that says,
+
+00:01:29.500 --> 00:01:37.260
+the beauty of nature brings us all home.
+
+00:01:37.260 --> 00:01:39.329
+That's a good blog title.
+
+00:01:39.329 --> 00:01:41.515
+Now you can see it's been replaced,
+
+00:01:41.515 --> 00:01:44.469
+and we have our real-life header up here.
+
+00:01:44.469 --> 00:01:46.920
+Now, in the content,
+
+00:01:46.920 --> 00:01:48.430
+if we're talking about nature,
+
+00:01:48.430 --> 00:01:50.930
+we probably want an image of nature.
+
+00:01:50.930 --> 00:01:53.570
+Now inside the div class content,
+
+00:01:53.569 --> 00:01:55.909
+we're going to create an image tag,
+
+00:01:55.909 --> 00:01:58.119
+and we're going to set the source.
+
+00:01:58.120 --> 00:02:04.250
+If you see here I have put some images into a folder called images.
+
+00:02:04.250 --> 00:02:11.465
+So I can say images/waterfall jpeg,
+
+00:02:11.465 --> 00:02:13.700
+and now we see a photo.
+
+00:02:13.699 --> 00:02:17.419
+But, why is it so big?
+
+00:02:17.419 --> 00:02:20.539
+One of my favorite tricks for dealing with photos that
+
+00:02:20.539 --> 00:02:24.844
+css grid allows is instead of putting this as an image,
+
+00:02:24.844 --> 00:02:26.844
+element inside this element,
+
+00:02:26.844 --> 00:02:32.449
+because our grid has already set how big and how much space each element should take up,
+
+00:02:32.449 --> 00:02:35.089
+we can actually come into the css,
+
+00:02:35.090 --> 00:02:39.379
+and we can set the background image of the element to be that image.
+
+00:02:39.379 --> 00:02:42.799
+So the way we would do that is come to style.css,
+
+00:02:42.800 --> 00:02:45.005
+and here in the content area,
+
+00:02:45.004 --> 00:02:46.534
+which is what we want,
+
+00:02:46.534 --> 00:02:50.270
+I'm going to use the background image property,
+
+00:02:50.270 --> 00:02:56.689
+which takes a path to the photo; images/waterfall.
+
+00:02:56.689 --> 00:03:02.620
+Now I'm going to say background size contain.
+
+00:03:02.620 --> 00:03:07.520
+So now we can see we have pictures of our beautiful waterfall.
+
+00:03:07.520 --> 00:03:11.870
+There's another CSS property,
+
+00:03:11.870 --> 00:03:14.090
+which we'll see if I can remember.
+
+00:03:14.090 --> 00:03:21.395
+Background-repeat, no-repeat will just give us our one image.
+
+00:03:21.395 --> 00:03:26.240
+So we could also I believe, stretch this image.
+
+00:03:26.240 --> 00:03:28.060
+But for us right now,
+
+00:03:28.060 --> 00:03:30.610
+contain is really what we're looking for.
+
+00:03:30.610 --> 00:03:33.595
+So let's say we're on our blog homepage,
+
+00:03:33.594 --> 00:03:36.080
+and we want to click to the most recent post.
+
+00:03:36.080 --> 00:03:42.210
+So now we're over to the html that is in post.html,
+
+00:03:42.210 --> 00:03:45.295
+which is linked to blog.css.
+
+00:03:45.294 --> 00:03:50.309
+So this is where we have set out our grid template areas,
+
+00:03:50.310 --> 00:03:51.640
+and as you can see in this one,
+
+00:03:51.639 --> 00:03:55.564
+each grid template area has its own row.
+
+00:03:55.564 --> 00:03:59.210
+So let's say that we wanted to be able to get
+
+00:03:59.210 --> 00:04:03.055
+back to our homepage once we're on the secondary page.
+
+00:04:03.055 --> 00:04:06.465
+We can go to post html and here,
+
+00:04:06.465 --> 00:04:09.104
+in the footer box down at the bottom,
+
+00:04:09.104 --> 00:04:15.769
+we might want to say click here to go back to index.html.
+
+00:04:15.770 --> 00:04:20.595
+So now, we can easy get back to our blog homepage,
+
+00:04:20.595 --> 00:04:23.160
+to our secondary layout,
+
+00:04:23.160 --> 00:04:25.490
+and back to our first layout.
+
+00:04:25.490 --> 00:04:32.360
+This is an example of how you can build multiple page layouts using CSS grid.
+

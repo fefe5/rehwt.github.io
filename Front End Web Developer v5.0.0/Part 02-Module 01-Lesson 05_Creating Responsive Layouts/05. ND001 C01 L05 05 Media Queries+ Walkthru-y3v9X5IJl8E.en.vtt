@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.199 --> 00:00:05.290
+We've seen how to setup a breakpoint and use media queries to
+
+00:00:05.290 --> 00:00:08.980
+create different layouts for smaller screens and larger screens.
+
+00:00:08.980 --> 00:00:13.554
+But there are some development moments that will call for three possible layouts.
+
+00:00:13.554 --> 00:00:18.100
+A simple example would be creating two different breakpoints to set it up,
+
+00:00:18.100 --> 00:00:22.359
+so that X, we'll call the first set of CSS rules,
+
+00:00:22.359 --> 00:00:25.199
+X rules apply at the beginning,
+
+00:00:25.199 --> 00:00:28.664
+let's say between zero pixels and 900 pixels,
+
+00:00:28.664 --> 00:00:31.109
+and then we'll set a breakpoint at 900,
+
+00:00:31.109 --> 00:00:36.829
+and so Y set of rules apply between 900 and let's say 1150 pixels.
+
+00:00:36.829 --> 00:00:41.409
+Then anything above 1150 pixels will be set of rules Z,
+
+00:00:41.409 --> 00:00:43.294
+which will have its own set of rules.
+
+00:00:43.295 --> 00:00:47.450
+You could really set up as many media breakpoints as you want but the truth is,
+
+00:00:47.450 --> 00:00:49.265
+they start to conflict pretty quickly.
+
+00:00:49.265 --> 00:00:52.399
+So let's start at two and see if we can get by with that.
+
+00:00:52.399 --> 00:00:55.070
+So back to the code that we've been looking at,
+
+00:00:55.070 --> 00:00:59.030
+you can see that we have set up mobile first.
+
+00:00:59.030 --> 00:01:01.715
+What we want our grid template areas to look like,
+
+00:01:01.715 --> 00:01:07.204
+at the least wide really screen size.
+
+00:01:07.204 --> 00:01:08.420
+So in that instance,
+
+00:01:08.420 --> 00:01:12.484
+we just want one column with all of our content start.
+
+00:01:12.484 --> 00:01:15.560
+Now, if we come down here,
+
+00:01:15.560 --> 00:01:21.079
+we see I've set up a media query for what I'm calling medium screens.
+
+00:01:21.079 --> 00:01:23.314
+Medium screens I'm saying,
+
+00:01:23.314 --> 00:01:29.155
+are between a minimum width of 600 pixels,
+
+00:01:29.155 --> 00:01:33.739
+and now this is new for us a max width of 1100 pixels.
+
+00:01:33.739 --> 00:01:36.199
+Max-width works the same way as min-width,
+
+00:01:36.200 --> 00:01:37.790
+it sets a boundary.
+
+00:01:37.790 --> 00:01:39.859
+So what this means is that,
+
+00:01:39.859 --> 00:01:45.959
+the min-width of this it's going to have to be 601 pixels,
+
+00:01:45.959 --> 00:01:49.099
+and it can't be more than 1100 pixels.
+
+00:01:49.099 --> 00:01:52.849
+So everything in between this range will reflect
+
+00:01:52.849 --> 00:01:57.574
+this grid template area which includes an aquamarine border.
+
+00:01:57.575 --> 00:02:00.545
+So let's take a look at that switch first.
+
+00:02:00.545 --> 00:02:01.969
+If we come over into the browser,
+
+00:02:01.969 --> 00:02:06.004
+we can see that we have our column structure here in our tiny screen.
+
+00:02:06.004 --> 00:02:09.109
+Once I get it out to 600 pixels,
+
+00:02:09.110 --> 00:02:13.850
+you can see that it creates a two column structure here.
+
+00:02:13.849 --> 00:02:18.064
+So this will take me all the way to 1100 pixels.
+
+00:02:18.064 --> 00:02:22.414
+But now, I've sent an additional rule for large screens
+
+00:02:22.414 --> 00:02:26.949
+that says I want it to be setup where the sidebar has more room,
+
+00:02:26.949 --> 00:02:30.864
+right here between 600 and 1100.
+
+00:02:30.865 --> 00:02:33.545
+Outside bars just going to take up two of these columns.
+
+00:02:33.544 --> 00:02:35.394
+But we're saying on a large enough screen,
+
+00:02:35.395 --> 00:02:39.515
+we actually want our sidebar to come out and take up four columns.
+
+00:02:39.514 --> 00:02:43.519
+So if we continue now to bring this across,
+
+00:02:44.229 --> 00:02:47.399
+boom did you see that?
+
+00:02:49.370 --> 00:02:56.270
+So all the way across here we can see it has a layout that has three rows,
+
+00:02:56.270 --> 00:03:00.740
+with two columns in the middle row with plenty of room for the blog posts,
+
+00:03:00.740 --> 00:03:03.420
+maybe too much one could argue.
+
+00:03:03.590 --> 00:03:07.064
+Then as you come in and the room shrinks,
+
+00:03:07.064 --> 00:03:09.875
+these things are going to take up more even space,
+
+00:03:09.875 --> 00:03:12.780
+but that as we get smaller,
+
+00:03:13.479 --> 00:03:16.804
+you can see it I'll just take up one column.
+
+00:03:16.805 --> 00:03:20.270
+This is an example of how you can use multiple breakpoints to
+
+00:03:20.270 --> 00:03:24.510
+set up multiple views using CSS grid.
+

@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.459 --> 00:00:05.099
+So here we are back at our blog,
+
+00:00:05.099 --> 00:00:09.869
+and here we can see our block homepage is setup a little different.
+
+00:00:09.869 --> 00:00:13.889
+Right now, it just has one column with all the content.
+
+00:00:13.890 --> 00:00:19.440
+That's because when doing responsive design or mobile design,
+
+00:00:19.440 --> 00:00:25.275
+it's always, always, always important to start first with the smallest setting.
+
+00:00:25.274 --> 00:00:29.159
+Trust me, or you can go at it on your own, but by far,
+
+00:00:29.160 --> 00:00:31.980
+the most sane way to do this is to first that up what you want
+
+00:00:31.980 --> 00:00:36.935
+your content to look like on the smallest screen and that work up from there.
+
+00:00:36.935 --> 00:00:38.530
+So in this example,
+
+00:00:38.530 --> 00:00:43.335
+what I've done is I've started by setting up our container,
+
+00:00:43.335 --> 00:00:45.469
+and if you look here,
+
+00:00:45.469 --> 00:00:51.484
+I have the grid template areas setup as just one straight column down with a header,
+
+00:00:51.484 --> 00:00:53.664
+a sidebar, a main,
+
+00:00:53.664 --> 00:00:57.375
+and a footer right here.
+
+00:00:57.375 --> 00:01:02.159
+Here, I've assigned the different grid areas accordingly to the elements,
+
+00:01:02.159 --> 00:01:04.259
+but then down here,
+
+00:01:04.260 --> 00:01:06.765
+I've set a new rule.
+
+00:01:06.765 --> 00:01:10.189
+Here I'm saying, if the screen is wide enough.
+
+00:01:10.189 --> 00:01:13.640
+So if the minimum width of our browser screen,
+
+00:01:13.640 --> 00:01:19.323
+the device is telling us that the information is greater than 900 pixels,
+
+00:01:19.323 --> 00:01:23.299
+what I want to happen is I've created a new grid template area.
+
+00:01:23.299 --> 00:01:26.789
+So below 900 pixels,
+
+00:01:26.790 --> 00:01:29.310
+this is our grid template area,
+
+00:01:29.310 --> 00:01:31.929
+and then just using the names,
+
+00:01:31.929 --> 00:01:36.200
+I've said what I want it to look like if it's more than 900 pixels.
+
+00:01:36.200 --> 00:01:38.659
+So if we come over here and we see,
+
+00:01:38.659 --> 00:01:41.754
+if we just drag this over, did you see that?
+
+00:01:41.754 --> 00:01:44.064
+Right at 900 pixels,
+
+00:01:44.064 --> 00:01:45.799
+it makes the switch for us.
+
+00:01:45.799 --> 00:01:48.019
+So here I have a full wide screen layout.
+
+00:01:48.019 --> 00:01:50.479
+I have plenty of room for my blog post on the side,
+
+00:01:50.480 --> 00:01:51.965
+my content, my header and footer,
+
+00:01:51.965 --> 00:01:55.240
+and then as I go in and I start to lose room,
+
+00:01:55.239 --> 00:01:58.714
+the switch happens, just like that.
+
+00:01:58.715 --> 00:02:01.460
+One important thing to notice is that,
+
+00:02:01.459 --> 00:02:05.839
+I have my media query at the bottom of my code.
+
+00:02:05.840 --> 00:02:08.539
+It's always a good idea to set it up this way,
+
+00:02:08.539 --> 00:02:11.569
+because the way CSS is red is straight down.
+
+00:02:11.569 --> 00:02:14.930
+So it's going to go through like this first and pick up all of
+
+00:02:14.930 --> 00:02:18.305
+this inherently for under 900 pixels,
+
+00:02:18.305 --> 00:02:20.750
+and then when it goes over 900 pixels,
+
+00:02:20.750 --> 00:02:24.155
+the only rules that will override are the ones I've placed in here.
+
+00:02:24.155 --> 00:02:29.370
+So I'm going to remove this for a sec so you can see that it actually has its own object.
+
+00:02:29.539 --> 00:02:34.299
+The keyword is @media, let's write one out,
+
+00:02:34.300 --> 00:02:39.615
+@media, then @media takes a parameter,
+
+00:02:39.615 --> 00:02:43.110
+we've been using min-width.
+
+00:02:43.110 --> 00:02:48.565
+Then let's say we actually wanted to not happen till the screen for a little wider.
+
+00:02:48.564 --> 00:02:52.824
+We could say at 1100 pixels we want it to happen, our brackets,
+
+00:02:52.824 --> 00:02:54.924
+and then inside here,
+
+00:02:54.925 --> 00:02:58.930
+these are the CSS rules that are going to apply when this happens.
+
+00:02:58.930 --> 00:03:02.694
+So here I've put my code in at 1100 pixels.
+
+00:03:02.694 --> 00:03:05.259
+So now, nothing should happen at 900,
+
+00:03:05.259 --> 00:03:06.909
+but at 1100 pixels,
+
+00:03:06.909 --> 00:03:10.495
+we should see the widescreen format take hold.
+
+00:03:10.495 --> 00:03:14.575
+So now, we go a little wider and at 11, we see it happened.
+
+00:03:14.574 --> 00:03:19.119
+This is because we've used a media query with a break-point.
+
+00:03:19.120 --> 00:03:22.349
+That's just one example of what you can do with media queries.
+
+00:03:22.349 --> 00:03:25.310
+Now, you try some on your own and then we'll come back and I'll
+
+00:03:25.310 --> 00:03:28.460
+show you what we can do by setting up two media queries,
+
+00:03:28.460 --> 00:03:30.680
+so that there are three possible layouts,
+
+00:03:30.680 --> 00:03:32.224
+one for small screens,
+
+00:03:32.224 --> 00:03:33.799
+one for medium screens,
+
+00:03:33.800 --> 00:03:37.200
+and one for big screens. Good luck.
+

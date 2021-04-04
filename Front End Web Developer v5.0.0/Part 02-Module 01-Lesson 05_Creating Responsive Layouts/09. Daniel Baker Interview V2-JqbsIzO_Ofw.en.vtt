@@ -1,0 +1,250 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.044
+Hi. I'm Daniel Silver Baker.
+
+00:00:03.044 --> 00:00:05.370
+For the first half of my professional career,
+
+00:00:05.370 --> 00:00:09.690
+I worked with young people doing arts-based health programming in New York.
+
+00:00:09.689 --> 00:00:13.049
+I've always been really interested in language, poetry.
+
+00:00:13.050 --> 00:00:14.355
+I'm a performance poet.
+
+00:00:14.355 --> 00:00:15.570
+In the last five years,
+
+00:00:15.570 --> 00:00:19.304
+I've extended my language to also include programming.
+
+00:00:19.304 --> 00:00:21.870
+So right now, I'm a freelance web developer
+
+00:00:21.870 --> 00:00:25.690
+and engineer based out of Los Angeles, California.
+
+00:00:30.980 --> 00:00:36.079
+I became interested in front-end programming actually working with a group
+
+00:00:36.079 --> 00:00:40.445
+of young people on creating a digital program for young people in Brooklyn.
+
+00:00:40.445 --> 00:00:42.590
+As I was making this program with them,
+
+00:00:42.590 --> 00:00:47.285
+I started to realize that it might be something that I was falling in love with myself.
+
+00:00:47.284 --> 00:00:49.339
+I became one of those self-taught people.
+
+00:00:49.340 --> 00:00:51.320
+I really just scoured the Internet,
+
+00:00:51.320 --> 00:00:53.149
+I inspected different pages,
+
+00:00:53.149 --> 00:00:54.859
+I tore apart the HTML,
+
+00:00:54.859 --> 00:00:57.859
+and eventually I went to NYU,
+
+00:00:57.859 --> 00:01:01.850
+where I studied at the Interactive Telecommunications Program.
+
+00:01:01.850 --> 00:01:05.000
+That's where my love of front-end came into being.
+
+00:01:05.000 --> 00:01:08.120
+For me, my real interest is in communicating to people.
+
+00:01:08.120 --> 00:01:11.680
+So front-end web development lets me develop something that you,
+
+00:01:11.680 --> 00:01:13.920
+the audience, can see as opposed to,
+
+00:01:13.920 --> 00:01:16.799
+not to say something bad about other kinds of development,
+
+00:01:16.799 --> 00:01:20.060
+but programming for computers to talk to each other is for me less
+
+00:01:20.060 --> 00:01:24.840
+exciting than when I found front-end programming and I could program for other people.
+
+00:01:30.079 --> 00:01:35.179
+Getting started in front-end developing can feel difficult.
+
+00:01:35.180 --> 00:01:38.030
+So my number one thing I would say is patience.
+
+00:01:38.030 --> 00:01:41.390
+I think patience is such an important part of programming.
+
+00:01:41.390 --> 00:01:43.859
+This might sound a little up in the air,
+
+00:01:43.859 --> 00:01:46.625
+but really to enjoy it as much as you can.
+
+00:01:46.625 --> 00:01:50.000
+For me my learning has really come from when I can settle in and I
+
+00:01:50.000 --> 00:01:54.635
+can give in to the not knowing and then I can find discovery in what I'm doing.
+
+00:01:54.635 --> 00:01:57.380
+So little wins I think are a big deal.
+
+00:01:57.379 --> 00:01:59.589
+I tried to set goals for myself.
+
+00:01:59.590 --> 00:02:02.420
+Turn this box blue by the end of the hour and then I
+
+00:02:02.420 --> 00:02:05.310
+could work towards that and it feels amazing once you did it.
+
+00:02:05.310 --> 00:02:09.090
+It really for me as a practice of learning magic.
+
+00:02:14.439 --> 00:02:19.099
+I think there's mistakes all along the paths being a developer.
+
+00:02:19.099 --> 00:02:21.949
+So I think the earliest mistakes that people are
+
+00:02:21.949 --> 00:02:25.159
+prone to make have to do with not trusting yourself.
+
+00:02:25.159 --> 00:02:29.014
+I think there's an instinct to really copy and paste code at the beginning,
+
+00:02:29.014 --> 00:02:32.569
+and I really think there's a benefit to instead of doing that,
+
+00:02:32.569 --> 00:02:34.549
+to really going through the process yourself.
+
+00:02:34.550 --> 00:02:37.340
+Writing code from scratch can feel really difficult.
+
+00:02:37.340 --> 00:02:39.670
+There's nothing scarier than an empty page,
+
+00:02:39.669 --> 00:02:42.799
+whether it's coding or poetry or anything else.
+
+00:02:42.800 --> 00:02:44.990
+But I think there's really something to starting with
+
+00:02:44.990 --> 00:02:48.560
+an empty page and creating those elements out from scratch yourself.
+
+00:02:48.560 --> 00:02:51.229
+At some point, you're going to have to learn to do it yourself.
+
+00:02:51.229 --> 00:02:54.699
+So I say throw the crutches out as early as you can.
+
+00:02:54.699 --> 00:02:56.685
+For more advanced users,
+
+00:02:56.685 --> 00:02:59.289
+I would say not to become too comfortable in what you know.
+
+00:02:59.289 --> 00:03:02.840
+There's always new ways to do things that are coming out and there's always
+
+00:03:02.840 --> 00:03:06.844
+ways to discover what other people are doing to bring it to the next level.
+
+00:03:06.844 --> 00:03:08.000
+So for advanced users,
+
+00:03:08.000 --> 00:03:10.104
+I say push outside your comfort zone.
+
+00:03:10.104 --> 00:03:13.929
+For beginning users, I say push outside your comfort zone.
+
+00:03:19.639 --> 00:03:24.564
+HTML and CSS or what we think of as building block languages.
+
+00:03:24.564 --> 00:03:28.810
+So in some ways there are a lot more simple than say JavaScript,
+
+00:03:28.810 --> 00:03:31.240
+which goes well with them or slightly in another world,
+
+00:03:31.240 --> 00:03:34.370
+but Python is another advanced programming language.
+
+00:03:34.370 --> 00:03:36.615
+HTML and CSS though,
+
+00:03:36.615 --> 00:03:39.015
+well, we call them basic or easy.
+
+00:03:39.014 --> 00:03:40.454
+If you're starting from nothing,
+
+00:03:40.455 --> 00:03:41.730
+if you've never coded before,
+
+00:03:41.729 --> 00:03:45.704
+HTML and CSS provide plenty of challenge.
+
+00:03:45.705 --> 00:03:48.765
+Those are about what we create.
+
+00:03:48.764 --> 00:03:51.519
+The other programming languages like JavaScript then
+
+00:03:51.520 --> 00:03:54.640
+allow us to put those things into interaction with each other,
+
+00:03:54.639 --> 00:03:58.959
+which can be more complex because it can include equations and math,
+
+00:03:58.960 --> 00:04:00.724
+about the rates of change, and stuff.
+
+00:04:00.724 --> 00:04:03.424
+But really, it's still programming.
+
+00:04:03.425 --> 00:04:07.910
+So while I think the hardest thing to do would be going from nothing to say JavaScript,
+
+00:04:07.909 --> 00:04:09.810
+by breaking it up, I think it's a good path.
+
+00:04:09.810 --> 00:04:12.289
+You go from knowing what you know to learning
+
+00:04:12.289 --> 00:04:15.454
+the more fundamental languages of HTML and CSS.
+
+00:04:15.455 --> 00:04:19.520
+Then I think you'll feel ready for the jump to something like JavaScript.
+
+00:04:19.519 --> 00:04:21.789
+I know for myself, once I've created,
+
+00:04:21.790 --> 00:04:23.145
+say a blue circle,
+
+00:04:23.144 --> 00:04:24.909
+I want to see my blue circle move,
+
+00:04:24.910 --> 00:04:28.100
+and that's where something like JavaScript comes in.
+

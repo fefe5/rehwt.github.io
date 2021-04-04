@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.490 --> 00:00:06.390
+Media queries are expressions we can add to our code that
+
+00:00:06.389 --> 00:00:11.759
+modify our website based on characteristics of the device that it's being viewed on.
+
+00:00:11.759 --> 00:00:14.009
+Okay, quick rewind.
+
+00:00:14.009 --> 00:00:17.640
+So we're talking about developing apps for the web,
+
+00:00:17.640 --> 00:00:21.164
+which means we'll write our code and a browser will execute it.
+
+00:00:21.164 --> 00:00:25.369
+But that browser could be on someone's giant home monitor,
+
+00:00:25.370 --> 00:00:27.755
+or it could be on a tiny cell phone screen,
+
+00:00:27.754 --> 00:00:29.480
+or a giant cell phone screen,
+
+00:00:29.480 --> 00:00:33.280
+or one of the other 135 device sizes in between.
+
+00:00:33.280 --> 00:00:36.035
+So coding for the web can be difficult
+
+00:00:36.034 --> 00:00:40.909
+because the different devices will display our content differently.
+
+00:00:40.909 --> 00:00:46.054
+But the awesome flexibility of the web that makes all those things possible is
+
+00:00:46.054 --> 00:00:51.350
+also funneled into a set of really practical possibilities using media queries.
+
+00:00:51.350 --> 00:00:56.945
+So how do we ensure elegant design across all the possible different screen sizes?
+
+00:00:56.945 --> 00:01:00.560
+We use media queries with breakpoints.
+
+00:01:00.560 --> 00:01:03.350
+Here you can see a quick example of it.
+
+00:01:03.350 --> 00:01:08.224
+This is a media query set up with a breakpoint of 900 pixels,
+
+00:01:08.224 --> 00:01:14.063
+which means when the browser is more than 900 pixels,
+
+00:01:14.063 --> 00:01:17.599
+these are the CSS rules that will take place.
+
+00:01:17.599 --> 00:01:22.579
+Let's take a look at how you would develop first a mobile ready site,
+
+00:01:22.579 --> 00:01:28.170
+and then have that be able to responsively turn into a big website.
+

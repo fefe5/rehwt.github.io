@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.370 --> 00:00:03.945
+Let's bring it all together now,
+
+00:00:03.944 --> 00:00:08.355
+CSS Grid for page layout and Flexbox for the individual components,
+
+00:00:08.355 --> 00:00:10.515
+and all of it responsive.
+
+00:00:10.515 --> 00:00:13.290
+We're going to continue building the blog website demo
+
+00:00:13.289 --> 00:00:15.884
+I've been using and the upcoming content.
+
+00:00:15.884 --> 00:00:21.344
+I'll go over how to do some more complex layouts like nested grids and image galleries.
+
+00:00:21.344 --> 00:00:25.390
+This is when things really start to heat up. Here we go.
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.159 --> 00:00:07.125
+In this lesson, we have covered multi-page layouts with CSS Grid,
+
+00:00:07.125 --> 00:00:09.734
+responsive layouts with CSS grid,
+
+00:00:09.734 --> 00:00:12.269
+using media queries and break points,
+
+00:00:12.269 --> 00:00:16.545
+as well as nesting grids and making image galleries.
+
+00:00:16.545 --> 00:00:19.200
+But let's not forget where we began.
+
+00:00:19.199 --> 00:00:22.664
+All the way back at the fundamentals of HTML.
+
+00:00:22.664 --> 00:00:24.929
+We learned about HTML elements and
+
+00:00:24.929 --> 00:00:28.964
+their tags and the attributes that we can add to those tags.
+
+00:00:28.964 --> 00:00:32.594
+How we can use those attributes like ID and class
+
+00:00:32.594 --> 00:00:36.420
+to select those elements for styling with different CSS rules,
+
+00:00:36.420 --> 00:00:41.310
+like background-color, border, padding, margin.
+
+00:00:41.310 --> 00:00:45.770
+Then you learned about Flexbox and how to align and distribute content
+
+00:00:45.770 --> 00:00:49.905
+easily and elegantly using parent containers.
+
+00:00:49.905 --> 00:00:54.649
+Then you've learned how to make whole page website designs with CSS Grid and
+
+00:00:54.649 --> 00:01:00.829
+Flexbox working seamlessly together which brings us back here to the course recap.
+
+00:01:00.829 --> 00:01:06.079
+This course is meant to set you up for success throughout the courses that follow.
+
+00:01:06.079 --> 00:01:09.349
+So feel free to come back here and review these fundamentals with
+
+00:01:09.349 --> 00:01:12.834
+me anytime if you start to feel overwhelmed in later lessons.
+
+00:01:12.834 --> 00:01:15.899
+But don't worry. I know that you've got this.
+
+00:01:15.900 --> 00:01:18.015
+With HTML and CSS,
+
+00:01:18.015 --> 00:01:22.594
+you have everything you need for the next steps in your web developer journey.
+
+00:01:22.594 --> 00:01:27.959
+Good luck. To infinity and beyond.
+
