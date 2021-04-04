@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.055
+There's a lot of stuff going on right here,
+
+00:00:02.055 --> 00:00:04.214
+but we can see that this anchor element,
+
+00:00:04.214 --> 00:00:06.214
+is this card right here.
+
+00:00:06.214 --> 00:00:08.535
+And it has a class of card.
+
+00:00:08.535 --> 00:00:12.220
+Let's switch to the console and search for this card element.
+
+00:00:12.220 --> 00:00:15.390
+I'm querying the DOM for the first element with a class
+
+00:00:15.390 --> 00:00:18.600
+of card and I'm saving it to the card variable.
+
+00:00:18.600 --> 00:00:22.405
+Now let's call "innerHTML" on this.
+
+00:00:22.405 --> 00:00:28.700
+And we can see that we have all of the HTML here that we do up here.
+

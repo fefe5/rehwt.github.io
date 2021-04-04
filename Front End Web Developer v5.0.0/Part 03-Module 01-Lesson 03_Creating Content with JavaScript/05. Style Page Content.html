@@ -1,0 +1,658 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Style Page Content</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Creating Content with JavaScript</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Update Existing Page Content.html">02. Update Existing Page Content</a>
+    </li>
+    <li class="">
+      <a href="03. Add New Page Content.html">03. Add New Page Content</a>
+    </li>
+    <li class="">
+      <a href="04. Remove Page Content.html">04. Remove Page Content</a>
+    </li>
+    <li class="">
+      <a href="05. Style Page Content.html">05. Style Page Content</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Style Page Content</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L2 54 HS - What You'Ll Learn</p></h3>
+  <video controls>
+  <source src="05. L2 54 HS - What You&#x27;Ll Learn-gnEj1o58o_8.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L2 54 HS - What You&#x27;Ll Learn-gnEj1o58o_8.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="05. L2 54 HS - What You&#x27;Ll Learn-gnEj1o58o_8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L2 54 HS - What You&#x27;Ll Learn-gnEj1o58o_8.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="05. L2 54 HS - What You&#x27;Ll Learn-gnEj1o58o_8.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this section, we'll be looking at controlling page and element styling using the following properties and methods:</p>
+<ul>
+<li><code>.style.&lt;prop&gt;</code></li>
+<li><code>.cssText</code></li>
+<li><code>.setAttribute()</code></li>
+<li><code>.className</code></li>
+<li><code>.classList</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Before we begin, put these in the correct order of CSS specificity. Put the least-specific option at the top and the most-specific option at the bottom.</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>rules in a tag's style attribute</p></button>
+  <button class="btn btn-primary"><p>rules in a <code>&lt;style&gt;</code> tag</p></button>
+  <button class="btn btn-primary"><p>rules in a stylesheet</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Level of Specificity</p>
+      </th>
+      <th>
+        <p>CSS Rule</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Least specific</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>More specific</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Most specific</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Level of Specificity</p>
+        </th>
+        <th>
+          <p>CSS Rule</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Most specific</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>rules in a tag's style attribute</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>More specific</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>rules in a <code>&lt;style&gt;</code> tag</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Least specific</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>rules in a stylesheet</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="css-specificity">CSS Specificity</h2>
+</blockquote>
+<blockquote>
+  <p>To be successful in this section, it will help to have an understanding of how CSS Specificity works. According to the MDN, "specificity" is:</p>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <p>the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied.</p>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <p>Basically, the closer the style rule is to an element, the more specific it is. For example, a rule in a style attribute on an element will override a style rule for that element in a CSS stylesheet. There is also the specificity of the <em>type</em> of selector being used. An <em>ID</em> is more specific than a <em>class</em>.</p>
+</blockquote>
+<blockquote>
+  <p>If you'd like to learn more about CSS Specificity, check out the following links:</p>
+</blockquote>
+<blockquote>
+  <ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" rel="noopener noreferrer" target="_blank">Specificity on MDN</a></li>
+  </ul>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="modifying-an-elements-style-attribute">Modifying an Element's Style Attribute</h2>
+<p>Let's jump back to your knowledge of CSS. When trying to style an element, the most-specific rules that you can write for an element are written in that element's <code>style</code> attribute. Lucky for us, we can access an element's <code>style</code> attribute using the <code>.style</code> property! </p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');
+
+mainHeading.style.color = 'red';</code></pre>
+<p>Now, I want to point out that when using the <code>.style</code> property, you can only modify <em>one</em> CSS style at a time. That's why the previous code has <code>.style.color = 'red'</code> and not just <code>.style = 'red'</code>.</p>
+<p>Check out the documentation page for more information: <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" rel="noopener noreferrer" target="_blank">style docs</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 59 - Modify Styles With Style</p></h3>
+  <video controls>
+  <source src="05. DOM L2 59 - Modify Styles With Style-YvCtuOUMSkE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. DOM L2 59 - Modify Styles With Style-YvCtuOUMSkE.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. DOM L2 59 - Modify Styles With Style-YvCtuOUMSkE.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. DOM L2 59 - Modify Styles With Style-YvCtuOUMSkE.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. DOM L2 59 - Modify Styles With Style-YvCtuOUMSkE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="05. DOM L2 59 - Modify Styles With Style-YvCtuOUMSkE.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Why do you think it has to be <code>fontSize</code>? Why would <code>font-size</code> not work?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thank you for your response.</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Write the JavaScript code to set the width of element to 50%;</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Great work!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="adding-multiple-styles-at-once">Adding Multiple Styles At Once</h2>
+<p>We've seen how the <code>.style.&lt;property&gt;</code> syntax will let us change <em>just one</em> piece of styling for an element. So if we wanted to set an element's color, background color, and font size, we'd have to use three separate lines of code:</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');
+
+mainHeading.style.color = 'blue';
+mainHeading.style.backgroundColor = 'orange';
+mainHeading.style.fontSize = '3.5em';</code></pre>
+<p>…and that's just for setting <em>three</em> styles. Imagine if we needed 15 or 20 different styles! So the <code>.style.property</code> syntax is perfect for setting one style at a time, but it's not great for controlling multiple styles.</p>
+<p>Fortunately, we can use the <code>.style.cssText</code> property to set multiple CSS styles at once!</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');
+
+mainHeading.style.cssText = 'color: blue; background-color: orange; font-size: 3.5em';</code></pre>
+<p>Notice that when using the <code>.style.cssText</code> property, you write the CSS styles just as you would in a stylesheet; so you write <code>font-size</code> rather than <code>fontSize</code>. This is different than using the individual <code>.style.&lt;property&gt;</code> way.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><pre><code class="html language-html">&lt;p id="quizzing-quizzes" style="color: orange;"&gt;Howdy&lt;/p&gt;</code></pre>
+<p>For the element above, which of the following styles will be applied after running this code?</p>
+<pre><code class="js language-js">document.querySelector('#quizzing-quizzes').style.cssText = 'width: 30px; textDecoration: underline;';</code></pre></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512414902176" name="467882" id="a1512414902176">
+      <label for="a1512414902176"><p>color</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512414912078" name="467882" id="a1512414912078">
+      <label for="a1512414912078"><p>text-decoration</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512414912795" name="467882" id="a1512414912795">
+      <label for="a1512414912795"><p>width</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512414920021" name="467882" id="a1512414920021">
+      <label for="a1512414920021"><p>none</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>width</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="setting-an-elements-attributes">Setting An Element's Attributes</h2>
+<p>Another way to set styles for an element is to bypass the <code>.style.&lt;property&gt;</code> and <code>.style.cssText</code> properties altogether and use the <code>.setAttribute()</code> method:</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');
+
+mainHeading.setAttribute('style', 'color: blue; background-color: orange; font-size: 3.5em;');</code></pre>
+<p>Check out the documentation page for more information: <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" rel="noopener noreferrer" target="_blank">style docs</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="setattribute-is-not-just-for-styling"><code>.setAttribute()</code> Is Not Just For Styling</h3>
+<p>The <code>setAttribute()</code> method is not <em>just</em> for styling page elements. You can use this method to set <em>any</em> attribute for an element. If you want to give an element an ID, you can do that!:</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');
+
+// add an ID to the heading's sibling element
+mainHeading.nextElementSibling.setAttribute('id', 'heading-sibling');
+
+// use the newly added ID to access that element
+document.querySelector('#heading-sibling').style.backgroundColor = 'red';</code></pre>
+<p>The last two lines could've been combined into one to bypass setting an ID and just styling the element directly:</p>
+<pre><code class="js language-js">mainHeading.nextElementSibling.style.backgroundColor = 'red';</code></pre>
+<p>…but this was just to demonstrate that it's possible to set an attribute with JavaScript that affects the DOM which then can be used immediately</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 66 HS - Don'T Put Styles In JS</p></h3>
+  <video controls>
+  <source src="05. L2 66 HS - Don&#x27;T Put Styles In JS-zwdiy-AgiyI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L2 66 HS - Don&#x27;T Put Styles In JS-zwdiy-AgiyI.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. L2 66 HS - Don&#x27;T Put Styles In JS-zwdiy-AgiyI.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L2 66 HS - Don&#x27;T Put Styles In JS-zwdiy-AgiyI.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. L2 66 HS - Don&#x27;T Put Styles In JS-zwdiy-AgiyI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="05. L2 66 HS - Don&#x27;T Put Styles In JS-zwdiy-AgiyI.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="accessing-an-elements-classes">Accessing an Element's Classes</h2>
+<p>The first element property we'll look at is the <code>.className</code> property. This property returns a string of all of the element's classes. If an element has the following HTML:</p>
+<pre><code class="html language-html">&lt;h1 id="main-heading" class="ank-student jpk-modal"&gt;Learn Web Development at Udacity&lt;/h1&gt;</code></pre>
+<p>We could use <code>.className</code> to access the list of classes:</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('#main-heading');
+
+// store the list of classes in a variable
+const listOfClasses = mainHeading.className;
+
+// logs out the string "ank-student jpk-modal"
+console.log(listOfClasses);</code></pre>
+<p>The <code>.className</code> property returns a space-separated string of the classes. This isn't the most ideal format, unfortunately. We can, however, convert this space-separated string into an array using the JavaScript string method, <code>.split()</code>:</p>
+<pre><code class="js language-js">const arrayOfClasses = listOfClasses.split(' ');
+
+// logs out the array of strings ["ank-student", "jpk-modal"]
+console.log(arrayOfClasses);</code></pre>
+<p>Now that we have an <em>array</em> of classes, we can do any data-intensive calculations:</p>
+<ul>
+<li>use a <code>for</code> loop to loop through the list of class names</li>
+<li>use <code>.push()</code> to add an item to the list</li>
+<li>use <code>.pop()</code> to remove an item from the list</li>
+</ul>
+<p><code>.className</code> is a property, so we can set its value just by assigning a string to the property:</p>
+<pre><code class="js language-js">mainHeading.className = "im-the-new-class";</code></pre>
+<p>The above code <em>erases</em> any classes that were originally in the element's <code>class</code> attribute and replaces it with the single class <code>im-the-new-class</code>.</p>
+<p>Since <code>.className</code> returns a string, it makes it hard to add or remove individual classes. As I mentioned earlier, we can convert the string to an array and then use different Array Methods to search for a class remove it from the list, and then update the <code>.className</code> with the remaining classes. However, we don't want to do all of that work! Let's use the newer <code>.classList</code> property.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="the-classlist-property">The <code>.classList</code> Property</h3>
+<p>The <code>.classList</code> property is newer than the <code>.className</code> property, but is much nicer, check it out:</p>
+<pre><code class="html language-html">&lt;h1 id="main-heading" class="ank-student jpk-modal"&gt;Learn Web Development at Udacity&lt;/h1&gt;</code></pre>
+<pre><code class="js language-js">const mainHeading = document.querySelector('#main-heading');
+
+// store the list of classes in a variable
+const listOfClasses = mainHeading.classList;
+
+// logs out ["ank-student", "jpk-modal"]
+console.log(listOfClasses);</code></pre>
+<p>Check out the documentation page on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" rel="noopener noreferrer" target="_blank">classList docs</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Review the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" rel="noopener noreferrer" target="_blank">classList property's documentation</a>. What data structure does the <code>.classList</code> property return?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512415139904" name="467897" id="a1512415139904">
+      <label for="a1512415139904"><p>an array</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512415142640" name="467897" id="a1512415142640">
+      <label for="a1512415142640"><p>a NodeList</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512415143209" name="467897" id="a1512415143209">
+      <label for="a1512415143209"><p>a DOMTokenList</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512415143891" name="467897" id="a1512415143891">
+      <label for="a1512415143891"><p>an ElementList</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>a DOMTokenList</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The <code>.classList</code> property has a number of properties of its own. Some of the most popularly used ones are:</p>
+<ul>
+<li><code>.add()</code> - to add a class to the list</li>
+<li><code>.remove()</code> - to remove a class from the list</li>
+<li><code>.toggle()</code> - to add the class if it doesn't exists or remove it from the list if it does already exist</li>
+<li><code>.contains()</code> - returns a boolean based on if the class exists in the list or not</li>
+</ul>
+<p>Let's take a look!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 71 - ClassList</p></h3>
+  <video controls>
+  <source src="05. DOM L2 71 - ClassList-SIjgdT1O2Ns.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. DOM L2 71 - ClassList-SIjgdT1O2Ns.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. DOM L2 71 - ClassList-SIjgdT1O2Ns.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. DOM L2 71 - ClassList-SIjgdT1O2Ns.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. DOM L2 71 - ClassList-SIjgdT1O2Ns.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="05. DOM L2 71 - ClassList-SIjgdT1O2Ns.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What happens if you try to toggle a nonexistent class? For example, if you had this HTML:</p>
+<pre><code class="html language-html">&lt;h1 id="main-heading" class="ank-student jpk-modal"&gt;Learn Web Development at Udacity&lt;/h1&gt;</code></pre>
+<p>…what would happen after running the following JavaScript:</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('#main-heading');
+
+mainHeading.classList.toggle('richard');</code></pre></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512415370788" name="467906" id="a1512415370788">
+      <label for="a1512415370788"><p>the <code>richard</code> class is added to the list of classes</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512415375484" name="467906" id="a1512415375484">
+      <label for="a1512415375484"><p>the <code>richard</code> class is not added to the list; the existing list of classes remains the same</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512415376264" name="467906" id="a1512415376264">
+      <label for="a1512415376264"><p>the <code>richard</code> class replaces the other classes</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512415376916" name="467906" id="a1512415376916">
+      <label for="a1512415376916"><p>an error happens</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>the `richard` class is added to the list of classes</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 73 - DOMContentLoaded</p></h3>
+  <video controls>
+  <source src="05. DOM L2 73 - DOMContentLoaded-To24p4StUMw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. DOM L2 73 - DOMContentLoaded-To24p4StUMw.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. DOM L2 73 - DOMContentLoaded-To24p4StUMw.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. DOM L2 73 - DOMContentLoaded-To24p4StUMw.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. DOM L2 73 - DOMContentLoaded-To24p4StUMw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="05. DOM L2 73 - DOMContentLoaded-To24p4StUMw.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="style-page-content-recap">Style Page Content Recap</h2>
+<p>We learned a ton of content in this section! We looked at:</p>
+<ul>
+<li>modifying individual styles with <code>.style.&lt;prop&gt;</code></li>
+<li>updating multiple styles at once with <code>.style.cssText</code></li>
+<li>getting/setting a list of classes with <code>.className</code></li>
+<li>getting/setting/toggling CSS classes with <code>.classList</code></li>
+</ul>
+<p>My recommendation to you is that, out of the list of techniques you learned in this section, to use the <code>.classList</code> property more than any other. <code>.classList</code> is by far the most helpful property of the bunch, and it helps to keep your CSS styling out of your JavaScript code.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" rel="noopener noreferrer" target="_blank">style on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information" rel="noopener noreferrer" target="_blank">Article: Using dynamic styling information</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#DOM-CSS_CSSOM" rel="noopener noreferrer" target="_blank">DOM methods to control styling</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling" rel="noopener noreferrer" target="_blank">nextElementSibling on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className" rel="noopener noreferrer" target="_blank">className on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" rel="noopener noreferrer" target="_blank">classList on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" rel="noopener noreferrer" target="_blank">Specificity on MDN</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Style Page Content')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

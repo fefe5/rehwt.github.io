@@ -1,0 +1,44 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.069 --> 00:00:02.765
+Usei .createElement
+para criar um elemento span,
+
+00:00:02.807 --> 00:00:05.441
+que armazenei
+na variável newSpanElement,
+
+00:00:05.483 --> 00:00:09.334
+e configurei o textContent
+como ", right now!".
+
+00:00:09.376 --> 00:00:13.247
+Isso mostrará que temos um span
+com o texto ", right now!".
+
+00:00:13.289 --> 00:00:16.982
+Este elemento span
+não está na DOM atual.
+
+00:00:17.024 --> 00:00:20.845
+Adicionarei esse texto
+depois do texto "Learn ARKit".
+
+00:00:20.887 --> 00:00:24.455
+Seleciono este elemento DOM
+e acrescento o span.
+
+00:00:28.175 --> 00:00:29.918
+Agora que selecionei
+o elemento,
+
+00:00:29.960 --> 00:00:33.063
+posso acrescentar
+o elemento newSpanElement.
+
+00:00:37.518 --> 00:00:41.039
+Isso exibirá
+o texto na página.
+

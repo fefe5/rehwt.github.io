@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.639
+Veb sohasida vazifasi har xil bo‘lgan
+
+00:00:02.639 --> 00:00:05.940
+kod yozilgan fayllarni ajratib yozish maqsadga muvofiqdir. 
+HTML kod
+
+00:00:05.940 --> 00:00:08.429
+html faylda yozilishi va saqlanishi, 
+dizayn ya’ni,  styling kodi esa
+
+00:00:08.429 --> 00:00:09.719
+CSS faylda va
+
+00:00:09.719 --> 00:00:12.150
+Interaktivlik JavaScript faylida
+
+00:00:12.150 --> 00:00:14.280
+bo‘lishi kerak. Ushbu yuqoridagilarni bitta faylda aralashtirib yozish
+
+00:00:14.280 --> 00:00:16.859
+ko‘pgina chalkashliklikka olib kelishi mumkin. 
+Shunday qilib,  sahifa dizaynini 
+
+00:00:16.859 --> 00:00:19.050
+JavaScript fayliga joylashtirish biroz noto‘g‘ri 
+
+00:00:19.050 --> 00:00:21.000
+bo‘lishi mumkin. Endi nega dizayn kodi stylesheet
+
+00:00:21.000 --> 00:00:22.470
+faylda bo‘lishi kerakligini
+
+00:00:22.470 --> 00:00:25.619
+bilib oldingiz. Ammo,
+
+00:00:25.619 --> 00:00:27.779
+biz ushbu uch turdagi fayllarni bog‘lashimiz
+
+00:00:27.779 --> 00:00:30.660
+kerak. Masalan, element dizaynini o‘zgartirish uchun 
+
+00:00:30.660 --> 00:00:32.850
+qo‘llaniladigan class so‘zi HTML fayliga
+
+00:00:32.850 --> 00:00:34.649
+qo‘shiladi va biz JavaScript bilan DOMorqali 
+
+00:00:34.649 --> 00:00:36.930
+class ni izlashimiz mumkin.
+
+00:00:36.930 --> 00:00:39.390
+Dizayn kodini Javascript faylda
+
+00:00:39.390 --> 00:00:41.550
+ yozish o‘rniga, element uchun 
+
+00:00:41.550 --> 00:00:43.860
+JavaScript class 
+
+00:00:43.860 --> 00:00:46.250
+attributeidan foydalanamiz.
+

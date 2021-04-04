@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.875
+You've made it. We're here.
+
+00:00:02.875 --> 00:00:04.900
+This is the lesson where we start to actually
+
+00:00:04.900 --> 00:00:07.785
+control the document object model with Javascript.
+
+00:00:07.785 --> 00:00:10.490
+In the last lesson, we learned about the DOM,
+
+00:00:10.490 --> 00:00:11.980
+the Document Object Model,
+
+00:00:11.980 --> 00:00:16.635
+and in it we learned a few ways to select items in the DOM, ".getElementByID()",
+
+00:00:16.635 --> 00:00:21.730
+".getElementsByClassName()", the ".querySelector()", and a few others.
+
+00:00:21.730 --> 00:00:25.120
+And we looked at the Node and Element interfaces and the list of
+
+00:00:25.120 --> 00:00:29.469
+properties and methods that they pass on to their individual elements.
+
+00:00:29.469 --> 00:00:30.849
+Now like I said at the beginning,
+
+00:00:30.850 --> 00:00:34.840
+this is the lesson we'll use Javascript and DOM methods to create,
+
+00:00:34.840 --> 00:00:37.420
+delete, and manipulate DOM elements.
+
+00:00:37.420 --> 00:00:38.899
+While working through this content,
+
+00:00:38.899 --> 00:00:40.480
+you'll start to gain an understanding of
+
+00:00:40.479 --> 00:00:43.734
+the real power of combining JavaScript and the DOM.
+
+00:00:43.734 --> 00:00:46.640
+If you can't tell already, it's really exciting.
+
+00:00:46.640 --> 00:00:48.145
+Now before we dive right in though,
+
+00:00:48.145 --> 00:00:52.000
+we need to download the project that we use for the rest of the course.
+
+00:00:52.000 --> 00:00:54.100
+Okay, you ready? Good. Let's get started.
+

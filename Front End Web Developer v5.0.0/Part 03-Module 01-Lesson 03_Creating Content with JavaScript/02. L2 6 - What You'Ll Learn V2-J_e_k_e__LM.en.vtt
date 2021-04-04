@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.490
+In this section, we'll look at "innerHTML" to get
+
+00:00:04.490 --> 00:00:08.620
+the HTML content and set the HTML content of an element.
+
+00:00:08.619 --> 00:00:13.439
+We'll also look at "textContent" to get and set the text content of an element.
+
+00:00:13.439 --> 00:00:18.410
+And we'll look at "innerText" which also will get and set the text content of an element.
+
+00:00:18.410 --> 00:00:20.734
+Yes, both "textContent" and
+
+00:00:20.734 --> 00:00:24.015
+"innerText" will let you control the text content of an element.
+
+00:00:24.015 --> 00:00:27.484
+But there are some considerable differences between the two methods.
+
+00:00:27.484 --> 00:00:28.894
+By the end of this section,
+
+00:00:28.894 --> 00:00:35.204
+you'll know how to alter both HTML and text content of any element on any website.
+
+00:00:35.204 --> 00:00:38.000
+I think that's pretty cool. So let's get going.
+

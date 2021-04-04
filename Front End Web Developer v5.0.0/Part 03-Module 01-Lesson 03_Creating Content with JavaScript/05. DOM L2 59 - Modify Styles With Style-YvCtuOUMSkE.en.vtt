@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.340 --> 00:00:07.293
+Let's select this heading right here out of the DOM.
+
+00:00:07.293 --> 00:00:12.350
+Now this gray color is pretty on brand,
+
+00:00:12.349 --> 00:00:20.399
+but let's make it something exciting like orange.
+
+00:00:20.399 --> 00:00:23.824
+We can see that running this command has changed our text to Orange,
+
+00:00:23.824 --> 00:00:26.689
+and now it has a style property right here.
+
+00:00:26.690 --> 00:00:28.415
+And if we open up this,
+
+00:00:28.414 --> 00:00:31.359
+we can see that it has a style right here.
+
+00:00:31.359 --> 00:00:34.640
+Now let's give ourselves a bit more room here.
+
+00:00:34.640 --> 00:00:38.548
+Our heading looks pretty good right now but it is quite tiny.
+
+00:00:38.548 --> 00:00:42.130
+So let's bump up the font size,
+
+00:00:47.420 --> 00:00:54.829
+much better and we can see the font size right here and right here.
+
+00:00:54.829 --> 00:00:59.652
+Let's check out heading dot style to see what it shows us.
+
+00:00:59.652 --> 00:01:05.215
+We can see that this property returns a CSS style declaration.
+
+00:01:05.215 --> 00:01:07.515
+And let's open that up,
+
+00:01:07.515 --> 00:01:12.444
+scrolling through this we see that most of these things are empty.
+
+00:01:12.444 --> 00:01:14.639
+There's our color that we added.
+
+00:01:14.640 --> 00:01:18.989
+And somewhere down here is going to be the font size there it is.
+
+00:01:18.989 --> 00:01:22.464
+If we scroll back up a bit there should be a section.
+
+00:01:22.465 --> 00:01:27.280
+This CSS text will actually look at that in just a few minutes.
+

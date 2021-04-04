@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.094
+Have you ever filled out a form on the web? I'm sure you have.
+
+00:00:04.094 --> 00:00:05.804
+I do it dozens of times a day.
+
+00:00:05.804 --> 00:00:08.830
+Now, have you ever paid attention to when you make a mistake?
+
+00:00:08.830 --> 00:00:13.265
+An error message might pop up or one of the form fields might have a red border.
+
+00:00:13.265 --> 00:00:15.495
+All of those are style changes.
+
+00:00:15.494 --> 00:00:21.149
+In this lesson, we'll learn how to control page dialing with JavaScript and DOM methods.
+
+00:00:21.149 --> 00:00:23.139
+We'll look at the style property,
+
+00:00:23.140 --> 00:00:26.949
+the CSS text method and the classList property.
+
+00:00:26.949 --> 00:00:28.419
+Now unlike previous sections,
+
+00:00:28.420 --> 00:00:31.620
+we'll control a lot more visual changes to the page.
+
+00:00:31.620 --> 00:00:35.000
+So I hope you're ready and excited. Let's get started.
+

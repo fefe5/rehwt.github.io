@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.860
+Here's the project that I've downloaded.
+
+00:00:01.860 --> 00:00:07.125
+I can just take this HTML file and drag and drop it onto the browser window back here.
+
+00:00:07.125 --> 00:00:09.470
+And this is the Udacity website.
+
+00:00:09.470 --> 00:00:11.145
+I can scroll all the way down here,
+
+00:00:11.144 --> 00:00:12.974
+and we can see all of this content,
+
+00:00:12.974 --> 00:00:19.054
+and this is what the Udacity website looked like when I downloaded it.
+
+00:00:19.054 --> 00:00:20.429
+Switching over to the code editor,
+
+00:00:20.429 --> 00:00:24.564
+we can see that we have one HTML file and one JavaScript file.
+
+00:00:24.565 --> 00:00:28.750
+And then all of the site files are in this directory here.
+
+00:00:28.750 --> 00:00:31.977
+Remember that this is just the index file to the project.
+
+00:00:31.977 --> 00:00:34.500
+This isn't every single page on the Udacity website.
+
+00:00:34.500 --> 00:00:36.060
+It is just the home page.
+

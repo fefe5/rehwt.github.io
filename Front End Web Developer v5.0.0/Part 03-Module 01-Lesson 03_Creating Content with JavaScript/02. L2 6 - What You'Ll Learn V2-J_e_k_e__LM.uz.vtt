@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:04.490
+Ushbu bo‘limda, biz HTMl&lt;i/&gt; tarkibiy 
+qismini olish va uni joylash uchun
+
+00:00:04.490 --> 00:00:08.619
+"innerHTML" haqida o‘rganamiz
+
+00:00:08.619 --> 00:00:13.439
+Elementning matnini olish va joylash uchun 
+"textContent" haqida o‘rganamiz.
+
+00:00:13.439 --> 00:00:18.410
+Xuddi shunday, elemetning matnini olish va 
+joylash uchun "innerText" ni ham o‘rganamiz.
+
+00:00:18.410 --> 00:00:20.734
+Ha, "textContent" va 
+
+00:00:20.734 --> 00:00:24.015
+"innerText" ikkalasi ham elementning 
+matni ustida ishlash imkoniyatini beradi.
+
+00:00:24.015 --> 00:00:27.484
+Lekin, ushbu ikki method o‘rtasida 
+ba’zi ahamiyatga ega bo‘lgan farqlar mavjud.
+
+00:00:27.484 --> 00:00:28.894
+Ushbu bo‘lim oxirigacha,
+
+00:00:28.894 --> 00:00:35.204
+Har qanday veb-sahifada istagan elementning 
+matnini qanday qilib o‘zgartirishni bilib olasiz.
+
+00:00:35.204 --> 00:00:38.000
+Menimcha bu juda zo‘r. Shunday qilib, ketdik.
+

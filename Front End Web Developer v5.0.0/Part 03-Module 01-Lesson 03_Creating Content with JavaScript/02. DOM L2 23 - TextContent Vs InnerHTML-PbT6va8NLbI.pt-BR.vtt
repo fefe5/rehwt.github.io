@@ -1,0 +1,74 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.283 --> 00:00:05.189
+Vamos descer para atualizar
+o texto deste cabeçalho.
+
+00:00:05.231 --> 00:00:09.047
+Para facilitar a leitura,
+aumentarei o tamanho da fonte.
+
+00:00:16.414 --> 00:00:18.493
+Agora que selecionei o elemento
+na DOM,
+
+00:00:18.535 --> 00:00:20.332
+vamos usar o truque do $0
+
+00:00:20.374 --> 00:00:22.677
+para armazenar o elemento
+em uma variável.
+
+00:00:26.501 --> 00:00:29.927
+Agora que armazenei o elemento
+em uma variável - que vemos aqui -,
+
+00:00:29.969 --> 00:00:32.093
+atualizarei
+o texto deste elemento.
+
+00:00:37.653 --> 00:00:40.724
+Usando a propriedade .textContent
+configurada a esta string,
+
+00:00:40.766 --> 00:00:44.273
+vemos que, embora tenhamos
+adicionado HTML aqui,
+
+00:00:44.315 --> 00:00:49.145
+o HTML ainda é exibido
+na página renderizada.
+
+00:00:49.187 --> 00:00:51.724
+Vamos comparar
+a propriedade .textContent
+
+00:00:51.766 --> 00:00:55.355
+com a configuração da string
+com a propriedade .innerHTML.
+
+00:00:58.339 --> 00:01:01.338
+Usando a mesma string
+com os caracteres HTML,
+
+00:01:01.380 --> 00:01:04.294
+isto aparecerá
+como HTML renderizado,
+
+00:01:04.336 --> 00:01:07.059
+pois estamos usando
+a propriedade .innerHTML.
+
+00:01:07.101 --> 00:01:10.671
+O textContent exibe tudo
+como texto,
+
+00:01:10.713 --> 00:01:12.026
+enquanto .innerHTML
+
+00:01:12.068 --> 00:01:14.523
+renderizará qualquer HTML
+na string.
+

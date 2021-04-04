@@ -1,0 +1,50 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.060 --> 00:00:02.190
+Bir marta bo‘lsa ham veb-sahifada ro‘yxatdan o‘tish formasini 
+
+00:00:02.190 --> 00:00:04.950
+to‘ldirganmisiz? Ishonchim komilki, to‘ldirgansiz. Men buni kuniga
+
+00:00:04.950 --> 00:00:07.170
+o‘n martalab bajaraman. Formani   
+
+00:00:07.170 --> 00:00:08.880
+to‘ldirayotganingizda qanaqadir xato qilib qo‘ysangiz,
+
+00:00:08.880 --> 00:00:11.130
+ogohlantiruvchi xabar paydo bo‘lishi yoki
+
+00:00:11.130 --> 00:00:13.349
+so‘z kiritiladigan joylar chegarasi qizil rangga 
+o‘zgarishiga e’tibor berganmisiz. Buni hammasi
+
+00:00:13.349 --> 00:00:16.170
+dizaynga o‘rgartirish kiritish hisoblanadi. Ushbu
+
+00:00:16.170 --> 00:00:17.970
+darsda,  Javascript va Dom methos lari yordamida 
+
+00:00:17.970 --> 00:00:20.340
+sahifa dizayni ustida qanday qilib  ishlashni o‘rganamiz.
+
+00:00:20.340 --> 00:00:23.880
+Dizayn xususiyatlaridan matn method va class list 
+
+00:00:23.880 --> 00:00:26.340
+xususiyatlarini ko‘rib chiqdik.
+
+00:00:26.340 --> 00:00:28.740
+Endi oldingi bo‘limlardan farqli ravishda, 
+
+00:00:28.740 --> 00:00:30.630
+sahifada ko‘proq vizual o‘zgarishlarni boshqarishingiz
+
+00:00:30.630 --> 00:00:32.820
+ mumkin. Umid qilamanki, bunga tayyorsiz.
+
+00:00:32.820 --> 00:00:36.350
+Qani boshladik.
+

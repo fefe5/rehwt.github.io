@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.750
+I stored this page element inside of the "card" variable.
+
+00:00:03.750 --> 00:00:09.000
+Now let's compare the card's text content property with its innerText property.
+
+00:00:09.000 --> 00:00:10.050
+But before we do that,
+
+00:00:10.050 --> 00:00:15.425
+let's actually hide some of the text with CSS.
+
+00:00:15.425 --> 00:00:20.260
+Here we can see the "New!",
+
+00:00:20.260 --> 00:00:23.800
+the "Data Foundation's Nanodegree" and the "Enroll Now" text,
+
+00:00:23.800 --> 00:00:25.839
+but over here on the element itself we only see
+
+00:00:25.839 --> 00:00:28.059
+"New" and then "Data Foundations Nanodegree".
+
+00:00:28.059 --> 00:00:31.209
+We don't actually see the words "Enroll Now" which were down
+
+00:00:31.210 --> 00:00:35.750
+here because I hid them with CSS, display none.
+
+00:00:35.750 --> 00:00:40.045
+So, let's check out the card's text content property.
+
+00:00:40.045 --> 00:00:44.020
+And this shows us all of the text of the element.
+
+00:00:44.020 --> 00:00:47.200
+Now let's compare that with innerText.
+
+00:00:47.200 --> 00:00:51.040
+We can see that the innerText property does not have the text "Enroll Now".
+
+00:00:51.039 --> 00:00:52.479
+It's missing from down here,
+
+00:00:52.479 --> 00:00:55.560
+but there's also new is all in caps up here,
+
+00:00:55.560 --> 00:01:00.054
+while new actually is only capital N as you can see up here.
+
+00:01:00.054 --> 00:01:03.429
+The text content property returns all of the text regardless if CSS.
+
+00:01:03.429 --> 00:01:08.000
+The innerText property returns the text as it would be seen visually.
+

@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.710 --> 00:00:03.830
+Vimos como modificar
+um conteúdo existente.
+
+00:00:03.863 --> 00:00:06.641
+Nesta seção,
+partiremos desse princípio
+
+00:00:06.674 --> 00:00:09.525
+para criar novos conteúdos
+e para adicioná-los à página
+
+00:00:09.558 --> 00:00:13.677
+com o método createElement,
+o método createTextNode,
+
+00:00:13.710 --> 00:00:15.461
+o método appendChild
+
+00:00:15.494 --> 00:00:18.741
+e o método insertAdjacentHTML.
+
+00:00:18.774 --> 00:00:22.693
+Deduzimos o que os três primeiros
+métodos fazem pelo nome,
+
+00:00:22.726 --> 00:00:25.061
+mas mostraremos os detalhes
+de cada um deles.
+
+00:00:25.094 --> 00:00:27.357
+Começaremos
+com o método createElement,
+
+00:00:27.390 --> 00:00:30.196
+mas quero que você também pesquise
+sobre ele.
+

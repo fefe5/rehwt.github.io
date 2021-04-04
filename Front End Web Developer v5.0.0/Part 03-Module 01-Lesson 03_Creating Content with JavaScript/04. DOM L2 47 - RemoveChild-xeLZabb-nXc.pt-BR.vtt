@@ -1,0 +1,93 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.068 --> 00:00:02.753
+Vamos tentar remover
+este cartão da lista.
+
+00:00:02.795 --> 00:00:05.267
+Precisamos achar este item
+na DOM.
+
+00:00:07.507 --> 00:00:10.881
+Vemos que este div
+é este cartão aqui,
+
+00:00:10.923 --> 00:00:15.203
+e o pai do div é o div
+com a classe hero__module.
+
+00:00:15.245 --> 00:00:17.627
+Vamos armazenar o div
+em uma variável.
+
+00:00:21.123 --> 00:00:23.515
+Queremos o primeiro filho
+do cardContainer,
+
+00:00:23.557 --> 00:00:26.037
+então vamos conferir
+a propriedade firstChild.
+
+00:00:28.341 --> 00:00:31.388
+Que estranho!
+Não devia ser este div?
+
+00:00:31.430 --> 00:00:32.886
+Vamos analisar.
+
+00:00:34.342 --> 00:00:36.973
+Aqui embaixo vemos
+o textContent,
+
+00:00:37.015 --> 00:00:40.229
+um monte de flechas
+e alguns espaços.
+
+00:00:40.271 --> 00:00:41.550
+O que é tudo isso?
+
+00:00:41.592 --> 00:00:44.724
+Vamos voltar aqui,
+abrir mais espaço
+
+00:00:44.766 --> 00:00:47.605
+e editar como HTML.
+
+00:00:47.647 --> 00:00:53.587
+Há um monte de enteres
+e alguns espaços aqui.
+
+00:00:53.629 --> 00:00:57.432
+Os enteres e os espaços
+são este texto,
+
+00:00:57.474 --> 00:00:59.963
+o primeiro filho
+do cardContainer.
+
+00:01:01.796 --> 00:01:03.722
+Para obtermos
+este elemento div,
+
+00:01:03.764 --> 00:01:06.778
+precisamos obter
+a propriedade firstElementChild.
+
+00:01:09.122 --> 00:01:13.038
+Vemos que esta propriedade
+é o div que desejamos remover.
+
+00:01:13.080 --> 00:01:15.794
+Vamos armazenar isto
+em uma variável.
+
+00:01:19.899 --> 00:01:23.722
+Agora podemos remover
+o card do filho no pai.
+
+00:01:29.097 --> 00:01:33.775
+Invocar esta função
+a removeu da página e da DOM.
+

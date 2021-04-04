@@ -1,0 +1,83 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.052 --> 00:00:03.666
+Esta é a documentação
+do insertAdjacentHTML.
+
+00:00:03.708 --> 00:00:07.498
+Vemos que este método
+precisa ser chamado
+
+00:00:07.540 --> 00:00:09.234
+em um elemento pai
+
+00:00:09.276 --> 00:00:11.907
+e também precisa ser chamado
+com dois argumentos,
+
+00:00:11.949 --> 00:00:13.858
+a posição e o texto.
+
+00:00:13.900 --> 00:00:16.287
+Perceba que isto é,
+na verdade, um texto.
+
+00:00:16.329 --> 00:00:18.818
+De forma parecida
+com a propriedade .textContent,
+
+00:00:18.860 --> 00:00:21.040
+isto precisará ser um texto
+e não um HTML.
+
+00:00:21.082 --> 00:00:24.659
+Se passarmos um HTML,
+ele será exibido.
+
+00:00:24.701 --> 00:00:28.907
+A propriedade position facilita
+ver para onde eles foram.
+
+00:00:32.028 --> 00:00:35.682
+Estes são os quatro itens -
+beforebegin, afterbegin,
+
+00:00:35.724 --> 00:00:37.826
+beforeend e afterend -,
+
+00:00:37.868 --> 00:00:40.867
+mas vamos conferir
+a visualização.
+
+00:00:42.708 --> 00:00:45.360
+Se o elemento em questão
+for esta tag de parágrafo,
+
+00:00:45.402 --> 00:00:47.794
+é aqui que as quatro posições
+estarão.
+
+00:00:47.836 --> 00:00:50.603
+O beforebegin aparecerá
+antes do elemento,
+
+00:00:50.645 --> 00:00:54.411
+o afterbegin aparecerá logo após,
+como o primeiro filho,
+
+00:00:54.453 --> 00:00:57.211
+o beforeend aparecerá
+antes da tag de encerramento
+
+00:00:57.253 --> 00:00:58.969
+como o último filho
+
+00:00:59.011 --> 00:01:02.174
+e o afterend aparecerá logo depois
+do elemento de parágrafo,
+
+00:01:02.216 --> 00:01:03.533
+como um irmão.
+

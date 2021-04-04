@@ -1,0 +1,83 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.280
+Bu insert adjacent HTML hujjatlari berilgan sahifa. 
+
+00:00:02.280 --> 00:00:04.319
+Agar men ozgina pastga tushsam,
+
+00:00:04.319 --> 00:00:06.810
+bu method ota-ona elementda 
+
+00:00:06.810 --> 00:00:09.510
+chaqirilishi kerakligini ko‘ramiz.
+
+00:00:09.510 --> 00:00:11.130
+Bu method bundan tashqari ikkita 
+
+00:00:11.130 --> 00:00:13.980
+joylashuv va matn argumentlari 
+bilan birga chaqirilishi kerak.
+
+00:00:13.980 --> 00:00:15.269
+Endi, bu haqiqatan ham matn tarkibiy qismining xususiyatiga 
+
+00:00:15.269 --> 00:00:17.490
+o‘xshash matn ekanligini 
+
+00:00:17.490 --> 00:00:18.510
+aniqab olish muhim.
+
+00:00:18.510 --> 00:00:21.090
+Bu HTML emas matn bo‘lishi kerak,
+
+00:00:21.090 --> 00:00:23.519
+agar siz HTMLga o‘tsangiz, 
+
+00:00:23.519 --> 00:00:25.800
+unda o‘sha HTML tasvirlanadi, hozir bu joylashuv xususiyati orqali
+
+00:00:25.800 --> 00:00:27.900
+ular qayerga borayotganini ko‘rish osonroq.
+
+00:00:27.900 --> 00:00:33.360
+Bular mana bu yerdagi to‘rtta before begin, 
+
+00:00:33.360 --> 00:00:36.450
+after begin, before end, after end elementlaridir.
+
+00:00:36.450 --> 00:00:38.670
+ammo, keling, aslida mana bu yerda pastdagi   
+
+00:00:38.670 --> 00:00:42.930
+ko‘rinishni tekshirib olamiz shunda agar 
+
+00:00:42.930 --> 00:00:44.100
+ushbu savoldagi element mana shu paragraf tegi bo‘lsa,
+
+00:00:44.100 --> 00:00:46.350
+u holda bular mana bunday to‘rtta joylashuv bo‘yicha boradi:
+
+00:00:46.350 --> 00:00:49.020
+before begin elementdan oldin paydo bo‘ladi,
+
+00:00:49.020 --> 00:00:51.510
+after begin birinchi farzand sifatida 
+
+00:00:51.510 --> 00:00:53.699
+undan o‘ngda paydo bo‘ladi, 
+
+00:00:53.699 --> 00:00:56.489
+before end uning so‘nggi farzandi sifatida
+
+00:00:56.489 --> 00:00:59.340
+yopilish tegidan oldin o‘ngda paydo bo‘ladi
+
+00:00:59.340 --> 00:01:01.320
+va keyin after end aka-uka sifatida 
+
+00:01:01.320 --> 00:01:04.760
+paragraf elementidan keyin o‘ngda paydo bo‘ladi.
+

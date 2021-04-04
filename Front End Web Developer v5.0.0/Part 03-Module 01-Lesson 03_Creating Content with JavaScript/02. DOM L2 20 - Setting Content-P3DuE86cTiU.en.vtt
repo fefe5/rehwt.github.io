@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.040
+We can get the text of an element by using the textContent property.
+
+00:00:05.040 --> 00:00:11.629
+We can change the text of an element by setting the textContent property.
+
+00:00:14.009 --> 00:00:18.420
+Instead of just retrieving the text content,
+
+00:00:18.420 --> 00:00:20.938
+we've set that property here to this string,
+
+00:00:20.937 --> 00:00:23.969
+and we can see that that text is appearing right over here.
+
+00:00:23.969 --> 00:00:26.184
+We can also check this in the Elements pane,
+
+00:00:26.184 --> 00:00:28.859
+which we can see right here.
+

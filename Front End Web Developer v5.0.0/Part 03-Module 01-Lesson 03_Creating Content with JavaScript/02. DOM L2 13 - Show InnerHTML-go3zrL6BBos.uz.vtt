@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:01.650
+Mana bu yerda ko‘p narsalar sodir bo‘lmoqda.
+
+00:00:01.650 --> 00:00:03.629
+ammo biz ushbu anchor elementi 
+
+00:00:03.629 --> 00:00:06.569
+mana bu yerdagi karta ekanligini ko‘rishimiz mumkin.
+
+00:00:06.569 --> 00:00:09.300
+va u kartalar sinfiga ega.
+
+00:00:09.300 --> 00:00:11.429
+Keling, konsolga o‘tamiz va mana bu karta elementini qidiramiz.
+
+00:00:11.429 --> 00:00:14.519
+Men bironta karta sinfiga ega bo‘lgan birinchi element uchun 
+
+00:00:14.519 --> 00:00:16.109
+Domni so‘rayapman va uni 
+
+00:00:16.109 --> 00:00:19.020
+karta o‘zgaruvchisiga saqlab qo‘yayapman.
+
+00:00:19.020 --> 00:00:24.420
+Endi, keling, bunga innerhtmlni chaqiramiz va 
+
+00:00:24.420 --> 00:00:26.640
+mana bu yerda biz qilgan barcha  
+
+00:00:26.640 --> 00:00:29.570
+HTMLlarni ko‘rishimiz mumkin.
+

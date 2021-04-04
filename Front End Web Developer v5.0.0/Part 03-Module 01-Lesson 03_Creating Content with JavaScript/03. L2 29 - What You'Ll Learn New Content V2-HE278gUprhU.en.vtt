@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.875
+You just learned about modifying existing content.
+
+00:00:03.875 --> 00:00:07.234
+In this section, we'll build on top of this knowledge by creating
+
+00:00:07.235 --> 00:00:11.768
+new content and adding it to the page with the "createElement" method,
+
+00:00:11.768 --> 00:00:15.410
+the "creatextNode" method, the "appendChild" method,
+
+00:00:15.410 --> 00:00:18.664
+and the insertAdjacentHTML method.
+
+00:00:18.664 --> 00:00:22.625
+You should be able to tell what these first three methods do just by their names,
+
+00:00:22.625 --> 00:00:25.210
+but we'll dig into them all in detail.
+
+00:00:25.210 --> 00:00:27.530
+We'll look at the "createElement" method first,
+
+00:00:27.530 --> 00:00:30.010
+but I want you to do some of your own research on this one.
+

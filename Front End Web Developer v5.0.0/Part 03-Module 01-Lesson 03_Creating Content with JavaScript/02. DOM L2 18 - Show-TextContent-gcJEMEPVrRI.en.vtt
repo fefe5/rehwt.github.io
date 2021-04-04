@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.330
+Let's elect this card by clearing the DOM and searching for
+
+00:00:03.330 --> 00:00:09.109
+this first anchor element with a card class.
+
+00:00:09.109 --> 00:00:14.911
+Now let's check out its text content.
+
+00:00:14.912 --> 00:00:21.120
+We can see that the text content property only displays the text of the element.
+
+00:00:21.120 --> 00:00:23.467
+Now, let's move this up a bit,
+
+00:00:23.467 --> 00:00:28.905
+and then compare this to card's inner HTML property.
+
+00:00:28.905 --> 00:00:33.689
+You can see that the inner HTML property provides all of the HTML for
+
+00:00:33.689 --> 00:00:39.079
+the inner element while text content only provides the text of the card element.
+

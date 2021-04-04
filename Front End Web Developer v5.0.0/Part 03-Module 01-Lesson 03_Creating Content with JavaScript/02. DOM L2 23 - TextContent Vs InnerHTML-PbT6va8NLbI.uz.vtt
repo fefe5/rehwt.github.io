@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:04.919
+Keling, pastga tushamiz va bu sarlavhadagi matnni yangilaymiz.
+
+00:00:04.919 --> 00:00:06.753
+Hozir uni o‘qishga biroz osonroq qilish uchun 
+
+00:00:06.753 --> 00:00:14.480
+men shunchaki shrift hajmini ozroq kattalashtirmoqchiman.
+
+00:00:14.480 --> 00:00:18.382
+Hozir men DOMdagi elementni tanladim, 
+
+00:00:18.382 --> 00:00:26.500
+keling, bironta o‘zgaruvchiga bu elementni saqlash uchun 
+"$0" hiylasini ishlatamiz.
+
+00:00:26.500 --> 00:00:28.594
+Men bu elementni mana bu yerda ko‘rsak bo‘ladigan 
+
+00:00:28.594 --> 00:00:29.850
+biror o‘zgaruvchiga saqlab qo‘ydim, 
+
+00:00:29.850 --> 00:00:35.780
+endi, bu elementning matnini yangilaymiz.
+
+00:00:35.780 --> 00:00:40.704
+"textContent" xususiyatidan foydalanib va uni stringga tenglab, 
+
+00:00:40.704 --> 00:00:44.244
+mana bu o‘ng tomonda HTMLni qo‘shayotgan bo‘lishimizga qaramasdan, biz buni ko‘ra olamiz.
+
+00:00:44.244 --> 00:00:49.390
+Ushbu HTML haligacha asl ko‘rsatilgan sahifasida tasvirlanayapti.
+
+00:00:49.390 --> 00:00:51.804
+Endi, "textContent" xususiyatni 
+
+00:00:51.804 --> 00:00:56.604
+innerHTML xususiyati bilan bir xil bo‘lgan 
+string sozlamasi bilan taqqoslaymiz.
+
+00:00:56.604 --> 00:01:01.468
+Shunday qilib, HTML belgilari bilan bir xil bo‘lgan stringdan foydalanish,
+
+00:01:01.468 --> 00:01:06.905
+innerHTML xususiyatidan foydalanayotganimiz uchun 
+uni berilgan HTMLdek ko‘satadi.
+
+00:01:06.905 --> 00:01:10.430
+Shunday qilib, innerHTML istalgan HTMLni stringda berayotgan vaqtda 
+
+00:01:10.430 --> 00:01:15.000
+textContent hamma narsani matn sifatida tasvirlaydi.
+

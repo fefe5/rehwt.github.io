@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:01.770
+Aytaylik, biz bu kartani ro‘yxatdan olib tashlashni xohlaymiz.
+
+00:00:01.770 --> 00:00:04.140
+Uning uchun biz Domda bu elementni topishimiz kerak
+
+00:00:04.140 --> 00:00:08.849
+shunda, siz mana bu div mana bu  
+
+00:00:08.849 --> 00:00:11.160
+yerdagi karta ekanligini ko‘rishingiz mumkin va
+
+00:00:11.160 --> 00:00:13.380
+bu hero tagchiziq module sinfi kiritilgan 
+
+00:00:13.380 --> 00:00:15.780
+disparen tipi. Keling, bu divni 
+
+00:00:15.780 --> 00:00:21.810
+bironta o‘zgaruvchiga saqlab olamiz. Endi, 
+
+00:00:21.810 --> 00:00:24.000
+biz mana bu birinchi containerlarning kartasini xohlaymiz,
+
+00:00:24.000 --> 00:00:28.560
+shuning uchun, keling, biroz g‘alati tuyulayotgan 
+
+00:00:28.560 --> 00:00:30.420
+mana bu farzand xususiyatini tekshiramiz, u mana bu yerdagi
+
+00:00:30.420 --> 00:00:33.710
+div bo‘lishi kerak emasmi?. Keling, buni ochib,
+
+00:00:33.710 --> 00:00:35.940
+ichiga kiramiz va pastga tushib, 
+
+00:00:35.940 --> 00:00:38.129
+matn tarkibini ko‘zdan kechirib, bir to‘plam 
+
+00:00:38.129 --> 00:00:40.770
+nayzali belgilarni va ba’zi ochiq joylarni ko‘rishimiz mumkin.
+
+00:00:40.770 --> 00:00:43.379
+Keling, mana bu yerda orqaga qaytamiz.
+
+00:00:43.379 --> 00:00:45.570
+O‘zimizga biroz joy ajratamiz va buni HTML
+
+00:00:45.570 --> 00:00:48.690
+qilib o‘zgartiramiz. Bu yerda bir to‘plam enterlar 
+
+00:00:48.690 --> 00:00:51.750
+va ba’zi bo‘sh joylar borligini ko‘rishimiz mumkin.
+
+00:00:51.750 --> 00:00:54.629
+Demak, mana bu barcha joydagi ushbu 
+
+00:00:54.629 --> 00:00:57.600
+enterlarning hammasi mana bu matn.
+
+00:00:57.600 --> 00:01:01.980
+Karta containerining birinchi farzandi 
+
+00:01:01.980 --> 00:01:03.960
+mana bu div elementini olishi uchun, 
+
+00:01:03.960 --> 00:01:09.270
+biz farzand xususiyatining birinchi elementini olishimiz kerak.
+
+00:01:09.270 --> 00:01:10.860
+Shunda, biz xususiyat aslida biz olib tashlamoqchi bo‘lgan 
+
+00:01:10.860 --> 00:01:13.530
+Dave ekanligini ko‘rishimiz mumkin, demak,
+
+00:01:13.530 --> 00:01:20.369
+buni bironta o‘zgaruvchiga saqlaymiz va 
+
+00:01:20.369 --> 00:01:22.619
+endi biz bu farzandni uning ota-onasidan 
+
+00:01:22.619 --> 00:01:28.200
+olib tashlashimiz mumkin.
+
+00:01:28.200 --> 00:01:30.700
+Ko‘rishimiz mumkinki, mana bu funksiyani chaqirish
+
+00:01:30.700 --> 00:01:32.590
+uni ushbu sahifadan olib tashladi va u
+
+00:01:32.590 --> 00:01:35.460
+Domdan ham olib tashlangan.
+

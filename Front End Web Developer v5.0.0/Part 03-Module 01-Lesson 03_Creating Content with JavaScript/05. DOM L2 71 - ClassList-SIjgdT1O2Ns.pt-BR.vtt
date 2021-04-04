@@ -1,0 +1,75 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.213 --> 00:00:02.995
+Armazenei o cabeçalho
+"Our Amazing Community" -
+
+00:00:03.037 --> 00:00:06.131
+este elemento DOM -
+na variável heading.
+
+00:00:06.173 --> 00:00:10.117
+Vamos usar a propriedade classList
+para mexer com o elemento DOM.
+
+00:00:13.572 --> 00:00:16.459
+Vemos que este elemento DOM
+tem um atributo de classe
+
+00:00:16.501 --> 00:00:18.866
+com a classe text-center,
+
+00:00:18.908 --> 00:00:22.109
+mas a propriedade classList
+pode nos informar isso.
+
+00:00:23.188 --> 00:00:26.066
+Conferindo para ver se heading
+contém esta classe,
+
+00:00:26.108 --> 00:00:29.428
+isso nos informa que sim.
+Vamos adicionar a nossa classe.
+
+00:00:34.726 --> 00:00:37.555
+Usando a propriedade add
+da classList,
+
+00:00:37.597 --> 00:00:39.979
+podemos adicionar
+a classe ice-cream.
+
+00:00:40.021 --> 00:00:42.025
+Ela foi adicionada
+aqui em cima.
+
+00:00:42.067 --> 00:00:44.253
+Não existe estilo
+para a classe ice-cream,
+
+00:00:44.295 --> 00:00:47.388
+mas ela foi adicionada.
+Vamos remover isso.
+
+00:00:50.900 --> 00:00:53.452
+Chamando remove
+e passando a classe,
+
+00:00:53.494 --> 00:00:55.763
+isso removerá
+a classe ice-cream.
+
+00:00:55.805 --> 00:00:59.204
+Por fim,
+temos o método toggle.
+
+00:01:04.148 --> 00:01:07.092
+Alternando uma vez,
+a removemos.
+
+00:01:07.134 --> 00:01:10.347
+Alternando outra vez,
+a trazemos de volta.
+

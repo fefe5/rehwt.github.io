@@ -1,0 +1,288 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Remove Page Content</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Creating Content with JavaScript</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Update Existing Page Content.html">02. Update Existing Page Content</a>
+    </li>
+    <li class="">
+      <a href="03. Add New Page Content.html">03. Add New Page Content</a>
+    </li>
+    <li class="">
+      <a href="04. Remove Page Content.html">04. Remove Page Content</a>
+    </li>
+    <li class="">
+      <a href="05. Style Page Content.html">05. Style Page Content</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Remove Page Content</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="whats-in-store">What's in store!</h2>
+<p>In this quick section, you're going to learn how to remove content from the page. Specifically, we'll look at these new methods:</p>
+<ul>
+<li><code>.removeChild()</code></li>
+<li><code>.remove()</code></li>
+</ul>
+<p>In the process, you'll also learn about these two properties:</p>
+<ul>
+<li><code>.firstElementChild</code></li>
+<li><code>.parentElement</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="removing-a-child-element">Removing a Child Element</h2>
+<p>We can use the <code>.removeChild()</code> method to…wait for it…remove a child element. Basically, this is exactly the opposite of the <code>.appendChild()</code> method. So just like the <code>.appendChild()</code> method, the <code>.removeChild()</code> method requires:</p>
+<ul>
+<li>a parent element</li>
+<li>the child element that will be removed</li>
+</ul>
+<pre><code class="js language-js">&lt;parent-element&gt;.removeChild(&lt;child-to-remove&gt;);</code></pre>
+<p>Here's the <code>.removeChild()</code> documentation page on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" rel="noopener noreferrer" target="_blank">removeChild docs</a></p>
+<p>Let's see how to use this method:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 47 - RemoveChild</p></h3>
+  <video controls>
+  <source src="04. DOM L2 47 - RemoveChild-xeLZabb-nXc.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. DOM L2 47 - RemoveChild-xeLZabb-nXc.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="04. DOM L2 47 - RemoveChild-xeLZabb-nXc.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. DOM L2 47 - RemoveChild-xeLZabb-nXc.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="04. DOM L2 47 - RemoveChild-xeLZabb-nXc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="04. DOM L2 47 - RemoveChild-xeLZabb-nXc.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="a-drawback-and-workaround-with-the-removechild-method">A drawback (and workaround!) with the <code>.removeChild()</code> Method</h3>
+<p>Just like the <code>.appendChild()</code> method, there's a (somewhat minor) drawback to the <code>.removeChild()</code> method. Both methods:</p>
+<ul>
+<li>require access to parent to function</li>
+</ul>
+<p>However, we don't actually need to have the parent element because there is a workaround! Just like the <code>.firstElementChild</code> property can be called on a parent element to access its first element, every element also has a <code>parentElement</code> property that refers to its parent! So if we have access to the child element that we're about to add or remove, you can use the <code>parentElement</code> property to "move focus" to the element's parent. Then we can call <code>.removeChild()</code> (or <code>.appendChild()</code>) on that referenced parent element.</p>
+<p>Let's look at an example:</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');
+
+mainHeading.parentElement.removeChild(mainHeading);</code></pre>
+<p>Let's walk through this code. </p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');</code></pre>
+<p>The preceding code will select the first <code>&lt;h1&gt;</code> on the page and stores it in the <code>mainHeading</code> variable. Now to the next line:</p>
+<pre><code class="js language-js">mainHeading.parentElement.removeChild(mainHeading);</code></pre>
+<p>This starts with the <code>mainHeading</code> variable. It calls <code>.parentElement</code>, so the focus of the next code is directed at the parent element. Then <code>.removeChild()</code> is called on the parent element. Finally, <code>mainHeading</code> itself is passed as the element that needs to be removed from its parent.</p>
+<p>So an element uses itself to remove itself from its parent. Pretty cool, huh?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="removing-a-child-element-part-2">Removing a Child Element (Part 2!)</h2>
+<p>We went through all of those steps selecting an element, using DOM traversal techniques like <code>.parentElement</code> and <code>.firstElementChild</code>, so that we can remove a child element. I showed you this way so that you can get some exposure and practice to moving around in the DOM. </p>
+<p>Now, you might be glad (or frustrated! haha) to find out there's an easier way to do all this! We can remove the child element directly with the <code>.remove()</code> method:</p>
+<pre><code class="js language-js">const mainHeading = document.querySelector('h1');
+
+mainHeading.remove();</code></pre>
+<p>Here's the <code>.remove()</code> documentation page on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove" rel="noopener noreferrer" target="_blank">.remove() docs</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="remove-page-content-recap">Remove Page Content Recap</h2>
+<p>In this short section, we learned two ways to remove an element from the page. You learned about:</p>
+<ul>
+<li><code>.removeChild()</code> </li>
+<li><code>.remove()</code></li>
+</ul>
+<p>The difference is that with <code>.removeChild()</code> must be called on the parent of the element being removed and must be passed the child to be removed, while <code>.remove()</code> can be called directly on the element to delete.</p>
+<p>We also learned about the following helpful properties:</p>
+<ul>
+<li><code>.firstChild</code></li>
+<li><code>.firstElementChild</code></li>
+<li><code>.parentElement</code></li>
+</ul>
+<p>The difference between <code>.firstChild</code> and <code>.firstElementChild</code>, is that <code>.firstElementChild</code> will always return the first element, while <code>.firstChild</code> <em>might</em> return whitespace (if there is any) to preserve the formatting of the underlying HTML source code.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" rel="noopener noreferrer" target="_blank">removeChild on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove" rel="noopener noreferrer" target="_blank">remove on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild" rel="noopener noreferrer" target="_blank">firstChild on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild" rel="noopener noreferrer" target="_blank">firstElementChild on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement" rel="noopener noreferrer" target="_blank">parentElement on MDN</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Style Page Content.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Remove Page Content')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
