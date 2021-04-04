@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.960
+That brings us to talking about the difference between client-side and server-side code.
+
+00:00:06.960 --> 00:00:11.759
+I think the easiest way to think about server and client-side code is that
+
+00:00:11.759 --> 00:00:18.030
+servers are set up at the beginning to handle anything outside of what browsers can do.
+
+00:00:18.030 --> 00:00:23.609
+One example of that is to save data produced while someone's within the app.
+
+00:00:23.609 --> 00:00:26.054
+Client code on the other hand,
+
+00:00:26.054 --> 00:00:29.120
+represents all your code that the browser executes,
+
+00:00:29.120 --> 00:00:32.745
+and all the code that the users will see the end product of.
+
+00:00:32.744 --> 00:00:36.750
+It's probably helpful to think about browsers itself for a moment.
+
+00:00:36.750 --> 00:00:40.064
+Remember that browsers such as Chrome or Safari
+
+00:00:40.064 --> 00:00:43.464
+are actually applications that have the ability to do things,
+
+00:00:43.465 --> 00:00:46.520
+amazing things in the case of browser applications,
+
+00:00:46.520 --> 00:00:49.175
+which can execute HTML, JavaScript,
+
+00:00:49.174 --> 00:00:52.339
+and CSS natively and interactively.
+
+00:00:52.340 --> 00:00:54.710
+So really browsers handle a lot of
+
+00:00:54.710 --> 00:00:57.755
+the heavy lifting when it comes to runtime for our code.
+
+00:00:57.755 --> 00:00:59.565
+But for everything else,
+
+00:00:59.564 --> 00:01:01.309
+there's the server side.
+
+00:01:01.310 --> 00:01:06.560
+Now let's get into what it really looks like to make a post request on the client side.
+
+00:01:06.560 --> 00:01:10.170
+So far, we've been in our server side code,
+
+00:01:10.170 --> 00:01:13.879
+which as you'll remember is where we set up our port,
+
+00:01:13.879 --> 00:01:17.119
+setup express to use our middleware,
+
+00:01:17.120 --> 00:01:22.425
+and now we're going to move over to the client side.
+
+00:01:22.424 --> 00:01:29.120
+Okay. So here, inside of an async function which we'll cover in the next lesson,
+
+00:01:29.120 --> 00:01:31.219
+we've set up a post route.
+
+00:01:31.219 --> 00:01:35.870
+We've set our posts route with const response,
+
+00:01:35.870 --> 00:01:42.875
+we've asked it to fetch a URL which is where we'll want to make the post to,
+
+00:01:42.875 --> 00:01:49.204
+and then here under method is where we set the type of request we want to make.
+
+00:01:49.204 --> 00:01:53.435
+I've requested a post route because I want to post data somewhere,
+
+00:01:53.435 --> 00:01:55.519
+but we also could get data,
+
+00:01:55.519 --> 00:01:59.339
+or put data, or delete data entries.
+
+00:02:00.590 --> 00:02:04.850
+Some of this stuff is boilerplate that you need to include,
+
+00:02:04.849 --> 00:02:06.515
+but it's still is important.
+
+00:02:06.515 --> 00:02:10.895
+But the really juicy stuff comes down to data types.
+
+00:02:10.895 --> 00:02:12.640
+So here on the header as you'll see,
+
+00:02:12.639 --> 00:02:16.339
+we've said that we want our application to run on JSON data.
+
+00:02:16.340 --> 00:02:19.775
+So the really important thing is to make sure that the body of
+
+00:02:19.775 --> 00:02:24.004
+any request that we send matches that type of data.
+
+00:02:24.004 --> 00:02:27.840
+So because servers naturally deal with that as strings,
+
+00:02:27.840 --> 00:02:30.015
+but we want to deal with it as JSON,
+
+00:02:30.014 --> 00:02:36.869
+we've used the method JSON.stringify to turn our data into JSON data.
+

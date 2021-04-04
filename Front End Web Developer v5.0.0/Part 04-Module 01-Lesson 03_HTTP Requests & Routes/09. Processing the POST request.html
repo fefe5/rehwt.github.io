@@ -1,0 +1,311 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Processing the POST request</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTTP Requests &amp; Routes</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Routes &amp; GET Requests.html">01. Routes &amp; GET Requests</a>
+    </li>
+    <li class="">
+      <a href="02. Exercise GET requests.html">02. Exercise: GET requests</a>
+    </li>
+    <li class="">
+      <a href="03. More Powerful GET Requests.html">03. More Powerful GET Requests</a>
+    </li>
+    <li class="">
+      <a href="04. Routes &amp; POST requests.html">04. Routes &amp; POST requests</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise POST requests.html">05. Exercise: POST requests</a>
+    </li>
+    <li class="">
+      <a href="06. Client Side, Server Side.html">06. Client Side, Server Side</a>
+    </li>
+    <li class="">
+      <a href="07. Client Side &amp; Server Side Example.html">07. Client Side &amp; Server Side Example</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise Client Side &amp; Server Side.html">08. Exercise: Client Side &amp; Server Side</a>
+    </li>
+    <li class="">
+      <a href="09. Processing the POST request.html">09. Processing the POST request</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Processing the POST request</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Client Side &amp; Server Side+</p></h3>
+  <div>
+  <h1 id="processing-the-post-request">Processing the POST request</h1>
+<p>So now that we know how to send a POST request from the client side, let's return to the server code and learn how to process the data we receive with our POST request. Remember, the last line of code in our previous example called our <code>postData</code> function, passing in the URL of the POST route, and an object containing the data to be posted. That line of code looked like this:<br />
+<code>postData('/add', {answer:42})</code></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Example prep</p></h3>
+  <div>
+  <p>Back on the server side code we should now be able to receive the data <code>answer:42</code>. Remember in the last example, we attached our data to the <code>body</code> of our POST request, so to receive that data and make it actionable we can use <code>request.body</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Example</p></h3>
+  <div>
+  <p>Here is an example where we set a variable named <code>data</code> to hold the value of <code>request.body</code>, and then print <code>data</code> to see what we received.</p>
+<pre><code>app.post('/add', function (request, response) {
+    let data = request.body;
+    console.log(data);
+});</code></pre>
+<p>The output of this would display in ther terminal:<br />
+<code>{answer:42}</code></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Next Step</p></h3>
+  <div>
+  <p>But we don't just want to see the data we received, to complete our POST request we must assign the data we received to our project endpoint, the JS object in our server code named <code>projectData</code>. We can simply make a new entry in our JS object using the syntax:</p>
+<p><code>projectData["x"] = y</code></p>
+<p>This code would create a new entry in our JS object API endpoint where the value of a string <code>"x"</code> is <code>y</code>. So if the data received from the POST request was <code>{intelligence:100}</code>, we could create a new entry in our endpoint with the code:<br />
+<code>let data = request.body;
+    projectData["intelligence"]= data.intelligence;</code></p>
+<p>Notice that we manually set the string for the key of the new JS object entry as <code>"intelligence"</code>, and then to access the property we want to set as its value we use <code>data.intelligence</code>. For more on JS dot notation see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors" rel="noopener noreferrer" target="_blank">the MDN Web Docs entry on Property accessors</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Client Side &amp; Server Side Problem Set</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><pre><code>const data = [{animal:"elephant", score: 10},{animal:"kangaroo",score:3}]
+
+function makeData(request){
+
+}
+
+makeData({body:{animal:"turtle", score:7}})</code></pre>
+<p>Given the above code, which code block inside the function<code>makeData</code> would correctly use the input data to add a new JS object to the <code>data</code> array, following the same structure as the entries already present?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="860321" id="rbk1">
+        <label for="rbk1"><pre><code>let newData = request;
+let newEntry =     
+    animal: newData.animal,
+    score: newData.score
+data.push(newEntry)</code></pre></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="860321" id="rbk2">
+        <label for="rbk2"><pre><code>let newData = request.body;
+let newEntry = {
+    animal: newData.animal,
+    score: newData.score
+    }    
+data.push(newEntry)</code></pre></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    ```
+let newData = request.body;
+let newEntry = {
+    animal: newData.animal,
+    score: newData.score
+    }    
+data.push(newEntry)
+```
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Client Side and Server Side Quiz</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Let's look at another scenario: a client-side POST request written in a function, <code>postData()</code>. Assume <code>postData()</code> sent a POST request to your server with the data: <code>{answer:42}</code>. Complete the server-side code to add the request body directly to the project endpoint, named <code>projectData</code>.</p>
+<pre><code>...
+projectData = [];
+app.post('/add', function(request, response){
+  // Your code goes here   
+}) </code></pre></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Client Side &amp; Server Side Summary</p></h3>
+  <div>
+  <div id="spoiler_1" style="display:none"><pre><code>projectData.push(request.body);</code></pre>
+</div>
+<p><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler_1') .style.display=='none') {document.getElementById('spoiler_1') .style.display=''}else{document.getElementById('spoiler_1') .style.display='none'}">Show Solution</button></p>
+<p>In this lesson we have learned how server side and client side code work together to route data through a web app. We learned how to setup a POST request in the server side code, and then execute a POST request via that path on the client side code. We also covered how to structure and add POST request data to a project API endpoint. In the next lesson we will learn more about asynchronous functions in JavaScript and you will learn more in depth about some of the syntax used in these demos, including <code>async</code>, <code>await</code>, <code>try</code>,  and <code>catch</code> .</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Client Side &amp; Server Side Further Research</p></h3>
+  <div>
+  <p>For more details on server side and client side programming see this <a href="https://stackoverflow.com/questions/1404376/what-is-client-side-javascript-and-what-is-server-side-javascript" rel="noopener noreferrer" target="_blank">Stack Overflow post</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Processing the POST request')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

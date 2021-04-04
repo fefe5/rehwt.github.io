@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.265
+When working with a Web API,
+
+00:00:02.265 --> 00:00:06.255
+there's a little bit of setup you have to do even before you start coding.
+
+00:00:06.254 --> 00:00:09.120
+The first step is that for most Web APIs,
+
+00:00:09.119 --> 00:00:11.864
+you'll have to sign up for developer credentials.
+
+00:00:11.865 --> 00:00:15.050
+This is actually very easy to do if you go to any website.
+
+00:00:15.050 --> 00:00:19.185
+They usually have a Developer tab or something you can click on and it's free.
+
+00:00:19.184 --> 00:00:21.239
+You put your email address and you'll get
+
+00:00:21.239 --> 00:00:24.179
+a key which is a code as a string of characters,
+
+00:00:24.179 --> 00:00:28.214
+and that is what you'll use to access the Web API.
+
+00:00:28.214 --> 00:00:31.815
+The second part is that you're actually going to build
+
+00:00:31.815 --> 00:00:36.929
+a query by making a URL that includes the key that you got.
+
+00:00:36.929 --> 00:00:42.729
+Let's focus in a little bit and think about what it means to build this API.
+

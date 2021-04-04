@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.645
+Now let's talk about routes and requests.
+
+00:00:03.645 --> 00:00:07.484
+As a reminder, a server receives requests,
+
+00:00:07.485 --> 00:00:10.710
+processes them, and then returns a response.
+
+00:00:10.710 --> 00:00:13.695
+Routes are used to handle these requests.
+
+00:00:13.695 --> 00:00:17.879
+The two most common forms of requests are at GET request,
+
+00:00:17.879 --> 00:00:22.859
+which gets data and a POST request which sends data securely.
+
+00:00:22.859 --> 00:00:25.939
+Express provides methods that define routing,
+
+00:00:25.940 --> 00:00:30.345
+and these methods correspond directly to HTTP methods.
+
+00:00:30.344 --> 00:00:32.174
+To understand this better,
+
+00:00:32.174 --> 00:00:36.604
+let's take a look at an example using a basic Express get route.
+
+00:00:36.604 --> 00:00:43.579
+In this example, app.get is an express method to handle the HTTP GET request.
+
+00:00:43.579 --> 00:00:47.945
+So here we can see we're requiring express,
+
+00:00:47.945 --> 00:00:50.140
+a package that we've included on the terminal.
+
+00:00:50.140 --> 00:00:55.310
+Then we set up an instance of our app using const app equal to express.
+
+00:00:55.310 --> 00:01:00.920
+Then here, we use the getMethod on our app instance.
+
+00:01:00.920 --> 00:01:04.234
+The getMethod takes two arguments.
+
+00:01:04.234 --> 00:01:07.939
+The first argument is a string that represents the URL path.
+
+00:01:07.939 --> 00:01:12.079
+Here, we've just added dash which sets it to root or home.
+
+00:01:12.079 --> 00:01:15.379
+The second argument it takes is a function.
+
+00:01:15.379 --> 00:01:20.284
+In this instance, the function we're naming the argument req and res.
+
+00:01:20.284 --> 00:01:24.890
+Req stands for request and res stands for response.
+
+00:01:24.890 --> 00:01:26.780
+So inside our function,
+
+00:01:26.780 --> 00:01:33.620
+we've added the line res.send that's our response.send hello world.
+
+00:01:33.620 --> 00:01:38.755
+Following this example, if we went to our browser and went to the home URL,
+
+00:01:38.754 --> 00:01:42.129
+we would see hello world presented to us.
+
