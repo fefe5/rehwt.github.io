@@ -1,0 +1,217 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.559
+Okay. So hopefully you had the chance to try
+
+00:00:04.559 --> 00:00:10.169
+out using the Network tab to inspect some of the other websites.
+
+00:00:10.169 --> 00:00:13.199
+You hopefully are getting a picture for
+
+00:00:13.199 --> 00:00:16.484
+just how many assets are on all of these websites.
+
+00:00:16.484 --> 00:00:23.114
+I would encourage you to just continue to use that Inspect tool.
+
+00:00:23.114 --> 00:00:27.689
+A lot of times if I'm looking at a website and it looks really cool to me,
+
+00:00:27.690 --> 00:00:30.900
+I inspect element just to see what's there.
+
+00:00:30.899 --> 00:00:35.189
+I think you can learn a lot of front-end skills just doing that.
+
+00:00:35.189 --> 00:00:37.994
+So continue that.
+
+00:00:37.994 --> 00:00:42.320
+Now that you have a picture for what kinds of
+
+00:00:42.320 --> 00:00:46.685
+things we're dealing with in a professional front-end application,
+
+00:00:46.685 --> 00:00:50.240
+we're going to talk about what build tools are out there and what
+
+00:00:50.240 --> 00:00:54.065
+they're actually doing to make that management easier.
+
+00:00:54.064 --> 00:00:58.369
+So a good definition for build tools is that they allow
+
+00:00:58.369 --> 00:01:02.854
+developers to automate their process for handling website assets,
+
+00:01:02.854 --> 00:01:05.075
+saving them lots of time and headache.
+
+00:01:05.075 --> 00:01:07.204
+This is really true.
+
+00:01:07.204 --> 00:01:13.819
+It's hopefully going to bring together our picture of what all of the build tools do.
+
+00:01:13.819 --> 00:01:15.799
+Not any one of them specifically,
+
+00:01:15.799 --> 00:01:19.009
+but in general, build tools are management tools.
+
+00:01:19.010 --> 00:01:21.425
+They manage all of our assets.
+
+00:01:21.424 --> 00:01:24.569
+We need them because without a management tool,
+
+00:01:24.569 --> 00:01:27.214
+all of these assets is like herding cats.
+
+00:01:27.215 --> 00:01:30.890
+You're going to run around trying to manage all
+
+00:01:30.890 --> 00:01:34.430
+of your assets one-by-one and put them all into the head tag of your website,
+
+00:01:34.430 --> 00:01:39.260
+and it's just really going to get difficult as soon as you get more than a few.
+
+00:01:39.260 --> 00:01:44.210
+So in order to save ourselves that craziness,
+
+00:01:44.209 --> 00:01:46.729
+we have a lot of these tools.
+
+00:01:46.730 --> 00:01:53.615
+Some of the common names that you'll hear in build tool land are Grunt and Gulp,
+
+00:01:53.614 --> 00:01:58.134
+Brunch, Webpack, Bower, and some of these other ones.
+
+00:01:58.135 --> 00:02:00.859
+There are so many that I think sometimes that's
+
+00:02:00.859 --> 00:02:06.635
+a barrier for junior developers to get into using build tools.
+
+00:02:06.635 --> 00:02:09.349
+It's kind of abstract what they do,
+
+00:02:09.349 --> 00:02:13.864
+there's so many out there that it's hard to figure out where to start.
+
+00:02:13.865 --> 00:02:17.469
+Just to give you a bit of the lay of the land here,
+
+00:02:17.469 --> 00:02:23.444
+NPM scripts are about as simple as you can go to manage website assets.
+
+00:02:23.444 --> 00:02:28.219
+Those are just normal NPM scripts that you would put in your package.json file,
+
+00:02:28.219 --> 00:02:30.680
+and you can do quite a lot with those.
+
+00:02:30.680 --> 00:02:33.659
+On the other hand, you have Grunt and Gulp,
+
+00:02:33.659 --> 00:02:38.875
+which are probably the most common names to hear after Webpack.
+
+00:02:38.875 --> 00:02:43.245
+Grunt and Gulp allow you to write simple tools,
+
+00:02:43.245 --> 00:02:49.580
+simple rules that will allow you to manage all of your assets in a specific way,
+
+00:02:49.580 --> 00:02:51.920
+and they're pretty easy to set up.
+
+00:02:51.919 --> 00:02:56.584
+Webpack is probably the most common one right now.
+
+00:02:56.585 --> 00:03:00.740
+It really rose to fame alongside of React,
+
+00:03:00.740 --> 00:03:04.165
+and View, and some of those other JavaScript-based front-ends.
+
+00:03:04.164 --> 00:03:06.919
+Webpack works really well.
+
+00:03:06.919 --> 00:03:08.750
+It is JavaScript-based itself.
+
+00:03:08.750 --> 00:03:14.180
+So when you're working with JavaScript front-ends,
+
+00:03:14.180 --> 00:03:16.075
+you're very likely to see it.
+
+00:03:16.074 --> 00:03:22.280
+In fact, Webpack is used inside of the Create React app, React build tool.
+
+00:03:22.280 --> 00:03:26.240
+So you might have already used it without knowing.
+
+00:03:26.240 --> 00:03:31.365
+Here, why and how Webpack differs from other build tools.
+
+00:03:31.365 --> 00:03:34.250
+Webpack is becoming the ubiquitous build tool.
+
+00:03:34.250 --> 00:03:37.699
+It's seen around all of these more modern frameworks,
+
+00:03:37.699 --> 00:03:41.125
+and so you'll see it if you haven't already a lot.
+
+00:03:41.125 --> 00:03:44.000
+Grunt and Gulp are slightly simpler options.
+
+00:03:44.000 --> 00:03:47.240
+They'll allow you to build rules,
+
+00:03:47.240 --> 00:03:50.689
+but they don't have quite all of the functionality that Webpack has.
+
+00:03:50.689 --> 00:03:52.859
+If a project is simple enough,
+
+00:03:52.860 --> 00:03:56.090
+you might not need everything that Webpack does for you.
+
+00:03:56.090 --> 00:03:57.979
+So you can keep that in mind as well.
+
+00:03:57.979 --> 00:04:03.534
+Some of the reasons that we chose to do Webpack for this course though,
+
+00:04:03.534 --> 00:04:06.875
+are that it is becoming so well-known in
+
+00:04:06.875 --> 00:04:12.004
+front-end development that it's just a really good thing for you to know regardless.
+
+00:04:12.004 --> 00:04:14.465
+It's a little bit more complicated.
+
+00:04:14.465 --> 00:04:18.064
+So if you learn Webpack from the start,
+
+00:04:18.064 --> 00:04:19.920
+if you need to go back to Grunt and Gulp,
+
+00:04:19.920 --> 00:04:21.545
+it really won't be an issue.
+
+00:04:21.545 --> 00:04:26.085
+Hopefully with those two things in mind,
+
+00:04:26.084 --> 00:04:29.019
+learning Webpack will be pretty easy.
+

@@ -1,0 +1,354 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Journal App</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Weather Journal App</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Getting Started.html">01. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="02. Development Strategy.html">02. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Weather Journal App.html">Project Description - Weather Journal App</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Weather Journal App.html">Project Rubric - Weather Journal App</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Weather Journal App</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Project Environment Setup</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Node and Express Environment</p>
+        </td>
+        <td>
+          <p>Node and Express should be installed on the local machine. The project file <code>server.js</code> should require <code>express()</code>, and should create an instance of their app using express.</p>
+<p>The Express app instance should be pointed to the project folder with .html, .css, and .js files.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Project Dependencies</p>
+        </td>
+        <td>
+          <p>The ‘cors’ package should be installed in the project from the command line, required in the project file <code>server.js</code>, and the instance of the app should be setup to use <code>cors()</code>.</p>
+<p>The <code>body-parser</code> package should be installed and included in the project.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Local Server</p>
+        </td>
+        <td>
+          <p>Local server should be running and producing feedback to the Command Line through a working callback function.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>API Credentials</p>
+        </td>
+        <td>
+          <p>Create API credentials on OpenWeatherMap.com</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>APIs and Routes</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>APP API Endpoint</p>
+        </td>
+        <td>
+          <p>There should be a JavaScript Object named <code>projectData</code> initiated in the file <code>server.js</code>to act as the app API endpoint.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Integrating OpenWeatherMap API</p>
+        </td>
+        <td>
+          <p>The personal API Key for OpenWeatherMap API is saved in a named <code>const</code> variable.</p>
+<p>The API Key variable is passed as a parameter to <code>fetch()</code> .</p>
+<p>Data is successfully returned from the external API.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Return Endpoint Data</p>
+<p>GET Route I: Server Side </p>
+        </td>
+        <td>
+          <p>There should be a GET route setup on the server side with the first argument as a string naming the route, and the second argument a callback function to return the JS object created at the top of server code.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Return Endpoint Data</p>
+<p>GET Route II: Client Side</p>
+        </td>
+        <td>
+          <p>There should be an asynchronous function to fetch the data from the app endpoint</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>POST Route</p>
+        </td>
+        <td>
+          <p>You should be able to add an entry to the project endpoint using a POST route setup on the server side and executed on the client side as an asynchronous function.</p>
+<p>The client side function should take two arguments, the URL to make a POST to, and an object holding the data to POST.</p>
+<p>The server side function should create a new entry in the apps endpoint (the named JS object) consisting of the data received from the client side POST.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Dynamic UI</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Naming HTML Inputs and Buttons For Interaction</p>
+        </td>
+        <td>
+          <p>The <code>input</code> element with the <code>placeholder</code> property set to “enter zip code here” should have an <code>id</code> of <code>zip</code>.</p>
+<p>The <code>textarea</code> included in project HTML should have an <code>id</code> of <code>feelings</code>.</p>
+<p>The button included in project HTML should have an <code>id</code> of <code>generate</code>.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Assigning Element Properties Dynamically</p>
+        </td>
+        <td>
+          <p>The div with the <code>id</code>, <code>entryHolder</code> should have three child divs with the ids:</p>
+<ul>
+<li><code>date</code></li>
+<li><code>temp</code></li>
+<li><code>content</code></li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Event Listeners</p>
+        </td>
+        <td>
+          <p>Adds an event listener to an existing HTML button from DOM using Vanilla JS. </p>
+<p>In the file <code>app.js</code>, the element with the <code>id</code> of <code>generate</code> should have an <code>addEventListener()</code> method called on it, with <code>click</code> as the first parameter, and a named callback function as the second parameter.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Dynamically Update UI</p>
+        </td>
+        <td>
+          <p>Sets the properties of existing HTML elements from the DOM using Vanilla JavaScript.</p>
+<p>Included in the async function to retrieve that app’s data on the client side, existing DOM elements should have their <code>innerHTML</code> properties dynamically set according to data returned by the app route.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Weather Journal App')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

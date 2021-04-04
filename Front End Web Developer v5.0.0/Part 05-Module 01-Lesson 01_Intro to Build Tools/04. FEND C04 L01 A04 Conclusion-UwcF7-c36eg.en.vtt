@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.910
+So we've come to the end of lesson 1.
+
+00:00:02.910 --> 00:00:05.610
+Hopefully, you've gotten a good picture of
+
+00:00:05.610 --> 00:00:08.730
+just the world of build tools that's out there,
+
+00:00:08.730 --> 00:00:11.130
+and you feel comfortable answering the question
+
+00:00:11.130 --> 00:00:14.535
+about why front end developers use build tools.
+
+00:00:14.535 --> 00:00:17.160
+Hopefully, you're feeling comfortable with some of
+
+00:00:17.160 --> 00:00:19.699
+the things that we're using already like the network tab,
+
+00:00:19.699 --> 00:00:24.809
+and getting used to thinking about the full scope of your front end project.
+
+00:00:24.809 --> 00:00:26.354
+In the next lesson,
+
+00:00:26.355 --> 00:00:29.910
+we're really going to hit the nitty gritty of setting up web pack.
+
+00:00:29.910 --> 00:00:35.320
+So take a deep breath and we will get started.
+

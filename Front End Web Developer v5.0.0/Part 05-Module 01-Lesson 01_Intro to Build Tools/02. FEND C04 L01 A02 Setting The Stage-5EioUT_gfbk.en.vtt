@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.975
+All right. So before we talk about
+
+00:00:03.975 --> 00:00:08.339
+build tools and what they are and talk about more of the specifics,
+
+00:00:08.339 --> 00:00:13.620
+we're going to take a step back and talk about why we even need them.
+
+00:00:13.619 --> 00:00:15.658
+As a front-end developer,
+
+00:00:15.659 --> 00:00:17.580
+you have a ton of
+
+00:00:17.579 --> 00:00:22.279
+different libraries and technologies that you have to manage all the time.
+
+00:00:22.280 --> 00:00:25.530
+You might not have gotten a good picture for that yet.
+
+00:00:25.530 --> 00:00:31.230
+Sometimes when we're just building CSS and HTML, smaller apps,
+
+00:00:31.230 --> 00:00:35.460
+we just have one CSS file and one JavaScript file,
+
+00:00:35.460 --> 00:00:37.905
+and we put everything into those two files.
+
+00:00:37.905 --> 00:00:40.664
+But on a professional scale,
+
+00:00:40.664 --> 00:00:44.234
+those strategies don't work anymore.
+
+00:00:44.234 --> 00:00:48.629
+Because professional websites require so many assets,
+
+00:00:48.630 --> 00:00:51.890
+and so many different technologies to be used all the time,
+
+00:00:51.890 --> 00:00:54.439
+it gets really hard to manage because,
+
+00:00:54.439 --> 00:00:58.549
+we actually have to decide at what time all of those libraries are going to run.
+
+00:00:58.549 --> 00:01:04.340
+We can't just throw everything onto the page and hope that it all runs at the right time.
+
+00:01:04.340 --> 00:01:08.840
+So just as an example of one professional website,
+
+00:01:08.840 --> 00:01:11.954
+I thought we would go to the Udacity site.
+
+00:01:11.954 --> 00:01:14.120
+Once you come to this web page,
+
+00:01:14.120 --> 00:01:17.630
+you can take a look at the head tag to see
+
+00:01:17.629 --> 00:01:21.304
+all of the assets that are being loaded onto this page,
+
+00:01:21.305 --> 00:01:23.435
+and there's quite a lot.
+
+00:01:23.435 --> 00:01:26.740
+This view, it works,
+
+00:01:26.739 --> 00:01:29.359
+but it's not really the best view.
+
+00:01:29.359 --> 00:01:33.379
+If I was going to look at the assets on a web page,
+
+00:01:33.379 --> 00:01:35.974
+I would actually navigate to the network tab.
+
+00:01:35.974 --> 00:01:38.869
+If you haven't used it before, this is awesome.
+
+00:01:38.870 --> 00:01:43.564
+The Network tab will show you all of the assets on a page,
+
+00:01:43.564 --> 00:01:45.590
+you might have to refresh it,
+
+00:01:45.590 --> 00:01:51.780
+and you'll be able to see all of the different JavaScript,
+
+00:01:51.780 --> 00:01:55.265
+CSS, and other assets being loaded onto the page.
+
+00:01:55.265 --> 00:01:57.500
+So let's come here.
+
+00:01:57.500 --> 00:02:00.784
+When you scroll through these,
+
+00:02:00.784 --> 00:02:05.965
+you can get a ton of information about all of the different assets that are on the page.
+
+00:02:05.965 --> 00:02:10.030
+So not only can I see how many bytes it's taking up,
+
+00:02:10.030 --> 00:02:11.710
+or the size of the asset,
+
+00:02:11.710 --> 00:02:13.808
+I can also see what type it is,
+
+00:02:13.808 --> 00:02:16.930
+and I can see whether it loaded correctly or not.
+
+00:02:16.930 --> 00:02:20.469
+This makes the Network tab a fantastic debugging tool,
+
+00:02:20.469 --> 00:02:24.960
+and I highly recommend that you go to other websites and just try this out.
+
+00:02:24.960 --> 00:02:27.075
+But, for right now,
+
+00:02:27.074 --> 00:02:32.504
+the thing that I want you to come away with is just how many assets are on this page,
+
+00:02:32.504 --> 00:02:33.905
+it's just one page,
+
+00:02:33.905 --> 00:02:37.229
+but we still have tons of different things going on.
+
+00:02:37.229 --> 00:02:40.379
+We have JavaScripts, and we have gifs,
+
+00:02:40.379 --> 00:02:43.509
+and we have JPEG,
+
+00:02:43.509 --> 00:02:46.614
+and all of these other things that we need to manage.
+
+00:02:46.615 --> 00:02:50.525
+Order does often matter for these as well.
+
+00:02:50.525 --> 00:02:54.349
+So you can see that if a front-end developer on
+
+00:02:54.349 --> 00:03:01.114
+a professional project didn't have some tool to manage all of these assets for them,
+
+00:03:01.115 --> 00:03:03.680
+they might spend a lot of time just making
+
+00:03:03.680 --> 00:03:07.254
+sure that all of these assets load the correct way.
+
+00:03:07.254 --> 00:03:10.685
+Sometimes when I'm thinking about my front-end apps,
+
+00:03:10.685 --> 00:03:14.509
+I actually think about them as orchestras.
+
+00:03:14.509 --> 00:03:15.620
+It might sound funny,
+
+00:03:15.620 --> 00:03:20.435
+but there are a lot of different instruments playing at anytime.
+
+00:03:20.435 --> 00:03:24.094
+If each of our web assets are like one of those instruments,
+
+00:03:24.094 --> 00:03:27.724
+then the front-end developer is like the orchestra conductor.
+
+00:03:27.724 --> 00:03:32.719
+We have to make sure that every instrument is playing at exactly the right time,
+
+00:03:32.719 --> 00:03:34.789
+and if even one instrument is off,
+
+00:03:34.789 --> 00:03:39.229
+it can throw the whole piece into not a great state.
+
+00:03:39.229 --> 00:03:44.429
+So when you are building your front-end apps,
+
+00:03:44.430 --> 00:03:47.990
+you have to think about yourself as just orchestrating all of these different assets
+
+00:03:47.990 --> 00:03:52.390
+to build the beautiful picture that we actually want the web page to be.
+
+00:03:52.389 --> 00:03:59.250
+The hardest part is that you as the developer won't even be there when the app runs.
+
+00:03:59.250 --> 00:04:01.669
+It's going to run for the user.
+
+00:04:01.669 --> 00:04:05.839
+So it's not just orchestrating everything at runtime,
+
+00:04:05.840 --> 00:04:10.099
+you actually have to anticipate the order that all of these things are going to run in,
+
+00:04:10.099 --> 00:04:12.169
+and record those rules for later.
+
+00:04:12.169 --> 00:04:16.029
+So it's like being an orchestra conductor in another room.
+
+00:04:16.029 --> 00:04:21.169
+Which is hard, and I think that's one of the hard things about front-end development.
+
+00:04:21.170 --> 00:04:27.080
+So tools like Webpack and other build tools are really going to be your friend when it
+
+00:04:27.079 --> 00:04:34.439
+comes to maintaining an easy development flow for the rest of your app.
+
