@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.429 --> 00:00:07.919
+We did it. We've covered so much CSS and you're doing great.
+
+00:00:07.919 --> 00:00:12.240
+We've talked about how CSS selectors, classes, and IDs,
+
+00:00:12.240 --> 00:00:15.945
+we've discussed inline CSS plus external style sheets,
+
+00:00:15.945 --> 00:00:19.829
+we've talked about setting CSS rules for different properties like color,
+
+00:00:19.829 --> 00:00:22.244
+and border, and so much more.
+
+00:00:22.245 --> 00:00:24.150
+But believe it or not,
+
+00:00:24.149 --> 00:00:26.729
+there's even more that can be done with CSS.
+
+00:00:26.730 --> 00:00:32.429
+I thought I would use this time just to show you a couple additional CSS tips and tricks.
+
+00:00:32.429 --> 00:00:34.079
+So if we look here,
+
+00:00:34.079 --> 00:00:39.838
+we have our boxes that were used to alphabet beats coincidental drums,
+
+00:00:39.838 --> 00:00:43.574
+here are my CSS rules setup for box.
+
+00:00:43.575 --> 00:00:46.535
+Now, there's a couple of things I want to try here.
+
+00:00:46.534 --> 00:00:50.494
+One is border radius which has rounded corners.
+
+00:00:50.494 --> 00:00:56.929
+This is one of my favorite emergent styles in the web development world I'd say.
+
+00:00:56.929 --> 00:00:58.070
+It's been a couple of years now,
+
+00:00:58.070 --> 00:01:01.295
+but people are really starting to take advantage of the fact that we don't need
+
+00:01:01.295 --> 00:01:04.820
+all those rectangles to just be crisp lines.
+
+00:01:04.819 --> 00:01:08.974
+I think it adds a lot of style to set a little bit depart on a border-radius.
+
+00:01:08.974 --> 00:01:11.299
+So here's one way.
+
+00:01:11.299 --> 00:01:16.575
+To do border-radius we can setup with the border-radius name,
+
+00:01:16.575 --> 00:01:19.650
+and then we could just say 25 Px,
+
+00:01:19.650 --> 00:01:23.100
+which as you see bend these corners a bit,
+
+00:01:23.099 --> 00:01:24.959
+but then we lose our words.
+
+00:01:24.959 --> 00:01:27.979
+So what we can do to ameliorate that is
+
+00:01:27.980 --> 00:01:31.730
+to just add a little padding as well with the border-radius.
+
+00:01:31.730 --> 00:01:37.219
+Now we can see we have our smooth corners and we're not losing our words.
+
+00:01:37.219 --> 00:01:40.909
+Border-radius can also take percentages.
+
+00:01:40.909 --> 00:01:46.234
+For example, let's see what happens when we do border-radius 45 percent.
+
+00:01:46.234 --> 00:01:50.734
+Wow, things got circular.
+
+00:01:50.734 --> 00:01:53.799
+What about 85 percent?
+
+00:01:53.799 --> 00:01:56.265
+Cool.
+
+00:01:56.265 --> 00:01:59.780
+You can start to see by playing around the different shapes and
+
+00:01:59.780 --> 00:02:03.064
+setups you can make just using border-radius.
+
+00:02:03.064 --> 00:02:06.259
+So what if we wanted instead of
+
+00:02:06.260 --> 00:02:11.420
+those just those words to have a background image in each of these circles?
+
+00:02:11.419 --> 00:02:15.125
+That's something we can also do easily with CSS.
+
+00:02:15.125 --> 00:02:17.905
+So here in the box,
+
+00:02:17.905 --> 00:02:25.629
+what I'm going to do is I'm going to use the background image property which takes URL,
+
+00:02:26.210 --> 00:02:31.625
+it's the path to the image we want which happens to be the name this time as well.
+
+00:02:31.625 --> 00:02:33.590
+You can see over here on my folder,
+
+00:02:33.590 --> 00:02:36.670
+I have the image demo.jpg,
+
+00:02:36.669 --> 00:02:39.169
+so here I give it the URL I want,
+
+00:02:39.169 --> 00:02:42.604
+and then I'm going to set background size to cover.
+
+00:02:42.604 --> 00:02:45.889
+I'll show you in a sec but the background size can do when we change it up.
+
+00:02:45.889 --> 00:02:47.979
+But let's take a look at this.
+
+00:02:47.979 --> 00:02:51.859
+You see now that the image that I have has been placed as
+
+00:02:51.860 --> 00:02:57.590
+the background for all of these images including with the border-radius that I set.
+
+00:02:57.590 --> 00:03:03.365
+So what would happen if I instead of cover tried contained?
+
+00:03:03.365 --> 00:03:07.490
+Now, you can see what's happened is it has taken the picture and
+
+00:03:07.490 --> 00:03:11.330
+it's putting it over multiple times to fill up this space that's there.
+
+00:03:11.330 --> 00:03:14.870
+Playing with the background size can give you incredible amount of
+
+00:03:14.870 --> 00:03:21.694
+detail oriented customization over just how your images and image background look.
+
+00:03:21.694 --> 00:03:23.239
+I like this here.
+
+00:03:23.240 --> 00:03:26.570
+I would like to see the words a tiny bit bigger.
+
+00:03:26.569 --> 00:03:28.984
+So I might bring it all together and say,
+
+00:03:28.985 --> 00:03:36.500
+''That's a great spelling error example like 67 pixels.
+
+00:03:36.500 --> 00:03:38.210
+Now we're talking.''
+
+00:03:38.210 --> 00:03:41.659
+These are just a few more of the things you can do with CSS.
+
+00:03:41.659 --> 00:03:43.835
+I hope this is opening up your mind,
+
+00:03:43.835 --> 00:03:47.450
+and focusing your intelligence and your imagination into
+
+00:03:47.449 --> 00:03:53.849
+all the possibilities that can be created with HTML and CSS. Good luck.
+

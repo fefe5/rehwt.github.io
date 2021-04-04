@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.310 --> 00:00:06.359
+So now that we've learned about HTML elements themselves,
+
+00:00:06.360 --> 00:00:08.940
+let's move into CSS.
+
+00:00:08.939 --> 00:00:10.889
+So maybe you're asking yourself,
+
+00:00:10.890 --> 00:00:12.780
+''why do I need to learn CSS? ''
+
+00:00:12.779 --> 00:00:14.529
+I mean, I already can create a website,
+
+00:00:14.529 --> 00:00:19.259
+I can put up inputs and paragraph blocks and image tags.
+
+00:00:19.260 --> 00:00:22.980
+But without CSS, every web page would just be
+
+00:00:22.980 --> 00:00:27.435
+a drab set of text and pictures flowing straight into the page.
+
+00:00:27.434 --> 00:00:29.934
+But with CSS, you can add color,
+
+00:00:29.934 --> 00:00:34.189
+take control of hundreds of attributes to alter the layout of web pages,
+
+00:00:34.189 --> 00:00:37.879
+and create visually stunning experiences for your users.
+
+00:00:37.880 --> 00:00:40.460
+In the real world as a developer,
+
+00:00:40.460 --> 00:00:43.399
+you'll often be given high fidelity mock ups or
+
+00:00:43.399 --> 00:00:48.039
+wire frames that your clients want you to deliver into a website.
+
+00:00:48.039 --> 00:00:52.070
+Because CSS is the execution of design and
+
+00:00:52.070 --> 00:00:56.689
+the design of a web page is the deciding factor in how engaged users are,
+
+00:00:56.689 --> 00:01:01.554
+CSS becomes incredibly important in the web marketplace.
+
+00:01:01.554 --> 00:01:03.890
+So hopefully by the end of this lesson,
+
+00:01:03.890 --> 00:01:08.200
+you'll understand the basic structure for adding styling to HTML elements,
+
+00:01:08.200 --> 00:01:10.424
+what the heck's a box model is,
+
+00:01:10.424 --> 00:01:14.359
+the importance of hierarchy and specificity in CSS,
+
+00:01:14.359 --> 00:01:16.760
+how to configure fonts and colors,
+
+00:01:16.760 --> 00:01:19.055
+styling for images and shapes,
+
+00:01:19.055 --> 00:01:21.710
+best practices for styling and formatting,
+
+00:01:21.709 --> 00:01:24.169
+and almost anything else you can imagine.
+
+00:01:24.170 --> 00:01:28.114
+This is really where we learn how to take what's in our imagination,
+
+00:01:28.114 --> 00:01:31.699
+and add the computer code that lets it come to life.
+
+00:01:31.700 --> 00:01:34.590
+So let's jump right in.
+

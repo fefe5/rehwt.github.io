@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.310 --> 00:00:04.215
+As we discussed with the box model,
+
+00:00:04.215 --> 00:00:09.255
+all elements are read and displayed by the browser as rectangles.
+
+00:00:09.255 --> 00:00:13.080
+The CSS display property sets the behavior for how each
+
+00:00:13.080 --> 00:00:17.220
+of these rectangles participates in the flow of elements.
+
+00:00:17.220 --> 00:00:22.080
+Each element can have an inside display and an outside display property.
+
+00:00:22.080 --> 00:00:26.490
+We'll be focusing on the inside display in later lessons which determines
+
+00:00:26.490 --> 00:00:31.200
+the positioning behavior of the children elements inside of an element,
+
+00:00:31.200 --> 00:00:34.875
+and this is where flex and CSS grid come into play.
+
+00:00:34.875 --> 00:00:38.220
+But for now, let's focus on the outer display which
+
+00:00:38.220 --> 00:00:42.140
+determines how the element itself flows with other elements.
+
+00:00:42.140 --> 00:00:47.035
+This will be easier to conceptualize with a demonstration which we'll do in a second.
+
+00:00:47.035 --> 00:00:52.820
+But first, let's just take a quick look at the most common values for outer CSS display.
+
+00:00:52.820 --> 00:00:59.060
+There's display inline, there's display inline-block,
+
+00:00:59.060 --> 00:01:03.975
+display block, and display none.
+
+00:01:03.975 --> 00:01:09.140
+So here, you can see I have set up four elements with the
+
+00:01:09.140 --> 00:01:14.535
+class "box" and right now the CSS is just a background color,
+
+00:01:14.535 --> 00:01:16.625
+a color, and a little margin.
+
+00:01:16.625 --> 00:01:22.760
+So let's see what happens if we set the display here to inline.
+
+00:01:22.760 --> 00:01:30.125
+Very different, and what about if we change it to block?
+
+00:01:30.125 --> 00:01:35.090
+You can see block stretches over an entire line in the browser.
+
+00:01:35.090 --> 00:01:36.930
+It takes up a block.
+
+00:01:36.930 --> 00:01:40.670
+Inline on the other hand only takes up the amount of
+
+00:01:40.670 --> 00:01:44.990
+space that it needs given the content that's inside of it.
+
+00:01:44.990 --> 00:01:48.725
+So inline just takes up how long each of these words are.
+
+00:01:48.725 --> 00:01:52.970
+Coincidental, it's the largest block because it's the largest word.
+
+00:01:52.970 --> 00:01:56.165
+Whereas when we did block,
+
+00:01:56.165 --> 00:01:59.540
+you can see that regardless of how long any of these are,
+
+00:01:59.540 --> 00:02:02.255
+each of them take up an entire line on the screen.
+
+00:02:02.255 --> 00:02:07.895
+So what do you think will happen when I use display none property?
+
+00:02:07.895 --> 00:02:11.570
+Ready? It displays nothing which may
+
+00:02:11.570 --> 00:02:15.170
+seem a little counter-intuitive to you but it can come in handy
+
+00:02:15.170 --> 00:02:18.770
+because there are times where we want an element to be there
+
+00:02:18.770 --> 00:02:22.865
+when we need it but we don't want it to be there all the time.
+
+00:02:22.865 --> 00:02:26.120
+So having display none let's us not get rid of
+
+00:02:26.120 --> 00:02:30.740
+the element but also not have it take up space in the DOM as we've talked about.
+
+00:02:30.740 --> 00:02:34.100
+So it doesn't disrupt the flow of other elements.
+
+00:02:34.100 --> 00:02:38.210
+The display property can give you a lot of creative options
+
+00:02:38.210 --> 00:02:42.380
+especially as we continue to learn more about flex and grid.
+
+00:02:42.380 --> 00:02:45.740
+For now, why don't you jump in and see if you could do some of
+
+00:02:45.740 --> 00:02:50.290
+your own work around these different displays? Good luck.
+

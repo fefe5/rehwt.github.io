@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.189 --> 00:00:06.789
+Specificity in CSS.
+
+00:00:07.190 --> 00:00:11.160
+Specificity is about the way that
+
+00:00:11.160 --> 00:00:16.609
+the browser puts different commands above each other, right?
+
+00:00:16.609 --> 00:00:20.910
+We've seen examples of how CSS rules can be coming from all over the place.
+
+00:00:20.910 --> 00:00:23.490
+You might have one rule that's inline,
+
+00:00:23.489 --> 00:00:26.744
+and another set of rules that are coming from an external style sheet.
+
+00:00:26.745 --> 00:00:28.679
+One thing might have an ID,
+
+00:00:28.679 --> 00:00:30.434
+but it also might have a class.
+
+00:00:30.434 --> 00:00:33.420
+So you can't have moments where there's clashing style.
+
+00:00:33.420 --> 00:00:36.770
+So we need our browsers to have a way to deal with this.
+
+00:00:36.770 --> 00:00:39.200
+We need a hierarchy to tell them.
+
+00:00:39.200 --> 00:00:42.710
+So the way that it works in CSS is that,
+
+00:00:42.710 --> 00:00:47.929
+type selectors or what you could think of as the ground level.
+
+00:00:47.929 --> 00:00:51.365
+Type selectors are buttons or headers.
+
+00:00:51.365 --> 00:00:55.700
+So these things will have what we consider a generic styling to it.
+
+00:00:55.700 --> 00:00:59.210
+They're easy to override so that anything that has that
+
+00:00:59.210 --> 00:01:02.835
+class selector will override that.
+
+00:01:02.835 --> 00:01:08.150
+For example, if we have a button that we have said we want the background to be blue,
+
+00:01:08.150 --> 00:01:11.000
+and we've set that rule using that button type.
+
+00:01:11.000 --> 00:01:14.555
+But our button also has a class of favorite button.
+
+00:01:14.555 --> 00:01:19.470
+In favorite button, we've said that the background color should be red,
+
+00:01:19.469 --> 00:01:21.829
+the class will take precedence.
+
+00:01:21.829 --> 00:01:25.129
+So what we'll see is our button will have a background of red.
+
+00:01:25.129 --> 00:01:29.584
+But what if our button that had a class,
+
+00:01:29.584 --> 00:01:31.659
+also had an ID,
+
+00:01:31.659 --> 00:01:34.890
+and that ID also had CSS attached to it?
+
+00:01:34.890 --> 00:01:39.875
+Well, those rules would then overrun the class and type selectors.
+
+00:01:39.875 --> 00:01:41.450
+So as you can imagine,
+
+00:01:41.450 --> 00:01:44.510
+it can get a little bit confusing when you have had a lot of rules going on.
+
+00:01:44.510 --> 00:01:48.079
+So it's really important to keep in mind specificity when you're
+
+00:01:48.079 --> 00:01:53.239
+deciding how you want to attach CSS rules to your HTML elements.
+
+00:01:53.239 --> 00:01:59.254
+Now, if you find yourself in a position where you have an element that has a type,
+
+00:01:59.254 --> 00:02:01.579
+a class, and an ID,
+
+00:02:01.579 --> 00:02:03.500
+and you have all these rules coming at you,
+
+00:02:03.500 --> 00:02:05.599
+and you can't figure out, what's wrong with it?
+
+00:02:05.599 --> 00:02:07.959
+Or what's making it look different than you want?
+
+00:02:07.959 --> 00:02:10.469
+There is an escape patch of sorts,
+
+00:02:10.469 --> 00:02:13.270
+which is the important keyword.
+
+00:02:13.270 --> 00:02:15.740
+You put an exclamation point,
+
+00:02:15.740 --> 00:02:20.284
+followed by the word "important" after any specific CSS rule,
+
+00:02:20.284 --> 00:02:24.020
+and that will override the hierarchy that's laid out.
+
+00:02:24.020 --> 00:02:27.135
+Which means, regardless of whether it's the type, class,
+
+00:02:27.134 --> 00:02:32.884
+or ID selector, that line of code will take precedence because of the important keyword.
+
+00:02:32.884 --> 00:02:39.215
+But, it's one of the most overused things that I see in beginning programming.
+
+00:02:39.215 --> 00:02:41.900
+Because what the important word allows you to do,
+
+00:02:41.900 --> 00:02:45.405
+is it allows you to solve one problem immediately,
+
+00:02:45.405 --> 00:02:48.770
+but then it creates a stream of problems that keep going.
+
+00:02:48.770 --> 00:02:49.939
+Because what I find is that,
+
+00:02:49.939 --> 00:02:52.159
+often we're using the important keyword,
+
+00:02:52.159 --> 00:02:55.129
+when we haven't done the forethought to structure and organize
+
+00:02:55.129 --> 00:02:58.414
+our CSS in a way that's going to make sense to us.
+
+00:02:58.414 --> 00:03:00.289
+So disguising that problem with
+
+00:03:00.289 --> 00:03:03.215
+the important keyword might make you feel better in the moment,
+
+00:03:03.215 --> 00:03:06.289
+but in the long run, I think it's going to cause you more problems.
+
+00:03:06.289 --> 00:03:09.754
+So I really urge you to first try to use the type, class,
+
+00:03:09.754 --> 00:03:11.930
+and ID selector specificity,
+
+00:03:11.930 --> 00:03:14.605
+before relying on the important keyword.
+
+00:03:14.604 --> 00:03:22.139
+Regardless, I wish you good times in CSS land.
+

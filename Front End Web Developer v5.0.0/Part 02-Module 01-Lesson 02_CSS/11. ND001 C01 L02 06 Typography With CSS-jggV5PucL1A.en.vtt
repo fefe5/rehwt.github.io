@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.280 --> 00:00:06.209
+Typography gives character to text.
+
+00:00:06.209 --> 00:00:09.314
+If you think about all the web pages you have visited,
+
+00:00:09.314 --> 00:00:11.144
+all the texts you have seen,
+
+00:00:11.144 --> 00:00:14.419
+all of that has been designed and styled in different ways,
+
+00:00:14.419 --> 00:00:18.600
+the totality of which is what we call typography.
+
+00:00:18.600 --> 00:00:24.045
+CSS provides many meaningful ways to style your text through different properties.
+
+00:00:24.045 --> 00:00:28.130
+Let's see a few of them in action and then we'll go into more detail so
+
+00:00:28.129 --> 00:00:32.240
+that you can learn all the tools you have to bring your text to life,
+
+00:00:32.240 --> 00:00:34.835
+because that's what CSS provides.
+
+00:00:34.835 --> 00:00:38.105
+So some things we'll go over in the demo are,
+
+00:00:38.104 --> 00:00:43.969
+text-align, font-size, color, and line-height.
+
+00:00:43.969 --> 00:00:47.989
+But these are just four of many examples that come together in
+
+00:00:47.990 --> 00:00:53.750
+a creative toolkit to make your own customized and gorgeous text. Let's check it out.
+
+00:00:53.750 --> 00:00:59.200
+Here, you can see I have a document set up with just one div,
+
+00:00:59.200 --> 00:01:03.790
+which is a simple div called typography that has some text in it.
+
+00:01:03.789 --> 00:01:05.655
+Right now if you go look at the web-page,
+
+00:01:05.655 --> 00:01:08.790
+you'll see it's small and a little hard to read and
+
+00:01:08.790 --> 00:01:12.395
+there's a number of reasons that this text doesn't really stand out.
+
+00:01:12.394 --> 00:01:16.375
+So let's try to give it some life, shall we?
+
+00:01:16.375 --> 00:01:23.355
+One thing we can do is we can align our text center,
+
+00:01:23.355 --> 00:01:28.045
+we can give it a color to stand out a little bit more.
+
+00:01:28.045 --> 00:01:30.665
+Actually, how about yellow.
+
+00:01:30.665 --> 00:01:34.969
+So now you can see we have centered yellow text.
+
+00:01:34.969 --> 00:01:38.870
+For me, I'm a little bit of a typography nut and
+
+00:01:38.870 --> 00:01:42.650
+I think there is a optimal width that you should have.
+
+00:01:42.650 --> 00:01:44.990
+This is too long a line.
+
+00:01:44.989 --> 00:01:46.609
+People can't read text that long.
+
+00:01:46.609 --> 00:01:54.379
+So I like to set a width of around 64 percent.
+
+00:01:54.379 --> 00:01:57.339
+Now it's starting to become a little more readable.
+
+00:01:57.340 --> 00:01:59.890
+Margin auto puts it back in the center.
+
+00:01:59.890 --> 00:02:02.310
+So now we can see we've aligned our text,
+
+00:02:02.310 --> 00:02:04.835
+we've given it a color and a width,
+
+00:02:04.834 --> 00:02:07.439
+but it's still a little small.
+
+00:02:07.439 --> 00:02:12.335
+So the font-size property will let us set.
+
+00:02:12.335 --> 00:02:20.110
+Either, we could do 24 pixels but another thing we'll go into in later lessons is the em.
+
+00:02:20.110 --> 00:02:28.260
+So 1.1 em font size is a relative font size to the body font size of 18 points.
+
+00:02:28.259 --> 00:02:31.560
+So 1.1 will be just a little bit bigger.
+
+00:02:31.560 --> 00:02:36.515
+We might want to go way bigger and say 1.4.
+
+00:02:36.514 --> 00:02:39.619
+Now, the lines are starting to come together a bit,
+
+00:02:39.620 --> 00:02:44.120
+and there's actually a CSS property called line-height which will
+
+00:02:44.120 --> 00:02:49.670
+let us change the distance in between the lines of text.
+
+00:02:49.669 --> 00:02:53.179
+So let's do something bizarre just so you can get a look.
+
+00:02:53.180 --> 00:02:55.730
+If we set it to 3.3 em,
+
+00:02:55.729 --> 00:02:59.349
+then you see we can have these big bold lines in between.
+
+00:02:59.349 --> 00:03:04.064
+Font-size, line-height, margin, width, color, text-align,
+
+00:03:04.064 --> 00:03:07.039
+these are just some of the properties that come together to
+
+00:03:07.039 --> 00:03:11.129
+allow you create a typography with CSS.
+

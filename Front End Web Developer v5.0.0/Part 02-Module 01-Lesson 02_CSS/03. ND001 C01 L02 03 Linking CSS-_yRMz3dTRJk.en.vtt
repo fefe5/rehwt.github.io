@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.159 --> 00:00:05.190
+So we understand how to create some elements with HTML,
+
+00:00:05.190 --> 00:00:09.570
+and we understand that we can write CSS code to style particular elements.
+
+00:00:09.570 --> 00:00:13.830
+But how do we actually execute our code in the editor?
+
+00:00:13.830 --> 00:00:17.460
+I mean how do we connect the CSS and the HTML?
+
+00:00:17.460 --> 00:00:19.140
+Well, you have options.
+
+00:00:19.140 --> 00:00:23.070
+There are three main ways to link CSS to your HTML code,
+
+00:00:23.070 --> 00:00:25.664
+and I'll quickly show you an example of
+
+00:00:25.664 --> 00:00:28.875
+each and then you'll continue learning about them on your own.
+
+00:00:28.875 --> 00:00:31.589
+The first is called inline,
+
+00:00:31.589 --> 00:00:34.469
+the second are style tags,
+
+00:00:34.469 --> 00:00:37.829
+and the third are external stylesheets.
+
+00:00:37.829 --> 00:00:43.449
+One way that perhaps you've seen is through linking an external stylesheet.
+
+00:00:43.450 --> 00:00:45.249
+To link an external stylesheet,
+
+00:00:45.249 --> 00:00:50.315
+you create a link with a relationship stylesheet,
+
+00:00:50.314 --> 00:00:52.729
+a type, text CSS.
+
+00:00:52.729 --> 00:00:57.029
+Here is our href attribute which you may remember.
+
+00:00:57.030 --> 00:01:01.310
+Our href attribute goes to styleDemo.css So
+
+00:01:01.310 --> 00:01:06.004
+let's go into our folder and we see here we have styleDemo.css.
+
+00:01:06.004 --> 00:01:08.359
+So one way that we could do this,
+
+00:01:08.359 --> 00:01:14.340
+is we could say here we have an ID test. So there's one way.
+
+00:01:14.340 --> 00:01:17.939
+We can use an external stylesheet here,
+
+00:01:17.939 --> 00:01:23.069
+which we've linked in head of our HTML document,
+
+00:01:23.069 --> 00:01:25.849
+and then it reads perfectly to this.
+
+00:01:25.849 --> 00:01:29.869
+A second way is called inline CSS.
+
+00:01:29.870 --> 00:01:35.570
+Inline CSS lets you actually add the CSS code as an attribute,
+
+00:01:35.569 --> 00:01:38.224
+in the front tack of a div.
+
+00:01:38.224 --> 00:01:40.919
+So for example, here we have our div,
+
+00:01:40.920 --> 00:01:44.900
+and as we learned in HTML we have an ID attribute,
+
+00:01:44.900 --> 00:01:47.420
+but we can also have a style attribute.
+
+00:01:47.420 --> 00:01:53.644
+Here the style attribute lets you write CSS rules directly onto a div.
+
+00:01:53.644 --> 00:01:57.299
+So right now this div has style font size 54 px,
+
+00:01:57.299 --> 00:02:02.259
+but if we change it to style font size 14 px,
+
+00:02:02.260 --> 00:02:04.085
+we see a shrink right down.
+
+00:02:04.084 --> 00:02:07.174
+So see that these also work in connection.
+
+00:02:07.174 --> 00:02:09.574
+I'm calling both this CSS,
+
+00:02:09.574 --> 00:02:11.344
+which is giving me the color red,
+
+00:02:11.344 --> 00:02:16.115
+and on an inline style I'm setting the font to be 14 points.
+
+00:02:16.115 --> 00:02:17.570
+But that's not it.
+
+00:02:17.569 --> 00:02:21.229
+There's a third way you can do this which are to put
+
+00:02:21.229 --> 00:02:25.729
+style tags directly inside your header.
+
+00:02:25.729 --> 00:02:27.859
+So notice in our header here,
+
+00:02:27.860 --> 00:02:30.470
+we've linked an external style sheet.
+
+00:02:30.469 --> 00:02:32.330
+But if we don't want to do that,
+
+00:02:32.330 --> 00:02:35.585
+we could put style tags directly in here and then
+
+00:02:35.585 --> 00:02:40.280
+any CSS we write will go directly into our HTML.
+
+00:02:40.280 --> 00:02:42.229
+So let's do this.
+
+00:02:42.229 --> 00:02:46.924
+Let's say text-decoration uppercase.
+
+00:02:46.925 --> 00:02:48.110
+I think this is a property,
+
+00:02:48.110 --> 00:02:49.595
+we'll find out together.
+
+00:02:49.594 --> 00:02:52.955
+It's going to be text transform I think actually.
+
+00:02:52.955 --> 00:02:56.150
+Then we see uppercase.
+
+00:02:56.150 --> 00:03:02.870
+So now, we have CSS coming from an external sheet,
+
+00:03:02.870 --> 00:03:07.235
+we have CSS that's coming from within style tags in the header,
+
+00:03:07.235 --> 00:03:11.305
+and we have inline CSS directly on the element.
+
+00:03:11.305 --> 00:03:13.855
+Now, to be clear in the real world,
+
+00:03:13.854 --> 00:03:17.599
+I think you would rarely use all three of these in one project.
+
+00:03:17.599 --> 00:03:21.530
+For different instances, you might use one or the other.
+
+00:03:21.530 --> 00:03:24.680
+Often the style tags are good when you're just trying to
+
+00:03:24.680 --> 00:03:27.875
+throw something together and you don't want to have two files yet.
+
+00:03:27.875 --> 00:03:31.009
+But ultimately, when you're working on a professional project,
+
+00:03:31.009 --> 00:03:34.370
+we talk about separating concerns.
+
+00:03:34.370 --> 00:03:38.825
+So it's going to be helpful for you to know how to have your CSS in a separate file.
+
+00:03:38.824 --> 00:03:40.769
+But while we're going along in this lesson,
+
+00:03:40.770 --> 00:03:43.670
+you'll often see me use these style tags in the header because
+
+00:03:43.669 --> 00:03:46.729
+they work just fine and they're great for demonstration.
+
+00:03:46.729 --> 00:03:49.489
+You can choose your own way to put it in CSS.
+
+00:03:49.490 --> 00:03:53.070
+It's really up to the imagination.
+

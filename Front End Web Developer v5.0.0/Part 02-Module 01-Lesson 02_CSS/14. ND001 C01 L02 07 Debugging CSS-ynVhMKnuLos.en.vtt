@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.130 --> 00:00:05.385
+Welcome to Debugging CSS.
+
+00:00:05.385 --> 00:00:09.330
+We all knew we'd end up here because just like with HTML,
+
+00:00:09.330 --> 00:00:12.975
+debugging CSS takes such a great deal of patience,
+
+00:00:12.975 --> 00:00:14.235
+such a good eye,
+
+00:00:14.235 --> 00:00:17.280
+and it's one of the most important parts of coding.
+
+00:00:17.280 --> 00:00:21.840
+CSS errors can be hard to notice because the browser will often go ahead and
+
+00:00:21.840 --> 00:00:26.505
+render your code just without it being displayed in the way that you want.
+
+00:00:26.505 --> 00:00:30.700
+Incorrect CSS can lead to problems throughout your code base,
+
+00:00:30.700 --> 00:00:33.600
+so it's incredibly important that you isolate and
+
+00:00:33.600 --> 00:00:37.005
+look for problems before you build bigger websites.
+
+00:00:37.005 --> 00:00:42.605
+So let's take a quick look together at some of the most common CSS bugs.
+
+00:00:42.605 --> 00:00:44.105
+As a quick reminder,
+
+00:00:44.105 --> 00:00:47.810
+bugs are what we consider issues in our code.
+
+00:00:47.810 --> 00:00:50.720
+So anything that's an error or anything that's causing
+
+00:00:50.720 --> 00:00:54.215
+behavior other than what's expected it's called a bug.
+
+00:00:54.215 --> 00:00:57.050
+So debugging then is the process of going through
+
+00:00:57.050 --> 00:00:59.929
+our code to find those places where the errors are,
+
+00:00:59.929 --> 00:01:03.920
+removing those bugs so that everything can rock on.
+
+00:01:03.920 --> 00:01:11.840
+So here I have set up some CSS code that has some of the most common errors.
+
+00:01:11.840 --> 00:01:17.610
+Take a look before I talk about it just to see if you can see any with your eye.
+
+00:01:18.890 --> 00:01:22.330
+So here in the box class,
+
+00:01:22.330 --> 00:01:25.954
+you'll see that I'm missing a colon between
+
+00:01:25.954 --> 00:01:31.610
+the position which is the property and the value which is absolute.
+
+00:01:31.610 --> 00:01:39.995
+It's always important to make sure that the syntax is property, colon, value, semicolon.
+
+00:01:39.995 --> 00:01:47.075
+Now, here in the ID 1 I'm missing a semicolon after the color red.
+
+00:01:47.075 --> 00:01:48.860
+This line looks good.
+
+00:01:48.860 --> 00:01:50.660
+This line looks good.
+
+00:01:50.660 --> 00:01:53.225
+Something's funny here.
+
+00:01:53.225 --> 00:01:57.570
+I've misspelled or misnamed a property,
+
+00:01:57.570 --> 00:02:00.680
+which is one of the things that happens all the time,
+
+00:02:00.680 --> 00:02:02.810
+because it's not always intuitive what you
+
+00:02:02.810 --> 00:02:05.435
+want something to do verse what it actually is.
+
+00:02:05.435 --> 00:02:10.850
+So while the index is what I'm going for the way that CSS understands the index,
+
+00:02:10.850 --> 00:02:13.270
+is the hyphen index.
+
+00:02:13.270 --> 00:02:18.515
+It's these little errors that can make debugging a little difficult.
+
+00:02:18.515 --> 00:02:24.500
+So here you'll see the issue is that this two is not prep
+
+00:02:24.500 --> 00:02:30.860
+ended with either the class or ID sign of a period or a hash.
+
+00:02:30.860 --> 00:02:33.620
+So it's supposed to be a type,
+
+00:02:33.620 --> 00:02:36.320
+but HTML doesn't have a type called two,
+
+00:02:36.320 --> 00:02:38.030
+it has a list,
+
+00:02:38.030 --> 00:02:39.860
+it has an image, a button,
+
+00:02:39.860 --> 00:02:41.120
+input, a text area,
+
+00:02:41.120 --> 00:02:42.470
+it has all sorts of things,
+
+00:02:42.470 --> 00:02:44.600
+but two is nothing.
+
+00:02:44.600 --> 00:02:48.005
+If I wanted it to be the ID 2 I could do that,
+
+00:02:48.005 --> 00:02:50.870
+if I wanted it to be the Class 2, I could do that.
+
+00:02:50.870 --> 00:02:53.345
+But two on it's own will do nothing.
+
+00:02:53.345 --> 00:02:57.340
+Three on the other hand is the perfectly valid ID,
+
+00:02:57.340 --> 00:03:03.230
+and this perfectly valid ID wants to have a background of blue, but in fact,
+
+00:03:03.230 --> 00:03:07.310
+I have misspelled it so that it has a background of bluue,
+
+00:03:07.310 --> 00:03:10.160
+which is nothing unfortunately because
+
+00:03:10.160 --> 00:03:15.890
+B-L-U-U-E is not a color that the browser will recognize blue.
+
+00:03:15.890 --> 00:03:19.625
+This is an example of how you would debug CSS.
+
+00:03:19.625 --> 00:03:22.110
+Now, good luck on your own.
+

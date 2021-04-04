@@ -1,0 +1,273 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fonts</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>CSS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Why learn CSS.html">01. Why learn CSS?</a>
+    </li>
+    <li class="">
+      <a href="02. Selectors.html">02. Selectors</a>
+    </li>
+    <li class="">
+      <a href="03. Linking CSS.html">03. Linking CSS</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Linking CSS.html">04. Exercise: Linking CSS</a>
+    </li>
+    <li class="">
+      <a href="05. Specificity.html">05. Specificity</a>
+    </li>
+    <li class="">
+      <a href="06. The Box Model.html">06. The Box Model</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise The Box Model.html">07. Exercise: The Box Model</a>
+    </li>
+    <li class="">
+      <a href="08. Display and Positioning Inline &amp; Block.html">08. Display and Positioning: Inline &amp; Block</a>
+    </li>
+    <li class="">
+      <a href="09. Display and Positioning Z-index.html">09. Display and Positioning: Z-index</a>
+    </li>
+    <li class="">
+      <a href="10. Absolute &amp; Relative Units.html">10. Absolute &amp; Relative Units</a>
+    </li>
+    <li class="">
+      <a href="11. Typography.html">11. Typography</a>
+    </li>
+    <li class="">
+      <a href="12. Fonts.html">12. Fonts</a>
+    </li>
+    <li class="">
+      <a href="13. Colors.html">13. Colors</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise Debugging CSS.html">14. Exercise: Debugging CSS</a>
+    </li>
+    <li class="">
+      <a href="15. Recap.html">15. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. Fonts</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Fonts Heading</p></h3>
+  <div>
+  <h1 id="fonts">Fonts</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Font Family</p></h3>
+  <div>
+  <h3 id="font-family">Font Family</h3>
+<p><code>font-family</code> is another built-in CSS property that defines the typeface for whatever element you selected. It accepts multiple values because not all users will have the same fonts installed.</p>
+<p>When using fonts on the web, you must first consider what fonts are available to your users. Every operating system, be it Windows, OS X, or Linux, comes with a set of pre-installed fonts that you can use for customizing your website. For a complete list of "web-safe" fonts, follow <a href="https://web.mit.edu/jmorzins/www/fonts.html" rel="noopener noreferrer" target="_blank">this link</a>.</p>
+<p>The way it works is fairly simple. When using the font-family property, you specify the font(s) you want to use in your HTML.</p>
+<p>Then, the browser, starting from left to right, looks at the font(s) you've specified and checks to see if it can render the text using the font(s) you've provided. If it can't use the first font, then the browser moves to the next font, and so-on.</p>
+<p>The purpose for specifying multiple fonts is because not all fonts are available on every operating system. So, specifying multiple, similar fonts ensures users have a consistent experience regardless of the operating system they are using.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Font Weight &amp; Style</p></h3>
+  <div>
+  <h3 id="font-weight--style">Font Weight &amp; Style</h3>
+<p>In CSS, font weights are expressed as numeric values between 100 and 900. Fortunately, there are relatively standardized, human-friendly terms for each of these numeric values. “Black” usually means 900, “bold” is 700, “regular” is 400, etc. Most families don’t supply a face for every single weight. For example, Roboto is missing “extra light” (200), “semi bold” (600), and “extra bold” (800).</p>
+<p>It’s worth noting that each style and weight combination is designed as an entirely distinct face. In a high-quality font family, the condensed styles aren’t simply squashed versions of the roman faces, nor is the bold face merely a thicker version. Each letter in every face is hand-crafted to ensure it provides a uniform flow to its text.</p>
+<p>This is particularly apparent in the italic and roman faces of many serif fonts. For instance, the lowercase “a” in Century Schoolbook FS (the font you’re reading right now) takes on a completely different shape when it’s italicized.</p>
+<h4 id="emphasis--importance">Emphasis &amp; Importance</h4>
+<p>For emphasized (usually italics) words, use the <code>&lt;em&gt;</code> tag.</p>
+<pre><code class="html language-html">&lt;p&gt;
+  We &lt;em&gt;have&lt;/em&gt; to buy the latest version of the pet hair remover vacuum, the
+  floor is covered with fur!
+&lt;/p&gt;</code></pre>
+<p>Which results in:</p>
+<p>
+  We <em>have</em> to buy the latest version of the pet hair remover vacuum, the
+  floor is covered with fur!
+</p>
+<p>For important words, use the <code>&lt;strong&gt;</code> tag. By default, <code>&lt;strong&gt;</code> elements are displayed in bold, but keep in mind that it is only the browser’s default behavior. Don’t use <code>&lt;strong&gt;</code> only to put some text in bold, but rather to give it more importance.</p>
+<pre><code>&lt;p&gt;
+  My dog is the most &lt;strong&gt;important&lt;/strong&gt; creature in my life right now.
+&lt;/p&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Externally Hosted Fonts</p></h3>
+  <div>
+  <h2 id="external-fonts">External Fonts</h2>
+<p>There are a number of ways to host fonts from external sources. One commonly used example is <a href="https://fonts.google.com/" rel="noopener noreferrer" target="_blank">Google Fonts</a>, which provides a great number of fonts free for use in web projects. If you go to the Google Fonts website linked below, you can select a font and then you will be provided with the line of code to link your font of choice. That link goes in the <code>head</code> section of your code like this: </p>
+<pre><code>&lt;head&gt;
+  &lt;link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;</code></pre>
+<p>In the CSS portion of your code, you could then set an elements property like this:</p>
+<pre><code>.box{
+  font-family: 'Montserrat', sans-serif;
+}</code></pre>
+<p>In this example the Google font I selected was ‘Montserrat’.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Externally Hosted Fonts</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/css-fonts.png" alt="An example of using local fonts vs externally hosted fonts." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An example of using local fonts vs externally hosted fonts.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13. Colors.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. Fonts')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
