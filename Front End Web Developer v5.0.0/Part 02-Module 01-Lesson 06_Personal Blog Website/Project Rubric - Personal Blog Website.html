@@ -1,0 +1,512 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personal Blog Website</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Personal Blog Website</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Getting Started.html">01. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="02. Example Blog Websites.html">02. Example Blog Websites</a>
+    </li>
+    <li class="">
+      <a href="03. Development Strategy.html">03. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="04. A Note on Style Guides.html">04. A Note on Style Guides</a>
+    </li>
+    <li class="">
+      <a href="05. Project Cheat Sheet.html">05. Project Cheat Sheet</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Personal Blog Website.html">Project Description - Personal Blog Website</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Personal Blog Website.html">Project Rubric - Personal Blog Website</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Personal Blog Website</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Structure</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>CSS Separate From HTML</p>
+        </td>
+        <td>
+          <ol>
+<li>Portfolio completely separates structure from design/style. </li>
+<li>There are no attributes present in the body of the document. </li>
+<li>There are no elements in the document.</li>
+</ol>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>CSS Imports</p>
+        </td>
+        <td>
+          <p>There should be at least 3 imported files in the main CSS file, but the student is welcome to break it down even further if that makes it easier for them.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Directories &amp; Files</p>
+        </td>
+        <td>
+          <p>Files are organized with a directory structure that separates files based on page and functionality.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Links</p>
+        </td>
+        <td>
+          <p>There is an intentional user flow on each page with appropriate links as needed.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Design</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Custom Design</p>
+        </td>
+        <td>
+          <p>Custom images, layout, and styling.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Foundations/Building Blocks</p>
+        </td>
+        <td>
+          <ul>
+<li><p><strong>Typography</strong>: Custom design for typography with at least 3 unique properties for each typography selector</p>
+<ol>
+<li>Headers (h1 to h3 at minimum) <code>&lt;h1&gt;</code></li>
+<li>Paragraph Text <code>&lt;p&gt;</code><br />
+a. Bold<br />
+b. Italic<br />
+c. Underlined</li>
+<li>Links <code>&lt;a&gt;</code></li>
+<li>Quotes</li></ol>
+<ul>
+<li><strong>Colors</strong>: At least 3 colors are used.</li></ul></li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Components</p>
+        </td>
+        <td>
+          <p>The following are used in the webpage:</p>
+<ul>
+<li>Image(s)</li>
+<li>Image caption</li>
+<li>Buttons</li>
+<li>Card</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Patterns</p>
+        </td>
+        <td>
+          <p>The general pattern of the webpage should be as follows:</p>
+<ul>
+<li><strong>Blog Homepage</strong><ul>
+<li>Navbar</li>
+<li>Blog Post Card</li>
+<li>Card</li>
+<li>Image</li>
+<li>Buttons</li>
+<li>Footer</li></ul></li>
+<li><strong>Blog Post</strong><ul>
+<li>Header</li>
+<li>Author Info</li>
+<li>Name</li>
+<li>Title</li>
+<li>Current Company/School</li>
+<li>Short Bio</li>
+<li>Avatar</li>
+<li>Social Sharing</li>
+<li>Twitter</li>
+<li>Facebook</li>
+<li>LinkedIn</li></ul></li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Pages</p>
+        </td>
+        <td>
+          <p>The following pages should be present:</p>
+<ol>
+<li>Blog Homepage</li>
+<li>Blog Post</li>
+</ol>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Layout</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Flexbox Based Layout</p>
+        </td>
+        <td>
+          <p>Uses Flexbox at least twice throughout the project to create a component or pattern</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Grid Based Layout</p>
+        </td>
+        <td>
+          <p>Uses CSS Grid at least twice throughout the project to create the layout for pages</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Responsiveness</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Multi-Device Web Design</p>
+        </td>
+        <td>
+          <p>Pages are mobile-friendly and display correctly on all display sizes (mobile, tablet, desktop).</p>
+<p>Note: You can <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/" rel="noopener noreferrer" target="_blank">simulate Mobile Devices with Device Mode in Chrome DevTools</a>.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Quality</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Valid HTML</p>
+        </td>
+        <td>
+          <ul>
+<li>HTML5 semantic tags such as <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> , etc. are used to add meaning to the code.</li>
+<li>No div or section selectors are without a CSS class or id.</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>HTML Formatting Rules</p>
+        </td>
+        <td>
+          <ul>
+<li>All code is lowercase</li>
+<li>The code does not have trailing white spaces.</li>
+<li>Indentation is consistent (either all tabs or all 2 spaces or all 4 spaces etc).</li>
+<li>Code uses a new line for every block, list or table element and indent every such child element (it is acceptable to put all elements in one line).</li>
+<li>When quoting attribute values, code uses consistent quotation marks (single vs. double).</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>HTML Style Rules</p>
+        </td>
+        <td>
+          <ul>
+<li>HTML documents HTML5 <code>&lt;!doctype html&gt;</code></li>
+<li>Code omits type attributes for style sheets and scripts.</li>
+<li>[Optional] Code does not use entity references unless necessary e.g. characters with special meaning (like <code>&lt;</code> and <code>&amp;</code>) as well as control or “invisible” characters (like no-break spaces).</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>CSS Formatting Rules</p>
+        </td>
+        <td>
+          <ul>
+<li>The code does not have trailing white spaces.</li>
+<li>Indentation is consistent (either all tabs or all 2 spaces or all 4 spaces etc).</li>
+<li>Code indents all content, that is rules within rules as well as declarations to reflect hierarchy and improve understanding.</li>
+<li>The code uses a semicolon after every declaration for consistency and extensibility reasons.</li>
+<li>Code always uses a space after a property name's colon, but no space between property and colon, for consistency reasons.</li>
+<li>Code always uses a single space between the last selector and the opening brace that begins the declaration block. Code always start a new line for each selector and declaration.</li>
+<li>Code always put a blank line (two line breaks) between rules.</li>
+<li>Code uses consistent quotation marks for attribute selectors or property values (single vs. double).</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>CSS Style Rules</p>
+        </td>
+        <td>
+          <ul>
+<li>The code uses meaningful or generic ID and class names that are as short as possible, but as long as necessary.</li>
+<li>The code does not use element names in conjunction with IDs or classes.</li>
+<li>The code uses shorthand properties where possible.</li>
+<li>[Optional] Code omits unit specification after 0 values. </li>
+<li>[Optional] Code includes leading 0s in decimal values for readability.</li>
+<li>[Optional] Code uses 3-character hexadecimal notation where possible.</li>
+<li>[Optional] Code separates words in ID and class names by a hyphen.</li>
+</ul>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div class="jumbotron">
+        <h3>Tips to make your project standout:</h3>
+        <p><ul>
+<li><strong>Custom Text:</strong> You are welcome to use Lorem ipsum or other placeholder text in your blog and blog posts, but putting in real, custom text can make your project look even more impressive!</li>
+<li><strong>Pattern - Related Articles:</strong> Add 2 to 3 fake blog post references after the blog post ends (i.e. to older blog posts)</li>
+<li><strong>Pattern - Subscribe Form:</strong> Instead of a fake subscribe link on the blog, there is an actual form area with name and email input fields and a subscribe button.</li>
+<li><strong>Project URL:</strong> Project is fully deployed on GitHub Pages, Netlify or another hosting provider that is free of charge.</li>
+<li><strong>Design System:</strong> Consider implementing a <a href="https://www.forumone.com/ideas/what-is-design-system/" rel="noopener noreferrer" target="_blank">design system</a> for your webpage.</li>
+<li><strong>Accessibility:</strong> <ul>
+<li>Discernable text</li>
+<li>Sufficient color contrast</li>
+<li>ARIA attributes</li>
+<li>Less than 5 violations found through the <a href="https://www.deque.com/axe/" rel="noopener noreferrer" target="_blank">Axe</a> (Chrome extension) test on the web page.</li></ul></li>
+</ul></p>
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Personal Blog Website')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

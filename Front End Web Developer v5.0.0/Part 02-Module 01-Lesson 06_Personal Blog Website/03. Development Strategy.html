@@ -1,0 +1,219 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Development Strategy</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Personal Blog Website</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Getting Started.html">01. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="02. Example Blog Websites.html">02. Example Blog Websites</a>
+    </li>
+    <li class="">
+      <a href="03. Development Strategy.html">03. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="04. A Note on Style Guides.html">04. A Note on Style Guides</a>
+    </li>
+    <li class="">
+      <a href="05. Project Cheat Sheet.html">05. Project Cheat Sheet</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Personal Blog Website.html">Project Description - Personal Blog Website</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Personal Blog Website.html">Project Rubric - Personal Blog Website</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Development Strategy</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="development-strategy">Development Strategy</h1>
+<p>In this project, you'll write code across a handful of HTML and CSS files. Note that it's very important that you <em>plan your project</em> <strong>before</strong> you start writing any code! Break your project down into <em>small</em> pieces of work and strategize your approach to each one. With these bite-sized amounts, it'll be easier to debug and fix any issues that appear.</p>
+<p>Feel free to implement your own design workflow, but if you get stuck -- here is a brief primer to get you up and running!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ol>
+<li><strong>Decide on the overall structure of your project</strong>. You'll want separate HTML files, and related CSS files, for each piece of the website: the main page, a blog post, and the (<em>optional</em>) design system (feel free to add more!). Note that these should not all fall in the parent directory, but should also be organized into subdirectories.</li>
+<li><strong>Draw out some mock pages of the website</strong>. Even you aren't confident in your own drawing skills, that's okay - just a quick sketch of the different headers, boxes, etc. can help you think through what you want to do later with the layout.</li>
+<li><strong>(<em>Optional</em>) Begin considering your design system</strong>. This is really 2a, but doing a first draft of your webpages can help you take the first steps toward the design system. You don't need to build the page out yet, but hopefully drawing these pages has you thinking more in-depth on how everything should look. If you want some ideas, you can also check out <a href="https://veritas.udacity.design/" rel="noopener noreferrer" target="_blank">Veritas</a>, Udacity's design system (yours does not need to be anywhere near as detailed).</li>
+<li><strong>Start building out the HTML for the main page</strong>. Building out the HTML will allow you to start looking at the basics of what you are building, whether in the browser or in your IDE. Make sure to take a look at the <a href="http://udacity.github.io/frontend-nanodegree-styleguide/index.html" rel="noopener noreferrer" target="_blank">Udacity HTML Style Guide</a> as well from the get-go - it will be easier to follow this throughout than to have to re-format all your code once you've finished. Need a refresher? Head back into the <a href="https://classroom.udacity.com/nanodegrees/nd0011/parts/819dc899-4e21-4884-b050-2328896d87c0/modules/a280da9f-d026-43e4-a06c-279d7bff7faa/lessons/f4be330b-3406-4c6a-911b-c1871e1165d6/concepts/e18df41d-cf1c-4f80-8e9e-88aff6a512ee" rel="noopener noreferrer" target="_blank">lesson</a> to review HTML structure!</li>
+<li><strong>Build the HTML for your example blog post</strong>. Now that you've made one HTML page already, you're on a roll! Think about what items you might want on the blog post that weren't present on the main page, and vice versa.</li>
+<li><strong>(<em>Optional</em>) Formalize your design system</strong>. Now that you have the primary HTML pages built, it's time to formalize your approach to design and styling. Note that you are fully able to iterate on this later, but make sure you keep the design system consistent to what is in your actual CSS coming up. You can make the HTML page for the design system at this time.</li>
+<li><strong>Begin styling your pages with CSS</strong>. You should have a primary CSS file that is linked to from each of the HTML pages, and then <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import" rel="noopener noreferrer" target="_blank">import separate CSS files</a> for each page into this primary CSS file. Be sure to take a look at the <a href="http://udacity.github.io/frontend-nanodegree-styleguide/css.html" rel="noopener noreferrer" target="_blank">Udacity CSS Style Guide</a>, and if you are using an (<em>optional</em>) design system, make sure you are staying true to it (or update it accordingly). Note that you need to use both Flexbox and Grid per the <a href="https://review.udacity.com/#!/rubrics/2667/view" rel="noopener noreferrer" target="_blank">project rubric</a> as part of your CSS.</li>
+<li><strong>Take a look back at your initial drawings, and iterate</strong>. Is the page coming together as you initially planned? It's perfectly fine to have decided to go a different direction than you drew out, but this is a good chance to see if you are missing something you wanted on the page. From there, iterate, iterate, iterate, until each page looks how you want it to look.</li>
+<li><strong>Link between pages</strong>. If your project structure is set up correctly and you add the appropriate links within your HTML, a user should be able to click on those links to go between the main page, an example blog post, and the (<em>optional</em>) design system without issue. Note that it is fine to have certain links, like "Subscribe", be fake links.</li>
+<li><strong>Test and more iteration</strong>. Finally, just make sure you have tested out that everything on each page is working and looks as you want it to look. Take another look at the <a href="https://review.udacity.com/#!/rubrics/2667/view" rel="noopener noreferrer" target="_blank">project rubric</a> to double-check you have covered each item, and if you want, try to implement some of the ways to stand out at the end of the rubric. Deploying to <a href="https://pages.github.com/" rel="noopener noreferrer" target="_blank">Github Pages</a>, for instance, is a good way to get your project up live where you can check it out on multiple devices, and even show your friends and family your work.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="version-control">Version Control</h2>
+<p>Although not a requirement, we recommend using Git from the very beginning. Make sure to commit often and to use well-formatted commit messages that conform to our <a href="https://udacity.github.io/git-styleguide/" rel="noopener noreferrer" target="_blank">Git Style Guide</a>.</p>
+<h3 id="udacity-style-guides">Udacity Style Guides</h3>
+<p>You should write your code and markup to meet the specifications provided in these style guides:</p>
+<ul>
+<li><a href="http://udacity.github.io/frontend-nanodegree-styleguide/css.html" rel="noopener noreferrer" target="_blank">CSS Style Guide</a></li>
+<li><a href="http://udacity.github.io/frontend-nanodegree-styleguide/index.html" rel="noopener noreferrer" target="_blank">HTML Style Guide</a></li>
+<li><a href="https://udacity.github.io/git-styleguide/" rel="noopener noreferrer" target="_blank">Git Style Guide</a></li>
+</ul>
+<p>Make sure to check the <a href="https://review.udacity.com/#!/rubrics/2667/view" rel="noopener noreferrer" target="_blank">project rubric</a> for specific requirements.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. A Note on Style Guides.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Development Strategy')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
