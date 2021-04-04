@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.219 --> 00:00:05.804
+Another great tool that Flexbox allows you,
+
+00:00:05.804 --> 00:00:09.330
+is there are several ways for you to dynamically order
+
+00:00:09.330 --> 00:00:13.905
+the items inside your parent container using Flexbox code.
+
+00:00:13.904 --> 00:00:19.064
+The three ways that we're going to look at today are row reverse and column reverse.
+
+00:00:19.065 --> 00:00:24.164
+Here we see that keyword reverse which can be used on the Flex direction setting.
+
+00:00:24.164 --> 00:00:28.085
+The second way is the specific order of the HTML code.
+
+00:00:28.085 --> 00:00:31.700
+You can actually move the lines of code that you want to create the order.
+
+00:00:31.699 --> 00:00:35.030
+The third is the order CSS property.
+
+00:00:35.030 --> 00:00:39.439
+The order CSS property is specifically for Flex items.
+
+00:00:39.439 --> 00:00:46.104
+That is HTML elements that are inside of another HTML element that has the display Flex.
+
+00:00:46.104 --> 00:00:47.904
+That's the Flex container,
+
+00:00:47.905 --> 00:00:49.880
+inside it are the flex items.
+
+00:00:49.880 --> 00:00:52.925
+Flex items have a CSS property called
+
+00:00:52.924 --> 00:00:56.974
+order that can set the order that they appear in your browser.
+
+00:00:56.975 --> 00:01:02.969
+Let's take a quick look at how these three different ones might happen.
+

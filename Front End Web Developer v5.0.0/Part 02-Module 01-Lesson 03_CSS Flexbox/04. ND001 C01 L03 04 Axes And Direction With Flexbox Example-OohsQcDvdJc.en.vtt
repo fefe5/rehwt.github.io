@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.075
+So flex direction is the CSS property that's most directly related to the axis.
+
+00:00:06.075 --> 00:00:10.065
+When you set the flex direction to be column like this,
+
+00:00:10.064 --> 00:00:14.609
+it sets the main axis to be the vertical one up and down,
+
+00:00:14.609 --> 00:00:18.704
+which means the secondary axis will be the horizontal axis across.
+
+00:00:18.704 --> 00:00:23.984
+If we just by switching from column to row for our flex direction,
+
+00:00:23.984 --> 00:00:28.695
+we're also switching which is our main axis which is now going
+
+00:00:28.695 --> 00:00:34.664
+horizontally as opposed to our secondary axis which will be the one that is up and down.
+
+00:00:34.664 --> 00:00:40.039
+These are also going to map one-to-one to justify content and align items,
+
+00:00:40.039 --> 00:00:45.049
+which are used to justify or align things based on which axis they are on.
+
+00:00:45.049 --> 00:00:50.118
+So depending on whether you have set your flex direction to row or column,
+
+00:00:50.118 --> 00:00:53.329
+you'll actually see a line items and justify content
+
+00:00:53.329 --> 00:00:56.869
+interact slightly differently because those and everything
+
+00:00:56.869 --> 00:00:59.750
+else in flex are tied to the relationship of
+
+00:00:59.750 --> 00:01:04.739
+these two axis that are initially set using flex direction.
+

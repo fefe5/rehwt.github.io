@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.280 --> 00:00:05.790
+Now we're going to cover my favorite part of flexbox,
+
+00:00:05.790 --> 00:00:08.429
+or at least it's what brought me to flexbox.
+
+00:00:08.429 --> 00:00:14.054
+I was constantly struggling with how to align and justify items on my web page.
+
+00:00:14.054 --> 00:00:19.109
+I would have a parent element that would have between three and 12 elements inside of it,
+
+00:00:19.109 --> 00:00:21.210
+and I would drive myself crazy trying to set
+
+00:00:21.210 --> 00:00:23.685
+absolute positioning or relative positioning,
+
+00:00:23.684 --> 00:00:26.474
+trying to get all the things aligned how I want.
+
+00:00:26.475 --> 00:00:29.355
+Then I came across flexbox,
+
+00:00:29.355 --> 00:00:32.810
+and being able to align and justify the items in relationship to
+
+00:00:32.810 --> 00:00:36.785
+each other with simple CSS properties is a game changer.
+
+00:00:36.784 --> 00:00:40.159
+The two key properties we're going to talk about here are;
+
+00:00:40.159 --> 00:00:43.489
+align items and justify content.
+
+00:00:43.490 --> 00:00:46.890
+Let's take a look at them in action.
+

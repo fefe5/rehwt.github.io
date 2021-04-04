@@ -1,0 +1,268 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A Quick Flexbox Example</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>CSS Flexbox</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introducing Flexbox.html">01. Introducing Flexbox</a>
+    </li>
+    <li class="">
+      <a href="02. A Quick Flexbox Example.html">02. A Quick Flexbox Example</a>
+    </li>
+    <li class="">
+      <a href="03. Axes and Direction with Flexbox.html">03. Axes and Direction with Flexbox</a>
+    </li>
+    <li class="">
+      <a href="04. Axes and Direction in Action.html">04. Axes and Direction in Action</a>
+    </li>
+    <li class="">
+      <a href="05. Ordering Elements with Flexbox.html">05. Ordering Elements with Flexbox</a>
+    </li>
+    <li class="">
+      <a href="06. Ordering Elements Demo.html">06. Ordering Elements Demo</a>
+    </li>
+    <li class="">
+      <a href="07. Aligning Items &amp; Justifying Content with Flexbox.html">07. Aligning Items &amp; Justifying Content with Flexbox</a>
+    </li>
+    <li class="">
+      <a href="08. Aligning &amp; Justifying in Action.html">08. Aligning &amp; Justifying in Action</a>
+    </li>
+    <li class="">
+      <a href="09. Recap.html">09. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. A Quick Flexbox Example</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>A Quick Flexbox Example Heading</p></h3>
+  <div>
+  <h1 id="a-quick-flexbox-example">A Quick Flexbox Example</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND001 C01 L03 02 Introducing Flexbox Example</p></h3>
+  <video controls>
+  <source src="02. ND001 C01 L03 02 Introducing Flexbox Example-Wp--K4tnM9g.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="02. ND001 C01 L03 02 Introducing Flexbox Example-Wp--K4tnM9g.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="02. ND001 C01 L03 02 Introducing Flexbox Example-Wp--K4tnM9g.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="02. ND001 C01 L03 02 Introducing Flexbox Example-Wp--K4tnM9g.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introducing Flexbox Example Summary</p></h3>
+  <div>
+  <p>By setting an element's <code>display</code> property to <code>flex</code>, all elements inside of it become flex items that can be laid out in a customized way following design patterns like columns, rows, alignment, and distribution.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introducing Flexbox Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What do you add to your code to begin using flexbox properties?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="908272" id="rbk1">
+        <label for="rbk1"><p>By setting the <code>display</code> property of the parent element to <code>flex</code>.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="908272" id="rbk2">
+        <label for="rbk2"><p>By setting the <code>display</code> properties of the items inside the parent container to <code>flex</code>.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="908272" id="rbk3">
+        <label for="rbk3"><p>Just start using flexbox properties like <code>align-items</code> and <code>justify-content</code>.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    By setting the `display` property of the parent element to `flex`.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introducing Flexbox Summary</p></h3>
+  <div>
+  <p>Here, we have learned that Flexbox (the Flexible Box Module) is a set of CSS rules for stretching multiple columns or rows across a parent container. Flex is unique amongst CSS properties because you have a main container and the items nested within it. CSS flex has properties that apply to both the element itself, and the items inside of it.</p>
+<p>To use flexbox set the <code>display</code> property of the parent container to <code>flex</code>:</p>
+<pre><code>.container{
+  display:flex;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introducing Flexbox Further Research</p></h3>
+  <div>
+  <h3 id="further-research">Further research</h3>
+<p>For more information about a Flexbox overview, see <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" rel="noopener noreferrer" target="_blank">this MDN entry</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Axes and Direction with Flexbox.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. A Quick Flexbox Example')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

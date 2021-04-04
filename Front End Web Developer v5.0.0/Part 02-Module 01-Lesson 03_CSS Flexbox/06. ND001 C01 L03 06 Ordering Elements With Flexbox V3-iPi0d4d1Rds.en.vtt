@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.955
+So here we are back with our flex container and our three items inside of it,
+
+00:00:05.955 --> 00:00:09.855
+and now we're going to try different ways to reorder these items.
+
+00:00:09.855 --> 00:00:12.255
+So we see now our order is box one,
+
+00:00:12.255 --> 00:00:14.339
+box two, box three.
+
+00:00:14.339 --> 00:00:19.460
+So the simplest way to reorder it is that we can literally here in our code,
+
+00:00:19.460 --> 00:00:24.769
+I can just move box two up so that now it's box two,
+
+00:00:24.769 --> 00:00:26.469
+box one, box three,
+
+00:00:26.469 --> 00:00:29.085
+and in our browser now we see box two,
+
+00:00:29.085 --> 00:00:30.855
+box one, box three.
+
+00:00:30.855 --> 00:00:36.605
+That's simply by moving the HTML itself from following lines.
+
+00:00:36.604 --> 00:00:39.959
+So let's put this back, so one, two,
+
+00:00:39.960 --> 00:00:41.880
+three as our HTML read,
+
+00:00:41.880 --> 00:00:44.840
+and now let's do it with order.
+
+00:00:44.840 --> 00:00:48.875
+The way that the order works is that it's relative,
+
+00:00:48.875 --> 00:00:53.149
+so it'll be an evaluation where if I give
+
+00:00:53.149 --> 00:00:58.704
+one and two in order of two but three in order of one,
+
+00:00:58.704 --> 00:01:02.284
+it means three will come first followed by one and two,
+
+00:01:02.284 --> 00:01:04.939
+and that one and two with a shared order of two,
+
+00:01:04.939 --> 00:01:09.829
+which one of those comes first will then be thrown down to where it shows up in the HTML.
+
+00:01:09.829 --> 00:01:12.155
+So let's take a look at this,
+
+00:01:12.155 --> 00:01:17.150
+and now we see that box three is first because it has the order property of
+
+00:01:17.150 --> 00:01:22.219
+one while two and one have the order property of two which is the lower value.
+
+00:01:22.219 --> 00:01:24.715
+This property, they could share a three, a seven,
+
+00:01:24.715 --> 00:01:28.250
+it's all an evaluation of comparatively which has the
+
+00:01:28.250 --> 00:01:32.944
+lowest one being low value and that would come first.
+
+00:01:32.944 --> 00:01:38.934
+So now we have two ways to move things which are moving in the HTML itself,
+
+00:01:38.935 --> 00:01:42.620
+the order property, and the third way that we can do this
+
+00:01:42.620 --> 00:01:46.550
+is with the flex direction of the parent container.
+
+00:01:46.549 --> 00:01:50.509
+So with flex direction row we have box three,
+
+00:01:50.510 --> 00:01:53.185
+box one, box two,
+
+00:01:53.185 --> 00:01:57.825
+but with flex direction row reverse,
+
+00:01:57.825 --> 00:01:59.885
+we have box two,
+
+00:01:59.885 --> 00:02:02.030
+box one, box three.
+
+00:02:02.030 --> 00:02:06.079
+So those are the three different ways that you can order your elements.
+
+00:02:06.079 --> 00:02:09.229
+You can either use the flex direction, flipping row,
+
+00:02:09.229 --> 00:02:14.179
+and row reverse which will just reverse or setback the order in which they're laid out.
+
+00:02:14.180 --> 00:02:17.990
+We have the specific order property of each of
+
+00:02:17.990 --> 00:02:22.159
+the items in a container which here are set to two and two,
+
+00:02:22.159 --> 00:02:25.849
+and the one makes this one show up first so the order will be three,
+
+00:02:25.849 --> 00:02:27.310
+two, one based on that.
+
+00:02:27.310 --> 00:02:31.340
+The third way that you can order elements using
+
+00:02:31.340 --> 00:02:36.229
+flex is simply by doing it in the HTML itself.
+
+00:02:36.229 --> 00:02:38.405
+So what do you think will happen now?
+
+00:02:38.405 --> 00:02:40.909
+I've given div three an order of one,
+
+00:02:40.909 --> 00:02:42.620
+div two an order of two,
+
+00:02:42.620 --> 00:02:45.050
+and div one an order of three.
+
+00:02:45.050 --> 00:02:49.175
+So what order do we think the boxes will show up in?
+
+00:02:49.175 --> 00:02:54.060
+Three, two, one. Did you get that?
+
+00:02:54.060 --> 00:02:57.189
+You'll pick it up, I promise.
+

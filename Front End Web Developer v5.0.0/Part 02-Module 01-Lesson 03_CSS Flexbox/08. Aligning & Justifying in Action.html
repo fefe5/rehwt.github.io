@@ -1,0 +1,259 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aligning &amp; Justifying in Action</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>CSS Flexbox</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introducing Flexbox.html">01. Introducing Flexbox</a>
+    </li>
+    <li class="">
+      <a href="02. A Quick Flexbox Example.html">02. A Quick Flexbox Example</a>
+    </li>
+    <li class="">
+      <a href="03. Axes and Direction with Flexbox.html">03. Axes and Direction with Flexbox</a>
+    </li>
+    <li class="">
+      <a href="04. Axes and Direction in Action.html">04. Axes and Direction in Action</a>
+    </li>
+    <li class="">
+      <a href="05. Ordering Elements with Flexbox.html">05. Ordering Elements with Flexbox</a>
+    </li>
+    <li class="">
+      <a href="06. Ordering Elements Demo.html">06. Ordering Elements Demo</a>
+    </li>
+    <li class="">
+      <a href="07. Aligning Items &amp; Justifying Content with Flexbox.html">07. Aligning Items &amp; Justifying Content with Flexbox</a>
+    </li>
+    <li class="">
+      <a href="08. Aligning &amp; Justifying in Action.html">08. Aligning &amp; Justifying in Action</a>
+    </li>
+    <li class="">
+      <a href="09. Recap.html">09. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Aligning & Justifying in Action</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Aligning Items &amp; Justifying Content with Flexbox Example Prep</p></h3>
+  <div>
+  <h1 id="aligning--justifying-in-action">Aligning &amp; Justifying in Action</h1>
+<p>Aligning, justifying, and distributing is what flexbox is all about. Up next, we will focus in on two of the most powerful properties that flex introduces to achieve such easy and elegant layouts.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND001 C01 L03 08 Aligning Items   Justifying Content With Flexbox Example</p></h3>
+  <video controls>
+  <source src="08. ND001 C01 L03 08 Aligning Items   Justifying Content With Flexbox Example-Ois3sh2AAQw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="08. ND001 C01 L03 08 Aligning Items   Justifying Content With Flexbox Example-Ois3sh2AAQw.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="08. ND001 C01 L03 08 Aligning Items   Justifying Content With Flexbox Example-Ois3sh2AAQw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="08. ND001 C01 L03 08 Aligning Items   Justifying Content With Flexbox Example-Ois3sh2AAQw.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Aligning Items &amp; Justifying Content with Flexbox Example Summary</p></h3>
+  <div>
+  <p>By setting different values for the properties <code>align-items</code> and <code>justify-content</code> you can easily create elegant distribution of elements across the available space.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Aligning Items &amp; Justifying Content with Flexbox Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following is true?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="908294" id="rbk1">
+        <label for="rbk1"><p>The align-items property will align the items on the cross axis.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="908294" id="rbk2">
+        <label for="rbk2"><p>The justify-content property will align the items on the cross axis.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="908294" id="rbk3">
+        <label for="rbk3"><p>The align-items property will align the items on the main axis.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The align-items property will align the items on the cross axis.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Aligning Items &amp; Justifying Content with Flexbox Further Research</p></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<p>For further research on the topics covered in this section, see this MDN article <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#Alignment_justification_and_distribution_of_free_space_between_items" rel="noopener noreferrer" target="_blank">Alignment, justification and distribution of free space between items</a>.</p>
+<p>Reading the documentation will make you smarter and enjoy coding more!</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Recap.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Aligning &amp; Justifying in Action')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.710
+Let's take a quick look at some of the key things that Flexbox can do.
+
+00:00:04.710 --> 00:00:07.589
+I'm going to do that without giving too much explanation,
+
+00:00:07.589 --> 00:00:10.859
+just because I want to give you an idea of what Flexbox is.
+
+00:00:10.859 --> 00:00:15.224
+Then step-by-step, we'll go through and teach how to do each of them.
+
+00:00:15.224 --> 00:00:19.035
+Here, you can see that I have set up.
+
+00:00:19.035 --> 00:00:21.585
+Let's take a look at the HTML first,
+
+00:00:21.585 --> 00:00:24.585
+a div with a class container,
+
+00:00:24.585 --> 00:00:26.234
+and then inside of that,
+
+00:00:26.234 --> 00:00:29.384
+I have three divs with the class box,
+
+00:00:29.385 --> 00:00:31.245
+and each of them has a different ID,
+
+00:00:31.245 --> 00:00:32.895
+one, two, and three.
+
+00:00:32.895 --> 00:00:38.984
+So one thing I could do is simply change my flex direction from column to row,
+
+00:00:38.984 --> 00:00:43.729
+and you see that it has changed the alignment of the boxes inside.
+
+00:00:43.729 --> 00:00:45.049
+So now if you look,
+
+00:00:45.049 --> 00:00:47.750
+you can see that my three boxes are in a row.
+
+00:00:47.750 --> 00:00:52.009
+But again, column and they are in a column.
+
+00:00:52.009 --> 00:00:55.604
+What about column reverse?
+
+00:00:55.604 --> 00:00:57.179
+So here it's box one,
+
+00:00:57.179 --> 00:00:59.024
+box two, box three.
+
+00:00:59.024 --> 00:01:01.814
+Now, that we refreshed it's box three,
+
+00:01:01.814 --> 00:01:04.069
+box two, box one.
+
+00:01:04.069 --> 00:01:06.729
+Let's go back to a row for a second.
+
+00:01:06.730 --> 00:01:11.880
+Let's try changing how we justify our content.
+
+00:01:12.250 --> 00:01:16.204
+You can see that each of the three boxes
+
+00:01:16.204 --> 00:01:19.204
+also have some of their own individual CSS properties.
+
+00:01:19.204 --> 00:01:22.834
+The one that I want us to look at right this second is just called order.
+
+00:01:22.834 --> 00:01:25.609
+Right now they all have an order of one.
+
+00:01:25.609 --> 00:01:28.030
+So there are ordered one, two, three.
+
+00:01:28.030 --> 00:01:33.180
+But watch what happens when I drop the order of one and
+
+00:01:33.180 --> 00:01:38.780
+two to three and leave the order property of div three at one.
+
+00:01:38.780 --> 00:01:42.349
+You see that box three is now first because it comes in
+
+00:01:42.349 --> 00:01:47.854
+the order or of columns like this.
+
+00:01:47.855 --> 00:01:49.790
+If we don't want to align in the item center,
+
+00:01:49.790 --> 00:01:51.035
+we move them over there.
+
+00:01:51.034 --> 00:01:55.854
+There's all stuff that you can do once you start to take control with Flexbox.
+
+00:01:55.855 --> 00:01:59.659
+Let's dive deeper so that you can learn the real skills underlying
+
+00:01:59.659 --> 00:02:04.980
+the movements we're making and set up your pixel perfect website.
+

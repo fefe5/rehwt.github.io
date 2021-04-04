@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.250 --> 00:00:06.480
+Now you have learned to think inside the Flexbox,
+
+00:00:06.480 --> 00:00:08.160
+using the box model.
+
+00:00:08.160 --> 00:00:11.730
+With so many boxes there's so much to store.
+
+00:00:11.730 --> 00:00:15.179
+In this lesson, we learned how the display property, Flex,
+
+00:00:15.179 --> 00:00:17.850
+on a container element can be used to control
+
+00:00:17.850 --> 00:00:21.255
+the distribution and alignment of elements inside of it.
+
+00:00:21.254 --> 00:00:26.879
+We learned to control the flex flow with flex direction column or row.
+
+00:00:26.879 --> 00:00:31.934
+We learned how to justify and align content along the main and cross axes.
+
+00:00:31.934 --> 00:00:35.250
+We also learned how a flex container can expand to
+
+00:00:35.250 --> 00:00:38.924
+fit the items inside of it and to prevent overflow.
+
+00:00:38.924 --> 00:00:42.015
+Unlike many other CSS properties,
+
+00:00:42.015 --> 00:00:47.840
+Flex has a main container and then inside of it it has elements that we call items.
+
+00:00:47.840 --> 00:00:54.325
+Some CSS Flex properties are used only on the parent and others are used on the items.
+
+00:00:54.325 --> 00:00:58.430
+Now, I wish you great luck using Flexbox in the wild.
+
+00:00:58.429 --> 00:01:01.289
+It's one of those things that I think now that you have learned it,
+
+00:01:01.289 --> 00:01:05.245
+you'll start to recognize it at a lot of the different developing places you go.
+
+00:01:05.245 --> 00:01:08.359
+Flex is constantly used for web development and it's
+
+00:01:08.359 --> 00:01:11.480
+well worth your time to learn how you can align,
+
+00:01:11.480 --> 00:01:18.300
+distribute, and set up a set of elements just in the way that you want. Good luck.
+

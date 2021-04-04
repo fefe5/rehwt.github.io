@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.159 --> 00:00:09.390
+Two of the major concepts involved in Flexbox or the axis and the direction.
+
+00:00:09.390 --> 00:00:13.470
+The Flexbox model relies on two axis.
+
+00:00:13.470 --> 00:00:20.069
+The main axis is defined by flex direction which has four possible values: row,
+
+00:00:20.068 --> 00:00:23.039
+row reverse, column, and column reverse.
+
+00:00:23.039 --> 00:00:28.454
+The two row settings will create the main access horizontally or
+
+00:00:28.454 --> 00:00:31.289
+inline while the two column settings will create
+
+00:00:31.289 --> 00:00:35.325
+the main access vertically or block direction.
+
+00:00:35.325 --> 00:00:42.285
+This means that whichever access is not the main access will be our alternate access.
+
+00:00:42.284 --> 00:00:45.079
+The axis determined the flow of your content.
+
+00:00:45.079 --> 00:00:48.604
+You can think of this as being either rows or columns,
+
+00:00:48.604 --> 00:00:51.769
+and they will be determinant when you start aligning and
+
+00:00:51.770 --> 00:00:55.100
+justifying content within a flex container.
+
+00:00:55.100 --> 00:00:57.350
+Now that we've talked about axis and
+
+00:00:57.350 --> 00:01:01.010
+direction as well as looking at the row and column settings,
+
+00:01:01.009 --> 00:01:04.250
+let's combine it all and take a quick look together and see if we can
+
+00:01:04.250 --> 00:01:09.239
+understand exactly what's going on with these directions and these different axis.
+

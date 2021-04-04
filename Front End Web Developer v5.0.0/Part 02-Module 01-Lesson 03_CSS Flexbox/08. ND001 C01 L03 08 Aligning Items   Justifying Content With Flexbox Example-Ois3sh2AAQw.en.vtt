@@ -1,0 +1,271 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.370
+So one of the things that I want to try as we're talking about align-items and
+
+00:00:05.370 --> 00:00:11.655
+justify content is how you can use documentation yourself.
+
+00:00:11.654 --> 00:00:16.439
+It's really impossible to memorize every single type of code there is.
+
+00:00:16.440 --> 00:00:20.520
+Sure, you put your 10,000 hours in and you know a lot of the stuff by heart.
+
+00:00:20.519 --> 00:00:24.000
+You pick it up, your fingers start to know the keystrokes.
+
+00:00:24.000 --> 00:00:28.349
+But the truth is there's so many properties that even professional developers,
+
+00:00:28.349 --> 00:00:32.359
+often consult the documentation to learn all of them.
+
+00:00:32.359 --> 00:00:34.759
+So last night, as I was preparing this run through,
+
+00:00:34.759 --> 00:00:37.269
+going through the documentation myself, I thought,
+
+00:00:37.270 --> 00:00:41.150
+Instead of pretending I'm totally brilliant and just always know this stuff,
+
+00:00:41.149 --> 00:00:44.060
+I would show some of that process with you and we could share
+
+00:00:44.060 --> 00:00:47.750
+the process of looking at documentation as we're working with code.
+
+00:00:47.750 --> 00:00:49.670
+So let's see how it goes.
+
+00:00:49.670 --> 00:00:53.100
+Here I'm looking at the justify-content page.
+
+00:00:53.100 --> 00:00:58.295
+I can see that the different possibilities for justify-content,
+
+00:00:58.295 --> 00:01:01.594
+are start, center, space between,
+
+00:01:01.594 --> 00:01:04.414
+space around, and space evenly.
+
+00:01:04.415 --> 00:01:10.520
+So over here I can tell that I'm using justify-content center,
+
+00:01:10.519 --> 00:01:13.670
+let's try some of the other ones.
+
+00:01:13.670 --> 00:01:17.230
+What happens if I go justify-content start?
+
+00:01:17.230 --> 00:01:18.965
+Boom. Did you see that?
+
+00:01:18.965 --> 00:01:24.665
+All the boxes moved over so that they start where my starting access is.
+
+00:01:24.665 --> 00:01:28.210
+Should we see it again? There they go, back to center.
+
+00:01:28.209 --> 00:01:29.884
+Let's take a look at another one.
+
+00:01:29.885 --> 00:01:38.320
+What would happen if we did space around? Did you see that?
+
+00:01:38.319 --> 00:01:43.294
+Now, it evenly distributes that with space in between each of them.
+
+00:01:43.295 --> 00:01:46.355
+Should we see it again? There it is, centered.
+
+00:01:46.355 --> 00:01:48.109
+Here it is, space around.
+
+00:01:48.109 --> 00:01:49.745
+Should we try one more?
+
+00:01:49.745 --> 00:01:53.500
+How about space evenly?
+
+00:01:54.409 --> 00:01:58.965
+Cool. These are only working, if you notice,
+
+00:01:58.965 --> 00:02:02.975
+justify-content is doing things on the horizontal access.
+
+00:02:02.974 --> 00:02:06.719
+Let's try some different settings with aligned items.
+
+00:02:06.719 --> 00:02:13.500
+In order to do so, I'm going to create a few more boxes.
+
+00:02:13.500 --> 00:02:18.455
+Okay. So now, let's take a look at aligning some items.
+
+00:02:18.455 --> 00:02:23.490
+So we've added boxes four and five here,
+
+00:02:23.490 --> 00:02:24.810
+so we can see boxes 1,
+
+00:02:24.810 --> 00:02:26.939
+2, 3, 4, and 5.
+
+00:02:26.939 --> 00:02:30.469
+Here we can see that we have align item set to center.
+
+00:02:30.469 --> 00:02:32.180
+If we go into the documentation,
+
+00:02:32.180 --> 00:02:37.205
+we can see that some of the other ones are stretch, start, and end.
+
+00:02:37.205 --> 00:02:40.625
+So let's take a look at stretch.
+
+00:02:40.625 --> 00:02:44.969
+Let's see what happens if we change this to column.
+
+00:02:47.000 --> 00:02:50.210
+So align items, stretched out,
+
+00:02:50.210 --> 00:02:52.640
+we see that they're actually going to stretch across
+
+00:02:52.639 --> 00:02:56.179
+the entire width of the container that it's in.
+
+00:02:56.180 --> 00:02:58.760
+That's one of the amazing things that flex does.
+
+00:02:58.759 --> 00:03:04.030
+If you see here, box no longer has any width and height set explicitly on it,
+
+00:03:04.030 --> 00:03:06.034
+all it has is a border.
+
+00:03:06.034 --> 00:03:10.759
+But simply by changing the way that the items are fit in to the container,
+
+00:03:10.759 --> 00:03:13.310
+we see them actually change their shape.
+
+00:03:13.310 --> 00:03:15.634
+So let's try end.
+
+00:03:15.634 --> 00:03:18.560
+So now, we have align-items end,
+
+00:03:18.560 --> 00:03:24.629
+how about align-items start? That's going to be the theme.
+
+00:03:24.629 --> 00:03:30.159
+What if we do align-items and in a row?
+
+00:03:30.919 --> 00:03:37.259
+We'll try centered, stretch.
+
+00:03:37.259 --> 00:03:39.599
+Let's take out justify-content.
+
+00:03:39.599 --> 00:03:42.710
+See what happens, no change.
+
+00:03:42.710 --> 00:03:45.740
+What if we changed the direction of our axes?
+
+00:03:45.740 --> 00:03:48.310
+Now, we see a change.
+
+00:03:48.310 --> 00:03:52.219
+So you can see that align-items and justify-content act
+
+00:03:52.219 --> 00:03:55.925
+differently based on the flex direction itself.
+
+00:03:55.925 --> 00:04:03.765
+Here we have one of what I think is the most comfortable setups that I use.
+
+00:04:03.764 --> 00:04:05.449
+One of the things that I like to see are
+
+00:04:05.449 --> 00:04:09.530
+well-distributed boxes that use up as much real estate as possible.
+
+00:04:09.530 --> 00:04:13.145
+In this example, we've set up box one through five
+
+00:04:13.145 --> 00:04:16.970
+to be spaced evenly throughout its parent container.
+
+00:04:16.970 --> 00:04:19.560
+So that even if we took out,
+
+00:04:19.560 --> 00:04:23.240
+say box five, we can see now that
+
+00:04:23.240 --> 00:04:27.514
+the four boxes will redistribute themselves to occupy the space.
+
+00:04:27.514 --> 00:04:30.529
+Let's say we don't want box three anymore either,
+
+00:04:30.529 --> 00:04:31.939
+you see how this works?
+
+00:04:31.939 --> 00:04:36.399
+Flexbox presents a lot of magic possibilities,
+
+00:04:36.399 --> 00:04:39.579
+box one, box four.
+
+00:04:40.069 --> 00:04:42.675
+Still right in the center,
+
+00:04:42.675 --> 00:04:43.980
+without any extra code,
+
+00:04:43.980 --> 00:04:45.569
+we have box one.
+
+00:04:45.569 --> 00:04:47.509
+So a lot of what we've just seen,
+
+00:04:47.509 --> 00:04:51.810
+including the way that we remove and add different elements,
+
+00:04:51.810 --> 00:04:57.050
+a lot of this stuff can also be done in a programming language called JavaScript.
+
+00:04:57.050 --> 00:04:59.050
+Actually, if you look on the internet,
+
+00:04:59.050 --> 00:05:01.343
+there's whole sets of people who will argue
+
+00:05:01.343 --> 00:05:04.360
+the best way to do things because JavaScript is
+
+00:05:04.360 --> 00:05:10.180
+a more complex language that really allows you a dynamic possibility that CSS doesn't.
+
+00:05:10.180 --> 00:05:13.860
+But CSS is a much simpler language that also can allow you,
+
+00:05:13.860 --> 00:05:16.009
+as you see to do some of the same things.
+
+00:05:16.009 --> 00:05:18.305
+So as you learn both of these tools,
+
+00:05:18.305 --> 00:05:21.639
+you could weigh in on the debate about when and how to use
+
+00:05:21.639 --> 00:05:26.789
+CSS vs JavaScript to manipulate elements on your DOM.
+
