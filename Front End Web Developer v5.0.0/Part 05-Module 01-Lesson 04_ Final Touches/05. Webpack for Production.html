@@ -1,0 +1,335 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webpack for Production</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3> Final Touches</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Broken Project.html">01. Broken Project</a>
+    </li>
+    <li class="">
+      <a href="02. Fixing Our Functionality.html">02. Fixing Our Functionality</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Fixing Functionality.html">03. Exercise: Fixing Functionality</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise API Call Challenge.html">04. Exercise: API Call Challenge</a>
+    </li>
+    <li class="">
+      <a href="05. Webpack for Production.html">05. Webpack for Production</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Dev Tools Challenge.html">06. Exercise: Dev Tools Challenge</a>
+    </li>
+    <li class="">
+      <a href="07. Service Workers.html">07. Service Workers</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise Service Workers.html">08. Exercise: Service Workers</a>
+    </li>
+    <li class="">
+      <a href="09. Course 4 Conclusion.html">09. Course 4 Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Webpack for Production</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Production Goals</p></h3>
+  <div>
+  <p>Now we have a usable and fairly well set up development environment for webpack with express. But though our development environment has gotten a lot of attention lately, we haven’t done much with our production config. So we’ll give it some love in this section. Thankfully, just by setting mode as “production” webpack knows to do some optimizations. For instance, have you noticed that the main.js file is not minified in development, but is minified for production? That’s webpack automatically knowing what we want, just because we specified the mode.</p>
+<p>When we bundle assets for production, I like to think of it like your app is going on a camping trip and you have to pack the bag. Everything your app needs to run has to be there, but you have to make it as small and light as possible, or else your app won’t do very well on its trip. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="switch-the-git-branch">Switch the Git Branch</h2>
+<p>You can continue to practice the demonstration instructions below on <code>2-fixing-js</code> branch, <strong>or</strong> you can switch to <code>3-webpack-production-config</code> branch corresponding to the current exercise where all the steps have already been carried out. Use the following checkout command in your project root directory:</p>
+<pre><code>git checkout 3-webpack-production-config</code></pre>
+<h2 id="set-up-production-configuration-for-webpack">Set up Production Configuration for Webpack</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L4 A03 Webpack For Production</p></h3>
+  <video controls>
+  <source src="05. FEND C04 L4 A03 Webpack For Production-La7iR5d9Vb8.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. FEND C04 L4 A03 Webpack For Production-La7iR5d9Vb8.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="05. FEND C04 L4 A03 Webpack For Production-La7iR5d9Vb8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="steps-followed-in-the-demonstration-video">Steps Followed in the Demonstration Video</h2>
+<ol>
+<li>In <code>packages.json</code> append the following new entries in "devDependencies":</li>
+</ol>
+<pre><code>"mini-css-extract-plugin": "^0.9.0",
+"terser-webpack-plugin": "^1.3.0",
+"optimize-css-assets-webpack-plugin": "^5.0.3",</code></pre>
+<p>The version may vary with time. </p>
+<ol start="2">
+<li>In <code>webpack.prod.js</code> config file, append the new plugin statements:</li>
+</ol>
+<pre><code class="js language-js">const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');</code></pre>
+<p>Add the optimization attribute in <code>module.exports</code> section,  that will help us to minimize certain files. Notice that the TerserPlugin and OptimizeCSSAssetsPlugin are being initialized here.</p>
+<pre><code class="js language-js">optimization: {
+     minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+     },</code></pre>
+<p>Updated the rule section for Sass file loaders:</p>
+<pre><code class="js language-js">{
+test: /\.scss$/,
+use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+},</code></pre>
+<p>Instantiate the new plugin in the plugin list:</p>
+<pre><code class="js language-js">new MiniCssExtractPlugin({ filename: "[name].css" })</code></pre>
+<ol start="3">
+<li>On the terminal, run the following commands:</li>
+</ol>
+<pre><code>npm i -D mini-css-extract-plugin
+npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
+npm run build-prod</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Multiple Choice Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What are the three biggest factors contributing to slow and bloated websites?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1592494367916" name="1037071" id="a1592494367916">
+      <label for="a1592494367916"><p>High resolution images and gifs</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592494420538" name="1037071" id="a1592494420538">
+      <label for="a1592494420538"><p>Javascript</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592494429890" name="1037071" id="a1592494429890">
+      <label for="a1592494429890"><p>Having too many webpages in the architecture</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592494443242" name="1037071" id="a1592494443242">
+      <label for="a1592494443242"><p>Styles</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>High resolution images and gifs</li>
+      <li>Javascript</li>
+      <li>Styles</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Reflect</p></strong></p>
+  <p>With your minified css file, go check the overall page size in your browser again. How much smaller is your webpage? The results won't be drastic here, because our styles are quite short, but whatever percentage of space you saved, apply that mentally to 5MB of styles. Then you really start to see some page speed results!</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks! </p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>What is the purpose of a .map file?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Map files keep track of which source files the code in your bundled file comes from. This is incredibbly handy when debugging. Without a map file, you would get an error that says it is coming from like 1783 of bundle.js - which isn’t very helpful, but with a source map turned on it would tell you the file name and line where the error is occuring. Much better!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>A Little Bit Extra</p></h3>
+  <div>
+  <h3 id="a-real-life-example">A real life example</h3>
+<p>Just as a bit of extra for how knowing all of this about production builds can be useful, take this example. Imagine you just took on a new client, and want to give them a report of their current site before starting on any development work (that is a great thing to do for all your clients, by the way). Minimizing assets can be an easy win. You might be able to bump a client's page speed considerably, just by minimizing their stylesheets, if they aren't being minimized already. You can also check if styles are being loaded that are never used on the page. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Webpack for Production Conclusion</p></h3>
+  <div>
+  <p>Webpack allows us to do some really powerful optimizations for production, and we have only scratched the surface here, but we have done probably the most important tasks. If you want to delve more into production optimizations, webpack has its <a href="https://webpack.js.org/guides/production/" rel="noopener noreferrer" target="_blank">own documentation</a> for this and reading plugin documentation like Terser’s will have lots of ways to help you.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Webpack for Production Optional</p></h3>
+  <div>
+  <p>If you feel comfortable with webpack and what we've done so far, you might have noticed that our webpack config files don't exactly follow the DRY principle. There is definitely going to be some overlap between our prod and dev configs. Webpack recognizes this and has actually created a webpack merge plugin that allows you to create a webpack config file that is generic across all your configs, that can be merged with another config to contain exactly the settings you need. Create a new branch on your repo, then see if you can get it working. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Exercise Dev Tools Challenge.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Webpack for Production')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

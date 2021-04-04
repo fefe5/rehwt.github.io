@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.399
+In this section, we're going to highlight
+
+00:00:02.399 --> 00:00:05.189
+one last really cool thing that we can do with Webbpack.
+
+00:00:05.190 --> 00:00:06.975
+We're going to add service workers.
+
+00:00:06.974 --> 00:00:11.849
+Service workers is a piece of JavaScript that runs between our app and the Internet,
+
+00:00:11.849 --> 00:00:15.434
+and runs in the background to allow us to do some really cool things
+
+00:00:15.435 --> 00:00:19.560
+like push notifications or even offline content.
+
+00:00:19.559 --> 00:00:21.809
+You'll often hear about service workers,
+
+00:00:21.809 --> 00:00:24.719
+talked about in the same circles as progressive web apps.
+
+00:00:24.719 --> 00:00:30.035
+Progressive web apps are essentially websites that can feel more like a mobile phone app.
+
+00:00:30.035 --> 00:00:31.940
+Now, as an introduction to
+
+00:00:31.940 --> 00:00:34.914
+all the really cool things that you can do with service workers,
+
+00:00:34.914 --> 00:00:37.460
+we're going to take the app we've built and use
+
+00:00:37.460 --> 00:00:40.460
+service workers to make our content available offline.
+
+00:00:40.460 --> 00:00:42.770
+You can use service workers without Webbpack,
+
+00:00:42.770 --> 00:00:45.215
+but Webbpack makes it wonderfully easy,
+
+00:00:45.215 --> 00:00:47.280
+and I'm sure you'll see how.
+

@@ -1,0 +1,292 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.705
+Now that you've had that practice with EFIS, in this video,
+
+00:00:03.705 --> 00:00:08.355
+we're going to take a look at the webpack fixes for our JavaScript problems.
+
+00:00:08.355 --> 00:00:10.650
+So if we take a look at this code,
+
+00:00:10.650 --> 00:00:16.679
+you can see that I have the webpack config exactly as we ended it in the last lesson.
+
+00:00:16.679 --> 00:00:19.094
+So we have our styles loaders and everything.
+
+00:00:19.094 --> 00:00:22.660
+But I've added this new section called output.
+
+00:00:22.660 --> 00:00:27.484
+Up until now, we've used the default settings for output.
+
+00:00:27.484 --> 00:00:29.839
+But to make our JavaScript work,
+
+00:00:29.839 --> 00:00:33.545
+I've added the library and libraryTarget settings.
+
+00:00:33.545 --> 00:00:36.789
+You don't have to worry too much about what those are doing,
+
+00:00:36.789 --> 00:00:39.600
+but know that our JavaScript files,
+
+00:00:39.600 --> 00:00:42.800
+our custom JavaScript is now going to be put
+
+00:00:42.799 --> 00:00:46.804
+into our own library that I've called client.
+
+00:00:46.804 --> 00:00:49.549
+The name client isn't important.
+
+00:00:49.549 --> 00:00:51.364
+You could name it whatever you wanted,
+
+00:00:51.365 --> 00:00:55.280
+but what's important to understand here is that all of
+
+00:00:55.280 --> 00:01:01.424
+our JavaScript code is now going to be accessible through the client library.
+
+00:01:01.424 --> 00:01:03.284
+What does that really mean?
+
+00:01:03.284 --> 00:01:09.125
+How is webpack going to let us use this new client library and how does that help us?
+
+00:01:09.125 --> 00:01:13.219
+Well first off, we need to come to our index.js
+
+00:01:13.219 --> 00:01:17.944
+file that has both of our JavaScript files being imported.
+
+00:01:17.944 --> 00:01:24.729
+We are going to actually export these files into the client library.
+
+00:01:24.730 --> 00:01:27.320
+Now, how it's getting into a client library
+
+00:01:27.319 --> 00:01:30.154
+that's done by webpack and we don't have to worry about it.
+
+00:01:30.155 --> 00:01:34.760
+But here we just need to know that all of our JavaScript is being
+
+00:01:34.760 --> 00:01:41.045
+exported from the index.js file and now it's going to be part of that client library.
+
+00:01:41.045 --> 00:01:46.490
+But how does that actually get used in our index.html?
+
+00:01:46.489 --> 00:01:49.459
+Well, if we come to the
+
+00:01:49.459 --> 00:01:54.994
+index.html and we look at the custom handle submit function that we created,
+
+00:01:54.995 --> 00:01:58.385
+this is not going to work and it hasn't worked.
+
+00:01:58.385 --> 00:02:03.710
+So now, we can add a client.handleSubmit and this is going to
+
+00:02:03.709 --> 00:02:09.310
+reference our custom function that is now being exported into the client library.
+
+00:02:09.310 --> 00:02:15.110
+If we make this change universally through this file and through all of our JavaScript,
+
+00:02:15.110 --> 00:02:18.230
+we will have fixed all of our JavaScript issues.
+
+00:02:18.229 --> 00:02:20.299
+So if we go to
+
+00:02:20.300 --> 00:02:26.210
+the JavaScript just know that all throughout any of the JavaScript that you've written,
+
+00:02:26.210 --> 00:02:29.585
+it now needs to reference the client library.
+
+00:02:29.585 --> 00:02:33.349
+So here, instead of just using the function checkForName that
+
+00:02:33.349 --> 00:02:37.039
+would normally come to my second JavaScript function,
+
+00:02:37.039 --> 00:02:42.739
+I need to make sure that I reference that checkForName through the client library.
+
+00:02:42.740 --> 00:02:47.455
+So I've gone ahead and made that reference to client global in my code.
+
+00:02:47.455 --> 00:02:51.860
+Now, I've restarted webpack and we can see that if I type in
+
+00:02:51.860 --> 00:02:57.530
+a name and hit "Submit" that our functionality gets back to working which is fantastic.
+
+00:02:57.530 --> 00:03:01.509
+Now, let's address what's going wrong with our Express server.
+
+00:03:01.509 --> 00:03:05.219
+We have been using the webpack-dev-server in development,
+
+00:03:05.219 --> 00:03:07.925
+which is an awesome tool because we don't have to
+
+00:03:07.925 --> 00:03:11.780
+restart our browser every time that we make a style change.
+
+00:03:11.780 --> 00:03:15.289
+We get to watch that update happen in live time in our browser.
+
+00:03:15.289 --> 00:03:18.349
+But when we use this in production,
+
+00:03:18.349 --> 00:03:20.704
+we can't use the webpack-dev-server.
+
+00:03:20.705 --> 00:03:23.240
+So we need to make sure that our Express server
+
+00:03:23.240 --> 00:03:26.314
+is set up correctly so that we can use it in production.
+
+00:03:26.314 --> 00:03:30.425
+Now, you'll notice a really interesting thing that happens when I
+
+00:03:30.425 --> 00:03:34.730
+run the Express server that we set up at the very beginning of the course.
+
+00:03:34.729 --> 00:03:40.649
+You can see that it's running on port 8080 and if I go there,
+
+00:03:43.759 --> 00:03:47.014
+our app has gone back in time.
+
+00:03:47.014 --> 00:03:50.750
+We are looking at the app as it was at the beginning of lesson 2.
+
+00:03:50.750 --> 00:03:53.060
+Now, what's going on?
+
+00:03:53.060 --> 00:03:54.740
+Why does it happen that way?
+
+00:03:54.740 --> 00:04:02.555
+Well, we have been using the webpack-dev-server that does not rebuild our main.js.
+
+00:04:02.555 --> 00:04:07.069
+So the main.js file in the distribution folder that we're looking at right
+
+00:04:07.069 --> 00:04:12.680
+now is the same one that we built right before we added the webpack-dev-server.
+
+00:04:12.680 --> 00:04:16.625
+So we can see that there's some work that needs to be done here.
+
+00:04:16.625 --> 00:04:20.014
+Now some of you may have noticed that in
+
+00:04:20.014 --> 00:04:24.409
+our formHandler function we were doing a fetch request.
+
+00:04:24.410 --> 00:04:28.220
+This is a good example of a fetch request that you could put into
+
+00:04:28.220 --> 00:04:32.000
+the code of your app that could reference a local file,
+
+00:04:32.000 --> 00:04:37.160
+it could also go to an external third party API and it's here as
+
+00:04:37.160 --> 00:04:42.650
+a reference for you so that you can make references to an API for your project.
+
+00:04:42.649 --> 00:04:49.509
+But right now, we're looking for a file at port 8081 called test.
+
+00:04:49.509 --> 00:04:53.250
+This points out one thing about the webpack-dev-server which
+
+00:04:53.250 --> 00:04:56.555
+is only good for single-page apps.
+
+00:04:56.555 --> 00:04:59.240
+If you need to start working with multiple pages,
+
+00:04:59.240 --> 00:05:02.840
+like if we were trying to look for a test page on
+
+00:05:02.839 --> 00:05:07.969
+the 8080 port of the dev server, it wouldn't work.
+
+00:05:07.970 --> 00:05:11.660
+We would have to do some extra configuration or you might have
+
+00:05:11.660 --> 00:05:16.235
+to handle your own solution if you want the dev server to do that.
+
+00:05:16.235 --> 00:05:18.680
+So this fetch request is to
+
+00:05:18.680 --> 00:05:23.480
+simulate the type of fetch request you might make to another API.
+
+00:05:23.480 --> 00:05:28.825
+But if we go look at our index.js for our server,
+
+00:05:28.824 --> 00:05:32.329
+you can see that the way we had it set up at the beginning was
+
+00:05:32.329 --> 00:05:35.524
+to use port 8080 which conflicts with
+
+00:05:35.524 --> 00:05:38.719
+our dev server that's also running on port 8080 and you
+
+00:05:38.720 --> 00:05:42.455
+can't run two apps on the same port at the same time.
+
+00:05:42.454 --> 00:05:47.240
+So that forces us to change this to be port 8081.
+
+00:05:47.240 --> 00:05:52.685
+Now you could change it to be 3,000 or whatever you want it but 8081 is convenient.
+
+00:05:52.685 --> 00:05:55.954
+So now that we've set that to run on port 8081,
+
+00:05:55.954 --> 00:06:00.589
+we can run this server at the same time as we run our webpack server.
+
+00:06:00.589 --> 00:06:03.169
+So if we come over to the terminal,
+
+00:06:03.170 --> 00:06:06.620
+you can see that I've opened two different windows and I have
+
+00:06:06.620 --> 00:06:13.384
+my Express side running on port 8081 and I have my webpack side running on port 8080.
+
+00:06:13.384 --> 00:06:15.730
+If we go to our app now,
+
+00:06:15.730 --> 00:06:19.955
+if I put in a value and I hit "Submit",
+
+00:06:19.954 --> 00:06:26.029
+you can see that we actually get our message being returned into the browser.
+
+00:06:26.029 --> 00:06:29.389
+So that's awesome because that means that our Express server is
+
+00:06:29.389 --> 00:06:34.319
+working and it means that all of our JavaScript is working as expected.
+

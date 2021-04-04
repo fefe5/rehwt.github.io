@@ -1,0 +1,292 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixing Our Functionality</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3> Final Touches</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Broken Project.html">01. Broken Project</a>
+    </li>
+    <li class="">
+      <a href="02. Fixing Our Functionality.html">02. Fixing Our Functionality</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Fixing Functionality.html">03. Exercise: Fixing Functionality</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise API Call Challenge.html">04. Exercise: API Call Challenge</a>
+    </li>
+    <li class="">
+      <a href="05. Webpack for Production.html">05. Webpack for Production</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Dev Tools Challenge.html">06. Exercise: Dev Tools Challenge</a>
+    </li>
+    <li class="">
+      <a href="07. Service Workers.html">07. Service Workers</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise Service Workers.html">08. Exercise: Service Workers</a>
+    </li>
+    <li class="">
+      <a href="09. Course 4 Conclusion.html">09. Course 4 Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Fixing Our Functionality</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="switch-the-git-branch">Switch the Git Branch</h2>
+<p>You can continue to practice the demonstration instructions below on <code>1-add-sass-loaders</code> branch, or you can switch to <code>2-fixing-js</code> branch corresponding to the current exercise where all the steps have already been carried out. Use the following checkout command in your project root directory:</p>
+<pre><code>git checkout 2-fixing-js</code></pre>
+<h2 id="fixing-the-js-functionality">Fixing the JS Functionality</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L4 A02 Fixing Functionality</p></h3>
+  <video controls>
+  <source src="02. FEND C04 L4 A02 Fixing Functionality-UAbNwATXNy0.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. FEND C04 L4 A02 Fixing Functionality-UAbNwATXNy0.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. FEND C04 L4 A02 Fixing Functionality-UAbNwATXNy0.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="instructions-to-follow">Instructions to Follow</h2>
+<ol>
+<li>As we will start the Express server on a different port, we have to make familiar changes in the <code>webpack.prod.js</code>.  Add the rule for sass files, like below:</li>
+</ol>
+<pre><code>            {
+                test: /\.scss$/,
+                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+            }</code></pre>
+<ol start="2">
+<li>In <code>webpack.prod.js</code> as well as <code>webpack.dev.js</code>, add a new section in <code>module.exports</code> as:</li>
+</ol>
+<pre><code>output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },</code></pre>
+<ol start="3">
+<li>In <code>client/index.js</code>, add the export statement:</li>
+</ol>
+<pre><code class="js language-js">export {
+    checkForName,
+    handleSubmit
+}</code></pre>
+<ol start="4">
+<li>In <code>client/views/index.html</code>, confirm that the custom <code>handleSubmit()</code> function references the newly created Client library, as:</li>
+</ol>
+<pre><code class="html language-html">            &lt;section&gt;
+                &lt;form class="" onsubmit="return Client.handleSubmit(event)"&gt;
+                    &lt;input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name"&gt;
+                    &lt;input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)"&gt;
+                &lt;/form&gt;
+            &lt;section&gt;</code></pre>
+<ol start="5">
+<li>In <code>client/js</code> directory, confirm that the javascript function calls refer to the Client library. In <code>formHandler.js</code>:</li>
+</ol>
+<pre><code>Client.checkForName(formText)</code></pre>
+<p>Change the port number in the fetch request in the  <code>formHandler.js</code> to 8081:</p>
+<pre><code>    fetch('http://localhost:8081/test')
+    .then(res =&gt; {
+        return res.json()
+    })
+    .then(function(data) {
+        document.getElementById('results').innerHTML = data.message
+    })</code></pre>
+<ol start="6">
+<li>Change the port number in <code>server/index.js</code> to 8081 as well:</li>
+</ol>
+<pre><code>// designates what port the app will listen to for incoming requests
+app.listen(8081, function () {
+    console.log('Example app listening on port 8081!')
+})</code></pre>
+<ol start="7">
+<li>Open two terminal, one for the webpack dev server, and another for Express in production mode. In terminal 1, run the following commands:</li>
+</ol>
+<pre><code># If you have switched to a new branch
+npm install</code></pre>
+<pre><code># Optional installation for development mode
+npm i -D @babel/core @babel/preset-env babel-loader
+npm i -D style-loader node-sass css-loader sass-loader
+npm i -D clean-webpack-plugin
+npm i -D html-webpack-plugin</code></pre>
+<pre><code># Build and start the webpack dev server at port 8080
+npm run build-dev</code></pre>
+<ol start="8">
+<li>In terminal 2, run the following commands:</li>
+</ol>
+<pre><code># generate a `dist` folder for prod
+npm run build-prod
+# Run the Express server on port 8081
+npm start </code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>Explain scope in javascript. It might be easier if you choose an example to walk through.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>This question is likely to come up in some form or another in a javascript interview. Even if they never ask about scope directly, they will most likely ask a question that revolves around your knowledge of scope. But it is a frustratingly abstract and difficult concept to answer point blank. The simplest answer is to say that scope is where a variable can be seen. But you need to go into better detail than that, so most people choose an allegory or code examples. No one expects your answer to be perfect, so just try your best to get the point across. This is also a great interview question to show off your communication skills. A big part of being a developer is being able to clearly explain complex and technical topics, especially to non-technical people. </p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Exercise Fixing Functionality.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Fixing Our Functionality')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

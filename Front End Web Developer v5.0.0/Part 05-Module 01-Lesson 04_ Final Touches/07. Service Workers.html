@@ -1,0 +1,314 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Service Workers</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3> Final Touches</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Broken Project.html">01. Broken Project</a>
+    </li>
+    <li class="">
+      <a href="02. Fixing Our Functionality.html">02. Fixing Our Functionality</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Fixing Functionality.html">03. Exercise: Fixing Functionality</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise API Call Challenge.html">04. Exercise: API Call Challenge</a>
+    </li>
+    <li class="">
+      <a href="05. Webpack for Production.html">05. Webpack for Production</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Dev Tools Challenge.html">06. Exercise: Dev Tools Challenge</a>
+    </li>
+    <li class="">
+      <a href="07. Service Workers.html">07. Service Workers</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise Service Workers.html">08. Exercise: Service Workers</a>
+    </li>
+    <li class="">
+      <a href="09. Course 4 Conclusion.html">09. Course 4 Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Service Workers</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>FEND C04 L4 A04 What Are Service Workers</p></h3>
+  <video controls>
+  <source src="07. FEND C04 L4 A04 What Are Service Workers-Y2UxD8WV8ww.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="07. FEND C04 L4 A04 What Are Service Workers-Y2UxD8WV8ww.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="07. FEND C04 L4 A04 What Are Service Workers-Y2UxD8WV8ww.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="switch-the-git-branch">Switch the Git Branch</h2>
+<p>You can continue to practice the instructions below, making use of <code>3-webpack-production-config</code> branch, and create a new branch for yourself <code>adding service workers</code>. </p>
+<p>Otherwise, you can switch to <code>4-service-workers</code> branch corresponding to the current exercise where all the steps have already been carried out. Use the following checkout command in your project root directory:</p>
+<pre><code>git checkout 4-service-workers</code></pre>
+<h2 id="add-service-workers">Add Service Workers</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Google Workbox makes working with basic Service Workers incredibly convenient. We are going to follow their setup instructions, the steps are going to feel very familiar by now, because Google Workbox created a webpack plugin for us.</p>
+<p>We are going to add service workers to <code>webpack.prod.js</code> config file, because to allow offline access, what the service workers actually do is create a cached version of your website that they can supply if the server can’t be reached. But we don’t want that caching around our dev site, so we won’t add this to our dev config at all.</p>
+<p>Like we’ve learned with most plugins, when we call the generate service workers function, we have the ability to pass in some options. There are lots of cool options you can choose from, to do things like cache images at runtime, limit the max size of your cache, etc. For now, we are going to stick with the default settings.</p>
+<p>So, we do our three steps:</p>
+<ol>
+<li>In <code>webpack.prod.js</code> config file, </li>
+</ol>
+<ul>
+<li>Require the plugin, by appending the new plugin statement </li>
+</ul>
+<pre><code>const WorkboxPlugin = require('workbox-webpack-plugin');</code></pre>
+<ul>
+<li>Instantiate the new plugin in the plugin list: <br />
+<code>
+new WorkboxPlugin.GenerateSW()</code></li>
+</ul>
+<ol>
+<li>On the terminal, install the plugin using <code>npm install workbox-webpack-plugin --save-dev</code></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ol start="3">
+<li><p>If you follow along with the <a href="https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack" rel="noopener noreferrer" target="_blank">Workbox Service Worker documentation</a>, there’s one more step. We need to register a Service Worker with our app. To do this, we will add a script to our <code>/src/client/views/index.html</code> file and call the register service worker function if the browser supports service workers.</p>
+<p>Add this code to the bottom of your html file, just above the closing body tag.</p></li>
+</ol>
+<pre><code class="js language-js">&lt;script&gt;
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () =&gt; {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+&lt;/script&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>What are Service Workers Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>A service worker is a json file that keeps a cached copy of your DOM </p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916625" id="rbk1">
+        <label for="rbk1"><p>True</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916625" id="rbk2">
+        <label for="rbk2"><p>False</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    False
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>What are Service Workers Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Service Workers do all the following except:</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916622" id="rbk1">
+        <label for="rbk1"><p>Allow websites to use push notifications like phones</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916622" id="rbk2">
+        <label for="rbk2"><p>Allow websites to have icons like phone apps</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="916622" id="rbk3">
+        <label for="rbk3"><p>Allow websites to offer offline interactions like phone apps</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="916622" id="rbk4">
+        <label for="rbk4"><p>Allow websites to be available through app stores like phone apps</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Allow websites to be available through app stores like phone apps
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Further Research</p></h3>
+  <div>
+  <p>In case this idea of PWA's really caught your interest, I would go to the <a href="https://codelabs.developers.google.com/codelabs/workbox-lab/#0" rel="noopener noreferrer" target="_blank">Google Workbox PWA tutorial</a>. <br />
+Your knowledge of webpack and service workers will put you in a good place to get started.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Exercise Service Workers.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Service Workers')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

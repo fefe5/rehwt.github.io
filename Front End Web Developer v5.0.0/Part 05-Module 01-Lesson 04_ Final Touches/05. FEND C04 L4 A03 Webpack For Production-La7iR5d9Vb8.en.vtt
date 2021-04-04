@@ -1,0 +1,262 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.270
+In this video, we're going to be taking a look at how
+
+00:00:03.270 --> 00:00:06.435
+to set up our production configuration for webpack.
+
+00:00:06.434 --> 00:00:10.649
+This is probably one of the most important parts about webpack and doing
+
+00:00:10.650 --> 00:00:16.170
+this step well will mean that we send a great experience to our users.
+
+00:00:16.170 --> 00:00:18.679
+Every front-end developer is concerned with how
+
+00:00:18.679 --> 00:00:21.920
+fast their website is going to run for users,
+
+00:00:21.920 --> 00:00:27.230
+and the biggest contributors to slow websites are lots of styles,
+
+00:00:27.230 --> 00:00:31.774
+lots of JavaScript, and either large or many images.
+
+00:00:31.774 --> 00:00:34.989
+Now, to make a website run faster,
+
+00:00:34.990 --> 00:00:36.795
+we have to make it smaller.
+
+00:00:36.795 --> 00:00:38.560
+The smaller the web pages,
+
+00:00:38.560 --> 00:00:42.425
+the fewer bytes that are being sent over the internet to the user;
+
+00:00:42.424 --> 00:00:46.414
+therefore, the faster that the website should be able to run.
+
+00:00:46.414 --> 00:00:49.280
+When it comes to making a web page smaller,
+
+00:00:49.280 --> 00:00:51.530
+we only have two options.
+
+00:00:51.530 --> 00:00:58.460
+We can either make the webpage smaller by taking away JavaScript or styles or images,
+
+00:00:58.460 --> 00:01:03.410
+or we can make it smaller by compressing both assets into
+
+00:01:03.409 --> 00:01:10.884
+a smaller format and our webpack config can actually do a lot of that minifying for us.
+
+00:01:10.885 --> 00:01:15.965
+Webpack minifies all of our JavaScript by default when we choose production mode.
+
+00:01:15.965 --> 00:01:18.665
+But all of our styles are a different story.
+
+00:01:18.665 --> 00:01:21.550
+Right now in the webpack dev server,
+
+00:01:21.549 --> 00:01:25.099
+it takes all of our styles and puts them into the main.js
+
+00:01:25.099 --> 00:01:30.155
+file and then adds them into our HTML via inline styles.
+
+00:01:30.155 --> 00:01:33.965
+The problem with that is that inline styles are slow,
+
+00:01:33.965 --> 00:01:36.620
+and to be most efficient,
+
+00:01:36.620 --> 00:01:42.785
+we need to take all of our styles and move them into a CSS file that can be minified.
+
+00:01:42.784 --> 00:01:49.819
+So we're going to add a mini CSS extract plug-in that's going to do those steps for us.
+
+00:01:49.819 --> 00:01:55.009
+By now you're pretty familiar with adding a new plugin to your webpack config but,
+
+00:01:55.010 --> 00:02:01.234
+just quickly I have already added the minify CSS extract plug-in.
+
+00:02:01.234 --> 00:02:03.575
+I've installed it via NPM,
+
+00:02:03.575 --> 00:02:08.120
+and I've instantiated it here in my plugins list.
+
+00:02:08.120 --> 00:02:09.920
+One of the unique things about
+
+00:02:09.919 --> 00:02:14.809
+the mini CSS extract plugin is that it gives us a loader that
+
+00:02:14.810 --> 00:02:17.629
+we can use much like we did with the sass and
+
+00:02:17.629 --> 00:02:21.590
+CSS loaders in the previous lesson in our dev config.
+
+00:02:21.590 --> 00:02:24.500
+So I'm going to add a new set of rules that
+
+00:02:24.500 --> 00:02:28.319
+will handle all of our style sheets for production.
+
+00:02:30.280 --> 00:02:36.245
+Here, you can see that we are again looking for a scss file extension.
+
+00:02:36.245 --> 00:02:42.875
+But instead of the CSS style-loader that we used in the dev config,
+
+00:02:42.875 --> 00:02:48.995
+style-loader here was taking all of our styles and loading them into inline styles.
+
+00:02:48.995 --> 00:02:51.995
+But like we said before inline styles are slow,
+
+00:02:51.995 --> 00:02:55.745
+and so we actually want to extract
+
+00:02:55.745 --> 00:03:01.295
+our CSS into its own file that's going to be added to the distribution folder.
+
+00:03:01.294 --> 00:03:05.739
+So now that we have that setup in our webpack production config,
+
+00:03:05.740 --> 00:03:10.340
+we can come here and run our build prod command.
+
+00:03:10.340 --> 00:03:11.990
+Now, make sure that you have
+
+00:03:11.990 --> 00:03:18.379
+the mini CSS extract plugin installed and we should be able to
+
+00:03:18.379 --> 00:03:22.639
+run this command and then see a new output in
+
+00:03:22.639 --> 00:03:28.009
+our distribution folder which is this main.css file.
+
+00:03:28.009 --> 00:03:30.215
+When you look at the CSS file,
+
+00:03:30.215 --> 00:03:35.585
+it has all of the styles from all of our style sheets concatenated together.
+
+00:03:35.585 --> 00:03:42.340
+I don't have very many styles but imagine that this file is say 5,000 lines long.
+
+00:03:42.340 --> 00:03:46.300
+Now, this is easily human-readable,
+
+00:03:46.300 --> 00:03:48.844
+which means that it hasn't been minified yet.
+
+00:03:48.844 --> 00:03:53.990
+All we're doing at this point is extracting this CSS that would
+
+00:03:53.990 --> 00:03:59.945
+normally go into our main.js file if we were running the webpack dev server.,
+
+00:03:59.944 --> 00:04:04.629
+but now we've brought it out into our own main.css.
+
+00:04:04.629 --> 00:04:07.549
+Now, this is the file that we're going to
+
+00:04:07.550 --> 00:04:12.080
+minify to make the file size smaller for our end users.
+
+00:04:12.080 --> 00:04:15.100
+To do that last minification step,
+
+00:04:15.099 --> 00:04:20.240
+we're going to add a new piece to our webpack prod config file.
+
+00:04:20.240 --> 00:04:24.530
+Now, this is the optimization attribute,
+
+00:04:24.529 --> 00:04:31.684
+and what it's going to do is allow us to run minimizing actions on certain files.
+
+00:04:31.685 --> 00:04:37.040
+In this case, we're going to use two new plugins to do our optimization work.
+
+00:04:37.040 --> 00:04:43.640
+The first one is the tertiary plug-in and the second is the optimized CSS assets plugin.
+
+00:04:43.639 --> 00:04:48.425
+First things first, we're going to install all of the plug-ins that we need.
+
+00:04:48.425 --> 00:04:52.795
+So I have my cursor and optimize plugins ready to go,
+
+00:04:52.795 --> 00:04:58.819
+and now I'm going to add the required statements for both of those new plug-ins.
+
+00:04:58.819 --> 00:05:03.439
+One cool thing about the tertiary and optimize plugins is that you can
+
+00:05:03.439 --> 00:05:07.449
+see we are initializing them here instead of in the plugins list.
+
+00:05:07.449 --> 00:05:09.289
+You would know to do that by reading
+
+00:05:09.290 --> 00:05:12.305
+the GitHub instructions for each of these but for now,
+
+00:05:12.305 --> 00:05:14.090
+you can just now put them here.
+
+00:05:14.089 --> 00:05:17.329
+Now that we've set up those two new plug-ins,
+
+00:05:17.329 --> 00:05:24.310
+we can rerun our config and we should see the modified CSS file on the other side.
+
+00:05:24.310 --> 00:05:29.319
+Now, we can see that our main.css file is, in fact, minified.
+
+00:05:29.319 --> 00:05:32.615
+It's no longer the friendly human-readable format
+
+00:05:32.615 --> 00:05:35.420
+but it's taken a lot of space out of our file.
+
+00:05:35.420 --> 00:05:39.740
+Some minimizers will even go through and shorten your class names to be
+
+00:05:39.740 --> 00:05:44.644
+one letter or do other enhancements to make the code as short as possible.
+
+00:05:44.644 --> 00:05:49.430
+Now, it's a good rule of thumb that if you come across a built file like this,
+
+00:05:49.430 --> 00:05:50.930
+it's going to be minified,
+
+00:05:50.930 --> 00:05:54.530
+and it's a clue that you shouldn't edit this file because it's
+
+00:05:54.529 --> 00:05:58.099
+going to be overwritten every time that they rebuild the styles.
+
+00:05:58.100 --> 00:06:02.720
+So, in general, don't modify a built file.
+
+00:06:02.720 --> 00:06:05.100
+It isn't any fun anyway.
+

@@ -1,0 +1,305 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Broken Project</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3> Final Touches</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Broken Project.html">01. Broken Project</a>
+    </li>
+    <li class="">
+      <a href="02. Fixing Our Functionality.html">02. Fixing Our Functionality</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Fixing Functionality.html">03. Exercise: Fixing Functionality</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise API Call Challenge.html">04. Exercise: API Call Challenge</a>
+    </li>
+    <li class="">
+      <a href="05. Webpack for Production.html">05. Webpack for Production</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Dev Tools Challenge.html">06. Exercise: Dev Tools Challenge</a>
+    </li>
+    <li class="">
+      <a href="07. Service Workers.html">07. Service Workers</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise Service Workers.html">08. Exercise: Service Workers</a>
+    </li>
+    <li class="">
+      <a href="09. Course 4 Conclusion.html">09. Course 4 Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Broken Project</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Heading</p></h3>
+  <div>
+  <p>As we have gone along setting up this project, we have let all functionality slide. We just got our styles to show up again, but now, what about our click events? What if we wanted to make an API call or add pages to this app? </p>
+<p>This will hopefully be a short and sweet lesson where we solve those entirely practical issues, so that I can get out of your way and let you build stuff. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="lesson-objectives">Lesson Objectives</h2>
+<p>In this lesson, we will learn to incorporate the following in our web app:</p>
+<ol>
+<li>JavaScript functionalities - This will help us to attach listeners to the events and have webpack configure to access the listeners.</li>
+<li>API call - Learn to call APIs from our exercise project, add pages it.</li>
+<li>Production environment - Set up production configuration for webpack</li>
+<li>Offline functionality - Introduce the "Service Workers" script that runs in the background and helps to load the webpage even without internet connectivity. </li>
+</ol>
+<p>Let's start by introducing  JavaScript functionalities in our web app, that are currently broken.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L4 A01 Broken Project</p></h3>
+  <video controls>
+  <source src="01. FEND C04 L4 A01 Broken Project-XyxDwaac2t8.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. FEND C04 L4 A01 Broken Project-XyxDwaac2t8.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="01. FEND C04 L4 A01 Broken Project-XyxDwaac2t8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="immediately-invoked-function-expression-iife">Immediately Invoked Function Expression (IIFE)</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Optional Activity</p></h3>
+  <div>
+  <p>If you haven't run into IIFE's yet, this is a great time to become familiar with them. Go to the mozilla developer docs <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE" rel="noopener noreferrer" target="_blank">here</a> and see if you can answer the following questions. If you think you have a handle on IIFEs, try answering the questions first and then go back to the docs to fill in any gaps. Also, the mozilla developer docs are an amazing resource for many many front end concepts, so you might want to bookmark it for future reading if you haven't already.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>IIFE Quiz</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>What does IIFE stand for?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>IIFE Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What are some benefits of using IIFEs?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="916610" id="rbk1">
+      <label for="rbk1"><p>They keep variables out of the global scope</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="916610" id="rbk2">
+      <label for="rbk2"><p>They will import all necessary code from other files at run time</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="916610" id="rbk3">
+      <label for="rbk3"><p>They run directly after being defined, so you don’t have to name them</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="916610" id="rbk4">
+      <label for="rbk4"><p>When you use them, you don't have to worry about variables you write overlapping with variables from third party code</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>They keep variables out of the global scope</li>
+      <li>They run directly after being defined, so you don’t have to name them</li>
+      <li>When you use them, you don't have to worry about variables you write overlapping with variables from third party code</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>IIFE Quiz - Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>What is wrong with this IIFE?</p>
+<pre><code class="js language-js">function foo() {
+...javascript
+}();</code></pre>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Potentially there are other answers, but the big one that you shouldn’t miss, is that this is <strong><em>an invalid IIFE</em></strong> because it is a named function. <br><br><br />
+If I were asked this in an interview, I wouldn’t stop at saying <strong><em>why it is an invalid IIFE</em></strong> - a question like this is an opportunity to tell the interviewer everything you know about the topic. <br><br><br />
+It isn’t going too far to talk about a time that you used them, or a lightbulb moment you had while learning about it.</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Fixing Our Functionality.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Broken Project')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

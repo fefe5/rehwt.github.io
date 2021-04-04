@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.100
+In this video, we're going to talk about
+
+00:00:02.100 --> 00:00:04.679
+some of the functionality in our app that's broken.
+
+00:00:04.679 --> 00:00:07.830
+We've done a great job so far of setting up Webpack.
+
+00:00:07.830 --> 00:00:09.330
+But along the way,
+
+00:00:09.330 --> 00:00:11.250
+we've actually broken a lot of
+
+00:00:11.250 --> 00:00:14.355
+the functionality that was working on our app to begin with.
+
+00:00:14.355 --> 00:00:17.609
+So we're going to take a look at all the things that
+
+00:00:17.609 --> 00:00:21.390
+aren't working and then we'll start talking about how to fix them.
+
+00:00:21.390 --> 00:00:23.339
+Let's take stock of our app.
+
+00:00:23.339 --> 00:00:25.079
+What's working, what isn't,
+
+00:00:25.079 --> 00:00:26.579
+let's figure it all out.
+
+00:00:26.579 --> 00:00:30.750
+So first, our JavaScript event code isn't running.
+
+00:00:30.750 --> 00:00:37.185
+We can see that if we go to our app and we try to type something into the form field.
+
+00:00:37.185 --> 00:00:41.765
+None of that custom JavaScript that we wrote is actually happening.
+
+00:00:41.765 --> 00:00:45.500
+So we'll need to fix that and suss out why it's not working.
+
+00:00:45.500 --> 00:00:49.490
+The next thing that's not working about our app is the Express Server.
+
+00:00:49.490 --> 00:00:52.460
+We've done a lot of Webpack config that's actually
+
+00:00:52.460 --> 00:00:55.850
+messed up the Express Server that we had working at the beginning.
+
+00:00:55.850 --> 00:00:57.950
+So we'll need to reset that.
+
+00:00:57.950 --> 00:01:01.595
+It's important that we reset our Express Server because
+
+00:01:01.594 --> 00:01:04.310
+our production build that we also haven't set up
+
+00:01:04.310 --> 00:01:07.325
+yet is going to rely on our Express Server.
+
+00:01:07.325 --> 00:01:11.359
+Let's dive into why our JavaScript code isn't working.
+
+00:01:11.359 --> 00:01:14.540
+Webpack tries to keep the global scope really
+
+00:01:14.540 --> 00:01:17.450
+clean and you've probably come across the concept of
+
+00:01:17.450 --> 00:01:20.150
+scope so far in the course and you've probably
+
+00:01:20.150 --> 00:01:23.344
+heard that it is a good thing to keep the global scope clean.
+
+00:01:23.344 --> 00:01:28.204
+But what that means is that Webpack puts all of our code
+
+00:01:28.204 --> 00:01:33.519
+into encapsulated little libraries and that can be a great thing,
+
+00:01:33.519 --> 00:01:34.804
+it is a great thing.
+
+00:01:34.805 --> 00:01:37.880
+But it can also mean that we have some problems and
+
+00:01:37.879 --> 00:01:42.034
+those problems are actually what are breaking our code right now.
+
+00:01:42.034 --> 00:01:46.234
+If you look under the hood of what Webpack is actually doing,
+
+00:01:46.234 --> 00:01:49.730
+Webpack uses IIFE's to separate all of
+
+00:01:49.730 --> 00:01:54.140
+our code and keep it neatly organized into its own little chunks.
+
+00:01:54.140 --> 00:01:59.540
+Now, that is what IIFE's are for and if you haven't come across them,
+
+00:01:59.540 --> 00:02:02.315
+we're going to get a lot more practice with them in just a second.
+
+00:02:02.314 --> 00:02:09.229
+But for now, all we need to know is that these little chunks of code can't always
+
+00:02:09.229 --> 00:02:12.560
+talk to each other and that not being able
+
+00:02:12.560 --> 00:02:16.414
+to talk to each other is what is breaking our event code.
+
+00:02:16.414 --> 00:02:21.454
+Let's take a look at a bit more of the JavaScript scope setup.
+
+00:02:21.455 --> 00:02:24.910
+In order to understand more what's going wrong with our JavaScript,
+
+00:02:24.909 --> 00:02:27.139
+we need to have a good understanding of scope.
+
+00:02:27.139 --> 00:02:31.429
+Now, Webpack is dealing with a lot of JavaScript so it
+
+00:02:31.430 --> 00:02:36.159
+encapsulates each chunk of JavaScript into a scope layer.
+
+00:02:36.159 --> 00:02:38.854
+Now, you can imagine that if all of
+
+00:02:38.854 --> 00:02:42.599
+our JavaScript code especially if this were a large application,
+
+00:02:42.599 --> 00:02:45.384
+we could have thousands of lines of JavaScript,
+
+00:02:45.384 --> 00:02:48.750
+and if Webpack didn't encapsulate everything,
+
+00:02:48.750 --> 00:02:51.949
+we would end up with just all of our stuff thrown
+
+00:02:51.949 --> 00:02:55.339
+into one huge global scope and we would have to make sure
+
+00:02:55.340 --> 00:02:58.700
+that variable names didn't conflict with other variable names
+
+00:02:58.699 --> 00:03:02.344
+and it would just be chaos like you see here.
+
+00:03:02.344 --> 00:03:05.030
+But with scope, we get
+
+00:03:05.030 --> 00:03:12.715
+these neatly stacked scope layers and the IIFF's are what allow Webpack to do that.
+
+00:03:12.715 --> 00:03:16.520
+Now, one problem with that is that sometimes
+
+00:03:16.520 --> 00:03:20.330
+we lose communication between these two scope layers.
+
+00:03:20.330 --> 00:03:27.015
+The browser events like our form submit are happening on the global level but our code,
+
+00:03:27.014 --> 00:03:30.829
+the custom JavaScript that we wrote is happening on the function level
+
+00:03:30.830 --> 00:03:36.830
+and our problem is that we lack the communication between these two layers.
+
+00:03:36.830 --> 00:03:42.170
+So what we need to do is come up with a fix that allows our functions to
+
+00:03:42.169 --> 00:03:47.780
+be callable by the global scope or when a browser event happens.
+
+00:03:47.780 --> 00:03:51.680
+So now, we're going to change and let you get some time
+
+00:03:51.680 --> 00:03:55.719
+with IIFE's because there are fantastic JavaScript strategy to know.
+
+00:03:55.719 --> 00:03:57.000
+But when we come back,
+
+00:03:57.000 --> 00:04:01.240
+we're going to talk about the fix for our Webpack JavaScript.
+
