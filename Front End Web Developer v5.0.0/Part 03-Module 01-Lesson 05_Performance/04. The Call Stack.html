@@ -1,0 +1,462 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Call Stack</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Performance</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Add Page Content Efficiently.html">02. Add Page Content Efficiently</a>
+    </li>
+    <li class="">
+      <a href="03. Reflow &amp; Repaint.html">03. Reflow &amp; Repaint</a>
+    </li>
+    <li class="">
+      <a href="04. The Call Stack.html">04. The Call Stack</a>
+    </li>
+    <li class="">
+      <a href="05. The Event Loop.html">05. The Event Loop</a>
+    </li>
+    <li class="">
+      <a href="06. setTimeout.html">06. setTimeout</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Summary.html">08. Course Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. The Call Stack</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="single-threading">Single Threading</h2>
+<p>You might've heard that JavaScript is <strong>single-threaded</strong> but what does that mean? According to Wikipedia, single-threading is:</p>
+<blockquote>
+  <p>the processing of one command at a time (<a target="_blank" href="https://en.wikipedia.org/wiki/Thread_(computing)#Single_threading">source</a>)</p>
+</blockquote>
+<p>Ok, so JavaScript can "process" one command at a time. The opposite of single-threading, is multithreading. There are numerous pros and cons to both which we won't be getting into (feel free to check out the <a href="https://bit.ly/2Nwu4Rd" rel="noopener noreferrer" target="_blank">Wikipedia article on Threading</a> for more info about the pros and cons). We're going to take a look at JavaScript's single-threaded model and how/why we should write our code to take advantage of it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's look at some code:</p>
+<pre><code class="js language-js">function addParagraph() {
+    const para = document.createElement('p');
+    para.textContent = 'JavaScript is single threaded!';
+    document.body.appendChild(para);
+}
+
+function appendNewMessage() {
+    const para = document.createElement('p');
+    para.textContent = "Isn't that cool?";
+    document.body.appendChild(para);
+}
+
+addParagraph();
+appendNewMessage();</code></pre>
+<p>Keeping JavaScript's single-threaded nature in mind (meaning it can only perform one task at a time), let's break down this code into the order it will run:</p>
+<ul>
+<li>the <code>addParagraph()</code> function is declared on line 1</li>
+<li>the <code>appendNewMessage()</code> function is declared on line 6</li>
+<li><code>addParagraph()</code> is called on line 13<ul>
+<li>execution moves into the function and executes all three lines in order</li>
+<li>now that the function is finished, execution returns to where it was called</li></ul></li>
+<li>the <code>appendNewMessage()</code> function is called on line 14<ul>
+<li>execution moves into the function and executes all three lines in order</li>
+<li>now that the function is finished, execution returns to where it was called </li></ul></li>
+<li>the program ends because all lines of code have been executed</li>
+</ul>
+<p>Hopefully, the order that this code executed in wasn't surprising. There are a couple of things I particularly want you to pay attention to. First, is the run-to-completion nature of the code. When <code>addParagraph()</code> is invoked on line 13, <em>all of the code in the function gets executed</em>: it doesn't just execute some lines and leave other lines to be executed later. The entire block of code is run. A second thing I want to point out is that <code>addParagraph()</code> is invoked, runs, and finishes <em>before</em> <code>appendNewMessage()</code> is invoked (including a possible reflow and repaint); JavaScript doesn't execute multiple lines/functions at the same time (this is single-threading…processing one command at a time!).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>I have a question for you - once <code>addParagraph()</code> has been invoked and it runs the lines of code inside the <code>addParagraph()</code> function, how does it know to go <em>back to <code>appendNewMessage()</code></em>? How does it keep track of that?</p>
+<p>What if we changed this code slightly to create nested functions:</p>
+<pre><code class="js language-js">function addParagraph() {
+    const para = document.createElement('p');
+    para.textContent = 'JavaScript is single threaded!';
+
+    appendNewMessage();
+    document.body.appendChild(para);
+}
+
+function appendNewMessage() {
+    const para = document.createElement('p');
+
+    para.textContent = "Isn't that cool?";
+    document.body.appendChild(para);
+}
+
+addParagraph();</code></pre>
+<p>Notice that the call to <code>appendNewMessage()</code> is located <em>inside the</em> <code>addParagraph()</code> <em>function</em>. First, <code>addParagraph()</code> is invoked. Then <code>appendNewMessage()</code> is invoked on line 5. Once <code>appendNewMessage()</code> has finished running, execution returns and finishes running the last line of code in the <code>addParagraph()</code> function…but how does it know how to do that? How does the JavaScript engine know where it left off and how to get back to it?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-call-stack">The Call Stack</h2>
+<p>The JavaScript engine keeps a call stack (basically a list) of the functions that are running. When a function is invoked, it is added to the list. When all of the code inside a function has been run, then the function is removed from the call stack. The cool part about a call stack is that a function doesn't have to complete before another function is added to the call stack.</p>
+<p>Let's see how this works!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L4 - 24 - Callstack V1</p></h3>
+  <video controls>
+  <source src="04. L4 - 24 - Callstack V1-J9iKeNhoXNM.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. L4 - 24 - Callstack V1-J9iKeNhoXNM.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="04. L4 - 24 - Callstack V1-J9iKeNhoXNM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. L4 - 24 - Callstack V1-J9iKeNhoXNM.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>How many items (frames) will be on the stack when the code reaches the <code>"stop here"</code> comment?</p>
+<pre><code class="js language-js">function quiz () {
+  var y = 'yes';
+  questions();
+  fun();
+}
+function questions () {
+  var y = 'no';
+  return 7;
+}
+function are () {
+  return 3;
+}
+function fun () {
+  are();
+  // stop here
+}
+
+quiz()</code></pre>
+<p>Assume there is no "&lt;main&gt;"/default frame.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1513026076369" name="476022" id="a1513026076369">
+      <label for="a1513026076369"><p>0</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513026083084" name="476022" id="a1513026083084">
+      <label for="a1513026083084"><p>1</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513026083579" name="476022" id="a1513026083579">
+      <label for="a1513026083579"><p>2</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513026084074" name="476022" id="a1513026084074">
+      <label for="a1513026084074"><p>3</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513026084569" name="476022" id="a1513026084569">
+      <label for="a1513026084569"><p>4</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>2</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Use this code for the following question.</p>
+<pre><code class="js language-js">function dolphins () {
+  // stop here
+  return 'llamas';
+}
+function rhinos () {
+  var y = 'no';
+  return penguins();
+}
+function penguins () {
+  return camels();
+}
+function camels () {
+  return dolphins();
+}
+
+rhinos()</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Put the function names in the correct order they would appear when the <code>// stop here</code> comment is reached. Remember to put the oldest/initial at the bottom of the stack. Assume there is no "&lt;main&gt;"/default frame.</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>penguins</p></button>
+  <button class="btn btn-primary"><p>dolphins</p></button>
+  <button class="btn btn-primary"><p>rhinos</p></button>
+  <button class="btn btn-primary"><p>camels</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Order of Stack</p>
+      </th>
+      <th>
+        <p>Function Name</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Top of the stack</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>2nd item in the stack</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>3rd item in the stack</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>bottom of the stack</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Order of Stack</p>
+        </th>
+        <th>
+          <p>Function Name</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>3rd item in the stack</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>penguins</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Top of the stack</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>dolphins</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>bottom of the stack</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>rhinos</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>2nd item in the stack</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>camels</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-call-stack-recap">The Call Stack Recap</h2>
+<p>In this section, we looked at how JavaScript is a single-threaded programming language, which means it can only execute one thing at a time. We looked at how JavaScript keeps track of what functions are running by using the Call Stack.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Call_stack" rel="noopener noreferrer" target="_blank">Call stack</a> on MDN</li>
+<li><a href="https://en.wikipedia.org/wiki/Call_stack" rel="noopener noreferrer" target="_blank">Call stack</a> on Wikipedia</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. The Event Loop.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. The Call Stack')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.350 --> 00:00:06.390
+Let's start out with some code.
+
+00:00:06.389 --> 00:00:09.083
+First, we have a console.log,
+
+00:00:09.083 --> 00:00:12.839
+then an event listener that listens for a click,
+
+00:00:12.839 --> 00:00:15.820
+and runs the numbers function.
+
+00:00:15.820 --> 00:00:21.490
+Whenever the page is clicked it'll log the string 1 2 3.
+
+00:00:21.489 --> 00:00:25.039
+Then we have a final console.log statement.
+
+00:00:25.039 --> 00:00:29.719
+Let's give ourselves a bit more room to add in our event loop stuff.
+
+00:00:29.719 --> 00:00:32.414
+First we have the call stack,
+
+00:00:32.414 --> 00:00:35.945
+the browser, and the queue.
+
+00:00:35.945 --> 00:00:40.210
+So let's start the code execution and walk through how all of this works.
+
+00:00:40.210 --> 00:00:41.884
+We started the first line,
+
+00:00:41.884 --> 00:00:45.484
+the console dot log is run and is added to the call stack,
+
+00:00:45.484 --> 00:00:49.034
+when it finishes it's removed from the call stack.
+
+00:00:49.034 --> 00:00:50.824
+Now onto the event listener,
+
+00:00:50.825 --> 00:00:54.484
+it's added to the call stack because the code is being evaluated,
+
+00:00:54.484 --> 00:00:56.924
+but then it's handed over to the browser.
+
+00:00:56.924 --> 00:01:00.814
+The browsers internals aren't visible to us but when the browser is clicked,
+
+00:01:00.814 --> 00:01:04.750
+it knows to run the numbers function, and that's it.
+
+00:01:04.750 --> 00:01:06.799
+The code moves onto the last line,
+
+00:01:06.799 --> 00:01:10.685
+it runs the console.log and finishes,
+
+00:01:10.685 --> 00:01:15.299
+and that's it it's done all of our code has run.
+
+00:01:15.299 --> 00:01:18.004
+Now whenever the browser is clicked,
+
+00:01:18.004 --> 00:01:23.435
+the numbers function is moved to the queue where waits until the call stack is empty,
+
+00:01:23.435 --> 00:01:27.394
+then numbers is moved to the call stack and invoked.
+
+00:01:27.394 --> 00:01:30.244
+Invoking the numbers function will invoke another
+
+00:01:30.245 --> 00:01:34.355
+console.log when it's finished it's removed from the list,
+
+00:01:34.355 --> 00:01:37.000
+and the numbers is finished and removed.
+

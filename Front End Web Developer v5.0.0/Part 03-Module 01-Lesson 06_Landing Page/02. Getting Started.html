@@ -1,0 +1,221 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getting Started</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Landing Page</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Development Strategy.html">03. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Landing Page.html">Project Description - Landing Page</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Landing Page.html">Project Rubric - Landing Page</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Getting Started</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="getting-started">Getting Started</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This project requires you to build a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="project-rubric">Project Rubric</h2>
+<p>Your project will be evaluated by a Udacity code reviewer according to the Landing Page <a href="https://review.udacity.com/#!/rubrics/2658/view" rel="noopener noreferrer" target="_blank">project rubric</a>. Please review for detailed project requirements.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="get-the-starter-code">Get the Starter Code</h2>
+<p>If you'd like to start from scratch without any files, you are encouraged to do so! You learn the most by developing on your own! But, it can be a bit challenging having to start from scratch, so we do provide a starter project (i.e., a "skeleton") to use.</p>
+<p>You can download the starter code <a href="https://github.com/udacity/fend/tree/refresh-2019" rel="noopener noreferrer" target="_blank">here</a> by cloning the specific branch 'refresh-2019'.</p>
+<p>The starter code has a static, non-interactive version of the project so you can get a jump-start on development!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="javascript-and-the-dom">JavaScript and the DOM</h2>
+<p>Great! You now have the starter code. Before moving forward, make sure you are comfortable with the content from the JavaScript and the DOM course. Ask yourself:</p>
+<ul>
+<li>What is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" rel="noopener noreferrer" target="_blank">Document</a>?</li>
+<li>What are <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" rel="noopener noreferrer" target="_blank">events</a>?<ul>
+<li>How do we <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" rel="noopener noreferrer" target="_blank">listen for them</a>?</li>
+<li>How does <strong>event delegation</strong> help us avoid too many events?</li>
+<li>Check <strong>Working with Browser Events</strong> in JavaScript and the DOM for a refresher if needed</li></ul></li>
+<li>How can we access elements with the following two methods? What are the differences between them?<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" rel="noopener noreferrer" target="_blank">querySelector()</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" rel="noopener noreferrer" target="_blank">querySelectorAll()</a></li></ul></li>
+<li>How do you use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" rel="noopener noreferrer" target="_blank">getElementbyId()</a> to select a DOM element by its <code>id</code>?</li>
+<li>We can also access elements with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" rel="noopener noreferrer" target="_blank">getElementsByClassName()</a>. What does this method return, and how do you use it?</li>
+<li>How do you use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className" rel="noopener noreferrer" target="_blank">className</a> property? What does it return, and why would it be useful?</li>
+<li>What are the different methods for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#Methods" rel="noopener noreferrer" target="_blank">classList</a>?<ul>
+<li>Hint: the <code>add()</code>, <code>remove()</code>, and <code>toggle()</code> methods look particularly useful…</li></ul></li>
+<li>Every element has an <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" rel="noopener noreferrer" target="_blank">innerHTML</a> property that represents the markup of the element's content. How can you leverage this property to <em>get</em> and <em>set</em> content?</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Development Strategy.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Getting Started')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

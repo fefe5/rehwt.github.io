@@ -1,0 +1,137 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.667
+Vejamos o código.
+
+00:00:01.700 --> 00:00:05.300
+Temos a função "addParagraph",
+que cria um parágrafo novo,
+
+00:00:05.333 --> 00:00:08.700
+adiciona texto a ele
+e o adiciona ao elemento "body".
+
+00:00:08.733 --> 00:00:10.200
+A linha 4 desta função
+
+00:00:10.267 --> 00:00:13.533
+invoca a função
+"appendNewMessage".
+
+00:00:13.600 --> 00:00:15.867
+A "appendNewMessage"
+faz a mesma coisa.
+
+00:00:15.900 --> 00:00:17.036
+Cria um parágrafo,
+
+00:00:17.059 --> 00:00:20.700
+adiciona texto a ele
+e o anexa ao elemento "body".
+
+00:00:20.733 --> 00:00:25.667
+A linha 12 invoca a função
+"addParagraph" declarada na linha 1.
+
+00:00:25.700 --> 00:00:27.067
+Vejamos a pilha de chamadas
+
+00:00:27.100 --> 00:00:30.200
+para monitorar
+as chamadas de funções.
+
+00:00:30.267 --> 00:00:33.333
+Certo.
+Vamos executar o arquivo.
+
+00:00:33.400 --> 00:00:35.333
+Chamar este arquivo
+adiciona um indicador
+
+00:00:35.400 --> 00:00:39.667
+chamado "frame" à pilha
+que diz o que estamos executando.
+
+00:00:39.700 --> 00:00:42.000
+Estou marcando isto
+com o texto "&lt;main&gt;",
+
+00:00:42.067 --> 00:00:43.733
+mas alguns motores
+de JavaScript
+
+00:00:43.800 --> 00:00:46.933
+usam a palavra "anonymous",
+"global" ou algo do tipo.
+
+00:00:47.000 --> 00:00:48.867
+Vamos começar
+pela primeira linha.
+
+00:00:48.900 --> 00:00:51.700
+É uma declaração de função.
+Seguimos em frente.
+
+00:00:51.733 --> 00:00:55.533
+Outra declaração de função.
+Vamos prosseguir.
+
+00:00:55.600 --> 00:00:57.333
+Enfim uma chamada de função.
+
+00:00:57.400 --> 00:00:59.900
+É aqui que começa
+a ficar interessante.
+
+00:00:59.933 --> 00:01:03.200
+Chamar a função
+a adiciona à pilha de chamadas.
+
+00:01:03.267 --> 00:01:06.067
+E a execução
+entra na função...
+
+00:01:06.100 --> 00:01:09.133
+e continua a descer por ela
+até a linha 4.
+
+00:01:09.200 --> 00:01:13.067
+Uma nova função é chamada,
+então é adicionada à pilha.
+
+00:01:13.900 --> 00:01:15.933
+A execução vai para lá.
+
+00:01:16.733 --> 00:01:19.500
+E vai descendo pela função.
+
+00:01:20.288 --> 00:01:22.600
+Ao chegar no final,
+terminou,
+
+00:01:22.667 --> 00:01:24.700
+e a função é removida
+da pilha de chamadas.
+
+00:01:24.733 --> 00:01:27.667
+Ela volta para onde parou
+e continua.
+
+00:01:30.667 --> 00:01:33.667
+Novamente,
+ao final da função, termina,
+
+00:01:33.700 --> 00:01:36.267
+e a função é removida
+da pilha.
+
+00:01:36.300 --> 00:01:38.667
+Ela volta para onde parou
+e continua.
+
+00:01:38.700 --> 00:01:42.733
+Ao chegar no fim do arquivo,
+acabou.
+

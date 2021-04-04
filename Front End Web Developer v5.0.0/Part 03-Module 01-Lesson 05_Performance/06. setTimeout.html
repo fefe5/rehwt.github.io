@@ -1,0 +1,266 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setTimeout</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Performance</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Add Page Content Efficiently.html">02. Add Page Content Efficiently</a>
+    </li>
+    <li class="">
+      <a href="03. Reflow &amp; Repaint.html">03. Reflow &amp; Repaint</a>
+    </li>
+    <li class="">
+      <a href="04. The Call Stack.html">04. The Call Stack</a>
+    </li>
+    <li class="">
+      <a href="05. The Event Loop.html">05. The Event Loop</a>
+    </li>
+    <li class="">
+      <a href="06. setTimeout.html">06. setTimeout</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Summary.html">08. Course Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. setTimeout</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="running-code-later">Running Code Later</h2>
+<p>Similarly to <code>.addEventListener()</code> code being run at some later point, there is the <code>setTimeout()</code> function that will run code at a point later in time. The <code>setTimeout()</code> function takes:</p>
+<ul>
+<li>a function to run at some later time</li>
+<li>the number of milliseconds the code should wait before running the function</li>
+</ul>
+<p>Let's check out an example:</p>
+<pre><code class="js language-js">setTimeout(function sayHi() {
+    console.log('Howdy');
+}, 1000);</code></pre>
+<p>If we ran this code, the string <code>'Howdy'</code> would appear in the console in about 1,000 milliseconds or in just about 1 second.</p>
+<p>Since <code>setTimeout()</code> is an API provided by the browser, the call to <code>setTimeout()</code> gives the <code>sayHi()</code> function over to the browser which it starts a timer. After the timer is finished, the <code>sayHi()</code> function moves to the Queue. If the Call Stack is empty, then the <code>sayHi()</code> function is moved to the Call Stack and executed.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="settimeout-with-delay-of-0"><code>setTimeout()</code> with Delay of 0</h2>
+<p>An interesting aspect to <code>setTimeout()</code> is that we can pass it a delay of <code>0</code> milliseconds.</p>
+<pre><code class="js language-js">setTimeout(function sayHi() {
+    console.log('Howdy');
+}, 0);  // ← 0 milliseconds!</code></pre>
+<p>You might think that since it has a delay of 0 milliseconds, that the <code>sayHi</code> function would run immediately. However, it still goes through the JavaScript Event Loop. So the function is handed off to the browser where the browser starts a timer for 0 milliseconds. Since the timer ends immediately, the <code>sayHi</code> function will move to the Queue, and then to the Call Stack once the Call Stack has finished executing any currently-running tasks.</p>
+<p>So why is this helpful? Well, this technique can help us to convert potentially long-running code to one that's broken up to allow for the browser to handle user interactions!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="break-up-long-running-code">Break Up Long-Running Code</h3>
+<p>Do you remember back to a previous section when we wrote JavaScript code to add two hundred paragraphs to the page? Now, instead of adding two <em>hundred</em> paragraphs to the page, what if we added <em>twenty thousand</em>? That's a lot of elements to create, append, and insert into the page!</p>
+<p>Now keep in mind how reflow and repaint affect an app's performance. We want to write our JavaScript code to take into consideration reflow and repaint and to cause the fewest number of these.</p>
+<p>However, we also want to make sure our app is responsive to user interaction. While JavaScript is running, the page is "busy" and the user won't be able to interact with the page (e.g. clicking a button, filling out a form). Remember that this is because JavaScript runs <em>synchronously</em>. So it will run to completion (creating, appending, and inserting all twenty thousand elements), and it does this <em>before</em> it is able to respond to any actions the user has taken. The function that creates all of these elements and adds them to the page will be in the Call Stack until it's completely finished.</p>
+<p>One way to give the user a chance to interact with the page is to break up the adding of the content into chunks. Let's do this with <code>setTimeout()</code>:</p>
+<pre><code class="js language-js">let count = 1
+
+function generateParagraphs() {
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 1; i &lt;= 500; i++) {
+        const newElement = document.createElement('p');
+        newElement.textContent = 'This is paragraph number ' + count;
+        count = count + 1;
+
+        fragment.appendChild(newElement);
+    }
+
+    document.body.appendChild(fragment);
+
+    if (count &lt; 20000) {
+        setTimeout(generateParagraphs, 0);
+    }
+}
+
+generateParagraphs();</code></pre>
+<p>This code starts off by setting a <code>count</code> variable to <code>1</code>. This will keep track of the number of paragraphs that have been added. The <code>generateParagraphs()</code> function will add 500 paragraphs to the page each time it's invoked. The interesting thing is that there's a <code>setTimeout()</code> call at the end of the <code>generateParagraphs()</code> function. If there are less than twenty thousand elements, then the <code>setTimeout()</code> will be used to call the <code>generateParagraphs()</code> function.</p>
+<p>If you try running this code on a page, you can still interact with the page while the code is running. It doesn't lock up or freeze the page. And it doesn't lock up or freeze because of the <code>setTimeout()</code> calls.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="settimeout-recap"><code>setTimeout()</code> Recap</h2>
+<p>The browser-provided <code>setTimeout()</code> function takes another function and a delay, and invokes the function after the delay has passed.</p>
+<p>Knowing how the JavaScript Event Loop works, we can use the <code>setTimeout()</code> method to help us write code that allows the browser to handle user interactions.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" rel="noopener noreferrer" target="_blank">setTimeout docs on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" rel="noopener noreferrer" target="_blank">Concurrency model and Event Loop</a></li>
+<li><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" rel="noopener noreferrer" target="_blank">What the heck is the event loop anyway? by Philip Roberts on YouTube</a></li>
+<li><a href="https://javascript.info/settimeout-setinterval" rel="noopener noreferrer" target="_blank">Scheduling: setTimeout and setInterval</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. setTimeout')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

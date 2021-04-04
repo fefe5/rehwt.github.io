@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.674 --> 00:00:03.303
+Tanto o código
+quanto o desempenho dele
+
+00:00:03.337 --> 00:00:06.406
+são considerações vitais
+no processo de desenvolvimento.
+
+00:00:06.440 --> 00:00:07.441
+Nesta aula,
+
+00:00:07.508 --> 00:00:10.410
+aprendemos a medir a velocidade
+do código que escrevemos
+
+00:00:10.444 --> 00:00:13.113
+e a escrevê-lo
+de maneira eficiente.
+
+00:00:13.146 --> 00:00:16.984
+Também vimos como o "reflow"
+e o "repaint" afetam o desempenho.
+
+00:00:17.050 --> 00:00:19.386
+Por fim, vimos
+o event loop do JavaScript,
+
+00:00:19.453 --> 00:00:21.455
+que faz todo motor JavaScript
+funcionar.
+
+00:00:21.488 --> 00:00:25.993
+Saber como funciona o event loop
+permitirá que escreva bons códigos.
+

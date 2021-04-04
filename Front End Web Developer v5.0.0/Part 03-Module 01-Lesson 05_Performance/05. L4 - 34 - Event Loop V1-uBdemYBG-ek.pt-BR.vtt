@@ -1,0 +1,114 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:04.332 --> 00:00:06.333
+Vamos começar com um código.
+
+00:00:06.400 --> 00:00:09.067
+Primeiro,
+temos um "console.log".
+
+00:00:09.100 --> 00:00:12.800
+Depois, um "EventListener"
+que monitora cliques
+
+00:00:12.867 --> 00:00:15.733
+e executa
+a função "numbers".
+
+00:00:15.800 --> 00:00:21.467
+Quando a página é clicada,
+a string "123" é registrada.
+
+00:00:21.500 --> 00:00:25.000
+Então temos uma última instrução
+"console.log".
+
+00:00:25.067 --> 00:00:29.282
+Vamos abrir um espaço
+para adicionar o event loop.
+
+00:00:30.456 --> 00:00:32.333
+Primeiro,
+temos a pilha de chamadas,
+
+00:00:32.400 --> 00:00:35.900
+o navegador e a fila.
+
+00:00:35.933 --> 00:00:40.133
+Vamos executar o código
+explicando como acontece.
+
+00:00:40.200 --> 00:00:42.337
+Começamos na primeira linha.
+
+00:00:42.370 --> 00:00:45.467
+O "console.log" é executado
+e adicionado à pilha de chamadas.
+
+00:00:45.500 --> 00:00:49.000
+Ao terminar, sai da pilha.
+
+00:00:49.067 --> 00:00:51.329
+Agora o "EventListener".
+
+00:00:51.362 --> 00:00:54.915
+Ele é adicionado à pilha,
+pois o código está sendo avaliado.
+
+00:00:54.948 --> 00:00:56.867
+Mas depois é transferido
+para o navegador.
+
+00:00:56.900 --> 00:00:59.300
+As especificidades do navegador
+não nos são visíveis,
+
+00:00:59.333 --> 00:01:00.733
+mas, quando clicado,
+
+00:01:00.800 --> 00:01:03.533
+ele sabe que deve executar
+a função "numbers".
+
+00:01:03.600 --> 00:01:06.733
+E pronto.
+O código desce até o final.
+
+00:01:06.800 --> 00:01:10.667
+Executa "console.log"
+e termina.
+
+00:01:11.368 --> 00:01:15.267
+E é isso, acabou.
+Todo o código foi executado.
+
+00:01:15.300 --> 00:01:17.933
+Quando o navegador
+for clicado,
+
+00:01:18.000 --> 00:01:20.667
+a função "numbers"
+é movida para a fila,
+
+00:01:20.700 --> 00:01:23.400
+onde aguarda a pilha
+de chamadas ser esvaziada.
+
+00:01:23.467 --> 00:01:27.927
+Depois "numbers" vai para a pilha
+e é chamada.
+
+00:01:27.960 --> 00:01:31.799
+Chamar a função "numbers"
+invoca outro "console.log".
+
+00:01:31.832 --> 00:01:34.300
+Ao terminar,
+é removido da lista,
+
+00:01:34.333 --> 00:01:37.000
+e depois "numbers" termina
+e é removida.
+

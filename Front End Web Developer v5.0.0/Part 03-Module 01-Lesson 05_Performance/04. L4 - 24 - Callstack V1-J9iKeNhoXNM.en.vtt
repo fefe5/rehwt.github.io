@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.679
+Let's take a look at the code.
+
+00:00:01.679 --> 00:00:05.325
+We have the ad paragraph function that will create a new paragraph,
+
+00:00:05.325 --> 00:00:08.745
+add text to it and add it to the body element.
+
+00:00:08.744 --> 00:00:10.259
+Line 4 of this function,
+
+00:00:10.259 --> 00:00:13.605
+invokes the Append New Message function.
+
+00:00:13.605 --> 00:00:15.900
+Append New Message does the same thing.
+
+00:00:15.900 --> 00:00:20.745
+It creates a paragraph, adds text to it and appends it to the body element.
+
+00:00:20.745 --> 00:00:25.690
+Line 12 invokes the add paragraph function declared on line 1.
+
+00:00:25.690 --> 00:00:30.234
+Let's show the call stack to keep track of the function invocations.
+
+00:00:30.234 --> 00:00:33.420
+Okay. Now, let's run the file.
+
+00:00:33.420 --> 00:00:35.910
+Calling this file adds an indicator called a
+
+00:00:35.909 --> 00:00:39.719
+frame to the stack that tells us what we're running.
+
+00:00:39.719 --> 00:00:42.344
+I'm marking this with the text Main but
+
+00:00:42.344 --> 00:00:46.984
+some Javascript engines use the word anonymous or global or something similar.
+
+00:00:46.984 --> 00:00:48.899
+So, let's start at the first line.
+
+00:00:48.899 --> 00:00:51.765
+This is a function declaration so, we just move on.
+
+00:00:51.765 --> 00:00:55.619
+Another function declaration so we move on again.
+
+00:00:55.619 --> 00:00:57.404
+Finally, a function invocation.
+
+00:00:57.405 --> 00:00:59.929
+Here's where it starts getting interesting.
+
+00:00:59.929 --> 00:01:06.090
+Calling the function, adds it to the call stack and execution moves into that function.
+
+00:01:06.090 --> 00:01:09.180
+Then, it works its way through the function until line 4.
+
+00:01:09.180 --> 00:01:11.475
+A new function is invoked so,
+
+00:01:11.474 --> 00:01:16.259
+it's added to the call stack and execution moves there.
+
+00:01:16.260 --> 00:01:19.535
+Then, it just works its way through the function.
+
+00:01:19.534 --> 00:01:21.979
+When it reaches the bottom of the function,
+
+00:01:21.980 --> 00:01:24.770
+it's done and the function is removed from the call stack.
+
+00:01:24.769 --> 00:01:29.015
+It moves back to where it left off and continues on.
+
+00:01:29.015 --> 00:01:32.954
+Again, when it reaches the bottom of the function,
+
+00:01:32.954 --> 00:01:36.310
+it's finished and the function is removed from the call stack.
+
+00:01:36.310 --> 00:01:38.715
+Then it picks up where it left off.
+
+00:01:38.715 --> 00:01:42.730
+It reaches the end of the file and finishes.
+

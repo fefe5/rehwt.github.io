@@ -1,0 +1,271 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reflow &amp; Repaint</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Performance</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Add Page Content Efficiently.html">02. Add Page Content Efficiently</a>
+    </li>
+    <li class="">
+      <a href="03. Reflow &amp; Repaint.html">03. Reflow &amp; Repaint</a>
+    </li>
+    <li class="">
+      <a href="04. The Call Stack.html">04. The Call Stack</a>
+    </li>
+    <li class="">
+      <a href="05. The Event Loop.html">05. The Event Loop</a>
+    </li>
+    <li class="">
+      <a href="06. setTimeout.html">06. setTimeout</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Summary.html">08. Course Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Reflow & Repaint</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="reflow--repaint">Reflow &amp; Repaint</h2>
+<p>We mentioned Reflow and Repaint in the last section, now it's time to take a closer look.</p>
+<p><strong>Reflow</strong> is the process of the browser laying out the page. It happens when you first display the DOM (generally after the DOM and CSS have been loaded), and happens again every time something could change the layout. This is a fairly <em>expensive</em> (slow) process.</p>
+<p><strong>Repaint</strong> happens after reflow as the browser draws the new layout to the screen.  This is fairly quick, but you still want to limit how often it happens.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For example, if you add a CSS class to an element, the browser often recalculates the layout of the entire page—that's one reflow and one repaint!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Adding a single CSS class could trigger <em>reflow</em>. In your own words, explain why adding some CSS to an element might cause reflow to happen.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Why did adding a little CSS change cause a reflow? What if adding a class changed the position of the element or caused it to float? The browser won't know for certain (and a complete calculation of the impact of a change could take longer than doing the reflow!)</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's take a realistic example. Say you're writing the next great blogging platform, and you want to have a "remove spam" button for the administrator. Your HTML looks like this:</p>
+<pre><code class="html language-html">&lt;div id="comments"&gt;
+  &lt;div class="comment"&gt; &lt;!-- some content --&gt; &lt;/div&gt;
+  &lt;div class="comment"&gt; &lt;!-- some content --&gt; &lt;/div&gt;
+  &lt;div class="comment"&gt; &lt;!-- some content --&gt; &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>When we run the spam filter, we discover comments one and two have to be removed.</p>
+<p>If we simply call <code>.removeChild()</code> for each of the two comments that need to be removed, that's one reflow and one repaint <em>for each change</em> (so a total of 2 reflows and 2 repaints). We could rebuild the whole thing in a <code>DocumentFragment</code> and replace <code>#comments</code> -- that's the time to rebuild (possibly involving reading files or data), plus at least one reflow and one repaint. </p>
+<p>Or we could <em>hide</em> <code>#comments</code>, delete the spam, and show it again -- that's surprisingly fast, to the cost of one reflow and two repaints (and little else). It's fast because hiding doesn't change the layout, it just erases that section of the screen (1 repaint). When you make the changed section visible again, that's a reflow and a repaint.</p>
+<pre><code class="js language-js">// hide #comments
+document.getElementById("comments").style.display = "none";
+
+// delete spam comments
+
+// show #comments
+document.getElementById("comments").style.display = "block";</code></pre>
+<p>In general, if you have to make a group of changes, hide/change all/show is a great pattern to use if the changes are relatively contained.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="virtual-dom">Virtual DOM</h2>
+<p>By the way, this is why React and other "virtual DOM" libraries are so popular. You don't make changes to the DOM, but make changes to another structure (a "virtual DOM") and the library calculates the best way to update the screen to match. The catch is you then have to rework your code to use whatever library you're adopting, and sometimes you can do a better job updating the screen yourself (because you understand your own unique situation).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="recap">Recap</h2>
+<p>In this section, we took a brief look at what reflow and repaint are and saw how they can impact the performance of a website.</p>
+<p>Reflow is the process of calculating the dimensions and position of page elements. This is a computationally intensive (slow) tasks. Repaint is the process of drawing the pixels to the screen. This is faster than reflow, but is still not a fast process. You want to make sure that your code causes the fewest number of reflows as possible.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://www.udacity.com/course/website-performance-optimization--ud884" rel="noopener noreferrer" target="_blank">Website Performance Optimization</a> course by Udacity</li>
+<li><a href="https://developers.google.com/speed/articles/reflow" rel="noopener noreferrer" target="_blank">Minimizing browser reflow</a> from PageSpeed Tools Guides</li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing" rel="noopener noreferrer" target="_blank">Avoid Large, Complex Layouts and Layout Thrashing</a> from Google's Web Fundamentals Guides</li>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#rendering" rel="noopener noreferrer" target="_blank">Performance Analysis Reference</a> from Google's Web Fundamentals Guides</li>
+<li>Article <a href="http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/" rel="noopener noreferrer" target="_blank">Reflows & Repaints: CSS Performance Making Your JavaScript Slow?</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. The Call Stack.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Reflow &amp; Repaint')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

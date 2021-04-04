@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.052
+À esquerda está o código
+a que estávamos habituados.
+
+00:00:03.085 --> 00:00:04.402
+Criamos um 'div',
+
+00:00:04.435 --> 00:00:07.933
+200 elementos de parágrafo,
+os adicionamos ao 'div'
+
+00:00:08.000 --> 00:00:12.200
+e, depois de criar esses 200,
+adicionamos o 'div' à página.
+
+00:00:12.267 --> 00:00:14.500
+Aqui executamos um loop
+200 vezes.
+
+00:00:14.533 --> 00:00:16.900
+A cada loop, um elemento
+de parágrafo é criado
+
+00:00:16.967 --> 00:00:18.933
+e adicionado à página.
+
+00:00:19.000 --> 00:00:20.600
+Os dois códigos
+
+00:00:20.667 --> 00:00:23.300
+têm "performance" no começo,
+onde ocorre uma verificação.
+
+00:00:23.333 --> 00:00:27.400
+E, lá embaixo,
+outra verificação acontece
+
+00:00:27.467 --> 00:00:28.900
+e é subtraída da primeira
+
+00:00:28.933 --> 00:00:30.867
+para retornar
+o tempo total de execução
+
+00:00:30.900 --> 00:00:33.100
+de cada um dos códigos.
+
+00:00:33.167 --> 00:00:35.000
+Vamos executar
+e ver o que ele nos diz.
+
+00:00:37.700 --> 00:00:40.667
+Como vemos,
+este aqui é de 0,5 milissegundo
+
+00:00:40.700 --> 00:00:43.400
+e este é
+de 0,75 milissegundo.
+
+00:00:43.467 --> 00:00:45.067
+Então este é
+bem mais rápido.
+

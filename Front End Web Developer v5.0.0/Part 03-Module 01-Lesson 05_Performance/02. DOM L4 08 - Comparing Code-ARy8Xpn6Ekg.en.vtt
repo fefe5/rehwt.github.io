@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.490
+On the left side, this is the code that were used to.
+
+00:00:02.490 --> 00:00:04.844
+We creative a div,
+
+00:00:04.844 --> 00:00:06.565
+create 200 paragraph elements,
+
+00:00:06.565 --> 00:00:07.990
+add those elements to the div.
+
+00:00:07.990 --> 00:00:09.990
+And then once we've created 200,
+
+00:00:09.990 --> 00:00:12.269
+we add that div to the page.
+
+00:00:12.269 --> 00:00:15.209
+Over here we run a loop 200 times and each
+
+00:00:15.210 --> 00:00:18.990
+time through the loop it creates a paragraph element and adds it to the page.
+
+00:00:18.989 --> 00:00:20.820
+Now each one of these pieces of code has
+
+00:00:20.820 --> 00:00:23.355
+the performance at the beginning, so it takes a check.
+
+00:00:23.355 --> 00:00:25.140
+And then down here at the end,
+
+00:00:25.140 --> 00:00:28.935
+it takes a new check of the performance and then subtracts it
+
+00:00:28.934 --> 00:00:30.750
+to give us the total amount of time it took to
+
+00:00:30.750 --> 00:00:33.134
+run this piece of code or this piece of code.
+
+00:00:33.134 --> 00:00:36.244
+So let's run them and see what it tells us.
+
+00:00:36.244 --> 00:00:39.169
+So we can see that this one over here is
+
+00:00:39.170 --> 00:00:41.210
+about half a millisecond and this one is
+
+00:00:41.210 --> 00:00:43.448
+over here is about three quarters of a millisecond.
+
+00:00:43.448 --> 00:00:45.049
+So this one runs quite a bit faster.
+

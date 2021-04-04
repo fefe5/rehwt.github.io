@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.879
+Both the code, you write and how it
+
+00:00:02.879 --> 00:00:06.459
+performs are vital things to think about while you are developing.
+
+00:00:06.459 --> 00:00:09.330
+In this lesson, we looked at how to measure the speed of
+
+00:00:09.330 --> 00:00:13.140
+the code we write and how to write it in an efficient way.
+
+00:00:13.140 --> 00:00:17.039
+We also looked at how "reflow" and "repaint" affect performance.
+
+00:00:17.039 --> 00:00:21.494
+Lastly, we looked at the Javascript Event Loop that powers all javascript engines,
+
+00:00:21.495 --> 00:00:26.000
+knowing how the Event Loop works will enable you to write quality code.
+

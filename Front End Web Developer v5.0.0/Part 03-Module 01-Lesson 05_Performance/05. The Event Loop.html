@@ -1,0 +1,393 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Event Loop</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Performance</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Add Page Content Efficiently.html">02. Add Page Content Efficiently</a>
+    </li>
+    <li class="">
+      <a href="03. Reflow &amp; Repaint.html">03. Reflow &amp; Repaint</a>
+    </li>
+    <li class="">
+      <a href="04. The Call Stack.html">04. The Call Stack</a>
+    </li>
+    <li class="">
+      <a href="05. The Event Loop.html">05. The Event Loop</a>
+    </li>
+    <li class="">
+      <a href="06. setTimeout.html">06. setTimeout</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Summary.html">08. Course Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. The Event Loop</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="code-synchronicity">Code Synchronicity</h2>
+<p>In the previous section on the Call Stack, we used the terms:</p>
+<ul>
+<li>run-to-completion</li>
+<li>single-threaded</li>
+</ul>
+<p>Another term for this is <strong>synchronous</strong>. By definition, "synchronous" means:</p>
+<blockquote>
+  <p>existing or occurring at the same time</p>
+</blockquote>
+<p>All of the code we've been looking at runs in order, at the same time. Functions are added to the call stack, and then removed from the call stack when they've completed. However, there is some code that is <em>not</em> synchronous - meaning that the code is written just like any other code, but it is executed at some later point in time. Does this sound familiar at all? You've just been working with it:</p>
+<pre><code class="js language-js">const links = document.querySelectorAll('input');
+const thirdField = links[2];
+
+thirdField.addEventListener('keypress', function handleKeyPresses(event) {
+    console.log('a key was pressed');
+});</code></pre>
+<p>…event listeners! <em>Most</em> of this code is synchronous like you're used to. But the event listener's function <code>handleKeyPresses</code> is <em>not</em> invoked immediately, it's invoked at some later point in time. </p>
+<p>Have you ever wondered about that? Where does the code go? What about the "call stack" that we learned about? Is it hidden in the call stack somewhere?</p>
+<p>Let's look at this code snippet:</p>
+<pre><code class="js language-js">console.log('howdy');
+document.addEventListener('click', function numbers() {
+    console.log('123');
+});
+console.log('ice cream is tasty');</code></pre>
+<p>The code will run in this order:</p>
+<ol>
+<li><code>'howdy'</code> will be logged to the console</li>
+</ol>
+<ul>
+<li><code>'ice cream is tasty'</code> will be logged to the console</li>
+</ul>
+<p>The string <code>'123'</code> will only be logged if there's a click. If the page is never clicked, then this code might not ever run! But where is it? Where did the <code>numbers</code> function holding the <code>console.log('123');</code> code go?</p>
+<h2 id="running-code-later">Running Code Later</h2>
+<p>But the same questions exist for this code as it does for the <code>.addEventListener()</code> code:</p>
+<ul>
+<li>where does the function go to wait?</li>
+<li>how does the function get run when it needs to?</li>
+</ul>
+<p>This happens because of the JavaScript Event Loop! </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-javascript-event-loop">The JavaScript Event Loop</h2>
+<p>The simplest explanation of JavaScript's <em>concurrency model</em> uses two rules:<br />
+If some JavaScript is running, let it run until it is finished ("run-to-completion").<br />
+If no JavaScript is running, run any pending event handlers.</p>
+<p>Since most JavaScript is run in response to an event, this is known as an <em>event loop</em>: Pick up the next event, run its handler, and repeat.</p>
+<p>There are three parts you have to think about around the event loop:</p>
+<ul>
+<li>the Call Stack </li>
+<li>Web APIs/the browser</li>
+<li>an Event Queue</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l4-performance-js-the-dom.jpg" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Not all of the code that we write is 100% <em>JavaScript</em> code. Some of the code is interacting with the Web APIs (also known as "browser APIs"). There are many more examples, but both <code>.addEventListener()</code> and <code>setTimeout()</code> are Web APIs. </p>
+<p>Let's look back at this code:</p>
+<pre><code class="js language-js">console.log('howdy'); // 1
+document.addEventListener('click', // 2
+  function numbers() {
+    console.log('123');
+});
+console.log('ice cream is tasty'); // 3</code></pre>
+<p>First, the browser runs this block of code to completion -- that is, steps 1, 2, and 3. Step 2 passes an event handler (<code>numbers</code>) to the browser for future use: the browser will hold this function until there's a click event. </p>
+<p>What happens if someone clicks before this block of code is done? When there is a click event and there is code already running, the <code>numbers</code> function can't just be added directly to the Call Stack because of JavaScript's run-to-completion nature; we can't interrupt any code that might currently be happening. So the function is placed in the Queue. When all of the functions in the Call Stack have finished (also known as <em>idle time</em>), then the Queue is checked to see if anything is waiting. If something is in the Queue, then it's run, creating an entry on the call stack.</p>
+<p>IMPORTANT: The key things to remember here are 1) current synchronous code runs to completion, and 2) events are processed when the browser isn't busy. Asynchronous code (such as loading an image) runs outside of this loop and sends an event when it is done.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L4 - 34 - Event Loop V1</p></h3>
+  <video controls>
+  <source src="05. L4 - 34 - Event Loop V1-uBdemYBG-ek.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L4 - 34 - Event Loop V1-uBdemYBG-ek.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. L4 - 34 - Event Loop V1-uBdemYBG-ek.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L4 - 34 - Event Loop V1-uBdemYBG-ek.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. L4 - 34 - Event Loop V1-uBdemYBG-ek.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>What is the order that the <code>iceCream</code> function goes through if the <code>&lt;footer&gt;</code> is clicked?</p>
+<pre><code class="js language-js">const pageFooter = document.querySelector('#page-footer');
+
+pageFooter.addEventListener('click', function iceCream () {
+    const footerDetails = document.querySelector('#details');
+
+    footerDetails.textContent = 'Everyone should eat ice cream!';
+});</code></pre></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>the Queue</p></button>
+  <button class="btn btn-primary"><p>the Call Stack</p></button>
+  <button class="btn btn-primary"><p>Browser</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Order</p>
+      </th>
+      <th>
+        <p>Event Loop Location</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>First</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Second</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Third</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Order</p>
+        </th>
+        <th>
+          <p>Event Loop Location</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Second</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>the Queue</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Third</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>the Call Stack</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>First</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Browser</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="recap">Recap</h2>
+<p>This section uncovered how JavaScript works under the hood; We looked at how JavaScript, the DOM, and Web APIs all fit together.</p>
+<p>Specifically, we looked at how JavaScript is a single-threaded programming language, which means it can only execute one thing at a time. We looked at how JavaScript keeps track of what functions are running by using the Call Stack. We also looked at how asynchronous code is handled.</p>
+<p>Asynchronous code makes use of the JavaScript Event Loop. Any asynchronous code (like <code>setTimeout</code> or the function passed to <code>.addEventListener()</code>) is handled by the browser. When this asynchronous code is ready to be executed, it's moved to the queue where it waits until the Call Stack is empty. Whenever the Call Stack is empty, code moves from the Queue over to the Call Stack and gets executed.</p>
+<p>Knowing how JavaScript and the Event Loop work can help us write code that is more efficient.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" rel="noopener noreferrer" target="_blank">Concurrency model and Event Loop</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers" rel="noopener noreferrer" target="_blank">Events and Handlers Overview</a></li>
+<li><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" rel="noopener noreferrer" target="_blank">What the heck is the event loop anyway? by Philip Roberts on YouTube</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. setTimeout.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. The Event Loop')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Page Content Efficiently</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Performance</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Add Page Content Efficiently.html">02. Add Page Content Efficiently</a>
+    </li>
+    <li class="">
+      <a href="03. Reflow &amp; Repaint.html">03. Reflow &amp; Repaint</a>
+    </li>
+    <li class="">
+      <a href="04. The Call Stack.html">04. The Call Stack</a>
+    </li>
+    <li class="">
+      <a href="05. The Event Loop.html">05. The Event Loop</a>
+    </li>
+    <li class="">
+      <a href="06. setTimeout.html">06. setTimeout</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Summary.html">08. Course Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Add Page Content Efficiently</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="using-a-loop-to-add-content">Using A Loop To Add Content</h2>
+<p>In the last lesson, we used a <code>for</code> loop to create two hundred paragraphs, add event listeners to them, and add them to the page. Let's take another look at the <code>for</code> loop, but this time without all of the event listener stuff:</p>
+<pre><code class="js language-js">for (let i = 1; i &lt;= 200; i++) {
+    const newElement = document.createElement('p');
+    newElement.textContent = 'This is paragraph number ' + i;
+
+    document.body.appendChild(newElement);
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Is this <code>for</code> loop code written efficiently? Write out the different ways you think this code could be improved. (hint - there are actually several ways!)</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's quickly recap the code to see where we can make improvements.</p>
+<pre><code class="js language-js">for (let i = 1; i &lt;= 200; i++) {
+    const newElement = document.createElement('p');
+    newElement.textContent = 'This is paragraph number ' + i;
+
+    document.body.appendChild(newElement);
+}</code></pre>
+<p>This code:</p>
+<ul>
+<li>creates a paragraph element</li>
+<li>adds some text to the paragraph</li>
+<li>adds the paragraph to the page</li>
+</ul>
+<p>…and it does this two hundred times.</p>
+<p>Since we want two hundred things done, the best way to do this is with a <code>for</code> loop, so that code is inescapable. However, the code <em>inside the <code>for</code> loop</em> is not all that efficient, and there are quite a few things we could do to improve this code. We could:</p>
+<ul>
+<li>create some parent container element <em>outside of the loop</em></li>
+<li>we could append all new paragraph elements to this parent container</li>
+<li>we append this parent container to the <code>&lt;body&gt;</code> element instead of appending each time through the loop</li>
+</ul>
+<p>Let's see all of these changes:</p>
+<pre><code class="js language-js">const myCustomDiv = document.createElement('div');
+
+for (let i = 1; i &lt;= 200; i++) {
+  const newElement = document.createElement('p');
+  newElement.innerText = 'This is paragraph number ' + i;
+
+  myCustomDiv.appendChild(newElement);
+}
+
+document.body.appendChild(myCustomDiv);</code></pre>
+<p>This looks a lot better, right? Right!…but how do we <em>know</em> it is? How can we <em>prove</em> it's better?</p>
+<p>We can test the time it takes to actually run this code!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="testing-code-performance">Testing Code Performance</h2>
+<p>The standard way to measure how long it takes code to run is by using <code>performance.now()</code>. <code>performance.now()</code> returns a timestamp that is measured in milliseconds, so it's extremely accurate. How accurate? Here's what the its documentation page says:</p>
+<blockquote>
+  <p>accurate to five thousandths of a millisecond (5 microseconds)</p>
+</blockquote>
+<p>That's <em>incredibly</em> precise!</p>
+<p>If you've ever used a timing procedure in another programming language, then you might've heard of Epoch time (also called Unix time or POSIX time). These tools tell you the time that has passed since 1/1/1970 (the first of January). The browser's <code>performance.now()</code> method is slightly different in that it starts measuring from the time the page loaded. Detailed information can be found on its documentation page: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" rel="noopener noreferrer" target="_blank">performance.now() on MDN</a></p>
+<p>These are the steps to use <code>performance.now()</code> to measure the speed of your code:</p>
+<ol>
+<li>use <code>performance.now()</code> to get the initial start time for the code</li>
+</ol>
+<ul>
+<li>run the code you want to test</li>
+<li>execute <code>performance.now()</code> to get another time measurement</li>
+<li>subtract the initial time from the final time</li>
+</ul>
+<p>Adding two hundred paragraphs to the page is actually going to be relatively quick, so let's slow things down by using a set of nested <code>for</code> loops that just count from one to a hundred…one hundred times!</p>
+<pre><code class="js language-js">for (let i = 1; i &lt;= 100; i++) { 
+  for (let j = 1; j &lt;= 100; j++) {
+    console.log('i and j are ', i, j);
+  }
+}</code></pre>
+<p>Next, we'll add in the <code>performance.now()</code> code to measure how long these loops take:</p>
+<pre><code class="js language-js">const startingTime = performance.now();
+
+for (let i = 1; i &lt;= 100; i++) { 
+  for (let j = 1; j &lt;= 100; j++) {
+    console.log('i and j are ', i, j);
+  }
+}
+
+const endingTime = performance.now();
+console.log('This code took ' + (endingTime - startingTime) + ' milliseconds.');</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud117-timing-with-performance-now.jpg" alt="_Using &#x60;performance.now()&#x60; to calculate the total time it takes code to run._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Using <code>performance.now()</code> to calculate the total time it takes code to run.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's go back to our original code of adding two hundred paragraphs to the page to see how long that code takes to run.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L4 08 - Comparing Code</p></h3>
+  <video controls>
+  <source src="02. DOM L4 08 - Comparing Code-ARy8Xpn6Ekg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. DOM L4 08 - Comparing Code-ARy8Xpn6Ekg.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. DOM L4 08 - Comparing Code-ARy8Xpn6Ekg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. DOM L4 08 - Comparing Code-ARy8Xpn6Ekg.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="using-a-document-fragment">Using a Document Fragment</h2>
+<p>So far, we've made a number of improvements to the code. However, there is still one thing that seems not so great; we have to create a extraneous <code>&lt;div&gt;</code> element <em>just to hold all the  <code>&lt;p&gt;</code> tags so we can add them all at once</em> and then we append this <code>&lt;div&gt;</code> to the <code>&lt;body&gt;</code> element. So in the end, we have an extra <code>&lt;div&gt;</code> that isn't really needed. It was just around because we wanted to add each new <code>&lt;p&gt;</code> to it instead of to the <code>&lt;body&gt;</code>.</p>
+<p>Why are we doing this? The browser is constantly working to make the screen match the DOM. When we add a new element, the browser has to run through a <code>reflow</code> calculation (to determine the new screen layout) and then <code>repaint</code> the screen. This takes time.</p>
+<p>If we had added each new paragraph to the body element, then the code would've been a lot slower, because this would cause the browser to go through the reflow and repaint process <em>for each paragraph</em>. We really only want the browser to do this once, so we need to attach each new paragraph to something, but we don't want to have an extra, unneeded element to get added to the DOM. </p>
+<p>This is exactly why we have the <strong>DocumentFragment</strong>! According to the documentation, a DocumentFragment:</p>
+<blockquote>
+  <p>represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document.</p>
+</blockquote>
+<p>So it's like creating another lightweight DOM tree. But the beneficial part of this is what it says next:</p>
+<blockquote>
+  <p>The key difference is that because the document fragment isn't part of the active document tree structure, changes made to the fragment don't affect the document, cause reflow, or incur any performance impact that can occur when changes are made.</p>
+</blockquote>
+<p>In other words, changes made to a DocumentFragment happen off-screen; there's no reflow and repaint cost while you build this. So this is exactly what we need!</p>
+<p>We can use the <code>.createDocumentFragment()</code> method to create an empty DocumentFragment object. This code should be very familiar to you, because it looks so very similar to <code>document.createElement()</code>. </p>
+<pre><code class="js language-js">const myDocFrag = document.createDocumentFragment();</code></pre>
+<p>Let's rewrite our code to use a DocumentFragment instead of the <code>&lt;div&gt;</code>.</p>
+<pre><code class="js language-js">const fragment = document.createDocumentFragment();  // ← uses a DocumentFragment instead of a &lt;div&gt;
+
+for (let i = 0; i &lt; 200; i++) {
+    const newElement = document.createElement('p');
+    newElement.innerText = 'This is paragraph number ' + i;
+
+    fragment.appendChild(newElement);
+}
+
+document.body.appendChild(fragment); // reflow and repaint here -- once!</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="recap">Recap</h2>
+<p>In this section, we took a brief dive into the performance implications of the code we write. We looked at a specific chunk of code and came up with ways that we could improve its performance simply by rearranging when the code was running (moving initialization code out of the <code>for</code> loop).</p>
+<p>We also looked at how to measure how long it takes code to run using <code>performance.now()</code>.</p>
+<p>Lastly, we looked at using a DocumentFragment to prevent performance issues and to prevent adding unnecessary elements to the DOM.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" rel="noopener noreferrer" target="_blank">performance.now() on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance" rel="noopener noreferrer" target="_blank">Performance Interface on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment" rel="noopener noreferrer" target="_blank">DocumentFragment Interface on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment" rel="noopener noreferrer" target="_blank">createDocumentFragment docs on MDN</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Reflow &amp; Repaint.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Add Page Content Efficiently')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.634 --> 00:00:02.402
+Isso não é um curso
+sobre desempenho,
+
+00:00:02.436 --> 00:00:05.680
+mas nunca é cedo demais
+para falar disso.
+
+00:00:05.713 --> 00:00:08.842
+Nesta aula, você aprenderá a medir
+a velocidade do seu código,
+
+00:00:08.909 --> 00:00:12.713
+a escrever código eficiente
+e aprenderá tudo
+
+00:00:12.746 --> 00:00:16.016
+sobre o event loop do JavaScript
+e como ele afeta seu código.
+
