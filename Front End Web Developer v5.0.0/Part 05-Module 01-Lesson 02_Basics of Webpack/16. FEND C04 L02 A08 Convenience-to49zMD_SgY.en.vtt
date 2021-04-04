@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.509
+One of the most popular tools for making webpack
+
+00:00:03.509 --> 00:00:07.320
+convenient to use is called the webpack-dev-server.
+
+00:00:07.320 --> 00:00:10.470
+I think it's one of the big reasons that webpack is popular,
+
+00:00:10.470 --> 00:00:13.035
+and I know that it's one of the things that makes
+
+00:00:13.035 --> 00:00:16.125
+development really fast when you're using webpack.
+
+00:00:16.125 --> 00:00:22.515
+The webpack-dev-server allows you to create a server for development mode
+
+00:00:22.515 --> 00:00:29.085
+only and it allows you to run files and run updates immediately.
+
+00:00:29.085 --> 00:00:35.265
+It's what allows Create React App to have that hot reloading feature which is so nice.
+
+00:00:35.265 --> 00:00:40.935
+So first let's talk about what the webpack-dev-server is doing.
+
+00:00:40.935 --> 00:00:42.270
+Right out of the box,
+
+00:00:42.270 --> 00:00:46.295
+the webpack provides the ability to watch certain files.
+
+00:00:46.295 --> 00:00:50.450
+When we say watch, it just means that webpack is going to watch
+
+00:00:50.450 --> 00:00:54.995
+the entire dependency tree to see when you make changes to those files.
+
+00:00:54.994 --> 00:00:59.144
+So if you're in your text editor and you save a file,
+
+00:00:59.145 --> 00:01:03.545
+webpack can recognize that a change just happened on that file.
+
+00:01:03.545 --> 00:01:12.099
+You can run this directly by adding a dash dash watch into the command.
+
+00:01:12.099 --> 00:01:15.569
+When we add this dash dash watch into the file,
+
+00:01:15.569 --> 00:01:18.479
+you can see that when we run the command,
+
+00:01:18.480 --> 00:01:20.415
+something different will happen.
+
+00:01:20.415 --> 00:01:23.490
+A webpack never finishes running.
+
+00:01:23.489 --> 00:01:27.379
+You can see here that it's just waiting for new files,
+
+00:01:27.379 --> 00:01:29.060
+or it's waiting for something to happen.
+
+00:01:29.060 --> 00:01:33.560
+In fact, it's watching all of our files to see if something happens.
+
+00:01:33.560 --> 00:01:36.620
+So if we go back to our index.js file,
+
+00:01:36.620 --> 00:01:41.825
+and we add just another alert to see that something happened.
+
+00:01:41.825 --> 00:01:46.920
+Here, you can watch that webpack is noticing that something happened,
+
+00:01:46.920 --> 00:01:50.825
+and it's reasserting the compilation of all these files.
+
+00:01:50.825 --> 00:01:55.969
+That's really cool, but it's still it's not quite as ergonomic
+
+00:01:55.969 --> 00:02:00.650
+as some people would hope for and it can't just restart your browser.
+
+00:02:00.650 --> 00:02:06.155
+The big thing is that if I'm working with this and I have my local host setup
+
+00:02:06.155 --> 00:02:12.860
+even if I save a file over here and webpack knows to rebuild my distribution folder,
+
+00:02:12.860 --> 00:02:16.070
+I still have to refresh my browser to see the change.
+
+00:02:16.069 --> 00:02:20.905
+So if we don't want to have to refresh our browser to see the change,
+
+00:02:20.905 --> 00:02:24.240
+webpack has the webpack-dev-server,
+
+00:02:24.240 --> 00:02:29.860
+and that will allow the hot reloading feature that so many people love.
+
+00:02:29.860 --> 00:02:32.395
+To install the webpack-dev-server,
+
+00:02:32.395 --> 00:02:35.255
+I'm going to stop the server,
+
+00:02:35.254 --> 00:02:40.719
+and we're going to install the webpack-dev-server.
+
+00:02:41.060 --> 00:02:43.724
+Once that's finished loading,
+
+00:02:43.724 --> 00:02:51.944
+we can just add the webpack-dev-server to our command in our package.json file.
+
+00:02:51.944 --> 00:02:55.574
+So to edit the build-dev script,
+
+00:02:55.574 --> 00:03:00.254
+we're now just going to replace it with this,
+
+00:03:00.254 --> 00:03:05.150
+and the webpack-dev-server here tells webpack that
+
+00:03:05.150 --> 00:03:10.430
+we're going to use the dev server to run this webpack dev file,
+
+00:03:10.430 --> 00:03:15.025
+and we're going to open it automatically every time we run it.
+
+00:03:15.025 --> 00:03:18.300
+So now, if we ran the npm build-dev script,
+
+00:03:18.300 --> 00:03:23.160
+we should see it open a new browser window for us with our app running.
+
+00:03:24.830 --> 00:03:32.070
+As you can see, we get our eye exist alerts from the index.js file, all of them.
+
+00:03:32.069 --> 00:03:35.209
+You can see that, none of our styles are showing up,
+
+00:03:35.210 --> 00:03:38.210
+but that's actually expected because we haven't
+
+00:03:38.210 --> 00:03:41.540
+set up any of our styles to be imported through webpack.
+
+00:03:41.539 --> 00:03:43.729
+The only things that are showing up here are
+
+00:03:43.729 --> 00:03:48.125
+the index HTML file and the JavaScript files that we've imported.
+
+00:03:48.125 --> 00:03:51.990
+So it looks about like we would expect it to.
+

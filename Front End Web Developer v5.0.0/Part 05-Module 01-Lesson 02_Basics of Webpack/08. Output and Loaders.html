@@ -1,0 +1,474 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Output and Loaders</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Basics of Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Webpack.html">01. Introduction to Webpack</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Ex 0 Getting Started - Workspace.html">03. Ex 0: Getting Started - Workspace</a>
+    </li>
+    <li class="">
+      <a href="04. Install Webpack.html">04. Install Webpack</a>
+    </li>
+    <li class="">
+      <a href="05. Ex 1 Install Webpack - Workspace.html">05. Ex 1: Install Webpack - Workspace</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack Entry.html">06. Webpack Entry</a>
+    </li>
+    <li class="">
+      <a href="07. Ex 2 Webpack Entry - Workspace.html">07. Ex 2: Webpack Entry - Workspace</a>
+    </li>
+    <li class="">
+      <a href="08. Output and Loaders.html">08. Output and Loaders</a>
+    </li>
+    <li class="">
+      <a href="09. Ex 3a Output &amp; Loaders - Workspace.html">09. Ex 3a: Output &amp; Loaders - Workspace</a>
+    </li>
+    <li class="">
+      <a href="10. Loaders.html">10. Loaders</a>
+    </li>
+    <li class="">
+      <a href="11. Ex 3b Loaders.html">11. Ex 3b: Loaders</a>
+    </li>
+    <li class="">
+      <a href="12. Plugins.html">12. Plugins</a>
+    </li>
+    <li class="">
+      <a href="13. Ex 4 Plugins.html">13. Ex 4: Plugins</a>
+    </li>
+    <li class="">
+      <a href="14. Mode.html">14. Mode</a>
+    </li>
+    <li class="">
+      <a href="15. Ex 5 Mode.html">15. Ex 5: Mode</a>
+    </li>
+    <li class="">
+      <a href="16. Convenience in Webpack.html">16. Convenience in Webpack</a>
+    </li>
+    <li class="">
+      <a href="17. Ex 6 Convenience.html">17. Ex 6: Convenience</a>
+    </li>
+    <li class="">
+      <a href="18. Conclusion.html">18. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Output and Loaders</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Heading</p></h3>
+  <div>
+  <p>We have setup webpack just enough to be performing the most basic function of webpack - creating a dist folder with a main.js file from our entry point. And all of that is great - but none of it is useful yet. </p>
+<p>What’s wrong? Let’s take a look:</p>
+<ol>
+<li>The distribution folder has no connection whatsoever to our app. If you start the express server, our app is still functioning exactly the same way it did in part 0. </li>
+<li>The main.js file of our distribution folder contains none of the javascript or other assets we wrote for our webpage.</li>
+</ol>
+<p>In short - there are some things wrong with our distribution folder. So it’s time to take a look at customizing the webpack output. The “output” of webpack is - no surprise here - the distribution folder. It is where webpack drops or “outputs” the neat bundles of assets it creates from the individual files we point it to. </p>
+<p>So we are going to solve the issues above by setting up our webpack output, along with a few other tasks required to make it all work. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="switch-the-git-branch">Switch the Git Branch</h2>
+<p>If you want to practise the steps mentioned in the video demonstration below, then stay on the <code>2-add-webpack-entry</code> branch.</p>
+<p>Else, you can switch to the branch <code>3-webpack-output-and-loaders</code> corresponding to the current exercise where all the steps have already been carried out. </p>
+<pre><code>git checkout 3-webpack-output-and-loaders
+git branch</code></pre>
+<h2 id="about-the-dist-directory-installing-the-babel-tool-and-loading-the-js-dependencies">About the <code>dist</code> Directory, Installing the Babel Tool and Loading the JS Dependencies</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L02 A05 Output And Loaders</p></h3>
+  <video controls>
+  <source src="08. FEND C04 L02 A05 Output And Loaders-fXjmVLke49w.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="08. FEND C04 L02 A05 Output And Loaders-fXjmVLke49w.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="08. FEND C04 L02 A05 Output And Loaders-fXjmVLke49w.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>If you were told to install a node module called awesomest-linter for your development dependencies, what command would you write?<br><br />
+*Hint - Use <code>npm</code> or <code>yarn</code>. *</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>It’s easy to get confused with the many commands and differences between <code>yarn</code> and <code>npm</code>, but in frontend development, it’s helpful to be fluent with the basics in both package management systems. Don’t forget you may want a <code>-D</code> or <code>--dev</code> with npm or yarn here as well. </p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Webpack Output RegEx Quiz Solution</p></h3>
+  <div>
+  <div id="spoiler_1" style="display:none">
+There are a handful of valid solutions here.
+
+- `npm install --dev awesomest-linter`
+- `yarn add --dev awesomest-linter`
+- `npm i -D awesomest-linter`
+- `yarn add -D awesomest-linter`
+</div>
+<p><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler_1') .style.display=='none') {document.getElementById('spoiler_1') .style.display=''}else{document.getElementById('spoiler_1') .style.display='none'}">Show Solution</button></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Webpack Output and Loaders Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>When using webpack, if you need to change the button background color, which of the following theoretical files would you choose to edit?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916945" id="rbk1">
+        <label for="rbk1"><p>bundle.min.css</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916945" id="rbk2">
+        <label for="rbk2"><p>ui.css</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="916945" id="rbk3">
+        <label for="rbk3"><p>main.css</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    ui.css
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="steps-demonstrated-in-the-video-above">Steps Demonstrated in the Video Above</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Installing Babel</p></h3>
+  <div>
+  <p>It might seem strange that we have to add ANOTHER library before we’re even finished setting up the first library - but believe me, that’s how it goes. Babel itself is also not an easy tool to use necessarily, it requires a bit of setup but it is widely used throughout the javascript world to translate new ES syntax into vanilla js that can run on browsers etc. They describe their tool like this:</p>
+<p>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.</p>
+<p>Once you have the hang of this setup, I have personally found it helpful to have babel even on projects that don’t have Webpack. Sometimes I’ll install it just for the convenience … like the convenience of no semicolons or being able to use import/export syntax. </p>
+<p>First off, we need to install Babel via npm. Babel occasionally changes its install requirements, but at the moment these are the configurations that work and seem to be pretty stable:</p>
+<p><code>npm i -D @babel/core @babel/preset-env babel-loader</code></p>
+<p>Remember that the -D will install these as <strong>development</strong> dependencies.</p>
+<p>And now, just like webpack, babel also requires a config file. In this case, it is a fairly simple one. </p>
+<p>Create a new file <code>.babelrc</code> in the root of the project. Fill it with this code:</p>
+<pre><code>{ ‘presets’: ['@babel/preset-env'] }```
+
+Now, we’re about to go through a whole rigamarole of settings, these aren’t the kind of settings I would commit to memory necessarily, but I will try to explain the steps as we go along. 
+
+First, we have both webpack and babel installed, now we have to get webpack to use babel. Doing that forces us to use a part of webpack we haven’t explained yet - we will explain them I promise - but that would jump us just a little ahead of where we are, so for now, you can copy and paste this part. We will observe what it does and then circle back around to explain it. 
+
+So, back we go to the webpack config, because we have some things to add. 
+
+First, we could specify the “output” of our webpack config, it would look something like this:</code></pre>
+<p>output: { …output options }```</p>
+<p>But at the moment, we don’t need to add any custom settings there. The default settings are good enough for us - creating a dist folder in the root of our project.</p>
+<p>So, output is set, but there’s still the matter of getting webpack to use babel. For that we’ll use a webpack loader. Loaders are what we will circle back around to in a second, but for now, add this to your webpack config.</p>
+<pre><code>    module: {
+            rules: [
+                    {
+                test: '/\.js$/',
+                exclude: /node_modules/,
+                loader: "babel-loader"
+                    }
+            ]
+    }</code></pre>
+<p>Now, with that loader in place, we should be able to get going. </p>
+<p>Go to your index.js file and import our two javascript files (also make sure you export them in the original files!). Then console log one of the functions. Here is an example:</p>
+<pre><code>import { checkForName } from './js/nameChecker'
+import { handleSubmit } from './js/formHandler'
+
+console.log(checkForName);
+
+alert("I EXIST")</code></pre>
+<p>Really we don’t need the alert any more, but either way, delete the current distribution folder and rerun the build command. </p>
+<p>You have been successful if you see your console logged function in the main.js that is output. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Babel is a javascript library that allows us to:</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916972" id="rbk1">
+        <label for="rbk1"><p>Use any version of javascript we want, in any file</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916972" id="rbk2">
+        <label for="rbk2"><p>Use javascript in any type of file like .html, .css, etc…</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="916972" id="rbk3">
+        <label for="rbk3"><p>Use the latest version of javascript, even if our browser or runtime doesn't allow it</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="916972" id="rbk4">
+        <label for="rbk4"><p>Use extra javascript features that don't yet exist in the language spec</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Use the latest version of javascript, even if our browser or runtime doesn't allow it
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>What file would you look for in a project to see if it is using babel?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Babel RegEx Quiz Solution</p></h3>
+  <div>
+  <div id="spoiler_2" style="display:none">
+`.babelrc`
+</div>
+<p><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler_2') .style.display=='none') {document.getElementById('spoiler_2') .style.display=''}else{document.getElementById('spoiler_2') .style.display='none'}">Show Solution</button></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Why are webpack and babel seen together so frequently?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916979" id="rbk1">
+        <label for="rbk1"><p>Babel allows developers to use convenient es6 syntax that works well with Webpack in a front end application</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916979" id="rbk2">
+        <label for="rbk2"><p>Webpack requires Babel and Babel is made to be run with Webpack.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="916979" id="rbk3">
+        <label for="rbk3"><p>Babel requires no extra setup when used with webpack</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="916979" id="rbk4">
+        <label for="rbk4"><p>They are not frequently used together, this example is only being used because we are not using a framework.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Babel allows developers to use convenient es6 syntax that works well with Webpack in a front end application
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>What is the difference between source code and built code?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>This is a good question to know the answer to, not because you will be asked it point blank like this necessarily, but because knowing the answer means you understand enough about the front end ecosystem and are probably able to jump into a larger project and contribute meaningful front end work. </p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="resource---webpack-introductory-documentation">Resource - Webpack Introductory Documentation</h3>
+<p>Have a look at the <a href="https://webpack.js.org/concepts/" rel="noopener noreferrer" target="_blank">Webpack Introductory Documentation</a>, where you can understand its core concepts - Entry, Output, Loaders, and Plugins.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Ex 3a Output &amp; Loaders - Workspace.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Output and Loaders')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.044
+Let's get started setting up Webbpack.
+
+00:00:03.044 --> 00:00:07.469
+I've created a GitHub repo that you can go to that has
+
+00:00:07.469 --> 00:00:11.774
+all the things set up so that we have something to add Webbpack to.
+
+00:00:11.775 --> 00:00:15.300
+To give you a walk-through of what's here,
+
+00:00:15.300 --> 00:00:22.080
+we have a basic GitHub node and node app,
+
+00:00:22.079 --> 00:00:25.004
+and it has Express as a web server.
+
+00:00:25.004 --> 00:00:29.629
+Here, I've given you a basic read me that will help you install everything,
+
+00:00:29.629 --> 00:00:33.879
+and I will have you install everything in this lesson.
+

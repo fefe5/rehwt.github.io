@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.650 --> 00:00:03.540
+So let's get started with Webpack.
+
+00:00:03.540 --> 00:00:07.710
+We have Webpack CLI and Webpack installed as dependencies.
+
+00:00:07.710 --> 00:00:10.469
+So they're showing up in our package.json file,
+
+00:00:10.470 --> 00:00:15.240
+and we've got our basic app set up the way that we want.
+
+00:00:15.240 --> 00:00:20.609
+So let's start talking about some of the basics of Webpack.
+
+00:00:20.609 --> 00:00:23.100
+First off, Webpack one of
+
+00:00:23.100 --> 00:00:26.130
+the things that's unique to it and one of the things that it does
+
+00:00:26.129 --> 00:00:28.529
+that other build tools don't is that it's going to
+
+00:00:28.530 --> 00:00:31.620
+build what's called a dependency tree for us.
+
+00:00:31.620 --> 00:00:34.140
+That dependency tree is going
+
+00:00:34.140 --> 00:00:39.490
+to start in one file and then as Webpack goes through that file,
+
+00:00:39.490 --> 00:00:43.429
+it's going to look for other dependencies that that file requires.
+
+00:00:43.429 --> 00:00:45.469
+So let's say that this file is
+
+00:00:45.469 --> 00:00:49.534
+our JavaScript file and we are using a function that's coming from another file.
+
+00:00:49.534 --> 00:00:53.869
+When Webpack sees that requirement for another file,
+
+00:00:53.869 --> 00:00:55.879
+it's going to go to that required file,
+
+00:00:55.880 --> 00:00:57.125
+and it's going to look through that.
+
+00:00:57.125 --> 00:01:00.844
+If it finds more dependencies in that file it will go to
+
+00:01:00.844 --> 00:01:05.185
+each one of the dependencies that's required to run that file.
+
+00:01:05.185 --> 00:01:08.810
+As it does that, it builds what we call a dependency tree,
+
+00:01:08.810 --> 00:01:13.240
+a tree of all of the things that are required to run our app.
+
+00:01:13.239 --> 00:01:16.784
+That's one of the things that Webpack does that say,
+
+00:01:16.784 --> 00:01:19.109
+Grunt and Gulp and Brunch don't,
+
+00:01:19.109 --> 00:01:21.465
+they just run rules.
+
+00:01:21.465 --> 00:01:26.689
+But Webpack has knowledge of the entire structure of our application.
+
+00:01:26.689 --> 00:01:33.259
+So in order to build any map like that Webpack is going to need a starting place.
+
+00:01:33.260 --> 00:01:37.400
+So Webpack is going to have a starting place that we call entry,
+
+00:01:37.400 --> 00:01:42.520
+and that's the first core concept of Webpack is this entry point.
+
+00:01:42.519 --> 00:01:45.780
+Now, one of the cool things about Webpack4 which is
+
+00:01:45.780 --> 00:01:48.920
+the newest version of Webpack is that it actually
+
+00:01:48.920 --> 00:01:56.219
+creates a default setting for all of the required Webpack and things.
+
+00:01:56.219 --> 00:02:02.179
+So there is a default entry point that Webpack will set that just goes to
+
+00:02:02.180 --> 00:02:05.780
+index.js and that one isn't
+
+00:02:05.780 --> 00:02:09.515
+quite going to work for us because we already have expressed installed.
+
+00:02:09.514 --> 00:02:14.375
+So we're going to instead set up our own entry point.
+
+00:02:14.375 --> 00:02:19.669
+To set up our own entry point or to set up any customized configs that are
+
+00:02:19.669 --> 00:02:25.469
+outside of that default Webpack setting that they've created in Webpack4,
+
+00:02:25.469 --> 00:02:30.229
+we're going to use this file called Webpack config.js.
+
+00:02:30.229 --> 00:02:37.229
+Here, I have a repo that is an exact copy of the one that you can clone from GitHub,
+
+00:02:37.229 --> 00:02:41.060
+and in it we've got all the normal files and I have just added a
+
+00:02:41.060 --> 00:02:46.110
+Webpack config.js file to the client folder.
+
+00:02:46.150 --> 00:02:51.635
+With this file, we'll actually be able to override all those default values.
+
+00:02:51.634 --> 00:02:54.109
+Before we get too far into that though,
+
+00:02:54.110 --> 00:02:57.140
+the other core concepts that we're going to go over in
+
+00:02:57.139 --> 00:03:01.684
+this lesson for Webpack are entry like we already mentioned,
+
+00:03:01.685 --> 00:03:06.784
+the output, field loaders, plugins, and mode.
+
+00:03:06.784 --> 00:03:10.534
+So once we've gone through each one of those individually,
+
+00:03:10.534 --> 00:03:15.689
+we'll have a good picture of what Webpack is going to do for us.
+

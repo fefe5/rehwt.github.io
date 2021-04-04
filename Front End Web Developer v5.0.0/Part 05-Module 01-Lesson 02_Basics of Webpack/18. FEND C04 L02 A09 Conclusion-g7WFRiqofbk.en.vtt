@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.504
+We've come to the end of lesson two.
+
+00:00:02.504 --> 00:00:04.169
+It's been a long lesson,
+
+00:00:04.169 --> 00:00:08.085
+but we have covered all of the major concepts in Webpack.
+
+00:00:08.085 --> 00:00:11.190
+We've talked about the Entry point and how it
+
+00:00:11.189 --> 00:00:14.445
+influences the dependency tree that Webpack creates for us.
+
+00:00:14.445 --> 00:00:15.839
+We've talked about Output,
+
+00:00:15.839 --> 00:00:19.620
+and how we can edit and change the distribution folder and
+
+00:00:19.620 --> 00:00:23.685
+where it is and what the distribution folder really does for us.
+
+00:00:23.684 --> 00:00:26.789
+We've talked about loaders and plugins and the differences
+
+00:00:26.789 --> 00:00:30.030
+between them and the things that they allow us to do with Webpack.
+
+00:00:30.030 --> 00:00:32.840
+We've talked about Mode and how we can set
+
+00:00:32.840 --> 00:00:36.170
+the production and development configurations
+
+00:00:36.170 --> 00:00:40.130
+with Webpack that make life so much easier for us as front end developers.
+
+00:00:40.130 --> 00:00:43.895
+We've talked about some tools to make Webpack convenient.
+
+00:00:43.895 --> 00:00:46.820
+There are a lot more out there but I think we've touched on some of
+
+00:00:46.820 --> 00:00:50.704
+the major ones that will really save you some time when you're building your apps.
+
+00:00:50.704 --> 00:00:57.379
+Now, that's been a lot of configuration and it has a tendency to be a little bit tedious.
+
+00:00:57.380 --> 00:01:02.330
+But, in this next section we finally get to put our hands on some code and start building
+
+00:01:02.329 --> 00:01:05.000
+web pages as we tackle SASS with
+
+00:01:05.000 --> 00:01:09.859
+Webpack and some of the other technologies that would pack allows us to use.
+

@@ -1,0 +1,277 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.030
+In this video, I'm going to be talking about how to set up Sass with webpack,
+
+00:00:06.030 --> 00:00:10.379
+and some of the particulars about loaders that we haven't looked into yet.
+
+00:00:10.380 --> 00:00:13.515
+As you can see here I've already gone through
+
+00:00:13.515 --> 00:00:18.164
+your first step in this concept and added our loaders.
+
+00:00:18.164 --> 00:00:21.494
+Now, this is a different syntax
+
+00:00:21.495 --> 00:00:25.929
+than we've seen previously and I want to highlight what's going on here.
+
+00:00:27.410 --> 00:00:31.125
+You can see all of these are in the rules array.
+
+00:00:31.125 --> 00:00:36.990
+When you see a rule that has a test case and then a use case here,
+
+00:00:36.990 --> 00:00:41.039
+there's a bunch of loaders listed here.
+
+00:00:41.039 --> 00:00:44.269
+That's really different than what we did up here where we were just
+
+00:00:44.270 --> 00:00:47.435
+using babel-loader to go over all of our JS files.
+
+00:00:47.435 --> 00:00:51.490
+What are all of these loaders doing here?
+
+00:00:51.490 --> 00:00:54.530
+Well, this points to a really cool thing about
+
+00:00:54.530 --> 00:00:57.814
+webpack loaders and that the fact that they are chainable.
+
+00:00:57.814 --> 00:01:05.530
+You can have the one loader take the output or you can make one loader run on a CSS file,
+
+00:01:05.530 --> 00:01:07.370
+for instance, or a Sass file.
+
+00:01:07.370 --> 00:01:11.000
+You can have it take the output that it would generate and
+
+00:01:11.000 --> 00:01:14.480
+instead of just outputting it into the dist folder,
+
+00:01:14.480 --> 00:01:18.200
+actually give it to another loader to process
+
+00:01:18.200 --> 00:01:22.939
+that same information and then that loader can give it to another and another and so on,
+
+00:01:22.939 --> 00:01:25.984
+until you get that content to
+
+00:01:25.984 --> 00:01:29.584
+the format that you want it to be in your distribution folder.
+
+00:01:29.584 --> 00:01:33.559
+That can be a little bit of a complex thing to process.
+
+00:01:33.560 --> 00:01:38.129
+So let's take a look at more of what that's doing in detail.
+
+00:01:38.620 --> 00:01:42.760
+In our normal loader flow,
+
+00:01:42.760 --> 00:01:44.984
+you would have webpack build,
+
+00:01:44.984 --> 00:01:49.289
+so it would run your build dev or build prod.
+
+00:01:49.290 --> 00:01:50.875
+When you did that,
+
+00:01:50.875 --> 00:01:55.685
+your file would either match a loader test case or it wouldn't.
+
+00:01:55.685 --> 00:02:01.010
+If the file being looked at by webpack matches the loader test case,
+
+00:02:01.010 --> 00:02:05.875
+then the contents of that file is going to get run through the loader,
+
+00:02:05.875 --> 00:02:07.618
+which could be a babel-loader,
+
+00:02:07.618 --> 00:02:08.879
+it could be a file loader,
+
+00:02:08.879 --> 00:02:12.454
+it could be any number of the webpack loaders that exist.
+
+00:02:12.455 --> 00:02:16.350
+But whatever job that loader does, at the end,
+
+00:02:16.349 --> 00:02:18.889
+you're going to end up with new content that
+
+00:02:18.889 --> 00:02:22.239
+somehow translated from the original content.
+
+00:02:22.240 --> 00:02:26.420
+Then your loader is going to add that content into the
+
+00:02:26.419 --> 00:02:30.289
+main.js or whatever you're bundled file is called,
+
+00:02:30.289 --> 00:02:34.834
+and all of that code is what ends up in your distribution folder.
+
+00:02:34.835 --> 00:02:38.460
+But what we're seeing right now is just a little bit different from that
+
+00:02:38.460 --> 00:02:42.439
+and this is a simplistic graph of what's going on.
+
+00:02:42.439 --> 00:02:47.639
+If you take a look at this part a little more specifically,
+
+00:02:47.639 --> 00:02:53.224
+then we have multiple loaders going on in step three.
+
+00:02:53.224 --> 00:02:59.090
+Really what's happening is a file is going to match our loader test case with
+
+00:02:59.090 --> 00:03:05.030
+the rejects matter and the contents of that is going to be given to the first loader.
+
+00:03:05.030 --> 00:03:10.840
+Once a loader is done with that or it has translated the content into whatever format,
+
+00:03:10.840 --> 00:03:16.594
+it's going to give the output to loader 2 and it becomes this assembly line
+
+00:03:16.594 --> 00:03:23.150
+of changing our content into our desired format which would be the last loader.
+
+00:03:23.150 --> 00:03:26.765
+Now, there are some really tricky things about this.
+
+00:03:26.764 --> 00:03:28.609
+It can make it a little harder to deal with,
+
+00:03:28.610 --> 00:03:31.535
+but once you know the tricks, it's really easy.
+
+00:03:31.534 --> 00:03:35.810
+So chaining loaders is a really powerful tool,
+
+00:03:35.810 --> 00:03:38.935
+but you have to know how to use the syntax.
+
+00:03:38.935 --> 00:03:46.685
+The tricky part is that chained loaders run from right to left. You heard that right.
+
+00:03:46.685 --> 00:03:49.909
+In this case, the Sass loader would be
+
+00:03:49.909 --> 00:03:53.990
+the first loader to run and the CSS loader would be the second,
+
+00:03:53.990 --> 00:03:56.540
+and the style-loader would be the last and
+
+00:03:56.539 --> 00:03:59.780
+it would get all of its content from the CSS loader.
+
+00:03:59.780 --> 00:04:02.104
+That seems a little tricky to me.
+
+00:04:02.104 --> 00:04:05.209
+I know that it caused me more than a few quizzical looks at
+
+00:04:05.210 --> 00:04:08.750
+my computer while I was learning to set all this up the first time,
+
+00:04:08.750 --> 00:04:12.185
+but once you get the hang of it and you remember that trick,
+
+00:04:12.185 --> 00:04:13.925
+they're really not that bad,
+
+00:04:13.925 --> 00:04:17.180
+and you can do some awesome things when you can have
+
+00:04:17.180 --> 00:04:21.329
+the power to combine multiple loaders in whatever way you want.
+
+00:04:21.329 --> 00:04:24.979
+Also, there's nothing special about any of these loaders.
+
+00:04:24.980 --> 00:04:29.285
+They could be run by themselves or they could be run in a chain.
+
+00:04:29.285 --> 00:04:33.725
+No loader is made just for one specific purpose.
+
+00:04:33.725 --> 00:04:37.220
+The other important thing to remember is that the thing that allows us
+
+00:04:37.220 --> 00:04:40.475
+to chain all of these is the "use" keyword here.
+
+00:04:40.475 --> 00:04:45.240
+So the use keyword allows us to input an array of loaders,
+
+00:04:45.240 --> 00:04:47.564
+and that's what allows us to chain them.
+
+00:04:47.564 --> 00:04:49.480
+So with all of that said,
+
+00:04:49.480 --> 00:04:52.775
+let's try taking a look at how this actually runs.
+
+00:04:52.774 --> 00:04:56.319
+Given this setup in my webpack dev,
+
+00:04:56.319 --> 00:04:58.435
+when I run my build script,
+
+00:04:58.435 --> 00:05:04.535
+it should just give me all of my styles inside of my main.js file.
+
+00:05:04.535 --> 00:05:08.230
+So that's what we're going to try,
+
+00:05:08.230 --> 00:05:11.504
+and when we see our app startup,
+
+00:05:11.504 --> 00:05:14.019
+all of our styles should be present.
+
+00:05:14.019 --> 00:05:17.659
+But we can see that they're not.
+
+00:05:17.660 --> 00:05:19.610
+This is a problem.
+
+00:05:19.610 --> 00:05:23.270
+I have all of my correct loaders in
+
+00:05:23.269 --> 00:05:28.089
+place and I have a test case and I have installed all of them,
+
+00:05:28.089 --> 00:05:31.894
+and yet somehow none of my styles are here.
+
+00:05:31.894 --> 00:05:37.279
+In fact, if I take a look at my main.js file,
+
+00:05:37.279 --> 00:05:42.239
+there won't even be any styles there.
+
+00:05:42.240 --> 00:05:47.405
+That's a problem that maybe you can figure out why it's happening.
+
+00:05:47.404 --> 00:05:50.029
+See if you can take a look through the code and figure
+
+00:05:50.029 --> 00:05:53.609
+out why my styles aren't showing up.
+

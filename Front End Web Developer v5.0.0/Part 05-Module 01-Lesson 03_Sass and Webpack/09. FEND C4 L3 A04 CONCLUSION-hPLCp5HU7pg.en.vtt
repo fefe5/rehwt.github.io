@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.379
+Congratulations.
+
+00:00:01.379 --> 00:00:04.560
+We just compiled all of our SaaS styles with Webbpack.
+
+00:00:04.559 --> 00:00:06.779
+All of those really tedious steps that we
+
+00:00:06.780 --> 00:00:09.224
+did in the previous lesson are starting to pay off.
+
+00:00:09.224 --> 00:00:10.469
+In the next lesson,
+
+00:00:10.470 --> 00:00:14.085
+we're going to take a practical look at how to work with events in Webbpack,
+
+00:00:14.085 --> 00:00:18.160
+and then move on to Webbpack for a production environment.
+

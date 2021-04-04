@@ -1,0 +1,252 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise: Sass Loaders &amp; Webpack</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sass and Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Sass Basics.html">01. Sass Basics</a>
+    </li>
+    <li class="">
+      <a href="02. Sass Nesting.html">02. Sass Nesting</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Sass Conversion.html">03. Exercise: Sass Conversion</a>
+    </li>
+    <li class="">
+      <a href="04. Sass Variables.html">04. Sass Variables</a>
+    </li>
+    <li class="">
+      <a href="05. Sass Ampersand.html">05. Sass Ampersand</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack and Sass.html">06. Webpack and Sass</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Sass Loaders &amp; Webpack.html">07. Exercise: Sass Loaders &amp; Webpack</a>
+    </li>
+    <li class="">
+      <a href="08. Optional Exercise Challenge.html">08. Optional Exercise: Challenge</a>
+    </li>
+    <li class="">
+      <a href="09. Conclusion.html">09. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Exercise: Sass Loaders & Webpack</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Exercise: Sass Loaders &amp; Webpack Heading</p></h3>
+  <div>
+  <h1 id="exercise-sass-loaders--webpack">Exercise: Sass Loaders &amp; Webpack</h1>
+<p>If you are using the classroom workspace, you <em>do not</em> need to use the tasklist below - it’s here to help those working on their local machines. The same instructions are included in the workspace, so you should click “Expand” on the bottom left to be able to use your full screen.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise: Sass Loaders &amp; Webpack Tasklist</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>In your own repo, do the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="fb2dca9e-126c-4a12-b032-85e02fbdb182--0">
+        <label for="fb2dca9e-126c-4a12-b032-85e02fbdb182--0"><p>Install the sass loaders and their dependencies</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fb2dca9e-126c-4a12-b032-85e02fbdb182--1">
+        <label for="fb2dca9e-126c-4a12-b032-85e02fbdb182--1"><p>Add the sass loaders</p>
+<pre><code>{
+    test: /\.scss$/,
+    use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+}</code></pre></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fb2dca9e-126c-4a12-b032-85e02fbdb182--2">
+        <label for="fb2dca9e-126c-4a12-b032-85e02fbdb182--2"><p>Change all your css files to sass files</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fb2dca9e-126c-4a12-b032-85e02fbdb182--3">
+        <label for="fb2dca9e-126c-4a12-b032-85e02fbdb182--3"><p>Import the sass files into index.js. You can use this import format as a template:<br />
+<code>import './styles/resets.scss'</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fb2dca9e-126c-4a12-b032-85e02fbdb182--4">
+        <label for="fb2dca9e-126c-4a12-b032-85e02fbdb182--4"><p>Run webpack and look for your styles in the bundled js file</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Amazing!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Optional Exercise Challenge.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Exercise: Sass Loaders &amp; Webpack')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

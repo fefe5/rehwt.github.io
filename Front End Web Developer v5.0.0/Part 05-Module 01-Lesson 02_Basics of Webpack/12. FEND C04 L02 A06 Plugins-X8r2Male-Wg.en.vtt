@@ -1,0 +1,268 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.805
+Let's install a plugin with Webpack.
+
+00:00:02.805 --> 00:00:07.275
+Plugins are our way to use Webpack
+
+00:00:07.275 --> 00:00:13.050
+to do actions that aren't just turning one type of file into another.
+
+00:00:13.050 --> 00:00:16.740
+So with loaders, we were just taking in JavaScript files,
+
+00:00:16.739 --> 00:00:20.159
+and we were turning out Vanilla JavaScript files.
+
+00:00:20.160 --> 00:00:26.780
+We were using the Babel loader to turn the ES6 that we wrote into Vanilla JS.
+
+00:00:26.780 --> 00:00:32.435
+But whenever we have an action that isn't just turning one file into another,
+
+00:00:32.435 --> 00:00:34.780
+then we need to use a plugin.
+
+00:00:34.780 --> 00:00:39.799
+The first plugin that we're going to install is called the HTML Webpack plug-in.
+
+00:00:39.799 --> 00:00:43.699
+We're starting with this plugin because it does really great things for us,
+
+00:00:43.700 --> 00:00:45.200
+getting started in this app.
+
+00:00:45.200 --> 00:00:49.675
+Also because it's a very normal plugin to install.
+
+00:00:49.674 --> 00:00:56.914
+What the HTML Webpack plugin is going to do is allow Webpack to
+
+00:00:56.914 --> 00:01:04.109
+add a dynamic reference to our dist folder without us having to do it.
+
+00:01:04.109 --> 00:01:07.049
+So a lesson or two ago,
+
+00:01:07.049 --> 00:01:16.979
+when we added a hard-coded reference in the HTML to the JavaScript files,
+
+00:01:16.980 --> 00:01:19.350
+main.js, in the dist folder,
+
+00:01:19.349 --> 00:01:20.939
+we're not going to need that anymore.
+
+00:01:20.939 --> 00:01:25.250
+We're going to instead just rely on Webpack to
+
+00:01:25.250 --> 00:01:30.290
+add the reference at the bottom of our HTML file dynamically.
+
+00:01:30.290 --> 00:01:33.800
+So when you go to install a plugin,
+
+00:01:33.799 --> 00:01:39.674
+the first thing that you should do is actually install it into your node modules.
+
+00:01:39.674 --> 00:01:42.454
+So for the HTML Webpack plugin,
+
+00:01:42.454 --> 00:01:47.909
+we're going to run an npm install on the HTML Webpack plugin.
+
+00:01:48.519 --> 00:01:55.199
+While that's running, we're also going to go back to our Webpack config file,
+
+00:01:55.200 --> 00:01:58.519
+and we need to do some setup here to
+
+00:01:58.519 --> 00:02:02.224
+actually tell that pack to use the HTML Webpack plugin.
+
+00:02:02.224 --> 00:02:07.159
+The first thing that we're going to do for that is to add a reference
+
+00:02:07.159 --> 00:02:13.049
+to the HTML Webpack plugin that is living in our node modules folder now.
+
+00:02:13.050 --> 00:02:16.260
+So we've required that plugin,
+
+00:02:16.259 --> 00:02:20.884
+and we also need to tell Webpack when to run that plugin.
+
+00:02:20.884 --> 00:02:25.564
+So here inside of the module.exports,
+
+00:02:25.564 --> 00:02:29.530
+we're going to add a new section called plugins.
+
+00:02:29.530 --> 00:02:31.780
+Don't forget your commas.
+
+00:02:31.780 --> 00:02:33.844
+So in this plugin section,
+
+00:02:33.844 --> 00:02:38.000
+we are declaring a new instance of the HTML Webpack plugin,
+
+00:02:38.000 --> 00:02:43.444
+and we're telling it to look at the HTML file in
+
+00:02:43.444 --> 00:02:50.614
+client views and to have it generate a new index HTML file for us in the dist folder.
+
+00:02:50.615 --> 00:02:55.325
+The cool thing about this is that now when we rerun
+
+00:02:55.324 --> 00:03:01.834
+our command we're actually going to go back to our dist folder and see how it's changed.
+
+00:03:01.835 --> 00:03:05.719
+Here, we used to be just getting the main.js file,
+
+00:03:05.719 --> 00:03:07.430
+but now we're getting two files,
+
+00:03:07.430 --> 00:03:09.724
+we're getting HTML as well.
+
+00:03:09.724 --> 00:03:12.034
+So if we take a look at this,
+
+00:03:12.034 --> 00:03:15.680
+now when we scroll to the very bottom of the file,
+
+00:03:15.680 --> 00:03:18.920
+we're getting this script that is bringing in the
+
+00:03:18.919 --> 00:03:22.864
+main.js file from the distribution folder.
+
+00:03:22.865 --> 00:03:24.350
+What's really cool about this is,
+
+00:03:24.349 --> 00:03:26.000
+I didn't have to create it,
+
+00:03:26.000 --> 00:03:28.500
+I didn't even put this here.
+
+00:03:28.500 --> 00:03:32.685
+The HTML Webpack plugin is doing that for us.
+
+00:03:32.685 --> 00:03:36.710
+What that means is that I can go to my source index HTML
+
+00:03:36.710 --> 00:03:42.409
+file and actually remove this script tag that is hard-coded,
+
+00:03:42.409 --> 00:03:45.560
+and looking at the disk.main js file.
+
+00:03:45.560 --> 00:03:50.090
+So here, if we were to rerun this,
+
+00:03:50.090 --> 00:03:55.145
+we would just get a clean HTML file that didn't have anything at the top,
+
+00:03:55.145 --> 00:03:58.820
+and instead we're going to rely on this script here at the bottom.
+
+00:03:58.819 --> 00:04:02.794
+You might be asking why it's important to have
+
+00:04:02.794 --> 00:04:07.814
+this plugin generate the script for us instead of us just doing it ourselves.
+
+00:04:07.814 --> 00:04:11.009
+Right now there's not a big benefit,
+
+00:04:11.009 --> 00:04:14.090
+but down the road this becomes really helpful,
+
+00:04:14.090 --> 00:04:18.290
+if you ever get into slightly more advanced things like cache busting,
+
+00:04:18.290 --> 00:04:23.590
+this strategy of having Webpack generate the HTML file
+
+00:04:23.589 --> 00:04:29.229
+for you allows you to create dynamic references to certain versions of your asset files,
+
+00:04:29.230 --> 00:04:31.345
+which becomes really handy.
+
+00:04:31.345 --> 00:04:34.030
+We're going to keep it installed in our project,
+
+00:04:34.029 --> 00:04:35.654
+just so that as we're moving forward,
+
+00:04:35.654 --> 00:04:38.149
+we don't have to worry about dynamic references.
+
+00:04:38.149 --> 00:04:41.620
+So it's just a good thing to have installed from the beginning.
+
+00:04:41.620 --> 00:04:45.500
+One last thing, because we've now decided to
+
+00:04:45.500 --> 00:04:49.985
+use this dynamic reference to the main.js file,
+
+00:04:49.985 --> 00:04:54.574
+something else has changed about our app that's really important to notice.
+
+00:04:54.574 --> 00:04:57.979
+It might just go by you because we haven't been paying
+
+00:04:57.980 --> 00:05:01.309
+a lot of attention to the server side of this application,
+
+00:05:01.309 --> 00:05:05.120
+but a big change has happened where we're no
+
+00:05:05.120 --> 00:05:09.574
+longer referencing the index.html file that we are writing,
+
+00:05:09.574 --> 00:05:12.974
+instead our app is actually going to rely on the
+
+00:05:12.975 --> 00:05:17.045
+index.html file that's in the distribution folder.
+
+00:05:17.045 --> 00:05:20.270
+But right now, our server doesn't know that at all.
+
+00:05:20.269 --> 00:05:24.680
+So we're going to have to go to the server folder,
+
+00:05:24.680 --> 00:05:29.019
+and we're going to take a look at the index.js file.
+
+00:05:29.019 --> 00:05:36.664
+You can see that right now to generate the home or the root page for this application,
+
+00:05:36.665 --> 00:05:41.860
+we are finding the client views index file.
+
+00:05:41.860 --> 00:05:45.785
+That's what Express is looking at to generate the view that we find.
+
+00:05:45.785 --> 00:05:51.725
+But now we actually don't need a reference to that file,
+
+00:05:51.725 --> 00:05:56.530
+we need a reference to the dist index file.
+
+00:05:56.529 --> 00:05:59.250
+So having made this change now,
+
+00:05:59.250 --> 00:06:05.399
+Express knows where to find the correct version of our index html file.
+

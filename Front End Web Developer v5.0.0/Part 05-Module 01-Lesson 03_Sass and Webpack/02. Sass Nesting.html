@@ -1,0 +1,410 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sass Nesting</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sass and Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Sass Basics.html">01. Sass Basics</a>
+    </li>
+    <li class="">
+      <a href="02. Sass Nesting.html">02. Sass Nesting</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Sass Conversion.html">03. Exercise: Sass Conversion</a>
+    </li>
+    <li class="">
+      <a href="04. Sass Variables.html">04. Sass Variables</a>
+    </li>
+    <li class="">
+      <a href="05. Sass Ampersand.html">05. Sass Ampersand</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack and Sass.html">06. Webpack and Sass</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Sass Loaders &amp; Webpack.html">07. Exercise: Sass Loaders &amp; Webpack</a>
+    </li>
+    <li class="">
+      <a href="08. Optional Exercise Challenge.html">08. Optional Exercise: Challenge</a>
+    </li>
+    <li class="">
+      <a href="09. Conclusion.html">09. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Sass Nesting</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="sass-nesting">Sass Nesting</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Main Concept</p></h3>
+  <div>
+  <p>Nesting is one of the key features of Sass. HTML elements are nested, and so CSS is nested by nature, but that isn't reflected in CSS syntax. Sass allows you to write styles for nested elements in a much more intuitive way. Writing nested sass can mean that you don't have to create nearly as many individual classes, which can save a lot of time and markup. Not only that, but you are much more likely to be able to edit styles by only touching the CSS file, without having to go back and forth between the HTML and CSS. As a rule of thumb though, <em>if you find yourself nesting more than three levels deep</em>, it’s probably time for a new class. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="nesting-example">Nesting Example</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nesting Examples</p></h3>
+  <div>
+  <p>Take a look at these examples of nesting:</p>
+<pre><code class="sass language-sass">nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}</code></pre>
+<p>The code above, when translated to css, would become:</p>
+<pre><code class="css language-css">nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}</code></pre>
+<p>I chose this feature as one of the core things to know about sass because it is probably the single feature that most impacts your ability to write compact and efficient styles. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="github-repository-for-the-current-lesson">GitHub Repository for the Current Lesson</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this lesson, we have once again provided in-classroom workspaces for you to use.</p>
+<p>Otherwise, if you wish to work on your local machine, the current lesson and the next one uses the same Git repository. You can fork and then clone this <a href="https://github.com/udacity/fend-webpack-sass" rel="noopener noreferrer" target="_blank">Git repo</a>. You can even continue from your work in the previous lesson. </p>
+<pre><code>git clone https://github.com/&lt;Github_Username&gt;/fend-webpack-sass.git
+cd fend-webpack-sass/</code></pre>
+<p>Once again, the different branches are the different steps at each exercise - <strong>make sure to use the branch before the current exercise</strong> (if you aren’t continuing from your own code), as the branch for each exercise contains the related solution code.</p>
+<p>Current exercise can be carried out on <code>0-initial-setup</code> branch.</p>
+<pre><code>git checkout 0-initial-setup
+git branch</code></pre>
+<h3 id="exercise">Exercise</h3>
+<p>Go to the path <code>fend-webpack-sass/src/client/styles/</code>, you'll find four <code>.css</code> files and a <code>resets.scss</code> file. Convert all the <code>.css</code> file extensions to <code>.scss</code>, and leave the content all the same. <strong><em>CSS is valid Sass!</em></strong></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Practice Question</p></h3>
+  <div>
+  <h4 id="quiz-sass-vs-css">Quiz: Sass vs. CSS</h4>
+<p>What css would be generated by the following sass code? </p>
+<pre><code>section.hero {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+         background-image: url('mybg.jpeg');
+         background-size: cover;
+    }
+
+    h1, h3 {
+         font-family: 'cool font', sans-serif;
+    }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Practice Options</p></h3>
+  <div>
+  <h5 id="option-1">Option 1</h5>
+<pre><code>section.hero {
+   width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.hero img {
+    background-image: url('mybg.jpeg');
+    background-size: cover;
+}
+
+section.hero img h1,  section.hero img h3 {
+    font-family: 'cool font', sans-serif;
+}</code></pre>
+<h5 id="option-2">Option 2</h5>
+<pre><code>section.hero {
+   width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img section.hero {
+    background-image: url('mybg.jpeg');
+    background-size: cover;
+}
+
+section.hero h1,  h3 {
+    font-family: 'cool font', sans-serif;
+}</code></pre>
+<h5 id="option-3">Option 3</h5>
+<pre><code>section.hero {
+   width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.hero img  {
+    background-image: url('mybg.jpeg');
+    background-size: cover;
+}
+
+section.hero h1,  h3 {
+    font-family: 'cool font', sans-serif;
+}</code></pre>
+<h5 id="option-4">Option 4</h5>
+<pre><code>section.hero {
+   width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.hero img  {
+    background-image: url('mybg.jpeg');
+    background-size: cover;
+}
+
+section.hero h1,  section.hero h3 {
+    font-family: 'cool font', sans-serif;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Practice</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Select one of the following options that correlates to the options listed above.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916588" id="rbk1">
+        <label for="rbk1"><p>Option 1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916588" id="rbk2">
+        <label for="rbk2"><p>Option 2</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="916588" id="rbk3">
+        <label for="rbk3"><p>Option 3</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="916588" id="rbk4">
+        <label for="rbk4"><p>Option 4</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Option 4
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>Explain sass nesting syntax and its advantages over vanilla css. </p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>If you need help remembering some of the main points, go back to video for this section. Some quick points are:</p>
+<p>Fewer classes required<br />
+Shorter stylesheets</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Exercise Sass Conversion.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Sass Nesting')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

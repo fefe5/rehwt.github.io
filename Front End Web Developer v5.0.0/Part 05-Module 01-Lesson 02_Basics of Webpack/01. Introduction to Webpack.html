@@ -1,0 +1,351 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction to Webpack</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Basics of Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Webpack.html">01. Introduction to Webpack</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Ex 0 Getting Started - Workspace.html">03. Ex 0: Getting Started - Workspace</a>
+    </li>
+    <li class="">
+      <a href="04. Install Webpack.html">04. Install Webpack</a>
+    </li>
+    <li class="">
+      <a href="05. Ex 1 Install Webpack - Workspace.html">05. Ex 1: Install Webpack - Workspace</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack Entry.html">06. Webpack Entry</a>
+    </li>
+    <li class="">
+      <a href="07. Ex 2 Webpack Entry - Workspace.html">07. Ex 2: Webpack Entry - Workspace</a>
+    </li>
+    <li class="">
+      <a href="08. Output and Loaders.html">08. Output and Loaders</a>
+    </li>
+    <li class="">
+      <a href="09. Ex 3a Output &amp; Loaders - Workspace.html">09. Ex 3a: Output &amp; Loaders - Workspace</a>
+    </li>
+    <li class="">
+      <a href="10. Loaders.html">10. Loaders</a>
+    </li>
+    <li class="">
+      <a href="11. Ex 3b Loaders.html">11. Ex 3b: Loaders</a>
+    </li>
+    <li class="">
+      <a href="12. Plugins.html">12. Plugins</a>
+    </li>
+    <li class="">
+      <a href="13. Ex 4 Plugins.html">13. Ex 4: Plugins</a>
+    </li>
+    <li class="">
+      <a href="14. Mode.html">14. Mode</a>
+    </li>
+    <li class="">
+      <a href="15. Ex 5 Mode.html">15. Ex 5: Mode</a>
+    </li>
+    <li class="">
+      <a href="16. Convenience in Webpack.html">16. Convenience in Webpack</a>
+    </li>
+    <li class="">
+      <a href="17. Ex 6 Convenience.html">17. Ex 6: Convenience</a>
+    </li>
+    <li class="">
+      <a href="18. Conclusion.html">18. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Introduction to Webpack</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="lesson-objectives">Lesson Objectives</h1>
+<p>The objectives of this lesson are to:</p>
+<ol>
+<li>Understand the role and necessity of webpack as a build tool </li>
+<li>Install webpack, and get started with a Node/Express web app</li>
+<li>Understand to use the major components of webpack - entry point, output, loaders, and plugins</li>
+<li>Explain the use to two different modes - production and development. We will also learn to use webpack-dev-server in development mode.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introduction to webpack Heading</p></h3>
+  <div>
+  <h1 id="getting-started-with-webpack">Getting Started with Webpack</h1>
+<p>The webpack documentation describes itself this way: </p>
+<blockquote>
+  <p>At its core, <strong>webpack</strong> is a <strong>static module bundler</strong> for modern JavaScript applications.</p>
+</blockquote>
+<p>But…what does that really mean? </p>
+<p>This image from the Webpack website is a good visual.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introduction to webpack Graphic</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/webpack-bundles.png" alt="Webpack bundles your assets, styles, images, and scripts.
+From https://webpack.js.org/" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Webpack bundles your assets, styles, images, and scripts.<br />
+From <a href="https://webpack.js.org/" rel="noopener noreferrer" target="_blank">https://webpack.js.org/</a></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Webpack Intro Continued</p></h3>
+  <div>
+  <p>The idea here is that on the left you have all the various asset file formats you will probably come across in a project. You might not recognize all the extensions, but just imagine that these are all your images, stylesheets, javascripts and more. </p>
+<p>Webpack takes all the assets on the left and “bundles” or combines them into fewer files that are much easier to manage. Notice that multiple .js files on the left became one .js file on the right - that’s because the two files were combined into one large .js file.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L02 A01 Intro To Webpack</p></h3>
+  <video controls>
+  <source src="01. FEND C04 L02 A01 Intro To Webpack-0SOWFdFaESQ.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. FEND C04 L02 A01 Intro To Webpack-0SOWFdFaESQ.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="01. FEND C04 L02 A01 Intro To Webpack-0SOWFdFaESQ.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="key-terms-used-in-the-video-above">Key Terms Used in the Video Above</h3>
+<ol>
+<li><p><strong>Bootstrap</strong> is an open-source CSS library that helps to build responsive web sites, meaning the websites can adapt to the user's device (platform). Bootstrap library contains CSS and JavaScript-based design templates for different web page components. Refer to <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/" rel="noopener noreferrer" target="_blank">Bootstrap documentation </a> for more details. Note that Bootstrap comprises a variety of components, two that the Instructor mentioned are tooltips, and modal. </p></li>
+<li><p><strong>Bootstrap Tooltip</strong> provides textual boxes that pop-up whenever we hover the mouse over a particular component or element. Refer a few <a href="https://getbootstrap.com/docs/4.1/components/tooltips/#examples" rel="noopener noreferrer" target="_blank">Tooltip examples</a> to have a better overview and usages. Note that the tooltip depends on third party library <code>Popper.js</code>, which in turn has its dependencies such as <code>popper.min.js</code>, and <code>util.js</code>. </p></li>
+<li><p><strong>Bootstrap Modal</strong> plugin adds dialogs to your site for lightboxes, user notifications, or any other component. They offer a variety of effects such as sliding, fading of the containing page, and scrolling. See a few examples <a href="https://getbootstrap.com/docs/4.1/components/modal/" rel="noopener noreferrer" target="_blank">here</a>.</p></li>
+<li><p>Animation library such as <strong>Parallax</strong>. Parallax is the type of animation effect where a component has a relative difference in the positioning on the web page. For example, an image that can seem to be moving when scrolling a web page is a Parallax. There are numerous libraries available in the market. </p></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Based on what you know of Webpack so far, which of these tasks would NOT be performed by webpack: </p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="916982" id="rbk1">
+      <label for="rbk1"><p>Running Typescript files</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="916982" id="rbk2">
+      <label for="rbk2"><p>Configure a development server</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="916982" id="rbk3">
+      <label for="rbk3"><p>Base64 encoding image files</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="916982" id="rbk4">
+      <label for="rbk4"><p>Adding dynamic css references to html</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk5" name="916982" id="rbk5">
+      <label for="rbk5"><p>Run a linter on our code</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk6" name="916982" id="rbk6">
+      <label for="rbk6"><p>All of the above could be done with webpack</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>All of the above could be done with webpack</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L2 Question 1</p></h3>
+  <video controls>
+  <source src="01. FEND C04 L2 Question 1-QAiKWiHH8TI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. FEND C04 L2 Question 1-QAiKWiHH8TI.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="01. FEND C04 L2 Question 1-QAiKWiHH8TI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>Tell us how you have addressed an issue caused by conflicting asset files (or if you haven't experienced this first hand, tell us about a situation where this could happen). Examples could be styles conflicting with a third party stylesheet, or a bug caused by the order of javascript files.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>When you get questions like “”tell us how you addressed an issue where” or “explain when you used [x]” in an interview, people often feel like they don’t have a valid answer unless they have worked on a project where they actually did those things. But feel free to answer with things you have learned to do. </p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Getting Started.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Introduction to Webpack')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.260 --> 00:00:03.419
+So let's get started with Webpack.
+
+00:00:03.419 --> 00:00:06.679
+First off, I want you to imagine a webpage,
+
+00:00:06.679 --> 00:00:09.990
+a fairly normal webpage that you might be building.
+
+00:00:09.990 --> 00:00:17.609
+So let's say it looks something like this and it's just a normal run of the mill webpage.
+
+00:00:17.609 --> 00:00:19.530
+We've got some animations running,
+
+00:00:19.530 --> 00:00:22.020
+some animations that might be coming from
+
+00:00:22.019 --> 00:00:26.129
+a JavaScript's third party cool animations library.
+
+00:00:26.129 --> 00:00:27.329
+There's tons of them out there.
+
+00:00:27.329 --> 00:00:29.879
+So something like that is going on.
+
+00:00:29.879 --> 00:00:31.379
+We've got some tooltips,
+
+00:00:31.379 --> 00:00:35.219
+maybe coming from Bootstrap and using the Bootstrap tooltips or models
+
+00:00:35.219 --> 00:00:39.289
+or something like that that requires the Bootstrap JavaScript library.
+
+00:00:39.289 --> 00:00:40.789
+We've got other interactions,
+
+00:00:40.789 --> 00:00:42.079
+they may be custom,
+
+00:00:42.079 --> 00:00:45.215
+they may be coming from yet another library.
+
+00:00:45.215 --> 00:00:48.830
+You probably have something like a form or a calculator
+
+00:00:48.829 --> 00:00:52.640
+or something like that that you're writing custom JavaScript for.
+
+00:00:52.640 --> 00:00:53.929
+On top of that,
+
+00:00:53.929 --> 00:00:56.269
+to make our website extra cool,
+
+00:00:56.270 --> 00:00:58.430
+we've got some parallax going on.
+
+00:00:58.429 --> 00:01:02.810
+So we've got elements on the page that are scrolling at
+
+00:01:02.810 --> 00:01:08.329
+different rates or maybe scrolling in from the sides as you go down the page.
+
+00:01:08.329 --> 00:01:09.724
+Who knows what you've got going on?
+
+00:01:09.724 --> 00:01:11.375
+But whatever you have going on,
+
+00:01:11.375 --> 00:01:18.689
+it's really cool and we are quickly accumulating libraries that we have to manage.
+
+00:01:18.689 --> 00:01:22.789
+So here, I've got a list of some of the files that you might
+
+00:01:22.790 --> 00:01:27.290
+have already just building a fairly simple webpage like this.
+
+00:01:27.290 --> 00:01:33.240
+We've got Bootstrap, a fairly common library that is going to be on most webpages.
+
+00:01:33.239 --> 00:01:35.069
+But on top of Bootstrap,
+
+00:01:35.069 --> 00:01:40.009
+we're using some of the Bootstrap JavaScript like models and tooltips.
+
+00:01:40.010 --> 00:01:43.325
+Then, we also have this animation library and
+
+00:01:43.325 --> 00:01:48.890
+the animation library might have a dependency on another library.
+
+00:01:48.890 --> 00:01:54.034
+It might require jQuery or react or any number of things.
+
+00:01:54.034 --> 00:01:56.989
+There's also the parallax library.
+
+00:01:56.989 --> 00:02:02.000
+The parallax library might also have dependencies and you see how
+
+00:02:02.000 --> 00:02:07.129
+we're beginning to really accumulate libraries that all have to be managed,
+
+00:02:07.129 --> 00:02:09.875
+they have to load in a very specific order.
+
+00:02:09.875 --> 00:02:14.120
+So this can get really difficult really quickly.
+
+00:02:14.120 --> 00:02:17.000
+I think from Lesson 1,
+
+00:02:17.000 --> 00:02:18.319
+hopefully you've got a good picture,
+
+00:02:18.319 --> 00:02:19.699
+you've gotten to look at
+
+00:02:19.699 --> 00:02:24.064
+some professional websites and how many assets there are and all of that.
+
+00:02:24.064 --> 00:02:28.740
+So when it comes to what Webpack actually does,
+
+00:02:28.740 --> 00:02:31.775
+we have here a lot of JavaScript files.
+
+00:02:31.775 --> 00:02:33.830
+So let's say that these are all the files from
+
+00:02:33.830 --> 00:02:38.290
+the previous slide along with any of the custom files that you've written.
+
+00:02:38.289 --> 00:02:40.969
+We also have all of your styles.
+
+00:02:40.969 --> 00:02:45.955
+Styles that could be in the form of CSS or SaaS or if there's any of the others.
+
+00:02:45.955 --> 00:02:49.985
+We'll talk about those other formats later on in the course.
+
+00:02:49.985 --> 00:02:54.305
+But here I can write my JavaScript in
+
+00:02:54.305 --> 00:02:56.810
+however many files I want and I can
+
+00:02:56.810 --> 00:02:59.754
+write my styles in however many different files I like.
+
+00:02:59.754 --> 00:03:03.574
+Then, Webpack is going to run all of those files
+
+00:03:03.574 --> 00:03:06.649
+through some loaders and
+
+00:03:06.650 --> 00:03:10.625
+some plugins and we're going to talk about all of those processes later.
+
+00:03:10.625 --> 00:03:14.689
+Then, it's going to spit all of those out into a bundle.js file,
+
+00:03:14.689 --> 00:03:20.900
+just one giant file that has everything we need in it already organized and it's great.
+
+00:03:20.900 --> 00:03:25.530
+So this is essentially what Webpack does.
+
+00:03:25.530 --> 00:03:29.129
+When I think about when do I need Webpack and when do I
+
+00:03:29.129 --> 00:03:33.125
+not need Webpack and really what the benefit of it is,
+
+00:03:33.125 --> 00:03:36.650
+I don't know about you, but sometimes I go to the grocery store
+
+00:03:36.650 --> 00:03:39.844
+and I only have one or two items that I think I'm going to get.
+
+00:03:39.844 --> 00:03:45.349
+So I don't take a cart or anything like that and I just walk in and I grab items.
+
+00:03:45.349 --> 00:03:48.180
+But then all of a sudden as I'm going through the store,
+
+00:03:48.180 --> 00:03:50.075
+I start accumulating more.
+
+00:03:50.074 --> 00:03:52.294
+I start grabbing things, "All this is on sale."
+
+00:03:52.294 --> 00:03:57.619
+So then I get to the end and I'm awkwardly carrying all of these things to the cashier
+
+00:03:57.620 --> 00:04:00.469
+and I have to make a decision about whether I want
+
+00:04:00.469 --> 00:04:04.539
+bags or whether I want to try and awkwardly carry everything to my car.
+
+00:04:04.539 --> 00:04:08.310
+Hopefully, like the bagger is going to put everything
+
+00:04:08.310 --> 00:04:11.620
+into well organized bags and in this case,
+
+00:04:11.620 --> 00:04:13.655
+our assets are like all the things that we're buying.
+
+00:04:13.655 --> 00:04:16.459
+You might only really need one or two things.
+
+00:04:16.459 --> 00:04:19.399
+So you might not need a build tool
+
+00:04:19.399 --> 00:04:22.549
+that's going to put everything in nice organized bags for you like this.
+
+00:04:22.550 --> 00:04:27.670
+But clients never want you to simplify a website.
+
+00:04:27.670 --> 00:04:30.905
+As your website grows and as it gets older,
+
+00:04:30.904 --> 00:04:34.189
+you're going to be adding things to it all the time.
+
+00:04:34.189 --> 00:04:37.795
+No website stays exactly the same for a really long time.
+
+00:04:37.795 --> 00:04:41.235
+So when that's happening,
+
+00:04:41.235 --> 00:04:44.090
+you need a good way to manage website's assets,
+
+00:04:44.089 --> 00:04:48.049
+not just at the moment that you're building the app,
+
+00:04:48.050 --> 00:04:49.639
+but also for the future.
+
+00:04:49.639 --> 00:04:53.724
+So even if you think you're only going to use one or two assets,
+
+00:04:53.725 --> 00:04:57.939
+I would still lean towards adding a build tool,
+
+00:04:57.939 --> 00:05:02.230
+adding Webpack so that you have a good way to manage those in the future.
+
+00:05:02.230 --> 00:05:04.920
+When we add Webpack,
+
+00:05:04.920 --> 00:05:09.470
+we're going to have some really easy bundled files to work with in the end.
+
+00:05:09.470 --> 00:05:11.830
+So to put it very simply,
+
+00:05:11.829 --> 00:05:15.169
+what Webpack is allowing us to do is use all of
+
+00:05:15.170 --> 00:05:18.769
+our assets the way that we want them in development,
+
+00:05:18.769 --> 00:05:21.590
+but then have just one file added to
+
+00:05:21.589 --> 00:05:26.159
+our website head and it makes it a whole lot easier to deal with.
+

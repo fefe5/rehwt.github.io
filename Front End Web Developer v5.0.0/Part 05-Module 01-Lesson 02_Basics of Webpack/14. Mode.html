@@ -1,0 +1,408 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mode</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Basics of Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Webpack.html">01. Introduction to Webpack</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Ex 0 Getting Started - Workspace.html">03. Ex 0: Getting Started - Workspace</a>
+    </li>
+    <li class="">
+      <a href="04. Install Webpack.html">04. Install Webpack</a>
+    </li>
+    <li class="">
+      <a href="05. Ex 1 Install Webpack - Workspace.html">05. Ex 1: Install Webpack - Workspace</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack Entry.html">06. Webpack Entry</a>
+    </li>
+    <li class="">
+      <a href="07. Ex 2 Webpack Entry - Workspace.html">07. Ex 2: Webpack Entry - Workspace</a>
+    </li>
+    <li class="">
+      <a href="08. Output and Loaders.html">08. Output and Loaders</a>
+    </li>
+    <li class="">
+      <a href="09. Ex 3a Output &amp; Loaders - Workspace.html">09. Ex 3a: Output &amp; Loaders - Workspace</a>
+    </li>
+    <li class="">
+      <a href="10. Loaders.html">10. Loaders</a>
+    </li>
+    <li class="">
+      <a href="11. Ex 3b Loaders.html">11. Ex 3b: Loaders</a>
+    </li>
+    <li class="">
+      <a href="12. Plugins.html">12. Plugins</a>
+    </li>
+    <li class="">
+      <a href="13. Ex 4 Plugins.html">13. Ex 4: Plugins</a>
+    </li>
+    <li class="">
+      <a href="14. Mode.html">14. Mode</a>
+    </li>
+    <li class="">
+      <a href="15. Ex 5 Mode.html">15. Ex 5: Mode</a>
+    </li>
+    <li class="">
+      <a href="16. Convenience in Webpack.html">16. Convenience in Webpack</a>
+    </li>
+    <li class="">
+      <a href="17. Ex 6 Convenience.html">17. Ex 6: Convenience</a>
+    </li>
+    <li class="">
+      <a href="18. Conclusion.html">18. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">14. Mode</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="switch-the-git-branch">Switch the Git Branch</h2>
+<p>If you wish to practice the steps mentioned in the video demonstration below, use the <code>4-webpack-plugins</code> branch.</p>
+<p>Else, you can switch to the branch <code>5-webpack-mode</code> corresponding to the current exercise where all the steps have already been carried out. </p>
+<pre><code>git checkout 5-webpack-mode
+git branch</code></pre>
+<h2 id="webpack-mode">Webpack Mode</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The last core Webpack concept we’re going to cover is Mode. In the last concept, when you build, you probably noticed the warning:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screenshot-2020-06-17-at-3.08.02-pm.png" alt="Mode Warning in Configuration" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Mode Warning in Configuration</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The issue is that we haven’t told webpack which mode to run in. Modes won’t make sense until we delve into environments. You have probably already come across the idea of environments in code projects, or at least heard mention of a “development” or “prod” environment. But in order to use webpack to its true potential, we have to fully understand these concepts.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Production vs Development</p></h3>
+  <div>
+  <h3 id="production-vs-development-environments">Production vs. Development Environments</h3>
+<p>Developers refer to the various “states” of a website as environments. When we are developing a website, we call it the development environment - we run the server on localhost and use tools that are specifically convenient for us as developers. On the other hand, there is a production environment, which is our code on a server and where we can tune every tool and file for optimal efficiency, thereby giving our users the best experience when they use the webpage. There can be many environments for a project, like a testing environment or review environment, but we are going to focus on development and production for now.</p>
+<p>There are lots of tools that aim to make writing code easier for developers. One of these tools, called “sass”, we will cover in a future lesson, but for now just know that it is css with some developer friendly syntax and features. It’s great that we have tools that make development easier, but if you take sass as an example - we can’t run sass on a server. All our sass files have to be run through a transpiler in order to become css that can go on a live webpage. No matter how awesome a development tool is, in the end our code will be judged by how well it runs on a server, and oftentimes what is best for the server is the opposite of what is convenient for developers. So how do we handle both of these environments? By utilizing build tools, we can make code that is convenient for our dev team, without sacrificing speed on the server. </p>
+<p>One of the awesome features of webpack, is that it lets us apply configurations to our code based on the environment we are running. We can create a development environment (MODE in webpack) and run totally different loaders and plugins than we do for production mode.</p>
+<p>Now we have learned the second part of why we use build tools. First, we learned that build tools allow devs to use the tools that are more convenient for them. The other side of that coin is that build tools simultaneously allow devs to optimize code for the server. Build tools like Webpack are one tool we can use to help us with organization in all environments. If that doesn’t fully make sense now, don’t worry too much, it will become more clear as we go along.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Mode Graphic</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/mode-graphic.png" alt="You can see that a lot of times, what is best for developers is the opposite of what is most efficient for the server. Webpack helps us have the best of both worlds." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>You can see that a lot of times, what is best for developers is the opposite of what is most efficient for the server. Webpack helps us have the best of both worlds.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L02 A07 Mode</p></h3>
+  <video controls>
+  <source src="14. FEND C04 L02 A07 Mode-OGgpLWG3KEc.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="14. FEND C04 L02 A07 Mode-OGgpLWG3KEc.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="14. FEND C04 L02 A07 Mode-OGgpLWG3KEc.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="changes-proposed-for-the-configuration-files">Changes proposed for the Configuration Files</h4>
+<ol>
+<li>Create a copy of the <code>webpack.config.js</code>, and rename it as <code>webpack.prod.js</code>.  This file should have <code>mode: 'production'</code> statement in <code>module.exports</code>.</li>
+<li>Now, rename the <code>webpack.config.js</code> to <code>webpack.dev.js</code>. This file should have the following statements in <code>module.exports</code> </li>
+</ol>
+<pre><code>    mode: 'development',
+    devtool: 'source-map',</code></pre>
+<h4 id="changes-proposed-for-packagejson">Changes proposed for <code>package.json</code></h4>
+<p>The statements added to the <code>package.json</code> for the configuration files of production and development modes separately in the "script" block are:</p>
+<pre><code>"scripts": {
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
+},</code></pre>
+<p>Note that you should remove the <code>"build": "webpack"</code> script now from <code>package.json</code>, and only have the two related to <code>build-dev</code> and <code>build-prod</code>. This also means when you build your app with npm, you should use the correct script, e.g. </p>
+<pre><code>npm run build-dev</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Mode Quiz</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Which environment is concerned with what happens on a server?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Prod RegEx Solution</p></h3>
+  <div>
+  <div id="spoiler_1" style="display:none">
+`prod` or `production`
+</div>
+<p><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler_1') .style.display=='none') {document.getElementById('spoiler_1') .style.display=''}else{document.getElementById('spoiler_1') .style.display='none'}">Show Solution</button></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Mode Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Select the following webpack loaders and plugins that you would expect to find in development mode and not in production mode</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="916995" id="rbk1">
+      <label for="rbk1"><p>CSS minifiers</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="916995" id="rbk2">
+      <label for="rbk2"><p>Linters</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="916995" id="rbk3">
+      <label for="rbk3"><p>An uglify package for javascript</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="916995" id="rbk4">
+      <label for="rbk4"><p>A source map mode for debugging</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Linters</li>
+      <li>A source map mode for debugging</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Mode Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which environment has the most direct effect on users?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916958" id="rbk1">
+        <label for="rbk1"><p>Development</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916958" id="rbk2">
+        <label for="rbk2"><p>Production</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Production
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>Would you minify files for development or production? Why?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Some interview questions will feel deceptively easy. That doesn’t necessarily mean that the question has an unexpected answer. With a question like this, the interviewer really wants to know that you understand the concepts and differences between development and production. In this question, you can answer by simply saying “production”, but you would be missing out. The “why” part is your big opportunity to show just how much you know about the subject. Even if the interviewer does not add the “why” at the end in person. Pretend it’s there. Take every opportunity to show your grasp of important concepts.</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="15. Ex 5 Mode.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('14. Mode')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

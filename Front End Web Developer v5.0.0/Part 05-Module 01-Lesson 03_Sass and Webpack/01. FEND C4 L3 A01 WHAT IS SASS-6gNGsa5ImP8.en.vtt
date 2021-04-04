@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.940
+In this video, I'm going to be talking to you about
+
+00:00:02.940 --> 00:00:06.000
+Sass and why it's such an awesome front-end tool.
+
+00:00:06.000 --> 00:00:10.785
+The documentation calls itself a CSS extension language.
+
+00:00:10.785 --> 00:00:12.554
+That can be a little bit confusing,
+
+00:00:12.554 --> 00:00:14.265
+but really what Sass is,
+
+00:00:14.265 --> 00:00:20.039
+is this awesome collection of extra syntax for CSS that will help you write better,
+
+00:00:20.039 --> 00:00:24.210
+more concrete and efficient styles.
+
+00:00:24.210 --> 00:00:27.469
+So this is a really important thing to learn,
+
+00:00:27.469 --> 00:00:32.464
+mostly because it's a really common tool in front-end development.
+
+00:00:32.465 --> 00:00:34.250
+At some point in your interviewing,
+
+00:00:34.250 --> 00:00:36.409
+you'll come across questions about Sass,
+
+00:00:36.409 --> 00:00:40.459
+and I can guarantee you you'll come across Sass style sheets at some point.
+
+00:00:40.460 --> 00:00:42.605
+So they're really handy to learn.
+
+00:00:42.604 --> 00:00:48.444
+It's a really powerful way to write better CSS syntax.
+
+00:00:48.445 --> 00:00:54.564
+So let's talk about why we need Webpack in order to run CSS and Sass.
+
+00:00:54.564 --> 00:01:01.250
+We know that we've already used CSS on our browsers before and we never needed Webpack.
+
+00:01:01.250 --> 00:01:02.840
+So the question is,
+
+00:01:02.840 --> 00:01:08.260
+what's so different about Sass that now we need Webpack in order to run our styles?
+
+00:01:08.260 --> 00:01:12.050
+It might seem a little bit strange until we realize
+
+00:01:12.049 --> 00:01:17.045
+the structure of how the Internet works with our styles in our HTML.
+
+00:01:17.045 --> 00:01:19.799
+We always start with the client.
+
+00:01:19.799 --> 00:01:22.034
+On the client or browser,
+
+00:01:22.034 --> 00:01:25.325
+we can run HTML, CSS and JavaScript.
+
+00:01:25.325 --> 00:01:29.405
+But when our client makes a request to our server,
+
+00:01:29.405 --> 00:01:33.000
+if our server has Sass instead of CSS,
+
+00:01:33.000 --> 00:01:36.390
+it's going to try and send that Sass to the client,
+
+00:01:36.390 --> 00:01:39.480
+but the browser doesn't know what Sass is,
+
+00:01:39.480 --> 00:01:44.070
+we cannot have any Sass on this side of our application.
+
+00:01:44.069 --> 00:01:47.563
+So when we're over here on the server,
+
+00:01:47.563 --> 00:01:52.519
+we can use Webpack to take the really awesome Sass files that we
+
+00:01:52.519 --> 00:01:58.054
+make and turn them into CSS so that we can send the CSS back to the client.
+
+00:01:58.055 --> 00:02:02.780
+That whole process is a really important thing to understand that whenever you're
+
+00:02:02.780 --> 00:02:07.780
+using a pre-processed CSS library like less or Sass,
+
+00:02:07.780 --> 00:02:10.814
+they're really common in front-end development,
+
+00:02:10.814 --> 00:02:12.944
+but you always need a build step.
+
+00:02:12.944 --> 00:02:16.489
+This is one of the major reasons that we even use build tools,
+
+00:02:16.490 --> 00:02:21.004
+Grunt and Gulp and Webpack are all really common for turning
+
+00:02:21.004 --> 00:02:27.060
+your Sass into CSS on the server side so that you can send it to the client.
+

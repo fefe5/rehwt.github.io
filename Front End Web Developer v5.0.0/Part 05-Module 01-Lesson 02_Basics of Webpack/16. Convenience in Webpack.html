@@ -1,0 +1,303 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Convenience in Webpack</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Basics of Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Webpack.html">01. Introduction to Webpack</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Ex 0 Getting Started - Workspace.html">03. Ex 0: Getting Started - Workspace</a>
+    </li>
+    <li class="">
+      <a href="04. Install Webpack.html">04. Install Webpack</a>
+    </li>
+    <li class="">
+      <a href="05. Ex 1 Install Webpack - Workspace.html">05. Ex 1: Install Webpack - Workspace</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack Entry.html">06. Webpack Entry</a>
+    </li>
+    <li class="">
+      <a href="07. Ex 2 Webpack Entry - Workspace.html">07. Ex 2: Webpack Entry - Workspace</a>
+    </li>
+    <li class="">
+      <a href="08. Output and Loaders.html">08. Output and Loaders</a>
+    </li>
+    <li class="">
+      <a href="09. Ex 3a Output &amp; Loaders - Workspace.html">09. Ex 3a: Output &amp; Loaders - Workspace</a>
+    </li>
+    <li class="">
+      <a href="10. Loaders.html">10. Loaders</a>
+    </li>
+    <li class="">
+      <a href="11. Ex 3b Loaders.html">11. Ex 3b: Loaders</a>
+    </li>
+    <li class="">
+      <a href="12. Plugins.html">12. Plugins</a>
+    </li>
+    <li class="">
+      <a href="13. Ex 4 Plugins.html">13. Ex 4: Plugins</a>
+    </li>
+    <li class="">
+      <a href="14. Mode.html">14. Mode</a>
+    </li>
+    <li class="">
+      <a href="15. Ex 5 Mode.html">15. Ex 5: Mode</a>
+    </li>
+    <li class="">
+      <a href="16. Convenience in Webpack.html">16. Convenience in Webpack</a>
+    </li>
+    <li class="">
+      <a href="17. Ex 6 Convenience.html">17. Ex 6: Convenience</a>
+    </li>
+    <li class="">
+      <a href="18. Conclusion.html">18. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">16. Convenience in Webpack</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Heading</p></h3>
+  <div>
+  <h2 id="congratulations">Congratulations!</h2>
+<p>We have made our tedious way through all of the webpack concepts. Now we get to actually make things awesome. </p>
+<p>As you probably noted during this lesson so far, there are some things about the process we have now that aren’t exactly smooth. Overall, I wouldn’t call our set up a good dev experience and we don’t have production set up at all. It is functional, and that’s about it. But the whole point of using all these tools is to make our lives easier. So…what’s going wrong? Let’s use what we’ve learned to make some improvements. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="switch-the-git-branch">Switch the Git Branch</h2>
+<p>If you wish to practice the steps mentioned in the video demonstration below, use the <code>5-webpack-mode</code> branch.</p>
+<p>Else, you can switch to the branch <code>6-webpack-for-convenience</code> corresponding to the current exercise where all the steps have already been carried out. </p>
+<pre><code>git checkout 6-webpack-for-convenience</code></pre>
+<h2 id="install-webpack-dev-server">Install Webpack Dev Server</h2>
+<p>It helps in live reloading of the page, only for Development mode, and automatically re-builds the application. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L02 A08 Convenience</p></h3>
+  <video controls>
+  <source src="16. FEND C04 L02 A08 Convenience-to49zMD_SgY.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="16. FEND C04 L02 A08 Convenience-to49zMD_SgY.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="16. FEND C04 L02 A08 Convenience-to49zMD_SgY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Clean Webpack Server</p></h3>
+  <div>
+  <p>Up next, have you noticed how we often have to remove the dist folder manually before re-running the build script?  From what I have seen, when you rebuild, new code will be added to the bundled files, but if there was old code that you got rid of, webpack build does not remove the old stuff. So, we have been removing the dist folder via the terminal and before rebuilding. </p>
+<p>Really though, that is an extra and unnecessary step. If we wanted to go really low tech, we could just edit our build script:</p>
+<pre><code>rm -rf dist &amp;&amp; webpack-dev-server  --config webpack.dev.js --open</code></pre>
+<p>And there’s really nothing wrong with that. Honestly, being comfortable customizing your npm scripts will make so many things easier. But, it is doing a little bit of extra work. That script blindly deletes everything and then rebuilds it, even if 99% of the code remained the same. </p>
+<p>To be a little more efficient, there is a webpack plugin called Clean. From its documentation:</p>
+<blockquote>
+  <p>By default, this plugin will remove all files inside webpack's output.path directory, as well as all unused webpack assets after every successful rebuild.</p>
+</blockquote>
+<p>Now, some people will choose to go with the simpler blanket dist folder delete, but just to try it, lets install the clean plugin. </p>
+<pre><code>npm i -D clean-webpack-plugin</code></pre>
+<p>Then, as we learned before, to make webpack use a plugin, we have to do two things:</p>
+<p>Add a require statement to the top of the webpack config file:</p>
+<pre><code>const { CleanWebpackPlugin } = require('clean-webpack-plugin');</code></pre>
+<p>Add the plugin to Plugins array in the module.exports. The clean plugin is a good example of a plugin that allows for various options. Take a look at this:</p>
+<p>We could use CleanWebpackPlugin like this:</p>
+<pre><code>    new CleanWebpackPlugin()</code></pre>
+<p>And the above would function. When there are no options passed in, a plugin will run all the default settings, but we can also pass in our custom selections of the various plugin options, like this:</p>
+<pre><code>        new CleanWebpackPlugin({
+                // Simulate the removal of files
+                dry: true,
+                // Write Logs to Console
+                verbose: true,
+                // Automatically remove all unused webpack assets on rebuild
+                cleanStaleWebpackAssets: true,
+                protectWebpackAssets: false
+        })</code></pre>
+<p>You can’t know what options a plugin allows without reading the documentation for that plugin. </p>
+<p>Add that code to your wepack.dev.js file and rerun the build script, now you’ll see a few lines added to the webpack output that tell you the clean plugin is functioning.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Reflect</p></strong></p>
+  <p>What do you think are the most time-saving developer tools for you? Which tools do you absolutely want in a development environment, or which could you do without?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response.</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>You start work on a project with webpack already installed, but there is no specific build for production.  Walk me through the steps of setting up a production environment in webpack</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>This is a very specific webpack question, and not one you would probably come across in a jr level job anywhere, but it is a good example of a question that dives more into the specifics of a technology. </p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="17. Ex 6 Convenience.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('16. Convenience in Webpack')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

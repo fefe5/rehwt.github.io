@@ -1,0 +1,362 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Plugins</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Basics of Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Webpack.html">01. Introduction to Webpack</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Ex 0 Getting Started - Workspace.html">03. Ex 0: Getting Started - Workspace</a>
+    </li>
+    <li class="">
+      <a href="04. Install Webpack.html">04. Install Webpack</a>
+    </li>
+    <li class="">
+      <a href="05. Ex 1 Install Webpack - Workspace.html">05. Ex 1: Install Webpack - Workspace</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack Entry.html">06. Webpack Entry</a>
+    </li>
+    <li class="">
+      <a href="07. Ex 2 Webpack Entry - Workspace.html">07. Ex 2: Webpack Entry - Workspace</a>
+    </li>
+    <li class="">
+      <a href="08. Output and Loaders.html">08. Output and Loaders</a>
+    </li>
+    <li class="">
+      <a href="09. Ex 3a Output &amp; Loaders - Workspace.html">09. Ex 3a: Output &amp; Loaders - Workspace</a>
+    </li>
+    <li class="">
+      <a href="10. Loaders.html">10. Loaders</a>
+    </li>
+    <li class="">
+      <a href="11. Ex 3b Loaders.html">11. Ex 3b: Loaders</a>
+    </li>
+    <li class="">
+      <a href="12. Plugins.html">12. Plugins</a>
+    </li>
+    <li class="">
+      <a href="13. Ex 4 Plugins.html">13. Ex 4: Plugins</a>
+    </li>
+    <li class="">
+      <a href="14. Mode.html">14. Mode</a>
+    </li>
+    <li class="">
+      <a href="15. Ex 5 Mode.html">15. Ex 5: Mode</a>
+    </li>
+    <li class="">
+      <a href="16. Convenience in Webpack.html">16. Convenience in Webpack</a>
+    </li>
+    <li class="">
+      <a href="17. Ex 6 Convenience.html">17. Ex 6: Convenience</a>
+    </li>
+    <li class="">
+      <a href="18. Conclusion.html">18. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. Plugins</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="switch-the-git-branch">Switch the Git Branch</h2>
+<p>If you want to practice the steps mentioned in the video demonstration below, then use on the <code>3-webpack-output-and-loaders</code> branch.</p>
+<p>Else, you can switch to the branch <code>4-webpack-plugins</code> corresponding to the current exercise where all the steps have already been carried out. </p>
+<pre><code>git checkout 4-webpack-plugins
+git branch</code></pre>
+<h2 id="webpack-plugins">Webpack Plugins</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Heading</p></h3>
+  <div>
+  <p>Plugins are one of the last vital concepts for webpack. The Webpack documentation explains them like this:</p>
+<blockquote>
+  <p>While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables.</p>
+</blockquote>
+<p>So, pretty much anything that we need to do that falls outside the range of loaders will be accomplished with plugins. </p>
+<p>Plugins can do all sorts of things, from automatically adding asset references to an html file (which we’ll cover in a second) to allowing for hot module replacement - which is used in React’s Create React App to create an auto updating development server. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C04 L02 A06 Plugins</p></h3>
+  <video controls>
+  <source src="12. FEND C04 L02 A06 Plugins-X8r2Male-Wg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="12. FEND C04 L02 A06 Plugins-X8r2Male-Wg.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="12. FEND C04 L02 A06 Plugins-X8r2Male-Wg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>Note</strong> - In the video demonstration above, one more change is required to be done in <code>&lt;project_root_directory&gt;/src/server/index.js</code> file:</p>
+<p>Change the path from:</p>
+<pre><code>app.use(express.static('src/client'))</code></pre>
+<p>To:</p>
+<pre><code>app.use(express.static('dist'))</code></pre>
+<p>***We will see a sequential task list of all the instructions on the next page. ***</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Would a webpack plugin or loader be responsible for creating global constant values that can be used throughout the application?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916998" id="rbk1">
+        <label for="rbk1"><p>Plugin</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916998" id="rbk2">
+        <label for="rbk2"><p>Loader</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Plugin
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Would a webpack plugin or loader be responsible for taking a .less file and returning css?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916989" id="rbk1">
+        <label for="rbk1"><p>Plugin</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916989" id="rbk2">
+        <label for="rbk2"><p>Loader</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Loader
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What are the three steps to install most plugins:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="916960" id="rbk1">
+      <label for="rbk1"><p>Declare a new instance of the plugin in the plugins list</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="916960" id="rbk2">
+      <label for="rbk2"><p>Require the plugin from the node modules directory</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="916960" id="rbk3">
+      <label for="rbk3"><p>Install the plugin via yarn or npm</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="916960" id="rbk4">
+      <label for="rbk4"><p>Instantiate the plugin at the top of the file</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Declare a new instance of the plugin in the plugins list</li>
+      <li>Require the plugin from the node modules directory</li>
+      <li>Install the plugin via yarn or npm</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>In javascript, when you see the "new" keyword, what does it do and what does it say about the thing it is being called on?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Some words and concepts that should be part of your answer here are: </p>
+<ul>
+<li>The word instantiate, you create a new instance of the class</li>
+<li>We create instances from classes, so the thing it is called on must be a class</li>
+<li>If you want to get into the nitty gritty, you could talk about javascript pseudo classes and how the new keyword in javascript classes is really just syntactic sugar for javascript prototypes</li>
+</ul></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13. Ex 4 Plugins.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. Plugins')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

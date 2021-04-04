@@ -1,0 +1,329 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sass Basics</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sass and Webpack</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Sass Basics.html">01. Sass Basics</a>
+    </li>
+    <li class="">
+      <a href="02. Sass Nesting.html">02. Sass Nesting</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Sass Conversion.html">03. Exercise: Sass Conversion</a>
+    </li>
+    <li class="">
+      <a href="04. Sass Variables.html">04. Sass Variables</a>
+    </li>
+    <li class="">
+      <a href="05. Sass Ampersand.html">05. Sass Ampersand</a>
+    </li>
+    <li class="">
+      <a href="06. Webpack and Sass.html">06. Webpack and Sass</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Sass Loaders &amp; Webpack.html">07. Exercise: Sass Loaders &amp; Webpack</a>
+    </li>
+    <li class="">
+      <a href="08. Optional Exercise Challenge.html">08. Optional Exercise: Challenge</a>
+    </li>
+    <li class="">
+      <a href="09. Conclusion.html">09. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Sass Basics</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="lesson-objectives">Lesson Objectives</h1>
+<p>In this lesson, we will learn about a CSS extension language - <strong>Sass</strong>, and how it can be used in conjunction with webpack. Sass provides an extra set of CSS language syntax that helps writing more efficient styles. The objectives are:</p>
+<ol>
+<li>Explain the basics of Sass, and introduce the important features</li>
+<li>Describe more about the features - nesting, variables, ampersand</li>
+<li>Learn to use Sass with webpack</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="introduction">Introduction</h1>
+<p>The two of the famous CSS extension languages are:</p>
+<ol>
+<li><a href="https://sass-lang.com/" rel="noopener noreferrer" target="_blank">Sass</a> - Note that these files have an extension as <code>.scss</code></li>
+<li><a href="http://lesscss.org/" rel="noopener noreferrer" target="_blank">Less</a> - It has <code>.less</code> as file extension</li>
+</ol>
+<p>We are going to learn about Sass in this lesson.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FEND C4 L3 A01 WHAT IS SASS</p></h3>
+  <video controls>
+  <source src="01. FEND C4 L3 A01 WHAT IS SASS-6gNGsa5ImP8.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. FEND C4 L3 A01 WHAT IS SASS-6gNGsa5ImP8.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="01. FEND C4 L3 A01 WHAT IS SASS-6gNGsa5ImP8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Using Sass</p></h3>
+  <div>
+  <p>When a developer writes a <code>.scss</code> file, there is a problem. Browsers don’t know what Sass is, they don’t run Sass, they run CSS. Sass transpiles to CSS - or in more common english - Sass can be directly translated to CSS. Anything you write in Sass can be written in 100% pure CSS, they are equivalent to each other, but the Sass syntax is going to be much shorter and easier to write than the CSS. </p>
+<p>Sass now comes with some of its own tools to run that translation process to create CSS, but since we’re using webpack anyway, we’re going to leverage webpack to do that job.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>From what you have learned of webpack loaders and plugins, which one do you think we will need to turn our <code>.scss</code> files into <code>.css</code> files?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916557" id="rbk1">
+        <label for="rbk1"><p>A Loader</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916557" id="rbk2">
+        <label for="rbk2"><p>A Plugin</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    A Loader
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Reflect</p></strong></p>
+  <p>Do you have any previous experience with sass?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>CSS is valid Sass and Sass can be transpiled to pure CSS</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="916558" id="rbk1">
+        <label for="rbk1"><p>True</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="916558" id="rbk2">
+        <label for="rbk2"><p>False</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    True
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Interview Question</p></strong></p>
+  <p>Name two or three reasons developers often prefer to work with sass or less over vanilla css.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Some common answers would be:<br />
+Terser, more efficient syntax than css (like sass nesting)<br />
+Extra syntax options (like the sass ampersand)<br />
+More flexibility (sass variables, mixins, and includes)</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="sass-tutorial-resource">Sass Tutorial Resource</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Conclusion</p></h3>
+  <div>
+  <p>Learning sass is worth every minute of your time as you hone your front end developer skills. These days it is pretty much required knowledge and it could be a whole course of its own. Unfortunately, this course is jam-packed enough as it is so we aren’t going to spend much time here. On the bright side, the sass website has a <a href="https://sass-lang.com/guide" rel="noopener noreferrer" target="_blank">good tutorial</a> that will take you through all the basics. In the next few sections, I’ll highlight three of the concepts I think are most important to learn about sass.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><em>Again, we strongly recommend you to give it some time to read through the preprocessing, variables, nesting, modules, inheritance, and operators, from the link above.</em></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Sass Nesting.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Sass Basics')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
