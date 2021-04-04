@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:07.009 --> 00:00:12.300
+So here you can see I've set up all the different parts we will need for a server,
+
+00:00:12.300 --> 00:00:16.620
+and then right down here is the server code that we just saw.
+
+00:00:16.620 --> 00:00:19.859
+Now, one of the things that's different about a server,
+
+00:00:19.859 --> 00:00:24.494
+is that you're probably used to seeing your log messages in the browser itself.
+
+00:00:24.495 --> 00:00:26.580
+But when you're doing server-side code,
+
+00:00:26.579 --> 00:00:30.969
+you'll get all the messages in the terminal. Like this.
+
+00:00:34.100 --> 00:00:38.189
+I'm going to tell node to run my server file,
+
+00:00:38.189 --> 00:00:42.070
+by saying node and then the name of my file.
+
+00:00:47.210 --> 00:00:51.880
+Awesome. So let's actually use
+
+00:00:51.880 --> 00:00:55.840
+this as a teaching moment to understand what I was doing wrong.
+
+00:00:55.840 --> 00:00:58.225
+I realized and it's a common mistake that you should
+
+00:00:58.225 --> 00:01:01.300
+always double-check what directory you're in.
+
+00:01:01.299 --> 00:01:08.319
+So I was in the directory dsb_go which is one level up from where I want to be,
+
+00:01:08.319 --> 00:01:13.524
+which is inside of my sample project which actually has the file that I'm looking for.
+
+00:01:13.525 --> 00:01:15.760
+So the issue was that I was telling node to look for
+
+00:01:15.760 --> 00:01:18.280
+a file that they didn't know existed.
+
+00:01:18.280 --> 00:01:20.504
+So if I go into the right directory,
+
+00:01:20.504 --> 00:01:23.299
+which is the udacitySampleProject,
+
+00:01:23.299 --> 00:01:27.819
+and then I tell node to run my file,
+
+00:01:33.469 --> 00:01:38.109
+we get the feedback we're looking for which is that the server is running,
+
+00:01:38.109 --> 00:01:41.885
+and it tells us that it's running on localhost: 8000.
+
+00:01:41.885 --> 00:01:43.514
+So just to review,
+
+00:01:43.513 --> 00:01:46.644
+an Express Server is created using the listen method,
+
+00:01:46.644 --> 00:01:48.969
+which takes two arguments: a port to run
+
+00:01:48.969 --> 00:01:52.284
+the server on and a callback function to execute.
+
+00:01:52.284 --> 00:01:57.590
+Let's walk through this code quickly just so that we all have an idea of what's going on.
+
+00:01:57.620 --> 00:02:01.810
+On line two, we're requiring Express which
+
+00:02:01.810 --> 00:02:05.665
+we would have already installed from the command line as we've seen.
+
+00:02:05.665 --> 00:02:10.469
+Then we create an instance of our app here with Express,
+
+00:02:10.469 --> 00:02:12.914
+and then come the dependencies,
+
+00:02:12.914 --> 00:02:14.650
+the middleware as we talked about,
+
+00:02:14.650 --> 00:02:17.800
+bodyParser so that we can parse our data.
+
+00:02:17.800 --> 00:02:20.650
+Here we use the use method,
+
+00:02:20.650 --> 00:02:24.909
+just to tell bodyParser exactly how we want our data to be dealt with.
+
+00:02:24.909 --> 00:02:28.579
+So we're going to mostly want JSON.
+
+00:02:29.000 --> 00:02:32.724
+Here, similar to the bodyParser package,
+
+00:02:32.724 --> 00:02:37.539
+we're requiring a package we've installed on the command line which is called const.
+
+00:02:37.539 --> 00:02:41.019
+Const is a package that lets the browser and server
+
+00:02:41.020 --> 00:02:45.765
+talk to each other without any security interruptions.
+
+00:02:45.764 --> 00:02:50.614
+On line 18, we use our use method again,
+
+00:02:50.615 --> 00:02:55.925
+and this time, we're pointing our app to the folder that we want them to look at.
+
+00:02:55.925 --> 00:02:58.000
+We'll cover this in more detail later.
+
+00:02:58.000 --> 00:03:01.250
+But this one simple line of code is what allows us to write
+
+00:03:01.250 --> 00:03:04.039
+server-side code that can then connect to
+
+00:03:04.039 --> 00:03:08.039
+client-side code which would be in a folder called demo.
+
+00:03:08.900 --> 00:03:13.819
+Then we get to our beautiful server which we've gone over, we set our port,
+
+00:03:13.819 --> 00:03:15.275
+we call the listen method,
+
+00:03:15.275 --> 00:03:17.599
+we pass it to our callback function,
+
+00:03:17.599 --> 00:03:20.460
+we got ourselves a server.
+

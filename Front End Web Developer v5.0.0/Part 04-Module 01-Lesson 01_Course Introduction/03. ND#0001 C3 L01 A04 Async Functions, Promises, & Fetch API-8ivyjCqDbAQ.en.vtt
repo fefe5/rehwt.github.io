@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.990
+Then we'll bring it all together with asynchronous JavaScript.
+
+00:00:03.990 --> 00:00:07.620
+I heard a very thoughtful person once say that as humans,
+
+00:00:07.620 --> 00:00:11.490
+it's hard for our minds to wrap around the idea of asynchronicity.
+
+00:00:11.490 --> 00:00:13.949
+Well we'll take on that challenge and unlock
+
+00:00:13.949 --> 00:00:17.144
+the hidden potential of asynchronous JavaScript.
+
+00:00:17.144 --> 00:00:20.384
+We'll cover how to set up and dynamically access
+
+00:00:20.385 --> 00:00:26.250
+Web API data and how to use the Fetch API to easily and
+
+00:00:26.250 --> 00:00:29.910
+elegantly make HTTP GET and POST requests from
+
+00:00:29.910 --> 00:00:35.594
+the client side code and seamlessly process that data from the server side code.
+
+00:00:35.594 --> 00:00:39.299
+Now a great deal of what we'll cover in this course,
+
+00:00:39.299 --> 00:00:42.178
+is made possible by the relatively new feature,
+
+00:00:42.179 --> 00:00:45.605
+a promises made native in JavaScript.
+
+00:00:45.604 --> 00:00:49.939
+We will rely heavily on promises through the Fetch API and you'll be able to
+
+00:00:49.939 --> 00:00:54.559
+use the new elegant syntax to create seamless async web apps,
+
+00:00:54.560 --> 00:00:58.385
+and if any or all of that sounds like nonsense to you now,
+
+00:00:58.384 --> 00:01:02.210
+make sure you come back and watch this video after completing the course,
+
+00:01:02.210 --> 00:01:05.489
+to see how wise and talented you've become.
+

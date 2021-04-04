@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.560 --> 00:00:05.505
+Often the first thing done in a Node and Express environment is to create
+
+00:00:05.504 --> 00:00:10.859
+a simple local server that will allow an app to run locally in a browser.
+
+00:00:10.859 --> 00:00:14.535
+A server receives requests,
+
+00:00:14.535 --> 00:00:19.250
+processes those requests and then returns a response.
+
+00:00:19.250 --> 00:00:22.160
+For our purposes, we'll be using a server to run
+
+00:00:22.160 --> 00:00:24.980
+our website locally without any FTP servers or
+
+00:00:24.980 --> 00:00:27.679
+other hosting solutions and to create routes to
+
+00:00:27.679 --> 00:00:31.269
+dynamically pass data between different parts of our apps.
+
+00:00:31.269 --> 00:00:36.170
+Now, let's take a look at the code we would use to actually write this server.
+
+00:00:36.170 --> 00:00:39.515
+So the first thing we want to do is to set our variables.
+
+00:00:39.515 --> 00:00:42.695
+So here we set our variable to port 8000.
+
+00:00:42.695 --> 00:00:44.179
+You can look more into ports,
+
+00:00:44.179 --> 00:00:48.979
+but 8000 is popular, 3000, 3030, 8080.
+
+00:00:48.979 --> 00:00:51.379
+You could be creative with your naming.
+
+00:00:51.380 --> 00:00:54.410
+The next thing we do is we set
+
+00:00:54.409 --> 00:01:02.254
+a variable named server and then we pass the listen method, two arguments.
+
+00:01:02.255 --> 00:01:05.015
+The first argument is the port which we set up here.
+
+00:01:05.015 --> 00:01:07.489
+This will tell us our server which port to run
+
+00:01:07.489 --> 00:01:11.314
+on and you'll actually go to that address in the web browser.
+
+00:01:11.314 --> 00:01:16.129
+The second argument is a callback functioning which we have named listening.
+
+00:01:16.129 --> 00:01:18.274
+So when our code runs,
+
+00:01:18.275 --> 00:01:21.870
+server will start listening at port 8000,
+
+00:01:21.870 --> 00:01:24.140
+and then we'll run the function listening.
+
+00:01:24.140 --> 00:01:28.370
+Here, we see that function listening will log out,
+
+00:01:28.370 --> 00:01:33.109
+the server is running and it will tell us where it's running on which port.
+
+00:01:33.109 --> 00:01:35.250
+Let's take a look at that.
+
