@@ -1,0 +1,33 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.028
+Eventning fazalari haqida tushunchaga ega bo‘lish uchun,
+
+00:00:02.028 --> 00:00:05.594
+ushbu  HTML kodni misol sifatida ko‘rib chiqamiz.
+
+00:00:05.594 --> 00:00:09.330
+Ba’zi  HTML tarkibiy qismlarini qoldirib ketyapmiz, 
+ammo bu yerda eng muhimi ushbu tugma hisoblanadi.
+
+00:00:09.330 --> 00:00:13.810
+Ushbu  event tugmani bossak, butun jarayon boshlanadi.
+
+00:00:13.810 --> 00:00:17.250
+Birinchi bo‘lib, "capturing" fazasidan boshlaymiz.
+
+00:00:17.250 --> 00:00:21.925
+Bu HTML elementidan boshlanadi and pastga qarab harakatlanadi.
+
+00:00:21.925 --> 00:00:25.710
+Bosilgan elementga yetib borgach,
+
+00:00:25.710 --> 00:00:29.160
+"target" fazasiga o‘tadi.
+
+00:00:29.160 --> 00:00:34.200
+Keyin, "bubbling" fazasiga o‘tadi va  
+yana jarayonning boshiga qaytib boradi.
+

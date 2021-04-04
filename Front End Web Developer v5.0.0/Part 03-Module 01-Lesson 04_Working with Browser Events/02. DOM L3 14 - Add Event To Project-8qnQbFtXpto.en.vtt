@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.634
+I've got the project files open in my code editor.
+
+00:00:02.634 --> 00:00:04.213
+Now this is the JavaScript file,
+
+00:00:04.213 --> 00:00:06.120
+and over here is the HTML file.
+
+00:00:06.120 --> 00:00:09.400
+Let's see where this file is loaded over here.
+
+00:00:09.400 --> 00:00:10.755
+This is right at the bottom,
+
+00:00:10.755 --> 00:00:13.790
+two lines just before the end of the file.
+
+00:00:13.789 --> 00:00:21.519
+So it's all the way at the end. So let's write an "Event Listener."
+
+00:00:21.519 --> 00:00:26.989
+So we're listening to the document for a click and running this message right here.
+
+00:00:26.989 --> 00:00:28.969
+Let's check this out in the page.
+
+00:00:28.969 --> 00:00:30.864
+Back in the browser, I've reloaded the page.
+
+00:00:30.864 --> 00:00:34.074
+And let's click somewhere, right here.
+
+00:00:34.075 --> 00:00:36.135
+And there's our message.
+
+00:00:36.134 --> 00:00:39.524
+Now let's change up the "EventListener" a bit.
+
+00:00:39.524 --> 00:00:44.420
+Let's say that I want to change the heading on the page,
+
+00:00:44.420 --> 00:00:46.402
+this heading to be exact.
+
+00:00:46.402 --> 00:00:49.219
+Remember that, I can't use the "$0" trick here in the code editor.
+
+00:00:49.219 --> 00:00:51.524
+That only works in dev tools.
+
+00:00:51.524 --> 00:00:53.269
+So if we want to select a DOM element,
+
+00:00:53.270 --> 00:00:58.770
+we have to use the DOM selection methods like a "query selector" or "get element by ID."
+
+00:00:58.770 --> 00:00:59.960
+To change the heading style,
+
+00:00:59.960 --> 00:01:06.769
+the first thing I need to do is select the element out of the DOM.
+
+00:01:06.769 --> 00:01:12.209
+Now let's change its style.
+
+00:01:12.209 --> 00:01:15.297
+This looks good to me. Let's switch back to the browser.
+
+00:01:15.298 --> 00:01:20.820
+Now clicking on this page should set the background color of this element to red.
+
+00:01:20.819 --> 00:01:22.694
+One, two, three. I don't know about you,
+
+00:01:22.694 --> 00:01:25.089
+but I think this is really cool.
+
+00:01:25.090 --> 00:01:29.079
+Let's check this element in the DOM.
+
+00:01:29.079 --> 00:01:31.519
+We can see that this element has a background color of
+
+00:01:31.519 --> 00:01:34.295
+red here and we can see that style applied here as well.
+
+00:01:34.295 --> 00:01:37.189
+So this code work just as if we ran it in the console,
+
+00:01:37.189 --> 00:01:40.000
+except now we're running it in our JavaScript file.
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.960
+In the previous lesson,
+
+00:00:01.960 --> 00:00:03.459
+you learned all about adding,
+
+00:00:03.459 --> 00:00:06.129
+removing, and styling page content.
+
+00:00:06.129 --> 00:00:10.449
+But, did you notice that we did all of that work in the browser's DevTools?
+
+00:00:10.449 --> 00:00:13.509
+That's great for testing, but it's not how it's really done.
+
+00:00:13.509 --> 00:00:16.890
+JavaScript code needs to be written in a JavaScript file.
+
+00:00:16.890 --> 00:00:20.455
+However, if we wrote everything in a JavaScript file,
+
+00:00:20.454 --> 00:00:23.679
+all changes we make would instantly run when the page loads.
+
+00:00:23.679 --> 00:00:25.629
+For example, if you wrote some code to update
+
+00:00:25.629 --> 00:00:28.269
+a heading to have a background color of sky blue,
+
+00:00:28.269 --> 00:00:32.079
+that heading would have a sky blue background immediately.
+
+00:00:32.079 --> 00:00:35.379
+In this lesson, you'll learn how to run this DOM manipulating
+
+00:00:35.380 --> 00:00:38.990
+JavaScript code in response to actions your users take.
+
+00:00:38.990 --> 00:00:41.065
+We'll look at what events are,
+
+00:00:41.064 --> 00:00:43.039
+how to respond to events,
+
+00:00:43.039 --> 00:00:44.829
+what data is stored in an event,
+
+00:00:44.829 --> 00:00:47.530
+how to stop an event, and more.
+
+00:00:47.530 --> 00:00:50.484
+I have to tell you that this is probably my favorite lesson.
+
+00:00:50.484 --> 00:00:52.000
+After completing this lesson,
+
+00:00:52.000 --> 00:00:54.744
+you'll be able to programmatically control the page.
+
+00:00:54.744 --> 00:00:55.809
+It's really exciting stuff,
+
+00:00:55.810 --> 00:00:58.150
+and it's fundamental to how all websites are made.
+

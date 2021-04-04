@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.484
+Even though two objects look exactly the same,
+
+00:00:03.484 --> 00:00:05.535
+that doesn't mean they're identical.
+
+00:00:05.535 --> 00:00:09.240
+So the same information does not indicate equality.
+
+00:00:09.240 --> 00:00:11.685
+For example, look at my Udacity jacket.
+
+00:00:11.685 --> 00:00:14.839
+It's dark, and it has the Udacity logo.
+
+00:00:14.839 --> 00:00:17.260
+Now, look at this jacket.
+
+00:00:17.260 --> 00:00:20.480
+It's the same color and has the same logo.
+
+00:00:20.480 --> 00:00:22.405
+They look exactly the same, right?
+
+00:00:22.405 --> 00:00:24.260
+But, now, ask yourself this,
+
+00:00:24.260 --> 00:00:27.230
+are they had the same jacket?
+
+00:00:27.230 --> 00:00:28.910
+No. Of course, they aren't.
+
+00:00:28.910 --> 00:00:30.789
+This one's mine, and this one's Areetz'.
+
+00:00:30.789 --> 00:00:32.674
+Oh, there's my jacket.
+
+00:00:32.674 --> 00:00:36.299
+Thank you.
+
+00:00:36.299 --> 00:00:40.489
+Now, if I call this jacket my jacket and someone else calls it Richard's jacket,
+
+00:00:40.490 --> 00:00:43.395
+they are two different names for the same object.
+
+00:00:43.395 --> 00:00:47.570
+So, my jacket and Richard's jacket are referring to the same thing.
+
+00:00:47.570 --> 00:00:51.515
+When working with JavaScript objects and equality, you need to think about,
+
+00:00:51.515 --> 00:00:53.539
+are they two separate objects,
+
+00:00:53.539 --> 00:00:57.000
+or are they different names referring to the same object?
+

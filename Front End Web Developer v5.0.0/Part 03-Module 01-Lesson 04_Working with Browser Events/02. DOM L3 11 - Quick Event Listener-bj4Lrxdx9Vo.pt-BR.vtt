@@ -1,0 +1,63 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.132 --> 00:00:02.978
+Estou na página da documentação
+do addEventListener.
+
+00:00:03.020 --> 00:00:06.212
+Vamos tentar adicionar
+um EventListener à página.
+
+00:00:06.971 --> 00:00:09.195
+O alvo será document.
+
+00:00:11.307 --> 00:00:14.760
+Que tipo de evento observaremos?
+Vamos observar o clique.
+
+00:00:15.849 --> 00:00:17.665
+Agora a função Listener.
+
+00:00:20.698 --> 00:00:21.889
+Vamos executar.
+
+00:00:22.561 --> 00:00:25.856
+Nada acontece
+até que cliquemos na página.
+
+00:00:27.657 --> 00:00:29.744
+Mais uma vez.
+
+00:00:31.809 --> 00:00:33.728
+O número está mudando,
+
+00:00:33.770 --> 00:00:35.999
+então a mensagem
+foi chamada outra vez.
+
+00:00:36.041 --> 00:00:37.569
+Clique, clique, clique...
+
+00:00:37.611 --> 00:00:40.731
+Vemos que os cliques
+estão sendo computados.
+
+00:00:42.586 --> 00:00:44.658
+Já clicamos 22 vezes.
+
+00:00:44.700 --> 00:00:46.778
+Sempre que o documento
+for clicado,
+
+00:00:46.820 --> 00:00:48.378
+esta função será executada.
+
+00:00:48.420 --> 00:00:50.481
+Como eu cliquei 22 vezes,
+
+00:00:50.523 --> 00:00:54.234
+esta mensagem foi registrada
+no console 22 vezes.
+

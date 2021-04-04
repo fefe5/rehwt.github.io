@@ -1,0 +1,123 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:01.920
+Men bu loyihaning fayllarini kod editorimda 
+
+00:00:01.920 --> 00:00:03.689
+ochib olganman. Mana bu JavaScript fayl
+
+00:00:03.689 --> 00:00:05.759
+va mana bu yerdagisi HTML fayli.
+
+00:00:05.759 --> 00:00:08.069
+Keling, mana bu yerdan bu fayl qayerga yuklanganini ko‘ramiz.
+
+00:00:08.069 --> 00:00:11.130
+Bu o‘ngda, eng pastda o‘ngda, shundoq  
+
+00:00:11.130 --> 00:00:13.290
+faylni tugashidan oldingi 
+
+00:00:13.290 --> 00:00:13.679
+ikki qatori.
+
+00:00:13.679 --> 00:00:15.870
+Demak, u eng oxiriga yuklab olingan, shunday qilib, 
+
+00:00:15.870 --> 00:00:20.580
+keling, bitta event listener yozib olamiz.
+
+00:00:20.580 --> 00:00:23.380
+biz bitta click uchun listener funksiya 
+
+00:00:23.380 --> 00:00:25.600
+yozayapmiz va bu xabarni mana bu yerda ishga tushirayapmiz.
+
+00:00:25.600 --> 00:00:28.259
+Keling, brauzerdagi sahifaga qaytib, 
+
+00:00:28.259 --> 00:00:30.520
+buni tekshirib olamiz. Men sahifani qayta yukladim.
+
+00:00:30.520 --> 00:00:32.830
+Va keling, mana bu yerdagi biron narsani bosib ko‘ramiz
+
+00:00:32.830 --> 00:00:36.489
+va bu yerda bizning xabarimiz turibdi. Endi, 
+
+00:00:36.489 --> 00:00:41.500
+event listenerni biroz o‘zgartiramiz.
+
+00:00:41.500 --> 00:00:43.180
+Aytaylik, men bu sahifadagi sarlavhani xuddi mana 
+
+00:00:43.180 --> 00:00:45.690
+bu sarlavhadek qilib o‘zgartirishni xohlayman.
+
+00:00:45.690 --> 00:00:47.830
+Esingizda bo‘lsin, men bu yerda kod editorda
+
+00:00:47.830 --> 00:00:49.809
+faqatgina divda ishlaydigan 
+
+00:00:49.809 --> 00:00:52.239
+dollar nol hiylasini ishlata olmayman, shuning uchun,
+
+00:00:52.239 --> 00:00:54.250
+agar biz Dom elementini tanlamoqchi bo‘lsak,
+
+00:00:54.250 --> 00:00:55.840
+biz query selectorga o‘xshagan 
+
+00:00:55.840 --> 00:00:59.079
+Dom selection methodidan yoki sarlavha dizaynini o‘zgartirish uchun 
+
+00:00:59.079 --> 00:01:00.760
+get element by IDdan foydalanishimiz kerak.
+
+00:01:00.760 --> 00:01:02.200
+Men qilishim kerak bo‘lgan birinchi narsa bu
+Domdan elementni tanlab olish.
+
+00:01:02.200 --> 00:01:12.310
+Endi, keling, uni dizaynini o‘zgartiramiz.
+
+00:01:12.310 --> 00:01:13.750
+Bu menga yaxshiga o‘xshab tuyulayapti.
+
+00:01:13.750 --> 00:01:16.479
+Keling, brauzerga qaytamiz. Endi, bu sahifaga bosish
+
+00:01:16.479 --> 00:01:18.310
+bu elementning fon rangini qizilga 
+
+00:01:18.310 --> 00:01:22.030
+o‘zgartirishi kerak, bir ikki uch. 
+
+00:01:22.030 --> 00:01:23.649
+Sizni bilmadim-u, ammo men buni haqiqatda 
+
+00:01:23.649 --> 00:01:26.200
+ajoyib deb o‘ylayman. Keling, Domdagi
+
+00:01:26.200 --> 00:01:30.610
+mana bu elementni tekshirib ko‘ramiz.
+
+00:01:30.610 --> 00:01:32.349
+Biz bu elementning fon rangi mana bu yerda qizil
+ekanligini ko‘rishimiz mumkin va 
+
+00:01:32.349 --> 00:01:33.849
+biz shuningdek bu yerda ishlatilgan dizaynni ham ko‘rishimiz mumkin.
+
+00:01:33.849 --> 00:01:36.190
+Shunday qilib, bu kod hozir biz uni JavaScript faylda  
+
+00:01:36.190 --> 00:01:38.170
+ishlatayotganimizdan tashqari biz uni 
+
+00:01:38.170 --> 00:01:41.130
+konsolda ishga tushirishimiz bilanoq ishlagan.
+

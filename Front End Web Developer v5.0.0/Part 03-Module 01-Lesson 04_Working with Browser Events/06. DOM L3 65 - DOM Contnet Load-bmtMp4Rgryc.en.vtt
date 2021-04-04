@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.345
+Let's actually check out this DOMContentLoaded event.
+
+00:00:03.345 --> 00:00:06.480
+First, we need to switch to the "Network pain."
+
+00:00:06.700 --> 00:00:10.710
+Let me bring this out just a bit.
+
+00:00:10.710 --> 00:00:14.880
+We can see it here. It's actually very hard to see and then it's right here.
+
+00:00:14.880 --> 00:00:17.449
+The easiest way to see it is down here at the bottom.
+
+00:00:17.449 --> 00:00:20.570
+We can see the event information right here in blue.
+
+00:00:20.570 --> 00:00:24.135
+DOMContentLoaded was at 245 milliseconds.
+
+00:00:24.135 --> 00:00:27.560
+Let me actually refresh the page and we can see it better.
+
+00:00:29.000 --> 00:00:32.054
+We can see right here, this blue little bar right there,
+
+00:00:32.054 --> 00:00:34.799
+that's the DOMContentLoaded event and right here,
+
+00:00:34.799 --> 00:00:36.219
+it's kind of hard to see as well, but there's
+
+00:00:36.219 --> 00:00:39.710
+a light blue line right here that's the DOMContentLoaded event.
+
+00:00:39.710 --> 00:00:43.399
+Again, we have the new information down here at the bottom of the page.
+

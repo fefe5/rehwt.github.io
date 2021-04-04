@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.895
+In the project files, I've written this Event Listener.
+
+00:00:02.895 --> 00:00:06.165
+So I'm listening on the body for a keypress.
+
+00:00:06.165 --> 00:00:09.539
+Then I'm going to log the message removing first child.
+
+00:00:09.539 --> 00:00:10.814
+I'll look through the DOM,
+
+00:00:10.814 --> 00:00:13.094
+for this element with this ID.
+
+00:00:13.095 --> 00:00:15.929
+I'll find its first child and I'll remove it.
+
+00:00:15.929 --> 00:00:19.019
+Let's switch over to the browser and see this in action.
+
+00:00:19.019 --> 00:00:20.085
+Here I am in the browser,
+
+00:00:20.085 --> 00:00:21.775
+and let's find that element.
+
+00:00:21.774 --> 00:00:23.579
+It is contain-all.
+
+00:00:23.579 --> 00:00:26.909
+And it contains all of the visible content on the page.
+
+00:00:26.910 --> 00:00:28.885
+Now one thing I want to point out is that div tools
+
+00:00:28.885 --> 00:00:32.015
+has an Event Listeners panel right here.
+
+00:00:32.015 --> 00:00:33.660
+Now if I click on it, it will show us all of
+
+00:00:33.659 --> 00:00:36.704
+the registered Event Listeners for the selected item.
+
+00:00:36.704 --> 00:00:42.070
+As we can see, there are no Event Listeners for this div with contain-all ID.
+
+00:00:42.070 --> 00:00:44.100
+I can click the Ancestors check box,
+
+00:00:44.100 --> 00:00:45.960
+to see all of the ancestors to this element.
+
+00:00:45.960 --> 00:00:49.560
+And we can see that the body has a keypress listener.
+
+00:00:49.560 --> 00:00:52.230
+Hovering over this section here provides us a Remove button,
+
+00:00:52.229 --> 00:00:56.265
+which will remove the Event Listener just for this time or session.
+
+00:00:56.265 --> 00:00:59.338
+Reloading the page will bring it back. Alright let's test this out.
+
+00:00:59.338 --> 00:01:03.954
+So I'm going to click over here so that the page has focus and I'm going to press a key.
+
+00:01:03.954 --> 00:01:06.355
+And this element has updated.
+
+00:01:06.355 --> 00:01:09.640
+Now watch this header. And I'm going to press another key,
+
+00:01:09.640 --> 00:01:12.114
+and I'm going to keep pressing keys.
+
+00:01:12.114 --> 00:01:13.584
+And we can see that
+
+00:01:13.584 --> 00:01:19.189
+each first child element is getting deleted every single time I press a key.
+
+00:01:19.469 --> 00:01:24.125
+And last but not least.
+
+00:01:24.125 --> 00:01:25.680
+So, that's really cool.
+
+00:01:25.680 --> 00:01:28.410
+Another cool thing is that the Event Listeners panel will let us see
+
+00:01:28.409 --> 00:01:31.515
+where the function was defined that actually runs.
+
+00:01:31.515 --> 00:01:35.909
+So, if I choose this arrow right here and bring this down a bit.
+
+00:01:35.909 --> 00:01:40.594
+This handler here is the function that will run in response to the keypress.
+
+00:01:40.594 --> 00:01:44.864
+And I can right click this and choose show function definition.
+
+00:01:44.864 --> 00:01:46.239
+Doing that will bring us over to
+
+00:01:46.239 --> 00:01:49.905
+the Sources panel and will show us where that function was defined.
+
+00:01:49.906 --> 00:01:52.425
+It was in app js and here is that function.
+
+00:01:52.424 --> 00:01:56.799
+We can see that the cursor is placed right at the beginning of the function.
+

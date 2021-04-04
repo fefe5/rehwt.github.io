@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.700
+Let's check out this world of hidden events with the "monitorEvents" function.
+
+00:00:04.700 --> 00:00:06.884
+And what do we want to monitor?
+
+00:00:06.884 --> 00:00:10.554
+Let's monitor the document object.
+
+00:00:10.554 --> 00:00:13.730
+All right; let's check this thing out.
+
+00:00:13.730 --> 00:00:19.589
+Whoa! Look at all those mousemoves and pointerevents. Let's do a little click.
+
+00:00:19.589 --> 00:00:24.085
+For more clicks, do a double click.
+
+00:00:24.085 --> 00:00:28.080
+Let's scroll the page with the mouse wheel.
+
+00:00:28.079 --> 00:00:31.000
+All those events firing.
+

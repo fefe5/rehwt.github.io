@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.710
+I'm on the event reference page,
+
+00:00:01.710 --> 00:00:05.429
+and this page lists out all of the different DOM events that can happen.
+
+00:00:05.429 --> 00:00:07.410
+And what's really cool is that if we scroll down a little bit,
+
+00:00:07.410 --> 00:00:11.266
+we can see that they are grouped by common category.
+
+00:00:11.266 --> 00:00:12.464
+What does that mean?
+
+00:00:12.464 --> 00:00:13.718
+Let's scroll down a bit,
+
+00:00:13.718 --> 00:00:19.320
+and we can get to the mouse events.
+
+00:00:19.320 --> 00:00:22.140
+So these are all of the mouse events on page.
+
+00:00:22.140 --> 00:00:24.823
+And look, here is the click event that we keep seeing,
+
+00:00:24.823 --> 00:00:26.690
+and here's the double click.
+
+00:00:26.690 --> 00:00:27.929
+And if we use the mouse wheel,
+
+00:00:27.929 --> 00:00:30.649
+there's the wheel event. Scroll up a bit.
+
+00:00:30.649 --> 00:00:32.475
+We can see here are some keyboard events,
+
+00:00:32.475 --> 00:00:34.645
+pressing keys, letting keys up.
+
+00:00:34.645 --> 00:00:36.054
+And let's just keep looking here.
+
+00:00:36.054 --> 00:00:37.435
+There are some other cool events.
+
+00:00:37.435 --> 00:00:39.630
+Here's the scroll event.
+
+00:00:39.630 --> 00:00:40.804
+When you submit a form,
+
+00:00:40.804 --> 00:00:42.409
+there are the form events,
+
+00:00:42.409 --> 00:00:45.319
+and here's the submit event when a form is submitted.
+
+00:00:45.320 --> 00:00:49.174
+It will fire the submit event that we can listen for and then respond to that.
+
+00:00:49.174 --> 00:00:51.074
+Then there are some other CSS events here,
+
+00:00:51.075 --> 00:00:53.870
+some for animation, some for transitions.
+
+00:00:53.869 --> 00:00:55.445
+This page has a ton of information,
+
+00:00:55.445 --> 00:00:58.000
+and I definitely recommend you checking it out.
+

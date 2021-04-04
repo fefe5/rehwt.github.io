@@ -1,0 +1,33 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.975
+Javascriptni qo‘llagan holda qanday qilib 
+veb-sahifa dizaynini o‘zgartirganimizni eslaysizmi?
+
+00:00:03.975 --> 00:00:07.245
+Biz script tegini joylashuvini qisqacha ko‘rib chiqqan edik.
+
+00:00:07.245 --> 00:00:08.932
+script tegi sahifaning oxiriga qo‘yilganda,
+4
+00:00:08,932 --&gt; 00:00:10,
+hammasi yaxshi ishladi.
+
+00:00:10.705 --> 00:00:15.095
+Ammo, script tegini sahifani boshiga 
+qo‘yganimizda, ba’zi bir xatoliklar yuz berdi.
+
+00:00:15.095 --> 00:00:17.699
+Buning sababi, Javascript kodi ishga tushganda,  
+
+00:00:17.699 --> 00:00:21.210
+DOM  boshqarishga tayyor emas edi.
+
+00:00:21.210 --> 00:00:24.239
+Ushbu bo‘limda biz nima uchun bu sodir bo‘lishini
+
+00:00:24.239 --> 00:00:28.000
+va ushbu muammoli vaziyatga qanday yechim topishni o‘rganamiz.
+

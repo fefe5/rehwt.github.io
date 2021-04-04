@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.668 --> 00:00:03.250
+Você aprendeu muitas coisas
+nesta aula.
+
+00:00:03.283 --> 00:00:05.342
+Aprendeu
+sobre o mundo secreto dos eventos
+
+00:00:05.375 --> 00:00:08.931
+que atuam em toda a sua página web
+enquanto você interage com ela.
+
+00:00:08.964 --> 00:00:11.128
+Aprendeu a interagir
+com esses eventos
+
+00:00:11.161 --> 00:00:13.117
+e tudo sobre o ciclo de vida
+deles.
+
+00:00:13.150 --> 00:00:17.190
+Depois nós vimos por que o código
+JavaScript que modifica a DOM
+
+00:00:17.223 --> 00:00:19.868
+deve ser escrito
+na parte inferior do HTML
+
+00:00:19.901 --> 00:00:21.763
+e como podemos contornar
+esse problema
+
+00:00:21.796 --> 00:00:24.067
+com o evento DOMContentLoaded.
+
+00:00:24.100 --> 00:00:25.311
+Nós já vimos quase tudo,
+
+00:00:25.344 --> 00:00:28.737
+mas ainda falta ver algumas coisas
+sobre desempenho.
+
+00:00:28.770 --> 00:00:30.523
+Faremos isso na próxima aula.
+

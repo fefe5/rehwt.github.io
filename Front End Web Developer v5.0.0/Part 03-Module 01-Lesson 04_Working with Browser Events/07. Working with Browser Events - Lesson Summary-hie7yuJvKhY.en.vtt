@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.250
+You learned a ton of stuff in this lesson.
+
+00:00:03.250 --> 00:00:05.964
+You learned about the secret world of events that are flying
+
+00:00:05.964 --> 00:00:09.099
+all around your web page as you interact with it.
+
+00:00:09.099 --> 00:00:11.125
+You learned how to interact with these events,
+
+00:00:11.125 --> 00:00:13.150
+all about the event lifecycle.
+
+00:00:13.150 --> 00:00:14.440
+And then we briefly looked at
+
+00:00:14.439 --> 00:00:18.219
+why javascript code that modifies the DOM should be written at
+
+00:00:18.219 --> 00:00:20.559
+the bottom of the HTML and how we can
+
+00:00:20.559 --> 00:00:24.250
+circumvent this problem with the DOM content loaded event.
+
+00:00:24.250 --> 00:00:25.368
+So we're almost done,
+
+00:00:25.368 --> 00:00:28.920
+but there are a few performance related things that we need to talk about.
+
+00:00:28.920 --> 00:00:31.000
+We'll do that in the next lesson.
+

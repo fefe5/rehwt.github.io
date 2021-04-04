@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.906
+I'm here on the addEvent Listener documentation page
+
+00:00:02.906 --> 00:00:06.019
+and let's try out adding an event listener to this page.
+
+00:00:06.019 --> 00:00:11.394
+We want our target to be the document.
+
+00:00:11.394 --> 00:00:13.174
+Now, what type of event do we want to listen for?
+
+00:00:13.175 --> 00:00:16.339
+Let's listen for a click and now,
+
+00:00:16.339 --> 00:00:22.554
+the listener function. Now, let's run it.
+
+00:00:22.554 --> 00:00:26.594
+Nothing's happened yet until we click on the page.
+
+00:00:26.594 --> 00:00:29.519
+And let's click one more time.
+
+00:00:29.519 --> 00:00:33.399
+We can see that the number here is changing,
+
+00:00:33.399 --> 00:00:35.979
+meaning this message is being called additional times.
+
+00:00:35.979 --> 00:00:37.599
+So click, click, click, click, click.
+
+00:00:37.600 --> 00:00:44.649
+We can see all those clicks are getting counted and all the way up here to 22.
+
+00:00:44.649 --> 00:00:46.759
+So each time the document is clicked,
+
+00:00:46.759 --> 00:00:50.534
+this function is run and since I clicked the page 22 times,
+
+00:00:50.534 --> 00:00:55.000
+this message right here was logged to the console 22 times.
+

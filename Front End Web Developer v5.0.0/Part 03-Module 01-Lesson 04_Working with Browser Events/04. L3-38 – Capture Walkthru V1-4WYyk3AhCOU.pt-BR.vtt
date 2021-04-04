@@ -1,0 +1,89 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.184 --> 00:00:02.446
+Vejamos a configuração
+dos EventHandlers
+
+00:00:02.479 --> 00:00:05.142
+nas diferentes fases
+do evento.
+
+00:00:05.175 --> 00:00:07.574
+Usaremos o mesmo HTML
+de antes,
+
+00:00:07.607 --> 00:00:11.575
+mas, adicionaremos um EventListener
+de captura ao parágrafo,
+
+00:00:11.608 --> 00:00:13.870
+um observador de borbulha
+ao corpo
+
+00:00:13.903 --> 00:00:16.130
+e outro ao botão.
+
+00:00:16.163 --> 00:00:20.114
+É importante lembrar que o parágrafo
+está na fase de captura
+
+00:00:20.147 --> 00:00:24.906
+e o corpo e o botão estão,
+por padrão, na fase de borbulha.
+
+00:00:24.939 --> 00:00:29.106
+Quando o botão é clicado,
+ele vai do começo ao fim.
+
+00:00:31.036 --> 00:00:32.842
+Quando ele chega
+ao elemento body,
+
+00:00:32.875 --> 00:00:37.340
+ele não executará a função,
+pois estamos na fase de captura.
+
+00:00:39.404 --> 00:00:41.646
+Porém,
+quando ele chega no parágrafo,
+
+00:00:41.679 --> 00:00:44.138
+ele executará
+a função Listener.
+
+00:00:44.171 --> 00:00:48.199
+Isso porque ele foi configurado
+para executar na fase de captura.
+
+00:00:49.160 --> 00:00:50.974
+Então ele segue para button,
+
+00:00:51.007 --> 00:00:55.181
+indo de captura para a fase de alvo,
+depois para a de borbulha,
+
+00:00:55.214 --> 00:00:57.207
+então ele dispara o Listener.
+
+00:00:57.240 --> 00:01:00.933
+Ele faz isso, porque o Event
+usa a configuração padrão
+
+00:01:00.966 --> 00:01:03.294
+de executar
+durante a fase de borbulha.
+
+00:01:03.327 --> 00:01:06.119
+Depois ele volta
+para a cadeia HTML.
+
+00:01:09.007 --> 00:01:12.678
+Quando chega ao body,
+ele executa a função Listener,
+
+00:01:12.711 --> 00:01:15.700
+segue para o elemento HTML
+e finaliza.
+

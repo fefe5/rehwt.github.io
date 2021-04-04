@@ -1,0 +1,83 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.045 --> 00:00:01.545
+Você acabou de ver
+este código.
+
+00:00:01.578 --> 00:00:03.011
+Ele vai criar um div,
+
+00:00:03.044 --> 00:00:06.432
+depois vai criar um parágrafo,
+adicionar um texto a esse parágrafo,
+
+00:00:06.465 --> 00:00:08.488
+adicionar um EventListener
+a ele
+
+00:00:08.521 --> 00:00:10.915
+e adicionar esse parágrafo
+ao div.
+
+00:00:10.948 --> 00:00:14.981
+Ele vai criar 200 parágrafos
+e adicionar cada um deles ao div,
+
+00:00:15.014 --> 00:00:16.520
+como filhos do div.
+
+00:00:16.553 --> 00:00:19.355
+Em seguida, vai adicionar esse div
+ao elemento body.
+
+00:00:19.388 --> 00:00:20.996
+Vamos ver no navegador.
+
+00:00:21.029 --> 00:00:24.227
+Aqui está. Como o código
+usou appendChild,
+
+00:00:24.260 --> 00:00:27.071
+o elemento div estará
+no final da página.
+
+00:00:27.104 --> 00:00:29.267
+Então vamos rolar
+para o final da página.
+
+00:00:29.300 --> 00:00:30.443
+Aqui está.
+
+00:00:30.476 --> 00:00:33.773
+Vou clicar com o botão direito
+no 1º parágrafo e escolher Inspect.
+
+00:00:33.806 --> 00:00:35.810
+Ele encontrou
+o elemento do 1º parágrafo.
+
+00:00:35.843 --> 00:00:38.024
+No painel Event Listeners,
+
+00:00:38.057 --> 00:00:41.822
+verei que há um listener de evento
+"click" para este 1º parágrafo.
+
+00:00:41.855 --> 00:00:45.678
+E, se eu clicar neste parágrafo,
+neste parágrafo e neste outro,
+
+00:00:45.711 --> 00:00:49.951
+verei que os três parágrafos têm
+o mesmo listener de evento "click".
+
+00:00:50.855 --> 00:00:53.176
+Na verdade,
+todos estes parágrafos
+
+00:00:53.209 --> 00:00:55.642
+têm o mesmo
+listener de evento "click".
+

@@ -1,0 +1,92 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.089 --> 00:00:02.745
+Este código define
+um EventListener no documento
+
+00:00:02.778 --> 00:00:04.191
+para eventos de clique.
+
+00:00:04.224 --> 00:00:06.482
+Agora podemos detectar
+um objeto event
+
+00:00:06.515 --> 00:00:09.452
+e vamos registrar
+esse objeto event.
+
+00:00:09.485 --> 00:00:11.821
+Vamos para o navegador
+e ver isso em ação.
+
+00:00:12.604 --> 00:00:15.249
+Bom, vamos clicar na página
+e ver o que acontece.
+
+00:00:15.282 --> 00:00:16.949
+Um, dois, três... clicar.
+
+00:00:16.982 --> 00:00:18.974
+Podemos ver
+que há um evento aqui,
+
+00:00:19.007 --> 00:00:21.640
+mais especificamente
+um MouseEvent.
+
+00:00:21.673 --> 00:00:23.859
+Vamos abrir
+e ver o que ele contém.
+
+00:00:25.140 --> 00:00:29.209
+Há muitas informações aqui.
+Vejamos algumas delas.
+
+00:00:29.242 --> 00:00:33.067
+Por exemplo, aqui embaixo
+há pageX e pageY.
+
+00:00:33.100 --> 00:00:35.433
+Estes valores representam
+as coordenadas X e Y
+
+00:00:35.466 --> 00:00:37.064
+do evento de clique em si,
+
+00:00:37.097 --> 00:00:40.354
+ou seja, a posição do mouse
+quando eu cliquei na página.
+
+00:00:40.387 --> 00:00:42.712
+Podemos ver aqui
+qual foi o tipo de MouseEvent.
+
+00:00:42.745 --> 00:00:44.688
+Foi um evento "click".
+
+00:00:44.721 --> 00:00:48.295
+Mas como saber o que é tudo isso
+e descobrir mais informações?
+
+00:00:48.328 --> 00:00:52.252
+Como foi um MouseEvent,
+podemos ver a interface MouseEvent.
+
+00:00:52.285 --> 00:00:54.284
+Esta é a página
+da interface MouseEvent
+
+00:00:54.317 --> 00:00:58.670
+e ela contém todas as informações
+sobre os objetos MouseEvent.
+
+00:00:58.703 --> 00:01:01.639
+Todas as informações
+contidas num objeto MouseEvent
+
+00:01:01.672 --> 00:01:05.304
+estão explicadas nesta página
+da interface MouseEvent.
+

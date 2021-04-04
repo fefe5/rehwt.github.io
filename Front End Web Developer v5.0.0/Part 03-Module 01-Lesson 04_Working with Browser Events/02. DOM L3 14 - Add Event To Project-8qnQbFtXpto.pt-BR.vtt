@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.002 --> 00:00:02.659
+Estou com os arquivos do projeto
+abertos no editor.
+
+00:00:02.701 --> 00:00:06.086
+Este é o arquivo JavaScript
+e aqui está o HTML.
+
+00:00:06.128 --> 00:00:09.155
+Vejamos onde este arquivo
+está carregado aqui.
+
+00:00:09.197 --> 00:00:13.743
+Está a duas linhas
+antes do fim do arquivo.
+
+00:00:13.785 --> 00:00:15.467
+Está lá no fim.
+
+00:00:15.509 --> 00:00:17.420
+Vamos compor um EventListener.
+
+00:00:21.338 --> 00:00:23.986
+Estamos observando o clique
+
+00:00:24.028 --> 00:00:26.769
+e executando esta mensagem.
+
+00:00:26.811 --> 00:00:29.009
+Vamos conferir isto na página.
+
+00:00:29.051 --> 00:00:31.257
+No navegador,
+eu recarreguei a página.
+
+00:00:31.299 --> 00:00:34.425
+Vamos clicar em algum lugar.
+Bem aqui.
+
+00:00:34.467 --> 00:00:36.121
+Aqui está a mensagem.
+
+00:00:36.163 --> 00:00:38.249
+Vamos mudar um pouco
+o EventListener.
+
+00:00:41.156 --> 00:00:44.129
+Imagine que eu queira mudar
+o cabeçalho da página -
+
+00:00:44.171 --> 00:00:46.290
+este cabeçalho.
+
+00:00:46.332 --> 00:00:49.313
+Não podemos usar o truque do $0
+no editor de código,
+
+00:00:49.355 --> 00:00:51.827
+isso só funciona
+nas ferramentas do desenvolvedor.
+
+00:00:51.869 --> 00:00:53.834
+Para selecionar
+um elemento DOM
+
+00:00:53.876 --> 00:00:56.873
+usamos os métodos de seleção DOM,
+como o querySelector
+
+00:00:56.915 --> 00:00:58.577
+ou o getElementById.
+
+00:00:58.619 --> 00:01:02.889
+Para alterar o estilo do cabeçalho,
+seleciono o elemento da DOM.
+
+00:01:06.746 --> 00:01:08.362
+Vamos alterar o estilo.
+
+00:01:12.058 --> 00:01:15.186
+Isso me parece bom.
+Vamos retornar ao navegador.
+
+00:01:15.228 --> 00:01:16.649
+Ao clicar na página,
+
+00:01:16.691 --> 00:01:19.778
+a cor do segundo plano
+deverá ficar vermelha.
+
+00:01:19.820 --> 00:01:21.609
+Um, dois, três.
+
+00:01:21.651 --> 00:01:24.977
+Não sei você,
+mas acho isso muito legal!
+
+00:01:25.019 --> 00:01:27.073
+Vejamos este elemento
+na DOM.
+
+00:01:29.346 --> 00:01:31.983
+Vemos que este elemento
+tem a cor vermelha
+
+00:01:32.025 --> 00:01:34.303
+e que o estilo
+também é aplicado aqui.
+
+00:01:34.345 --> 00:01:37.428
+O código funcionou como se
+tivéssemos executado no console,
+
+00:01:37.470 --> 00:01:39.827
+mas estamos executando
+no arquivo JavaScript.
+

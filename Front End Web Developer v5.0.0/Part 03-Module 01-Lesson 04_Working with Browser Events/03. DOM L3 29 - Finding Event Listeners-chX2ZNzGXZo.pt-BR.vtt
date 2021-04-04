@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.082 --> 00:00:03.080
+Nos arquivos do projeto,
+eu escrevi este EventListener.
+
+00:00:03.113 --> 00:00:06.224
+Estou observando o keypress
+no body.
+
+00:00:06.257 --> 00:00:09.319
+Então eu registrarei a mensagem
+"removendo primeiro filho".
+
+00:00:09.352 --> 00:00:13.375
+Eu procurarei na DOM
+por este elemento com este ID,
+
+00:00:13.408 --> 00:00:16.056
+encontrarei o primeiro filho
+e o removerei.
+
+00:00:16.089 --> 00:00:18.920
+Vamos para o navegador
+para ver isto em ação.
+
+00:00:18.953 --> 00:00:21.791
+Eu estou no navegador.
+Vamos encontrar o elemento.
+
+00:00:21.824 --> 00:00:26.887
+Ele é o contain-all, que contém
+os elementos visíveis da página.
+
+00:00:26.920 --> 00:00:31.831
+As ferramentas do desenvolvedor têm
+o painel Event Listeners.
+
+00:00:31.864 --> 00:00:33.352
+Se eu clicar nele,
+
+00:00:33.385 --> 00:00:36.959
+ele mostrará o EventListener
+para o item selecionado.
+
+00:00:36.992 --> 00:00:42.007
+Como vemos, não existe EventListener
+para este div com o ID contain-all.
+
+00:00:42.040 --> 00:00:46.022
+Eu posso clicar na opção Ancestors
+para ver os ancestrais do elemento,
+
+00:00:46.055 --> 00:00:49.653
+e veremos que body
+tem um listener keypress.
+
+00:00:49.686 --> 00:00:52.400
+Passar por esta seção
+fornecerá um botão de remoção,
+
+00:00:52.433 --> 00:00:56.431
+que removerá o EventListener
+somente para esta vez ou sessão.
+
+00:00:56.464 --> 00:00:59.486
+Ele voltará ao recarregar.
+Vamos testar.
+
+00:00:59.519 --> 00:01:01.815
+Clicarei aqui
+para focar na página
+
+00:01:01.848 --> 00:01:03.673
+e pressionarei uma tecla.
+
+00:01:04.553 --> 00:01:07.551
+O elemento foi atualizado.
+Veja o cabeçalho.
+
+00:01:07.584 --> 00:01:09.153
+Pressionarei outra tecla.
+
+00:01:10.512 --> 00:01:12.230
+Continuarei
+pressionando teclas.
+
+00:01:12.263 --> 00:01:15.905
+Vemos que cada elemento
+firstChild será deletado
+
+00:01:15.938 --> 00:01:17.968
+sempre que eu pressionar
+uma tecla.
+
+00:01:21.360 --> 00:01:22.849
+Por fim...
+
+00:01:24.496 --> 00:01:29.846
+Muito legal. O painel EventListener
+mostrará onde a função executada
+
+00:01:29.879 --> 00:01:31.522
+foi definida.
+
+00:01:31.555 --> 00:01:36.305
+Se eu escolher esta seta
+e abaixar um pouco isto,
+
+00:01:36.338 --> 00:01:38.835
+este handler
+será a função que executará
+
+00:01:38.868 --> 00:01:40.819
+em resposta
+à tecla pressionada.
+
+00:01:40.852 --> 00:01:42.493
+Posso clicar
+com o botão direito
+
+00:01:42.526 --> 00:01:44.911
+e escolher
+"Show function definition".
+
+00:01:44.944 --> 00:01:47.431
+Isso nos levará
+ao painel Sources
+
+00:01:47.464 --> 00:01:49.991
+e nos mostrará onde a função
+foi definida -
+
+00:01:50.024 --> 00:01:52.943
+em app.js. Aqui está a função.
+
+00:01:52.976 --> 00:01:55.896
+O cursor está no início
+da função.
+

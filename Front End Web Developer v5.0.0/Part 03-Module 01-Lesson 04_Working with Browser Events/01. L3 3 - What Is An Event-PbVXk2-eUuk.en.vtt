@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.710
+So, what is an event? Let me give you an example.
+
+00:00:03.710 --> 00:00:08.650
+Last year, my family had a family reunion with all of my aunts, uncles and cousins.
+
+00:00:08.650 --> 00:00:09.929
+Whenever it was time to eat,
+
+00:00:09.929 --> 00:00:13.349
+we'd make an announcement and everyone would head to the dinner table.
+
+00:00:13.349 --> 00:00:15.833
+When we made an announcement that it was time for games,
+
+00:00:15.833 --> 00:00:17.714
+everyone would go outside.
+
+00:00:17.714 --> 00:00:19.486
+Whenever we made an announcement,
+
+00:00:19.486 --> 00:00:21.949
+people would respond and perform some action.
+
+00:00:21.949 --> 00:00:24.644
+They'd go to the table or they'd go outside.
+
+00:00:24.644 --> 00:00:27.434
+An event is like one of these announcements.
+
+00:00:27.434 --> 00:00:29.129
+When something happens in the browser,
+
+00:00:29.129 --> 00:00:31.064
+the browser will make an announcement.
+
+00:00:31.065 --> 00:00:34.500
+And we can use Javascript to listen for the announcement and respond.
+

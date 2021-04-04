@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:01.635
+Mana bu siz hozirgina ko‘rgan kod.
+
+00:00:01.635 --> 00:00:06.434
+U bironta div yaratadi, keyin ular o‘sha paragrafga biron matnda,
+bironta event listenerda yana bironta paragraf yaratadi,
+
+00:00:06.434 --> 00:00:11.039
+va keyin ushbu paragrafni divga qo‘shadi, va u 200 ta paragraf qilib chiqadi 
+
+00:00:11.039 --> 00:00:15.134
+keyin ularning har birini divga qo‘shib chiqadi.
+
+00:00:15.134 --> 00:00:16.454
+Ushbu divning farzandi sifatida,
+
+00:00:16.454 --> 00:00:19.355
+keyin u o‘sha divni bodyning elementiga qo‘shadi.
+
+00:00:19.355 --> 00:00:21.179
+Keling, buni brauzerda ko‘ramiz.
+
+00:00:21.179 --> 00:00:24.335
+Bu yerda biz append farzanddan foydalangan kod uchun misolmiz.
+
+00:00:24.335 --> 00:00:27.164
+Bu div element sahifaning eng pastida bo‘lishini anglatadi.
+
+00:00:27.164 --> 00:00:30.620
+Demak, biz turgan eng pastki qismga tushamiz.
+
+00:00:30.620 --> 00:00:33.674
+Endi keling, birinchi birni bosamiz va inspectni tanlaymiz.
+
+00:00:33.674 --> 00:00:35.890
+Shunday qilib, bu birinchi paragraf elementini topmoqchi va 
+
+00:00:35.890 --> 00:00:38.024
+agar men event listeners painni tanlasam,
+
+00:00:38.024 --> 00:00:40.500
+biz mana bu yerda bu paragraf uchun click event listener 
+
+00:00:40.500 --> 00:00:43.859
+borligini ko‘rishimiz mumkin va men bu paragrafni,  
+
+00:00:43.859 --> 00:00:46.484
+mana bu paragrafni va mana buni bosa olaman va bu paragraflarning har biri 
+
+00:00:46.484 --> 00:00:50.259
+bir xil click event listenerga ega ekanligini ko‘rishimiz mumkin.
+
+00:00:50.259 --> 00:00:53.284
+Va aslida, bu paragraflarning har biri 
+
+00:00:53.284 --> 00:00:56.000
+mana shu bir xil event listenerga ega.
+

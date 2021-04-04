@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.550
+Oldingi darsda sahifa tarkibini 
+
+00:00:02.550 --> 00:00:05.040
+qo‘shish, o‘chirish va o‘zgartirish kiritish haqida
+
+00:00:05.040 --> 00:00:07.560
+bilib oldingiz. Lekin, Bu ishlarning barchasini brauzernning
+
+00:00:07.560 --> 00:00:09.240
+ishlab chiqarish vositalarida bajarganimizni payqadingizmi?
+
+00:00:09.240 --> 00:00:11.700
+ Bu tekshirib ko‘rish uchun yaxshi,
+
+00:00:11.700 --> 00:00:13.099
+bu aslida qanday amalga oshirilgani emas.
+
+00:00:13.099 --> 00:00:15.330
+javascript kod JavaScript faylda yozilishi
+
+00:00:15.330 --> 00:00:18.300
+kerak. Ammo, hamma kodni  
+
+00:00:18.300 --> 00:00:20.369
+ JavaScript faylda yozsak, sahifa
+
+00:00:20.369 --> 00:00:22.470
+yangilanganda barcha o‘zgarishlar darhol
+
+00:00:22.470 --> 00:00:24.720
+ishga tushadi. Masalan, Agar sarlavha fon ranginini
+
+00:00:24.720 --> 00:00:26.550
+havorangga o‘zgartirish uchun
+
+00:00:26.550 --> 00:00:28.800
+bir qancha kod yozsangiz,
+
+00:00:28.800 --> 00:00:30.619
+Sarlavhani rangi darhol havorang bo‘lib qoladi.
+
+00:00:30.619 --> 00:00:33.600
+Bu darsda, foydalanuvchilarning harakatlariga javoban
+
+00:00:33.600 --> 00:00:35.370
+JacaScript kodini boshqaruvchi
+
+00:00:35.370 --> 00:00:37.500
+DOM ni qanday ishlatish
+
+00:00:37.500 --> 00:00:40.200
+kerakligini o‘rganamiz. Bundan tashqari, hodisa nima?
+
+00:00:40.200 --> 00:00:43.230
+ularga qanday javob qaytarish kerak, hodisada
+
+00:00:43.230 --> 00:00:45.539
+qanday ma’lumotlar saqlanadi, hodisalarni qanday to‘xtatish kerakligi 
+
+00:00:45.539 --> 00:00:48.120
+haqida o‘rganamiz. Yana shuni aytib o‘tishim kerakki,
+
+00:00:48.120 --> 00:00:50.070
+bu mening eng sevimli darsim hisoblanadi.
+
+00:00:50.070 --> 00:00:52.260
+Ushbu darsni tugatgandan so‘ng siz
+
+00:00:52.260 --> 00:00:53.969
+sahifani darsturiy boshqarish imkoniyatiga
+
+00:00:53.969 --> 00:00:56.100
+ega bo‘lasiz. Albatta, bu juda qiziqarli va bu
+
+00:00:56.100 --> 00:01:00.020
+barcha veb-sahifalar yaratilishida muhim ahamiyatga ega.
+

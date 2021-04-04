@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:05.080
+Turli xil event fazalari uchun event handler sozlamalariga qarab chiqaylik.
+2
+00:00:05,080 --&gt; 00:00:07,530
+Biz avvalgidek ushbu HTML kodidan foydalanamiz,
+
+00:00:07.530 --> 00:00:11.455
+bundan tashqari, sahifaning yangi qatoriga(abzas)  capture event listener o‘rnatishni,
+
+00:00:11.455 --> 00:00:13.769
+sahifaning asosiybodyqismiga bubble listener o‘rnatishni,
+
+00:00:13.769 --> 00:00:16.170
+va tugmaga bubble listener o‘rnatishni o‘rganamiz.
+
+00:00:16.170 --> 00:00:18.780
+Muhim farqi shundaki, 
+
+00:00:18.780 --> 00:00:22.214
+paragraph  capturing fazasiga,
+
+00:00:22.214 --> 00:00:25.097
+body va button bubbling fazasiga tegishlidir.
+
+00:00:25.097 --> 00:00:26.141
+Button bosilganda,
+
+00:00:26.141 --> 00:00:29.870
+barcha jarayon yuqoridan boshlanadi va pastga qarab ishlaydi.
+
+00:00:29.870 --> 00:00:32.755
+body elementiga o‘tganda,
+
+00:00:32.755 --> 00:00:38.159
+funksiya ishlamaydi, chunki biz hali ham capturing fazasidamiz.
+
+00:00:38.159 --> 00:00:41.594
+Ammo,  paragraph ga yetganda,
+
+00:00:41.594 --> 00:00:43.829
+ listener funksiya ishlaydi.
+
+00:00:43.829 --> 00:00:48.929
+Bu degani, funksiya   capturing fazada ishlash uchun o‘rnatilganligi sababli ishlay oladi.
+
+00:00:48.929 --> 00:00:54.990
+Keyin u button ga o‘tadi. capturing dan targetga bubbling ga o‘tadi,
+
+00:00:54.990 --> 00:00:57.420
+keyin listener ni o‘chirib qo‘yadi, ya'ni ishdan chiqaradi.
+
+00:00:57.420 --> 00:00:59.969
+ event bubbling fazasida standart sozlamardan foydalanilgani 
+
+00:00:59.969 --> 00:01:03.335
+sababli listener funksiyasi bu fazada ishlamaydi.
+
+00:01:03.335 --> 00:01:07.405
+Shunday qilib,  HTML Chain  zanjiriga qaytib boradi.
+
+00:01:07.405 --> 00:01:10.640
+Button ga yetib borganda,
+
+00:01:10.640 --> 00:01:12.765
+O‘zining listener funksiyasini ishlatadi.
+
+00:01:12.765 --> 00:01:16.000
+Keyin u HTML elementiga o‘tadi va tugatiladi.
+

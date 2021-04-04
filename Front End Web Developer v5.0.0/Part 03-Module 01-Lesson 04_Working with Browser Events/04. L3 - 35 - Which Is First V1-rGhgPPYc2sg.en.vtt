@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.028
+To see the phases of an event,
+
+00:00:02.028 --> 00:00:05.595
+let's use this HTML code as an example.
+
+00:00:05.594 --> 00:00:09.330
+We're leaving out some content but the important part is this button.
+
+00:00:09.330 --> 00:00:13.810
+Clicking on the event starts the whole process.
+
+00:00:13.810 --> 00:00:17.250
+We first start off in the capturing phase.
+
+00:00:17.250 --> 00:00:21.925
+It starts at the HTML element and works its way down.
+
+00:00:21.925 --> 00:00:25.710
+Once it reaches the element that was clicked,
+
+00:00:25.710 --> 00:00:29.160
+it switches to the at target phase.
+
+00:00:29.160 --> 00:00:34.200
+Then, it switches to the bubbling phase and works its way all the way back up.
+

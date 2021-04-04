@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.606 --> 00:00:03.452
+Embora dois objetos
+pareçam iguais,
+
+00:00:03.485 --> 00:00:05.572
+isso não significa
+que são idênticos.
+
+00:00:05.605 --> 00:00:09.086
+As mesmas informações
+não indicam igualdade.
+
+00:00:09.119 --> 00:00:11.796
+Por exemplo,
+veja a minha jaqueta da Udacity.
+
+00:00:11.829 --> 00:00:14.845
+Ela é escura
+e tem a logo da Udacity.
+
+00:00:14.878 --> 00:00:17.347
+Agora observe esta jaqueta.
+
+00:00:17.380 --> 00:00:20.221
+É da mesma cor
+e tem a mesma logo.
+
+00:00:20.254 --> 00:00:22.532
+Elas parecem iguais, não acha?
+
+00:00:22.565 --> 00:00:27.055
+Mas se pergunte:
+elas são a mesma jaqueta?
+
+00:00:27.088 --> 00:00:28.878
+Não! É claro que não!
+
+00:00:28.911 --> 00:00:31.302
+Esta é minha,
+e esta é da Areetz.
+
+00:00:31.335 --> 00:00:33.991
+Aqui está a minha jaqueta.
+Obrigada.
+
+00:00:36.159 --> 00:00:38.262
+Se eu chamar está jaqueta
+de "Minha"
+
+00:00:38.295 --> 00:00:40.549
+e alguém a chamá-la
+de "Do Richard",
+
+00:00:40.582 --> 00:00:43.447
+teremos dois nomes
+para o mesmo objeto.
+
+00:00:43.480 --> 00:00:47.727
+"Minha" e "Do Richard"
+fazem referência à mesma coisa.
+
+00:00:47.760 --> 00:00:51.516
+Ao trabalhar com objetos JavaScript
+e igualdade, é preciso perguntar
+
+00:00:51.549 --> 00:00:53.678
+se eles são dois objetos
+distintos
+
+00:00:53.711 --> 00:00:56.871
+ou se são nomes diferentes
+do mesmo objeto.
+

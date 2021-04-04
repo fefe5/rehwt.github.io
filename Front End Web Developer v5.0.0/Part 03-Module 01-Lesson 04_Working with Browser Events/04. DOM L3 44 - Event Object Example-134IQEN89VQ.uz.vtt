@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.040
+Bu kod click uchun hujjatdagi bironta 
+
+00:00:02.040 --> 00:00:04.710
+eventlistenerni o‘rnatadi va 
+
+00:00:04.710 --> 00:00:06.210
+hozir biz aslida qandaydir obyekt event uchun eshitayapmiz
+
+00:00:06.210 --> 00:00:08.849
+va biz bu obyekt eventidan chiqib ketmoqchimiz.
+
+00:00:08.849 --> 00:00:10.650
+Keling, brauzerga o‘tamiz va  
+
+00:00:10.650 --> 00:00:12.049
+buni amalda qilib ko‘ramiz.
+
+00:00:12.049 --> 00:00:14.219
+Yaxshi, keling, sahifaga bosamiz va 
+
+00:00:14.219 --> 00:00:14.849
+nima sodir bo‘lishini ko‘ramiz.
+
+00:00:14.849 --> 00:00:17.940
+Bir ikki uch bosdik va biz mana bu yerda 
+
+00:00:17.940 --> 00:00:19.890
+bitta event borligini ko‘rishimiz mumkin
+
+00:00:19.890 --> 00:00:22.439
+va maxsus ravishda bu bironta mouse event
+
+00:00:22.439 --> 00:00:26.189
+Keling, uni ochamiz va u nimalardan tashkil topganini ko‘ramiz.
+
+00:00:26.189 --> 00:00:28.230
+Unda ko‘plab ma’lumotlar bor. Keling, ulardan ba’zilariga 
+
+00:00:28.230 --> 00:00:30.420
+qarab chiqamiz, masalan, mana bu yerda pastda
+
+00:00:30.420 --> 00:00:33.660
+X sahifasi va mana bu yerda Y sahifasi va bu ikkita qiymat
+
+00:00:33.660 --> 00:00:35.640
+bizga men sahifani bosganimda mouse chiqadigan 
+
+00:00:35.640 --> 00:00:37.860
+click eventning o‘zining 
+
+00:00:37.860 --> 00:00:40.710
+x va y koordinatalarini ko‘rsatadi va 
+
+00:00:40.710 --> 00:00:42.270
+biz bu yerda pastda u qanaqa turdagi mouse event
+
+00:00:42.270 --> 00:00:44.940
+ekanligini ko‘rishimiz mumkin. U qanaqadir click event edi.
+
+00:00:44.940 --> 00:00:45.960
+Endi, bu barcha xususiyatlar nima ekanligini qanday bilamiz
+
+00:00:45.960 --> 00:00:47.219
+va qanday qilib ko‘proq ma’lumot topamiz.
+
+00:00:47.219 --> 00:00:49.320
+Bu mouse event bo‘lganligi uchun biz  
+
+00:00:49.320 --> 00:00:51.360
+mouse event interfeysga qarashimiz mumkin
+
+00:00:51.360 --> 00:00:53.550
+Shunday qilib, bu o‘sha mouse event interfeys
+
+00:00:53.550 --> 00:00:55.230
+sahifasi va bu bizga bironta mouse event
+
+00:00:55.230 --> 00:00:56.940
+obyekti mana bu sahifada mouse event 
+
+00:00:56.940 --> 00:00:59.640
+interfeysida batafsil tasvirlangan mouse event
+
+00:00:59.640 --> 00:01:01.829
+obyekti tomonidan ta’minlangan 
+
+00:01:01.829 --> 00:01:03.780
+barcha ma’lumotni 
+
+00:01:03.780 --> 00:01:06.500
+ko‘rsatadi.
+

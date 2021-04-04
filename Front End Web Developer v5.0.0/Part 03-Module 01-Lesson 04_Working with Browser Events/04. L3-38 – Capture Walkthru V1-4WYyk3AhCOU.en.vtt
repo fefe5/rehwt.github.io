@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.080
+Let's take a look at event handlers setup for the different event phases.
+
+00:00:05.080 --> 00:00:07.530
+We'll use this same HTML as before,
+
+00:00:07.530 --> 00:00:11.455
+except this time we'll set a capture event listener to the paragraph,
+
+00:00:11.455 --> 00:00:13.769
+a bubble listener to the body,
+
+00:00:13.769 --> 00:00:16.169
+and a bubble listener to the button.
+
+00:00:16.170 --> 00:00:18.780
+The important distinction is that the paragraph is set to
+
+00:00:18.780 --> 00:00:22.214
+the capturing phase while the body and the button are,
+
+00:00:22.214 --> 00:00:25.097
+by default, set to the bubbling phase.
+
+00:00:25.097 --> 00:00:26.141
+When the button is clicked,
+
+00:00:26.141 --> 00:00:29.870
+it starts at the top again and works its way down.
+
+00:00:29.870 --> 00:00:32.755
+When it gets to the body element,
+
+00:00:32.755 --> 00:00:38.160
+it doesn't run the function because we're still in the capturing phase.
+
+00:00:38.159 --> 00:00:41.594
+However, when it reaches the paragraph,
+
+00:00:41.594 --> 00:00:43.829
+it will run the listener function.
+
+00:00:43.829 --> 00:00:48.929
+And it does this because this was set up to run in the capturing phase.
+
+00:00:48.929 --> 00:00:54.990
+Then it moves to the button. It switches from capturing to @target to bubbling,
+
+00:00:54.990 --> 00:00:57.420
+then fires the listener.
+
+00:00:57.420 --> 00:00:59.969
+And again, it does this because this event uses
+
+00:00:59.969 --> 00:01:03.335
+the default setting of running during the bubbling phase.
+
+00:01:03.335 --> 00:01:07.405
+Then it works its way back up the HTML chain.
+
+00:01:07.405 --> 00:01:10.640
+And when it reaches the body,
+
+00:01:10.640 --> 00:01:12.765
+it runs its listener function.
+
+00:01:12.765 --> 00:01:16.000
+Then it moves to the HTML element and finishes.
+

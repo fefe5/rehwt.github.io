@@ -1,0 +1,323 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Know When The DOM Is Ready</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Working with Browser Events</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Respond to Events.html">02. Respond to Events</a>
+    </li>
+    <li class="">
+      <a href="03. Remove an Event Listener.html">03. Remove an Event Listener</a>
+    </li>
+    <li class="">
+      <a href="04. Phases of an Event.html">04. Phases of an Event</a>
+    </li>
+    <li class="">
+      <a href="05. Avoid Too Many Events.html">05. Avoid Too Many Events</a>
+    </li>
+    <li class="">
+      <a href="06. Know When The DOM Is Ready.html">06. Know When The DOM Is Ready</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Know When The DOM Is Ready</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L3 59 HS - What You'Ll Learn</p></h3>
+  <video controls>
+  <source src="06. L3 59 HS - What You&#x27;Ll Learn-Ypt0vyLeQ1Q.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="06. L3 59 HS - What You&#x27;Ll Learn-Ypt0vyLeQ1Q.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="06. L3 59 HS - What You&#x27;Ll Learn-Ypt0vyLeQ1Q.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="06. L3 59 HS - What You&#x27;Ll Learn-Ypt0vyLeQ1Q.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="06. L3 59 HS - What You&#x27;Ll Learn-Ypt0vyLeQ1Q.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="06. L3 59 HS - What You&#x27;Ll Learn-Ypt0vyLeQ1Q.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-dom-is-built-incrementally">The DOM Is Built Incrementally</h2>
+<p>Do you remember the video we watched of Illya from Google explaining how the DOM is parsed? A key thing to point out is that when the HTML is received and converted into tokens and built into the document object model, is that this is a sequential process. When the parser gets to a <code>&lt;script&gt;</code> tag, it must wait to download the script file and execute that JavaScript code. <em>This is the important part and the key to why the placement of the JavaScript file matters!</em></p>
+<p>Let's look at some code to show (more or less) what's happening. Take a look at this initial part of an HTML file:</p>
+<pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="/css/styles.css" /&gt;
+  &lt;script&gt;
+    document.querySelector('footer').style.backgroundColor = 'purple';
+  &lt;/script&gt;</code></pre>
+<p>This isn't the full HTML file…BUT, it's all that's been parsed so far. Notice at the bottom of the code that we have so far is a <code>&lt;script&gt;</code> file. This is using inline JavaScript rather than pointing to an external file. The inline file will execute faster because the browser doesn't have to make another network request to fetch the JavaScript file. But the outcome will be exactly the same for both this inline version and if the HTML had linked to an external JavaScript file.</p>
+<p>Do you see the JavaScript/DOM code in the <code>&lt;script&gt;</code> tags? Take a second and read it again:</p>
+<pre><code class="js language-js">document.querySelector('footer').style.backgroundColor = 'purple';</code></pre>
+<p>Does anything jump out at you about this code? Anything at all? This code is completely error-free…unfortunately, when it runs, it will still cause an error. Any ideas why?</p>
+<p>The problem is with the <code>.querySelector()</code> method. When it runs…there's no <code>&lt;footer&gt;</code> element to select from the constructed document object model yet! So instead of returning a DOM element, it will return <code>null</code>. This causes an error because it would be like running the following code:</p>
+<pre><code class="js language-js">null.style.backgroundColor = 'purple';</code></pre>
+<p><code>null</code> doesn't have a <code>.style</code> property, so thus our error is born.</p>
+<p>Now, we've already used one solution to this issue. Remember that we moved the JavaScript file down to the bottom of the page. Think about why this would make things work. Well, if the DOM is built sequentially, <em>if</em> the JavaScript code is moved to the very bottom of the page, then by the time the JavaScript code is run, all DOM elements will already exist!</p>
+<p>However, an <em>alternative</em> solution would be to use browser events! 🙌🏼</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="the-content-is-loaded-event">The Content Is Loaded Event</h3>
+<p>When the document object model has been fully loaded, the browser will fire an event. This event is called the <code>DOMContentLoaded</code> event, and we can listen for it the same way we listen to any other events:</p>
+<pre><code class="js language-js">document.addEventListener('DOMContentLoaded', function () {
+    console.log('the DOM is ready to be interacted with!');
+});</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L3 65 - DOM Contnet Load</p></h3>
+  <video controls>
+  <source src="06. DOM L3 65 - DOM Contnet Load-bmtMp4Rgryc.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="06. DOM L3 65 - DOM Contnet Load-bmtMp4Rgryc.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="06. DOM L3 65 - DOM Contnet Load-bmtMp4Rgryc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="06. DOM L3 65 - DOM Contnet Load-bmtMp4Rgryc.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud117-domcontentloaded-event-with-indicators.jpg" alt="_The Network pane of DevTools with the DOMContentLoaded indicators highlighted._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>The Network pane of DevTools with the DOMContentLoaded indicators highlighted.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>On what event target should we listen for the <code>DOMContentLoaded</code> event?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1513025102205" name="475975" id="a1513025102205">
+      <label for="a1513025102205"><p>the <code>document</code> object</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513025109987" name="475975" id="a1513025109987">
+      <label for="a1513025109987"><p>the body element</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513025120607" name="475975" id="a1513025120607">
+      <label for="a1513025120607"><p>anything that inherits the Element interface</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>the `document` object</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="using-the-domcontentloaded-event">Using the <code>DOMContentLoaded</code> Event</h2>
+<p>Because we now know about the <code>DOMContentLoaded</code> event, we can use it to <em>keep</em> our JS code in the <code>&lt;head&gt;</code>.</p>
+<p>Let's update the previous HTML code to include this event:</p>
+<pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="/css/styles.css" /&gt;
+    &lt;script&gt;
+      document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('footer').style.backgroundColor = 'purple';
+      });
+    &lt;/script&gt;</code></pre>
+<p>Pretty cool, right?!? We have the JavaScript code in the <code>&lt;head&gt;</code> element, but it is now wrapped in an event listener for the <code>DOMContentLoaded</code> event. This will prevent the DOM-styling code from running when the browser gets to it. Then, when the DOM has been constructed, the event will fire and this code will run.</p>
+<p>If you're looking at somebody else's code, you may see that their code listens for the <code>load</code> event being used instead (e.g. <code>document.onload(...)</code>).  <code>load</code> fires later than <code>DOMContentLoaded</code> -- <code>load</code> waits until all of the images, stylesheets, etc. have been loaded (everything referenced by the HTML.)  Many older developers use <code>load</code> in place of <code>DOMContentLoaded</code> as the latter wasn't supported by the very earliest browsers. But if you need to detect when your code can run, <code>DOMContentLoaded</code> is generally the better choice.</p>
+<p>However, just because you <em>can</em> use the <code>DOMContentLoaded</code> event to write JavaScript code in the <code>&lt;head&gt;</code> that doesn't mean you <em>should</em> do this. Doing it this way, we have to write <em>more</em> code (all of the event listening stuff) and more code is usually not always the best way to do something. Instead, it would be better to move the code to the bottom of the HTML file just before the closing <code>&lt;/body&gt;</code> tag.</p>
+<p>So when would you want to use this technique? Well, JavaScript code in the <code>&lt;head&gt;</code> will run before JavaScript code in the <code>&lt;body&gt;</code>, so if you do have JavaScript code that needs to run <em>as soon as possible</em>, then you could put that code in the <code>&lt;head&gt;</code> and wrap it in a <code>DOMContentLoaded</code> event listener. This way it will run as early as possible, but not too early that the DOM isn't ready for it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="recap">Recap</h2>
+<p>In this section, we learned about the helpful <code>DOMContentLoaded</code> event.</p>
+<p>Along the way, we reviewed how the HTML code is parsed incrementally and how this affects JavaScript/DOM code. We also looked at why writing DOM-manipulation code in the <code>&lt;head&gt;</code> can cause errors.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded" rel="noopener noreferrer" target="_blank">DOMContentLoaded Event docs on MDN</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Know When The DOM Is Ready')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.612 --> 00:00:04.122
+Se lembra de quando definimos
+os estilos da página com JavaScript?
+
+00:00:04.155 --> 00:00:07.266
+Nós analisamos brevemente
+o posicionamento da tag script.
+
+00:00:07.299 --> 00:00:09.130
+Quando ela estava
+no final da página,
+
+00:00:09.163 --> 00:00:10.738
+tudo funcionava direito.
+
+00:00:10.771 --> 00:00:13.303
+Mas quando movemos
+a tag script para o topo,
+
+00:00:13.336 --> 00:00:14.974
+deu tudo errado.
+
+00:00:15.007 --> 00:00:18.656
+Isso ocorreu porque a DOM não estava
+pronta para ser manipulada
+
+00:00:18.689 --> 00:00:21.335
+quando o código JavaScript
+começou a rodar.
+
+00:00:21.368 --> 00:00:23.708
+Nesta seção,
+veremos por que isso acontece
+
+00:00:23.741 --> 00:00:27.548
+e como contornar essa situação
+potencialmente problemática.
+

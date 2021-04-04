@@ -1,0 +1,41 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.123 --> 00:00:02.061
+Para ver as fases
+de um evento,
+
+00:00:02.094 --> 00:00:05.537
+vamos usar este código HTML
+como exemplo.
+
+00:00:05.570 --> 00:00:09.131
+Vamos deixar coisas de fora,
+mas o que importa é este botão.
+
+00:00:09.835 --> 00:00:13.122
+Clicar no evento
+iniciará o processo.
+
+00:00:13.786 --> 00:00:17.081
+Começamos na fase de captura.
+
+00:00:17.114 --> 00:00:20.883
+Ele começa no elemento HTML
+e vai descendo.
+
+00:00:23.281 --> 00:00:25.794
+Quando chega no elemento
+que foi clicado,
+
+00:00:25.827 --> 00:00:29.256
+ele muda para a fase de alvo.
+
+00:00:29.289 --> 00:00:31.562
+Depois ele muda
+para a fase de borbulha
+
+00:00:31.595 --> 00:00:33.472
+e começa a subir de novo.
+

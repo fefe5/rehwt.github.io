@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.105 --> 00:00:05.287
+Estou na página de referência,
+que lista os eventos DOM.
+
+00:00:05.329 --> 00:00:07.879
+Se descermos um pouco,
+
+00:00:07.921 --> 00:00:10.792
+vemos que eles estão agrupados
+por categorias.
+
+00:00:10.834 --> 00:00:16.400
+O que isso significa?
+Se descermos um pouco, veremos...
+
+00:00:16.442 --> 00:00:17.998
+Onde está?
+
+00:00:18.040 --> 00:00:22.230
+Estes são os eventos de mouse
+da página.
+
+00:00:22.272 --> 00:00:24.871
+Aqui está o click,
+que sempre vemos,
+
+00:00:24.913 --> 00:00:26.830
+e aqui está o dblclick.
+
+00:00:26.872 --> 00:00:29.767
+Se usarmos a roda do mouse,
+teremos o evento wheel.
+
+00:00:29.809 --> 00:00:32.679
+Vamos subir um pouco.
+Vemos os eventos do teclado -
+
+00:00:32.721 --> 00:00:34.837
+pressionar e soltar as teclas.
+
+00:00:34.879 --> 00:00:37.284
+Vamos continuar olhando.
+Existem outros.
+
+00:00:37.326 --> 00:00:39.731
+Temos o evento scroll.
+
+00:00:39.773 --> 00:00:42.411
+Existem eventos para quando
+enviamos um formulário,
+
+00:00:42.453 --> 00:00:45.406
+e aqui está o submit,
+para quando enviamos o formulário.
+
+00:00:45.448 --> 00:00:47.705
+Ele dispara o evento submit
+
+00:00:47.747 --> 00:00:49.243
+e responde a isso.
+
+00:00:49.285 --> 00:00:53.825
+Existem outros eventos CSS
+para animação e para transições.
+
+00:00:53.867 --> 00:00:57.315
+Esta página tem muitas informações,
+e você precisa dar uma olhada.
+

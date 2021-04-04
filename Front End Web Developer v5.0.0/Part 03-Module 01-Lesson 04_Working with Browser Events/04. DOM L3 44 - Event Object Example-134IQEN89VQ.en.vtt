@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.125
+This code will set an event listener on the document for a click.
+
+00:00:04.125 --> 00:00:06.629
+And now, we're actually listening for an event object,
+
+00:00:06.629 --> 00:00:09.539
+and we are going to log out that event object.
+
+00:00:09.539 --> 00:00:12.099
+Let's switch to the browser and see this in action.
+
+00:00:12.099 --> 00:00:15.369
+All right, let's click on the page and see what happens.
+
+00:00:15.369 --> 00:00:16.814
+One, two, three, click.
+
+00:00:16.815 --> 00:00:19.080
+And we can see we have an event over here.
+
+00:00:19.079 --> 00:00:21.554
+And specifically, it's a mouse event.
+
+00:00:21.554 --> 00:00:25.079
+Let's open it up and see what it contains.
+
+00:00:25.079 --> 00:00:27.554
+This has got a lot of information in here.
+
+00:00:27.554 --> 00:00:29.239
+Let's look at some of them.
+
+00:00:29.239 --> 00:00:33.129
+For example, down here is Page X and here's Page Y.
+
+00:00:33.130 --> 00:00:37.260
+And these two values tell us the X and Y coordinate of the click event itself.
+
+00:00:37.259 --> 00:00:40.243
+Where was the mouse when I clicked on the page?
+
+00:00:40.243 --> 00:00:42.865
+And we can see down here what type of mouse event was it.
+
+00:00:42.865 --> 00:00:44.850
+It was a click event.
+
+00:00:44.850 --> 00:00:46.440
+Now how do we know what all of these properties
+
+00:00:46.439 --> 00:00:48.253
+are and how do we find out more information?
+
+00:00:48.253 --> 00:00:49.710
+Because this is a mouse event,
+
+00:00:49.710 --> 00:00:52.420
+we can look at the mouse event interface.
+
+00:00:52.420 --> 00:00:54.359
+So this is the mouse event interface page,
+
+00:00:54.359 --> 00:00:58.859
+and this will show us all of the information about a mouse event object.
+
+00:00:58.859 --> 00:01:00.490
+So all of the information provided by
+
+00:01:00.490 --> 00:01:05.000
+a mouse event object is detailed here in this mouse event interface page.
+

@@ -1,0 +1,74 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.440 --> 00:00:03.968
+Na aula anterior,
+aprendemos a adicionar, remover
+
+00:00:04.001 --> 00:00:05.958
+e estilizar o conteúdo
+de uma página,
+
+00:00:05.991 --> 00:00:10.175
+mas você notou que fizemos tudo
+nas ferramentas do desenvolvedor?
+
+00:00:10.208 --> 00:00:13.280
+Isso serve para testar,
+mas não é assim que fazemos.
+
+00:00:13.313 --> 00:00:16.736
+O código JavaScript precisa
+ser composto no arquivo JavaScript.
+
+00:00:16.769 --> 00:00:20.006
+Porém, se escrevermos tudo
+no arquivo JavaScript,
+
+00:00:20.039 --> 00:00:23.494
+as alterações serão executadas
+ao recarregar a página.
+
+00:00:23.527 --> 00:00:27.188
+Por exemplo, se compormos um código
+que atualiza a cor de um cabeçalho
+
+00:00:27.221 --> 00:00:32.272
+para azul, o cabeçalho
+terá essa cor imediatamente.
+
+00:00:32.305 --> 00:00:36.193
+Veremos como executar o código
+JavaScript de manipulação DOM
+
+00:00:36.226 --> 00:00:39.258
+em resposta
+às ações dos usuários.
+
+00:00:39.291 --> 00:00:42.950
+Veremos o que são os eventos,
+como responder a eles,
+
+00:00:42.983 --> 00:00:45.134
+quais dados
+são armazenados em um evento,
+
+00:00:45.167 --> 00:00:47.379
+como interromper um evento
+e muito mais.
+
+00:00:47.412 --> 00:00:50.514
+Esta é a minha aula favorita.
+
+00:00:50.547 --> 00:00:52.022
+Depois de completar a aula,
+
+00:00:52.055 --> 00:00:54.814
+você poderá controlar a página
+de forma programática.
+
+00:00:54.847 --> 00:00:58.291
+É muito legal, e fundamental
+para a construção de sites.
+

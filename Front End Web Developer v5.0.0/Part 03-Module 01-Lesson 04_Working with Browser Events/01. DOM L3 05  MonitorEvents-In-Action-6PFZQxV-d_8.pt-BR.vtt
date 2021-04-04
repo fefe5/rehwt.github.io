@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:02.065
+Vejamos o mundo
+dos eventos ocultos
+
+00:00:02.098 --> 00:00:04.172
+com a função monitorEvents.
+
+00:00:05.579 --> 00:00:09.060
+O que desejamos monitorar?
+O objeto document.
+
+00:00:11.723 --> 00:00:13.330
+Vamos dar uma olhada.
+
+00:00:14.148 --> 00:00:17.926
+Nossa! Quantos movimentos de mouse
+e eventos de ponteiro.
+
+00:00:17.959 --> 00:00:19.520
+Vamos clicar.
+
+00:00:20.391 --> 00:00:22.173
+Mais vezes.
+
+00:00:22.206 --> 00:00:23.622
+Um clique duplo.
+
+00:00:24.703 --> 00:00:27.767
+Vamos rolar para baixo
+na página.
+
+00:00:28.671 --> 00:00:30.400
+Vários eventos
+foram disparados.
+

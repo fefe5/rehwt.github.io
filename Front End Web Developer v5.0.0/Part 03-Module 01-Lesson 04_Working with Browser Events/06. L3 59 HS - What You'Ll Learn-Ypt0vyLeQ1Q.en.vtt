@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.975
+Remember back to when we were styling the page with JavaScript?
+
+00:00:03.975 --> 00:00:07.245
+We briefly looked at the placement of the script tag.
+
+00:00:07.245 --> 00:00:08.932
+When it was at the bottom of the page,
+
+00:00:08.932 --> 00:00:10.705
+everything worked totally fine.
+
+00:00:10.705 --> 00:00:15.094
+But when we moved the script tag to the head, then everything broke.
+
+00:00:15.095 --> 00:00:17.699
+This happened because the DOM wasn't ready to be
+
+00:00:17.699 --> 00:00:21.210
+manipulated when the JavaScript code started running.
+
+00:00:21.210 --> 00:00:24.240
+In this section, we'll look at why this happens and how to
+
+00:00:24.239 --> 00:00:28.000
+counteract this potentially problematic situation.
+

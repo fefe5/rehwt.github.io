@@ -1,0 +1,265 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Working with Browser Events</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Respond to Events.html">02. Respond to Events</a>
+    </li>
+    <li class="">
+      <a href="03. Remove an Event Listener.html">03. Remove an Event Listener</a>
+    </li>
+    <li class="">
+      <a href="04. Phases of an Event.html">04. Phases of an Event</a>
+    </li>
+    <li class="">
+      <a href="05. Avoid Too Many Events.html">05. Avoid Too Many Events</a>
+    </li>
+    <li class="">
+      <a href="06. Know When The DOM Is Ready.html">06. Know When The DOM Is Ready</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Introduction</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L3 1 - Lesson Overview V2</p></h3>
+  <video controls>
+  <source src="01. L3 1 - Lesson Overview V2-UtJyZeapAsc.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. L3 1 - Lesson Overview V2-UtJyZeapAsc.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="01. L3 1 - Lesson Overview V2-UtJyZeapAsc.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="01. L3 1 - Lesson Overview V2-UtJyZeapAsc.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="01. L3 1 - Lesson Overview V2-UtJyZeapAsc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="01. L3 1 - Lesson Overview V2-UtJyZeapAsc.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="lesson-overview">Lesson Overview</h2>
+<p>To recap, we'll be looking at :</p>
+<ul>
+<li><strong>Events</strong> - what they are</li>
+<li><strong>Responding to an event</strong> - how to listen for an event and respond when one happens</li>
+<li><strong>Event Data</strong> - harness the data that is included with an event </li>
+<li><strong>Stopping an event</strong> - preventing an event from triggering multiple responses</li>
+<li><strong>Event Lifecycle</strong> - the lifecycle stages of an event</li>
+<li><strong>DOM Readiness</strong> - events to know when the DOM itself is ready to be interacted with</li>
+</ul>
+<p>This lesson is chock full of incredibly useful information, so don't skim over anything!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 3 - What Is An Event</p></h3>
+  <video controls>
+  <source src="01. L3 3 - What Is An Event-PbVXk2-eUuk.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. L3 3 - What Is An Event-PbVXk2-eUuk.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="01. L3 3 - What Is An Event-PbVXk2-eUuk.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="01. L3 3 - What Is An Event-PbVXk2-eUuk.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="01. L3 3 - What Is An Event-PbVXk2-eUuk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="01. L3 3 - What Is An Event-PbVXk2-eUuk.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="seeing-an-event">Seeing An Event</h2>
+<p>There is a hidden world of events going on right now on this very page! It's really hard to actually <em>see</em> into this hidden world, though. So how can we know that events really <em>are</em> being announced? If they are being announced, how come they're not easy for us to see?</p>
+<p>Fortunately, the Chrome browser has a special <code>monitorEvents()</code> function that will let us see different events as they are occurring. </p>
+<p>Check out the documentation on the Chrome DevTools site: <a href="https://developers.google.com/web/tools/chrome-devtools/console/events#monitor_events" rel="noopener noreferrer" target="_blank">monitorEvents documentation</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L3 05  MonitorEvents-In-Action</p></h3>
+  <video controls>
+  <source src="01. DOM L3 05  MonitorEvents-In-Action-6PFZQxV-d_8.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. DOM L3 05  MonitorEvents-In-Action-6PFZQxV-d_8.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="01. DOM L3 05  MonitorEvents-In-Action-6PFZQxV-d_8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="01. DOM L3 05  MonitorEvents-In-Action-6PFZQxV-d_8.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="01. DOM L3 05  MonitorEvents-In-Action-6PFZQxV-d_8.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this video, you saw the following events:</p>
+<ul>
+<li><code>click</code></li>
+<li><code>dblclick</code></li>
+<li><code>scroll</code></li>
+<li><code>resize</code></li>
+</ul>
+<p>However, there are <em>hundreds</em> more!</p>
+<p>The monitorEvents function will keep spitting out all of the events that are happening on the targeted element until the end of time…that, or until you refresh the page. Alternatively, the Chrome browser <em>does</em> offer an <code>unmonitorEvents()</code> function that will turn off the announcing of events for the targeted element:</p>
+<pre><code class="js language-js">// start displaying all events on the document object
+monitorEvents(document);
+
+// turn off the displaying of all events on the document object.
+unmonitorEvents(document);</code></pre>
+<p>One last little bit of info on <code>monitorEvents</code> is that this is for development/testing purposes only. It's not supposed to be used for production code.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Respond to Events.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Introduction')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

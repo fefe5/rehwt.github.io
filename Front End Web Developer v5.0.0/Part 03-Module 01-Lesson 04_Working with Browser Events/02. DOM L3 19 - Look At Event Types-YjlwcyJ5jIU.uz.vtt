@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:01.979
+Men event tavsiyalari sahifasida turibman va 
+
+00:00:01.979 --> 00:00:03.990
+bu sahifa Domning barcha sodir bo‘lishi mumkin 
+
+00:00:03.990 --> 00:00:05.850
+bo‘lgan eventlarini ko‘rsatadi va 
+
+00:00:05.850 --> 00:00:07.200
+eng ajoyibi agar biz biroz pastga tushsak, 
+
+00:00:07.200 --> 00:00:09.090
+ular umumiy kategoriyaga ko‘ra guruhlanganini 
+
+00:00:09.090 --> 00:00:12.059
+ko‘rishimiz mumkin, demak, keling, bu shunchaki
+
+00:00:12.059 --> 00:00:13.860
+nimani anglatadi ko‘raylik. Biroz pastga tushamiz va
+
+00:00:13.860 --> 00:00:18.300
+biz u turgan joyga boramiz. Mana bu yerda
+
+00:00:18.300 --> 00:00:20.640
+mouse eventi, demak, bular ushbu sahifadagi
+
+00:00:20.640 --> 00:00:22.920
+barcha mouse eventlar va mana bu yerga 
+
+00:00:22.920 --> 00:00:24.029
+qarasangiz biz click eventlarni ko‘rishda davom etayapmiz
+12
+00:00:24,029 --&gt; 
+va mana bu yerda ikkitalik click va 
+
+00:00:27.180 --> 00:00:28.529
+agar biz sichqonchadan foydalansak, bu yerda wheel eventi
+
+00:00:28.529 --> 00:00:31.050
+ham bor. Biroz yuqoriga chiqamiz.
+
+00:00:31.050 --> 00:00:33.000
+Bu yerda biz ba’zi bir klaviatura eventlarini ko‘rishimiz mumkin.
+
+00:00:33.000 --> 00:00:35.399
+Klaviaturadagi belgilarni bosish ularni yuqoriga chiqaradi va  
+
+00:00:35.399 --> 00:00:37.140
+keling, mana bu yerga qarashda davom etamiz. Bu yerda ba’zi bir 
+
+00:00:37.140 --> 00:00:40.050
+boshqa ajoyib eventlar bor. Mana bu yerdagisi siz 
+
+00:00:40.050 --> 00:00:41.760
+bironta formani to‘ldirganingizdagi scroll eventi, 
+
+00:00:41.760 --> 00:00:43.440
+forma eventlari mavjud va mana bu submit event.
+
+00:00:43.440 --> 00:00:45.960
+Bironta forma topshirilganda, u biz eshita oladigan 
+
+00:00:45.960 --> 00:00:47.670
+submit eventga murojaat qiladi
+
+00:00:47.670 --> 00:00:49.530
+va keyin bunga javob beradi, bundan tashqari,
+
+00:00:49.530 --> 00:00:51.629
+bu yerda boshqa CSS eventlari ham bor 
+
+00:00:51.629 --> 00:00:54.239
+ba’zilari animatsiya uchun ba’zilari ko‘chirish uchun. 
+
+00:00:54.239 --> 00:00:55.620
+Bu sahifada tonnalab ma’lumotlar bor va 
+
+00:00:55.620 --> 00:00:58.968
+men sizga ularni ko‘rib chiqishni tavsiya qilaman.
+
