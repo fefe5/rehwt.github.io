@@ -1,0 +1,224 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getting Started</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: FEND Capstone - Travel App</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Development Strategy.html">03. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="Project Description - FEND Capstone - Travel App.html">Project Description - FEND Capstone - Travel App</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - FEND Capstone - Travel App.html">Project Rubric - FEND Capstone - Travel App</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Getting Started</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="getting-started">Getting Started</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This project requires you to build out a travel app that, at a minimum, obtains a desired trip location &amp; date from the user, and displays weather and an image of the location using information obtained from external APIs. Given that this is the Capstone project, it's highly encouraged for you to go above and beyond, adding additional functionality and customization to truly stand out with a project you are proud to have at the top of your portfolio!</p>
+<h2 id="project-rubric">Project Rubric</h2>
+<p>Your project will be evaluated by a Udacity code reviewer according to the Travel Planner App <a href="https://review.udacity.com/#!/rubrics/2669/view" rel="noopener noreferrer" target="_blank">project rubric</a>. Please review for detailed project requirements.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="get-the-starter-code">Get the Starter Code</h2>
+<p>If you'd like to start from scratch without any files, you are encouraged to do so! You learn the most by developing on your own! But, it can be a bit challenging having to start from scratch. There’s not the standard starter code you’re used to. If you would like to start with starter code, duplicate your code from project 3 and start there. Here is just one possibility for the visual of this project. Of course, you can style it how you choose, and extending the project will dictate the final appearance. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/travel-app-project-mockup.png" alt="An example Travel App, both at minimum and with additional functionality" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An example Travel App, both at minimum and with additional functionality</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="before-you-begin">Before you begin…</h2>
+<p>Before moving forward, reacquaint yourself with project 3 &amp; 4. After, ask yourself:</p>
+<ul>
+<li>What is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" rel="noopener noreferrer" target="_blank">Document</a>?</li>
+<li>What are <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" rel="noopener noreferrer" target="_blank">events</a>?<ul>
+<li>How do we <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" rel="noopener noreferrer" target="_blank">listen for them</a>?</li></ul></li>
+<li>How can we <a href="https://www.w3schools.com/js/js_htmldom_elements.asp" rel="noopener noreferrer" target="_blank">access elements</a> within the DOM?</li>
+<li>We can also access elements with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" rel="noopener noreferrer" target="_blank">getElementsByClassName()</a>. What does this method return, and how do you use it?</li>
+<li>Every element has an <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" rel="noopener noreferrer" target="_blank">innerHTML</a> property that represents the markup of the element's content. How can you leverage this property to get and set content?</li>
+<li>What is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" rel="noopener noreferrer" target="_blank">Fetch API</a> and how can we use it to get data? </li>
+<li>What are <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" rel="noopener noreferrer" target="_blank">callback functions</a> and how do we use them appropriately? </li>
+<li>What is <a href="https://developers.google.com/web/fundamentals/primers/async-functions" rel="noopener noreferrer" target="_blank">asynchronous javascript</a>? </li>
+<li>How/Why do we use <a href="https://expressjs.com/" rel="noopener noreferrer" target="_blank">Express</a>?</li>
+<li>How/Why do we use <a href="https://webpack.js.org/" rel="noopener noreferrer" target="_blank">Webpack</a>?</li>
+<li>How/Why do we use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" rel="noopener noreferrer" target="_blank">service workers</a>? </li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Development Strategy.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Getting Started')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

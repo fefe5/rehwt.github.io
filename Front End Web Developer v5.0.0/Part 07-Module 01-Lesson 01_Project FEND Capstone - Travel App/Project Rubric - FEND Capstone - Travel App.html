@@ -1,0 +1,427 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FEND Capstone - Travel App</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: FEND Capstone - Travel App</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started.html">02. Getting Started</a>
+    </li>
+    <li class="">
+      <a href="03. Development Strategy.html">03. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="Project Description - FEND Capstone - Travel App.html">Project Description - FEND Capstone - Travel App</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - FEND Capstone - Travel App.html">Project Rubric - FEND Capstone - Travel App</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">FEND Capstone - Travel App</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Development Environment and Architecture</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Architecture</p>
+        </td>
+        <td>
+          <p>The project should have a structure like the one shown below. All files shown must be present (Webpack may be split into multiple config files, and names may differ) and the app must successfully render a home page with clear design and functionality added when index.html is loaded in the browser. No errors should display in console. </p>
+<pre><code>- Root:
+  - `package.json`
+  - `readme.md`
+  - `webpack.config.js`
+  - src folder
+    - server folder
+      - `server.js` (name will vary)
+    - client folder
+      - `index.js`
+      - html/views folder
+        - `index.html`
+      - js folder
+        - `app.js` (name will vary)
+      - styles folder
+        - `style.scss` (name will vary - may be broke into partials)</code></pre>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Webpack</p>
+        </td>
+        <td>
+          <p>Webpack config should contain at least 3 scripts, express server, build and test. Additionally, dev server may be included. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Testing</p>
+        </td>
+        <td>
+          <p>There should be at least one test for the express server and application javascript</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Offline capabilities</p>
+        </td>
+        <td>
+          <p>The project must have service workers installed.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>HTML &amp; CSS</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Usability</p>
+        </td>
+        <td>
+          <p>All features are usable across modern desktop, tablet, and phone browsers.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Styling</p>
+        </td>
+        <td>
+          <p>Styling is set up in a logical way. All interactive elements have hover states.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>HTML Structure</p>
+        </td>
+        <td>
+          <p>HTML structure should be indented properly with classes and ID’s that make sense. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Visual Design</p>
+        </td>
+        <td>
+          <p>The design should clearly be different from the design used in projects 3 and 4. </p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>API and JS Integration</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Server</p>
+<pre><code>src &gt; server &gt; server.js</code></pre>
+        </td>
+        <td>
+          <p>Server should be a near duplication of project 3 with the exception of additional added member: value pairs. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>index.js</p>
+<pre><code>src &gt; client &gt; index.js</code></pre>
+        </td>
+        <td>
+          <ul>
+<li>At least one function should be imported. </li>
+<li>At least one event listener should be imported.</li>
+<li>(styles referenced in html/css)</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>app.js</p>
+<pre><code>src &gt; client &gt; js &gt; app.js</code></pre>
+        </td>
+        <td>
+          <ol>
+<li>There should be URLS and API Keys for at least 3 APIs, including Geonames, Weatherbit, and Pixabay. You can feel free to use more than 3 APIs.</li>
+<li>There should be a primary object with placeholder member value pairs. </li>
+<li>There should be a primary function that is exported to <code>index.js</code>.</li>
+</ol>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Extend Options / Ways to Stand Out</p>
+        </td>
+        <td>
+          <p>At least one option from the Extend your Project/Ways to Stand Out sections have been added. Please add a Note to your reviewer which one you chose to implement, or add into your <code>README</code>.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Documentation</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>README</p>
+        </td>
+        <td>
+          <p>A <code>README</code> file is included detailing the app and all dependencies.</p>
+<p><strong>Other requirements:</strong><br />
+The Readme file should have non-default text in it that is specific to this project. It doesn’t have to be thorough, but should have some basic info. Bonus points if correct markdown is used.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Comments</p>
+        </td>
+        <td>
+          <p>Comments are present and effectively explain longer code procedure when necessary.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Code Quality</p>
+        </td>
+        <td>
+          <p>Code is formatted with consistent, logical, and easy-to-read formatting as described in the <a href="http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html" rel="noopener noreferrer" target="_blank">Udacity JavaScript Style Guide</a>.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div class="jumbotron">
+        <h3>Tips to make your project standout:</h3>
+        <p><p><strong>At least one of these is required</strong>, but the rest are great additional ways to further customize and improve your project!</p>
+<ul>
+<li>Add end date and display length of trip. </li>
+<li>Pull in an image for the country from Pixabay API when the entered location brings up no results (good for obscure localities). </li>
+<li>Allow user to add multiple destinations on the same trip.<ul>
+<li>Pull in weather for additional locations.</li></ul></li>
+<li>Allow the user to add hotel and/or flight data.<ul>
+<li>Multiple places to stay? Multiple flights?</li></ul></li>
+<li>Integrate the <a href="https://restcountries.eu/" rel="noopener noreferrer" target="_blank">REST Countries API</a> to pull in data for the country being visited. </li>
+<li>Allow the user to remove the trip.</li>
+<li>Use <a href="https://www.taniarascia.com/how-to-use-local-storage-with-javascript/" rel="noopener noreferrer" target="_blank">Local Storage</a> to save the data so that when they close, then revisit the page, their information is still there. </li>
+<li>Instead of just pulling a single day forecast, pull the forecast for multiple days.</li>
+<li>Incorporate icons into forecast.</li>
+<li>Allow user to Print their trip and/or export to PDF.</li>
+<li>Allow the user to add a todo list and/or packing list for their trip.</li>
+<li>Allow the user to add additional trips (this may take some heavy reworking, but is worth the challenge). <ul>
+<li>Automatically sort additional trips by countdown.</li>
+<li>Move expired trips to bottom/have their style change so it’s clear it’s expired.</li></ul></li>
+</ul></p>
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('FEND Capstone - Travel App')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
