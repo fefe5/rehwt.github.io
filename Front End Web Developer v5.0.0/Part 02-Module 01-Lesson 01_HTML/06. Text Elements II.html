@@ -1,0 +1,389 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text Elements II</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTML</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Introduction.html">01. Course Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to HTML.html">02. Intro to HTML</a>
+    </li>
+    <li class="">
+      <a href="03. Text Editors.html">03. Text Editors</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Creating an HTML File.html">04. Exercise: Creating an HTML File</a>
+    </li>
+    <li class="">
+      <a href="05. Text Elements I.html">05. Text Elements I</a>
+    </li>
+    <li class="">
+      <a href="06. Text Elements II.html">06. Text Elements II</a>
+    </li>
+    <li class="">
+      <a href="07. HTML Lists.html">07. HTML Lists</a>
+    </li>
+    <li class="">
+      <a href="08. Attributes.html">08. Attributes</a>
+    </li>
+    <li class="">
+      <a href="09. The DOM.html">09. The DOM</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise Creating an HTML Template.html">10. Exercise: Creating an HTML Template</a>
+    </li>
+    <li class="">
+      <a href="11. Forms.html">11. Forms</a>
+    </li>
+    <li class="">
+      <a href="12. Exercise Debugging HTML.html">12. Exercise: Debugging HTML</a>
+    </li>
+    <li class="">
+      <a href="13. Recap.html">13. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Text Elements II</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Text Elements II Heading</p></h3>
+  <div>
+  <h1 id="text-elements-ii">Text Elements II</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND001 C01 L01 03.1 Text Elements II</p></h3>
+  <video controls>
+  <source src="06. ND001 C01 L01 03.1 Text Elements II-JKoE6gdWaMA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. ND001 C01 L01 03.1 Text Elements II-JKoE6gdWaMA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="06. ND001 C01 L01 03.1 Text Elements II-JKoE6gdWaMA.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Headings</p></h3>
+  <div>
+  <h3 id="headings">Headings</h3>
+<p>Headings in HTML are comparable to headings in other media types. In journals, for instance, big headings are typically used to catch the attention of a reader. Other times, headings are used to define material, such as a film's title or an instructional article.</p>
+<p>Headings are the primary way to outline the content of your webpage. They define the outline of your web page as both humans and search engines see it, which makes selecting relevant headings essential for a high-quality web page.</p>
+<p>There are six distinct headings or heading components in HTML. Headings can be used for a multitude of reasons, such as titling segments, journals, or other types of content.</p>
+<p>One way to think about headings on a web page is like headings in a book..</p>
+<p>The <code>&lt;h1&gt;</code>, like the book title, introduces the topic that the web page is all about.</p>
+<p>The <code>&lt;h2&gt;</code>, like book chapters, describe the main topics covered on the web page</p>
+<p>Smaller headers like the <code>&lt;h3&gt;</code> to <code>&lt;h6&gt;</code> serve as other sub-headings that can be used within each section, just like a book chapter can be as a book chapter may be split up by multiple sub-topics.</p>
+<p>Headings are ordered from the biggest to the smallest size. There are 6 levels of headings available, ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, 1 being the most important one.</p>
+<p>H1 is used for the primary headings. For subheadings, all other lower headings are used.</p>
+<hr />
+<p>Here's an example of headers:</p>
+<pre><code>&lt;h1&gt;Observable Universe&lt;/h1&gt;
+&lt;h2&gt;Milky Way Galaxy&lt;/h2&gt;
+&lt;h3&gt;Earth&lt;/h3&gt;
+&lt;h4&gt;USA&lt;/h4&gt;
+&lt;h5&gt;Norfolk, VA&lt;/h5&gt;
+&lt;h6&gt;Main Street&lt;/h6&gt;</code></pre>
+<p>Which results in:</p>
+<h1>Observable Universe</h1>
+<h2>Milky Way Galaxy</h2>
+<h3>Earth</h3>
+<h4>USA</h4>
+<h5>Norfolk, VA</h5>
+<h6>Main Street</h6>
+<hr />
+<h4 id="accessibility-with-headers">Accessibility with Headers</h4>
+<p>For people who are blind or visually impaired, screen reading software is used to parse through text on a web page.<br />
+A common technique these folks will use to navigate the page is to jump from heading to heading to determine the overall content of the page more easily.<br />
+That's why it's best practice to not skip one or more heading levels. If you did skip headings and went from <code>&lt;h1&gt;</code> to <code>&lt;h3&gt;</code>, you may cause confusion since the user has to deal with a missing heading.<br />
+Don't bum out any of your users - structure your headings properly! 👍🏽</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Paragraphs</p></h3>
+  <div>
+  <h3 id="paragraphs">Paragraphs</h3>
+<p>Paragraphs <code>&lt;p&gt;</code> are the most used HTML element, as they act as the default block-level element and are quick to write.</p>
+<p>Below is the HTML code, as well as the “paragraphs” of text - note that there is nothing particularly special with the formatting of these.</p>
+<pre><code class="html language-html">&lt;p&gt;
+  The sweet-faced and loving Labrador Retriever is actually one of the most
+  popular dog breeds.
+&lt;/p&gt;
+&lt;p&gt;
+  Labs are extremely friendly with an easygoing and high-spirited personality
+  which is great for bonding with the whole family.
+&lt;/p&gt;</code></pre>
+<p>The sweet-faced and loving Labrador Retriever is actually one of the most popular dog breeds.</p>
+<p>Labs are extremely friendly with an easygoing and high-spirited personality which is great for bonding with the whole family.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spans</p></h3>
+  <div>
+  <h3 id="spans">Spans</h3>
+<p>The HTML <code>&lt;span&gt;</code> element is like a generic wrapper that is used to group text, mostly for styling purposes. Consider the following code:</p>
+<pre><code>&lt;style&gt;
+p {
+  color: black;
+}
+.red {
+  color: red;
+}
+&lt;/style&gt;
+&lt;p&gt;
+  This sentence needs some &lt;span class=”red”&gt;visual emphasis&lt;/span&gt; to really bring home the point.
+&lt;/p&gt;</code></pre>
+<p>And its result:</p>
+<p>
+  This sentence needs some <span style="color:red">visual emphasis</span> to really bring home the point.
+</p>
+<p>In this code, the words <code>visual emphasis</code> have been put inside the <code>span</code> with the class <code>red</code>, so that those individual words can be styled separately from the rest of the <code>p</code> element. In this instance, the <code>span</code> words would be red, while the rest of the words would be black.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Block Quotes</p></h3>
+  <div>
+  <h3 id="blockquotes">Blockquotes</h3>
+<p>Blockquotes are used to identify a citation.</p>
+<pre><code>&lt;blockquote cite="https://www.wikiwand.com/en/Scooby-Doo_(character)"&gt;
+  &lt;p&gt;Ruh-roh--RAGGY!!!&lt;/p&gt;
+  &lt;footer&gt;—Scooby Doo, &lt;cite&gt;Mystery Incorporated&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+<blockquote cite="https://www.wikiwand.com/en/Scooby-Doo_(character)">
+  <p>Ruh-roh--RAGGY!!!</p>
+  <footer>—Scooby Doo, <cite>Mystery Incorporated</cite></footer>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Line Breaks</p></h3>
+  <div>
+  <h3 id="line-breaks">Line Breaks</h3>
+<p>The spacing between code in an HTML file doesn’t affect the positioning of elements in the browser.</p>
+<p>If you are interested in modifying the spacing in the browser, you can use HTML’s line break element.</p>
+<pre><code>&lt;p&gt;
+  I jump in delight&lt;br /&gt;
+  I run off in frenzy&lt;br /&gt;
+  For now I have just realized&lt;br /&gt;
+  that the fun has arrived&lt;br /&gt;
+  the fun has begun&lt;br /&gt;
+  jumping all on one piece&lt;br /&gt;
+  almost feeling like I can't breathe&lt;br /&gt;
+  blood rushing through me&lt;br /&gt;
+  a second, a beat&lt;br /&gt;
+  I feel the air on my face&lt;br /&gt;
+  My fur rising up&lt;br /&gt;
+  Free as free as it can be&lt;br /&gt;
+  That's what you feel&lt;br /&gt;
+  When your owner has arrived&lt;br /&gt;
+&lt;/p&gt;</code></pre>
+<p>
+  I jump in delight<br />
+  I run off in frenzy<br />
+  For now I have just realized<br />
+  that the fun has arrived<br />
+  the fun has begun<br />
+  jumping all on one piece<br />
+  almost feeling like I can't breathe<br />
+  blood rushing through me<br />
+  a second, a beat<br />
+  I feel the air on my face<br />
+  My fur rising up<br />
+  Free as free as it can be<br />
+  That's what you feel<br />
+  When your owner has arrived<br />
+</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz 1: Element Review</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which HTML snippets are formatted correctly?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="907872" id="rbk1">
+      <label for="rbk1"><pre><code>&lt;p&gt;a paragraph about dogs&lt;/p&gt;</code></pre></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="907872" id="rbk2">
+      <label for="rbk2"><pre><code>&lt;p&gt;&lt;em&gt;a paragraph in italics about dogs&lt;/em&gt;&lt;/p&gt;</code></pre></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="907872" id="rbk3">
+      <label for="rbk3"><pre><code>&lt;span...a span about dogs...&lt;/span&gt;</code></pre></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="907872" id="rbk4">
+      <label for="rbk4"><pre><code>&lt;p&gt;&lt;em&gt;a paragraph in italics about dogs&lt;/p&gt;&lt;/em&gt;</code></pre></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>```
+<p>a paragraph about dogs</p>
+```</li>
+      <li>```
+<p><em>a paragraph in italics about dogs</em></p>
+```</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. HTML Lists.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Text Elements II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

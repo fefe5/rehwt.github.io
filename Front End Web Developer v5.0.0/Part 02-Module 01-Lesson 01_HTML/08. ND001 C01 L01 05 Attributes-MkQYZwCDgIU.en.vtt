@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.159 --> 00:00:09.269
+So something I mentioned earlier is that all HTML elements can have attributes.
+
+00:00:09.269 --> 00:00:13.049
+Attributes provide additional information about an element and
+
+00:00:13.050 --> 00:00:16.830
+are almost always specified in the start tag.
+
+00:00:16.829 --> 00:00:21.794
+So what are some examples of what attributes we might want to give elements?
+
+00:00:21.795 --> 00:00:24.420
+Well, it varies on the type of element but for
+
+00:00:24.420 --> 00:00:27.000
+almost every element an ID would make sense.
+
+00:00:27.000 --> 00:00:30.120
+An ID is an attribute that will allow us to programmatically
+
+00:00:30.120 --> 00:00:34.230
+select and manipulate that element based on its ID.
+
+00:00:34.229 --> 00:00:37.454
+Another example is source.
+
+00:00:37.454 --> 00:00:42.030
+Source comes into handy as an attribute for things like an image tag.
+
+00:00:42.030 --> 00:00:46.820
+An image tag will use IMG to say this is going to be an image,
+
+00:00:46.820 --> 00:00:49.310
+but to tell it where to pull the image from,
+
+00:00:49.310 --> 00:00:51.350
+we use the source attribute.
+
+00:00:51.350 --> 00:00:55.100
+Another very useful attribute is href.
+
+00:00:55.100 --> 00:00:59.465
+It could be argued that href is really the attributes that the web is built on.
+
+00:00:59.465 --> 00:01:05.855
+Because href is what you use to a link to tell it where to go to next.
+
+00:01:05.855 --> 00:01:08.390
+So if the web is a set of interconnected links that you
+
+00:01:08.390 --> 00:01:11.349
+can follow by pressing on those links,
+
+00:01:11.349 --> 00:01:15.155
+the href is what's sending you all around those places.
+
+00:01:15.155 --> 00:01:19.260
+So let's take a look at this with some real code.
+
+00:01:19.719 --> 00:01:25.310
+So here we are with a file called attributes.html and we're going
+
+00:01:25.310 --> 00:01:30.290
+to dive into some of the most useful attributes and see what they look like in practice.
+
+00:01:30.290 --> 00:01:34.700
+So the first thing I might do is just create a basic div and I'm going to give
+
+00:01:34.700 --> 00:01:39.859
+it an ID, id equals love.
+
+00:01:39.859 --> 00:01:48.769
+We might as well have the text of this say, love will overcome.
+
+00:01:48.769 --> 00:01:51.420
+Now, let's first check that it works,
+
+00:01:51.420 --> 00:01:52.875
+love will overcome, we see.
+
+00:01:52.875 --> 00:01:55.609
+Now, this is jumping ahead a little bit to the CFS lesson,
+
+00:01:55.609 --> 00:02:00.034
+but I'm realizing I would really like you to see why an ID might be useful.
+
+00:02:00.034 --> 00:02:03.530
+So what I'm going to do here is I'm going to
+
+00:02:03.530 --> 00:02:09.485
+quickly add some style tags which we'll go over much more in later lessons.
+
+00:02:09.485 --> 00:02:17.240
+But now, because I have set the attribute here to the idea of love,
+
+00:02:17.240 --> 00:02:20.180
+I can access this div in my style.
+
+00:02:20.180 --> 00:02:27.455
+We prep end names with a hash sign or a pound mark for IDs.
+
+00:02:27.455 --> 00:02:31.160
+So #love is ID love.
+
+00:02:31.159 --> 00:02:36.650
+Then, I'm going to say color red.
+
+00:02:36.650 --> 00:02:42.200
+Now, we see that the text is red because I've used
+
+00:02:42.199 --> 00:02:48.364
+the attribute an ID love and then I have used the style rule here to set it to be red.
+
+00:02:48.365 --> 00:02:52.325
+That's one example of how setting an attribute can be useful.
+
+00:02:52.324 --> 00:02:54.994
+Let's take a look at an image.
+
+00:02:54.995 --> 00:02:57.004
+So to make an image,
+
+00:02:57.004 --> 00:03:01.414
+I need the image tag and then I need a source.
+
+00:03:01.414 --> 00:03:04.340
+I think I have an image here.
+
+00:03:04.340 --> 00:03:12.000
+So I'm going to try just the name myImage.png.
+
+00:03:12.000 --> 00:03:15.530
+I feel like I'm missing something but the browser will tell us.
+
+00:03:15.530 --> 00:03:17.330
+Oh, and there it is.
+
+00:03:17.330 --> 00:03:23.835
+So another example of an attribute is actually I belief width.
+
+00:03:23.835 --> 00:03:32.725
+So let's try changing the width of that image to make it only 55 percent.
+
+00:03:32.724 --> 00:03:36.310
+Now, you can see we have a much smaller image.
+
+00:03:36.310 --> 00:03:39.330
+So here, it's an image element,
+
+00:03:39.330 --> 00:03:41.295
+we use an IMG tag.
+
+00:03:41.294 --> 00:03:45.189
+The attributes that we added were the source which is where the image is
+
+00:03:45.189 --> 00:03:49.389
+coming from and the width which is the size that we want the image to be.
+
+00:03:49.389 --> 00:03:53.654
+Another attribute I want to make sure to cover is the href attribute,
+
+00:03:53.655 --> 00:03:56.455
+as I've given it so much credit already.
+
+00:03:56.455 --> 00:03:58.590
+So if you don't remember that,
+
+00:03:58.590 --> 00:04:01.930
+href attribute is something that goes to the links on the web.
+
+00:04:01.930 --> 00:04:06.260
+The way that we make links on the web is with an a tag.
+
+00:04:06.259 --> 00:04:08.393
+Because href is an attribute,
+
+00:04:08.394 --> 00:04:10.145
+we put it in the opening tag.
+
+00:04:10.145 --> 00:04:14.570
+So a href equals and
+
+00:04:14.569 --> 00:04:19.134
+then we want to pass the href the website that we would like it to point to.
+
+00:04:19.134 --> 00:04:24.319
+In this case, we'll go to udacity.com.
+
+00:04:24.319 --> 00:04:26.584
+We want to I like to say,
+
+00:04:26.584 --> 00:04:33.049
+follow this link to become a genius.
+
+00:04:33.050 --> 00:04:35.920
+Now, when we go back to our webpage,
+
+00:04:35.920 --> 00:04:39.115
+fingers crossed, we see our link come up.
+
+00:04:39.115 --> 00:04:42.050
+So follow this link to become a genius,
+
+00:04:42.050 --> 00:04:44.855
+we click on it and boom,
+
+00:04:44.855 --> 00:04:46.535
+here we are at Udacity,
+
+00:04:46.535 --> 00:04:50.410
+ready to become brilliant.
+
+00:04:50.410 --> 00:04:53.095
+Those are just three of the attributes,
+
+00:04:53.095 --> 00:04:56.960
+but really each element can have any number of attributes and it can be
+
+00:04:56.959 --> 00:04:59.779
+such a strong way to set up your code to be
+
+00:04:59.779 --> 00:05:03.144
+customized and unique exactly the way you want it.
+
+00:05:03.144 --> 00:05:04.959
+As you go through this,
+
+00:05:04.959 --> 00:05:09.319
+think about what other attributes you might like to see and we'll talk later about
+
+00:05:09.319 --> 00:05:14.764
+how to do advance things using CSS classes and IDs.
+
+00:05:14.764 --> 00:05:20.060
+Up next, we're going to talk about the DOM which is the space where
+
+00:05:20.060 --> 00:05:22.129
+everything you do comes together in
+
+00:05:22.129 --> 00:05:25.939
+a conceptual hierarchy that is laid out to the browser.
+
+00:05:25.939 --> 00:05:28.819
+It will both blow your mind and make
+
+00:05:28.819 --> 00:05:32.639
+you wish you didn't have to think about it, I promise.
+

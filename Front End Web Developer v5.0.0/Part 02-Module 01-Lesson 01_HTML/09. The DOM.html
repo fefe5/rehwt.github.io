@@ -1,0 +1,323 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The DOM</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTML</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Introduction.html">01. Course Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to HTML.html">02. Intro to HTML</a>
+    </li>
+    <li class="">
+      <a href="03. Text Editors.html">03. Text Editors</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Creating an HTML File.html">04. Exercise: Creating an HTML File</a>
+    </li>
+    <li class="">
+      <a href="05. Text Elements I.html">05. Text Elements I</a>
+    </li>
+    <li class="">
+      <a href="06. Text Elements II.html">06. Text Elements II</a>
+    </li>
+    <li class="">
+      <a href="07. HTML Lists.html">07. HTML Lists</a>
+    </li>
+    <li class="">
+      <a href="08. Attributes.html">08. Attributes</a>
+    </li>
+    <li class="">
+      <a href="09. The DOM.html">09. The DOM</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise Creating an HTML Template.html">10. Exercise: Creating an HTML Template</a>
+    </li>
+    <li class="">
+      <a href="11. Forms.html">11. Forms</a>
+    </li>
+    <li class="">
+      <a href="12. Exercise Debugging HTML.html">12. Exercise: Debugging HTML</a>
+    </li>
+    <li class="">
+      <a href="13. Recap.html">13. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. The DOM</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>The DOM Header</p></h3>
+  <div>
+  <h1 id="the-dom">The DOM</h1>
+<p>Understanding HTML hierarchy is important because child elements can inherit behavior and styling from their parent element.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND001 C01 L01 06 Intro To The DOM</p></h3>
+  <video controls>
+  <source src="09. ND001 C01 L01 06 Intro To The DOM-nNayR1xiTV8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. ND001 C01 L01 06 Intro To The DOM-nNayR1xiTV8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="09. ND001 C01 L01 06 Intro To The DOM-nNayR1xiTV8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Document type declaration</p></h3>
+  <div>
+  <p><strong>Note:</strong> If you’d like to inspect the HTML of a website as Daniel does in the video, you can use <a href="https://developers.google.com/web/tools/chrome-devtools/" rel="noopener noreferrer" target="_blank">Chrome’s Developer Tools</a> to do so.</p>
+<p>Now that you’ve learned about some of the most common HTML elements, it’s time to learn how to set up an HTML file. HTML files require certain elements to set up the document properly. You can let web browsers know that you are using HTML by starting your document with a document type declaration. The declaration looks like this: </p>
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
+<p>This declaration is an instruction, and it must be the first line of code in your HTML document. It tells the browser what type of document to expect, along with what version of HTML is being used in the document. For now, the browser will correctly assume that the html in <code>&lt;!DOCTYPE html&gt;</code> is referring to HTML5, as it is the current standard.</p>
+<p>In the future, however, a new standard will override HTML5. To make sure your document is forever interpreted correctly, always include <code>&lt;!DOCTYPE html&gt;</code> at the very beginning of your HTML documents.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>The Head</p></h3>
+  <div>
+  <h2 id="the-head">The Head</h2>
+<p>So far you’ve done two things to set up the file properly:</p>
+<ol>
+<li>Declared to the browser that your code is HTML with <code>&lt;!DOCTYPE html&gt;</code></li>
+<li>Added the HTML element (<code>&lt;html&gt;</code>) that will contain the rest of your code.</li>
+</ol>
+<p>Remember the <code>&lt;body&gt;</code> tag? The <code>&lt;head&gt;</code> element is part of this HTML metaphor. It goes above our <code>&lt;body&gt;</code> element.</p>
+<h3 id="metadata">Metadata</h3>
+<p>The <code>&lt;head&gt;</code> element contains the metadata for a web page.</p>
+<p>Metadata is information about the page that isn’t displayed directly on the web page.</p>
+<p>Unlike the information inside of the <code>&lt;body&gt;</code> tag, the metadata in the head is information about the page itself.</p>
+<h3 id="title">Title</h3>
+<p>A browser’s tab displays the title specified in the <code>&lt;title</code>&gt; tag. The <code>&lt;title&gt;</code> tag is always inside of the <code>&lt;head&gt;</code>.</p>
+<pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Coding Journal&lt;/title&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+<p>If we were to open a file containing the HTML code in the example above, the browser would display the words “My Coding Journal” in the title bar (or in the tab’s title).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>The Head Graphic</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/title-tag.png" alt="An example of titles" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An example of titles</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>The Body</p></h3>
+  <div>
+  <h2 id="the-body">The Body</h2>
+<pre><code class="html language-html">&lt;body&gt;&lt;/body&gt;</code></pre>
+<p>Once the file has a body, many different types of content – including text, images, and buttons – can be added to the body.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Hierarchy</p></h3>
+  <div>
+  <h2 id="hierarchy">Hierarchy</h2>
+<p>HTML is organized as a collection of family tree relationships. As you saw in the last exercise, we placed <code>&lt;p&gt;</code> tags within <code>&lt;body&gt;</code> tags. When an element is contained inside another element, it is considered the child of that element. The child element is said to be nested inside of the parent element.</p>
+<pre><code class="html language-html">&lt;body&gt;
+  &lt;p&gt;This paragraph is a child of the body&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+<p>In the example above, the <code>&lt;p&gt;</code> element is nested inside the <code>&lt;body&gt;</code>element. The <code>&lt;p&gt;</code> element is considered a child of the <code>&lt;body&gt;</code> element, and the <code>&lt;body&gt;</code> element is considered the parent. You can also see that we’ve added two spaces of indentation (using the space bar) for better readability.</p>
+<p>Since there can be multiple levels of nesting, this analogy can be extended to grandchildren, great-grandchildren, and beyond. The relationship between elements and their ancestor and descendent elements is known as hierarchy.</p>
+<p>Let’s consider a more complicated example that uses some new tags:</p>
+<pre><code class="html language-html">&lt;body&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Sibling to p, but also grandchild of body&lt;/h1&gt;
+    &lt;p&gt;Sibling to h1, but also grandchild of body&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+<p>In this example, the <code>&lt;body&gt;</code> element is the parent of the <code>&lt;div&gt;</code> element. Both the <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> elements are children of the <code>&lt;div&gt;</code> element. Because the <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> elements are at the same level, they are considered siblings and are both grandchildren of the <code>&lt;body&gt;</code> element.</p>
+<p>Again, understanding HTML hierarchy is important because child elements can inherit behavior and styling from their parent element. You’ll learn more about webpage hierarchy when you start digging into CSS.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Semantic Elements</p></h3>
+  <div>
+  <h2 id="semantic-elements">Semantic Elements</h2>
+<p>Structure elements allow you to organize the main parts of your page. They usually contain other HTML elements.</p>
+<p>Here’s what a typical webpage could include:</p>
+<ul>
+<li><code>&lt;header&gt;</code> as the first element of the page, that can include the logo and the tagline.</li>
+<li><code>&lt;nav&gt;</code> as a list of links that go to the different pages of the website.</li>
+<li><code>&lt;h1&gt;</code> as the title of the page.</li>
+<li><code>&lt;article&gt;</code> as the main content of the page, like a blog post.</li>
+<li><code>&lt;footer&gt;</code> as the last element of the page, located at the bottom.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Semantic Elements Graphic</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/html-sectioning-elements.png" alt="An example of the structure of semantic elements" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An example of the structure of semantic elements</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Exercise Creating an HTML Template.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. The DOM')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

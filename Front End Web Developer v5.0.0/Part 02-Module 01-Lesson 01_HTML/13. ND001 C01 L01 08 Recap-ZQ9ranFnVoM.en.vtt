@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.940 --> 00:00:07.839
+You did it. You made it through the HTML lesson.
+
+00:00:08.900 --> 00:00:11.609
+Give yourself a round of applause.
+
+00:00:11.609 --> 00:00:12.855
+Take a deep breath,
+
+00:00:12.855 --> 00:00:14.880
+drink some water, get hydrated.
+
+00:00:14.880 --> 00:00:17.160
+You are doing an amazing job.
+
+00:00:17.160 --> 00:00:21.344
+Some of the HTML that we covered in this lesson is about
+
+00:00:21.344 --> 00:00:26.399
+elements and how we make them and how we can add attributes to them.
+
+00:00:26.399 --> 00:00:30.414
+Then we also looked at debugging HTML,
+
+00:00:30.414 --> 00:00:33.414
+some of the biggest errors people see.
+
+00:00:33.414 --> 00:00:36.250
+Then we got little hints of CSS,
+
+00:00:36.250 --> 00:00:39.109
+ways that we can style the elements on our page
+
+00:00:39.109 --> 00:00:43.030
+using class or ID which are the attributes we've learned from.
+
+00:00:43.030 --> 00:00:46.370
+Coming up we'll learn how to separate out the concerns,
+
+00:00:46.369 --> 00:00:50.554
+so that our CSS lives in a completely different file from our HTML,
+
+00:00:50.554 --> 00:00:54.094
+and those two things will come into perfect synchronicity
+
+00:00:54.094 --> 00:00:58.739
+to create the most elegant web page layout and design.
+

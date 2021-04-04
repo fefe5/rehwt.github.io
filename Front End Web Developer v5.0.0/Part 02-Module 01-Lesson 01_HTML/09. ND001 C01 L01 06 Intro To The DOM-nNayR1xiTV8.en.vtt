@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.250 --> 00:00:09.640
+The DOM, D-O-M stands for Document Object Model.
+
+00:00:10.039 --> 00:00:14.910
+Document Object Model, it kind of makes sense.
+
+00:00:14.910 --> 00:00:20.655
+It's the model that our web document is being presented as.
+
+00:00:20.655 --> 00:00:26.359
+So it's helpful to think of it as a tree and the tree has different nodes that come off
+
+00:00:26.359 --> 00:00:32.195
+of it and each of these nodes are attached like we've seen a paragraph tag and a tag.
+
+00:00:32.195 --> 00:00:35.884
+So the DOM represents a document with a logic tree.
+
+00:00:35.884 --> 00:00:40.429
+Each branch of the tree ends in a node and each node contains objects.
+
+00:00:40.429 --> 00:00:43.490
+DOM methods allow programmatic access to
+
+00:00:43.490 --> 00:00:48.695
+the tree and then you can change the documents style, structure or content.
+
+00:00:48.695 --> 00:00:51.469
+So why is it referred to as a tree?
+
+00:00:51.469 --> 00:00:54.619
+This is because the DOM starts with a single parent item
+
+00:00:54.619 --> 00:00:58.114
+that branches out into children items hierarchically.
+
+00:00:58.115 --> 00:01:01.984
+The children items can also branch out into the smaller trees.
+
+00:01:01.984 --> 00:01:03.509
+If we take a look here,
+
+00:01:03.509 --> 00:01:09.370
+you can see this is laid out where at the top, we have HTML.
+
+00:01:09.370 --> 00:01:12.484
+That's our top node and then we have
+
+00:01:12.484 --> 00:01:15.230
+the head and we can open the head and
+
+00:01:15.230 --> 00:01:18.020
+we see that anything we put in there is also in there.
+
+00:01:18.019 --> 00:01:19.519
+So this is level two,
+
+00:01:19.519 --> 00:01:22.204
+level two, and then we have a body.
+
+00:01:22.204 --> 00:01:27.754
+So everything that we have written in between the body tags here,
+
+00:01:27.754 --> 00:01:31.660
+will show up in between the body tags here.
+
+00:01:31.659 --> 00:01:34.234
+This is the DOM that we're looking at.
+
+00:01:34.234 --> 00:01:41.370
+The DOM holds all of our elements in the order that we've placed them.
+

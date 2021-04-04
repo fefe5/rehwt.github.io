@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.159 --> 00:00:07.790
+Writing code can be monotamous, sometimes difficult task.
+
+00:00:07.790 --> 00:00:11.070
+So I'm really a believer in setting up an environment
+
+00:00:11.070 --> 00:00:12.810
+that you want to spend a lot of time in
+
+00:00:12.810 --> 00:00:14.745
+and that you're comfortable in when you're coding.
+
+00:00:14.744 --> 00:00:17.204
+That's where text editors come in.
+
+00:00:17.204 --> 00:00:22.004
+Because remember, the amazing thing about code is that it's just plain text.
+
+00:00:22.004 --> 00:00:25.154
+So it could be written in any text file you want it.
+
+00:00:25.155 --> 00:00:27.770
+But people have put together some of
+
+00:00:27.769 --> 00:00:32.344
+the most comprehensive and customizable environments to be able to write code in.
+
+00:00:32.344 --> 00:00:35.149
+So I quickly want to take you through my favorite and
+
+00:00:35.149 --> 00:00:39.214
+an industry standard which is VS Code.
+
+00:00:39.215 --> 00:00:44.210
+Vs Code is an app that's going to allow us to do three things right now.
+
+00:00:44.210 --> 00:00:47.750
+First we're going to look at how you open an existing project,
+
+00:00:47.750 --> 00:00:50.215
+so you can have all your files right in the code editor.
+
+00:00:50.215 --> 00:00:52.430
+Then we're going to show you how to create
+
+00:00:52.429 --> 00:00:56.090
+a new HTML file as something you'll need to do.
+
+00:00:56.090 --> 00:00:59.660
+Then I'll quickly show you through the plugin environment.
+
+00:00:59.659 --> 00:01:01.839
+We won't spend too much time there because,
+
+00:01:01.840 --> 00:01:04.370
+literally I've spent too much time there but you
+
+00:01:04.370 --> 00:01:07.325
+can really customize your setup to be anything you want.
+
+00:01:07.325 --> 00:01:09.799
+So the first thing I'm going to do,
+
+00:01:09.799 --> 00:01:13.039
+is I'm going to open Visual Code Studio,
+
+00:01:13.040 --> 00:01:17.570
+new release notes which I'm sure are in enthralling but we'll skip for now.
+
+00:01:17.569 --> 00:01:21.469
+So one of my favorite things about getting set up here is,
+
+00:01:21.469 --> 00:01:24.289
+I can just drag the folder I'm interested in working on,
+
+00:01:24.290 --> 00:01:26.930
+which in this case is less than one HTML,
+
+00:01:26.930 --> 00:01:31.745
+which is where we are, and I can drop it right onto the Text Editor and it'll
+
+00:01:31.745 --> 00:01:34.280
+open up for me on the side all of the files
+
+00:01:34.280 --> 00:01:37.370
+that are there which makes it very easy to work with them.
+
+00:01:37.370 --> 00:01:41.344
+Now let's say from in here I want to create a new file.
+
+00:01:41.344 --> 00:01:47.209
+One of the ways I can do it is by using the Command N shortcut.
+
+00:01:47.209 --> 00:01:53.589
+Another way is to go up here and to say 'New File'.
+
+00:01:53.590 --> 00:01:56.630
+A third way is, I can do it here on the sidebar.
+
+00:01:56.629 --> 00:02:01.534
+If I want to make a New File in my existing folder I can add a file right here.
+
+00:02:01.534 --> 00:02:03.229
+So let's add a new file.
+
+00:02:03.230 --> 00:02:05.689
+We want to learn how to make an HTML file.
+
+00:02:05.689 --> 00:02:12.615
+So let's call it 'learn' and then.html.
+
+00:02:12.615 --> 00:02:17.450
+Just by adding the extension.html and saving that document it
+
+00:02:17.449 --> 00:02:22.639
+knows that it is now an HTML document and can be read as such.
+
+00:02:22.639 --> 00:02:25.679
+So we've looked at opening a project,
+
+00:02:25.680 --> 00:02:27.960
+creating an HTML file.
+
+00:02:27.960 --> 00:02:31.250
+Now let's take a quick look at what some plugins do.
+
+00:02:31.250 --> 00:02:35.224
+These are the extensions that are available in VS Code
+
+00:02:35.224 --> 00:02:39.409
+there things from themes that make your syntax highlights look different,
+
+00:02:39.409 --> 00:02:43.805
+to Linters that will actually help you debug your code.
+
+00:02:43.805 --> 00:02:48.110
+Let's look for anything that has to do with HTML.
+
+00:02:48.110 --> 00:02:51.395
+We can see there's an HTML snippets one.
+
+00:02:51.395 --> 00:02:53.480
+This would allow you to create auto tags.
+
+00:02:53.479 --> 00:02:55.099
+This might be something worth coming back to.
+
+00:02:55.099 --> 00:02:56.254
+Let me tell you this,
+
+00:02:56.254 --> 00:02:57.680
+installing them is easy.
+
+00:02:57.680 --> 00:02:59.314
+You can just press 'Install',
+
+00:02:59.314 --> 00:03:01.974
+then I'll reset it to make sure it's activated.
+
+00:03:01.974 --> 00:03:05.599
+Now you'd be ready to start learning how to write your HTML code,
+
+00:03:05.599 --> 00:03:09.569
+right here in this file. Let's get to it
+

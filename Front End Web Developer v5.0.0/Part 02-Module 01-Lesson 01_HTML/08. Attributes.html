@@ -1,0 +1,330 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Attributes</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTML</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Introduction.html">01. Course Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to HTML.html">02. Intro to HTML</a>
+    </li>
+    <li class="">
+      <a href="03. Text Editors.html">03. Text Editors</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Creating an HTML File.html">04. Exercise: Creating an HTML File</a>
+    </li>
+    <li class="">
+      <a href="05. Text Elements I.html">05. Text Elements I</a>
+    </li>
+    <li class="">
+      <a href="06. Text Elements II.html">06. Text Elements II</a>
+    </li>
+    <li class="">
+      <a href="07. HTML Lists.html">07. HTML Lists</a>
+    </li>
+    <li class="">
+      <a href="08. Attributes.html">08. Attributes</a>
+    </li>
+    <li class="">
+      <a href="09. The DOM.html">09. The DOM</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise Creating an HTML Template.html">10. Exercise: Creating an HTML Template</a>
+    </li>
+    <li class="">
+      <a href="11. Forms.html">11. Forms</a>
+    </li>
+    <li class="">
+      <a href="12. Exercise Debugging HTML.html">12. Exercise: Debugging HTML</a>
+    </li>
+    <li class="">
+      <a href="13. Recap.html">13. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Attributes</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Attributes Heading</p></h3>
+  <div>
+  <h1 id="attributes">Attributes</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND001 C01 L01 05 Attributes</p></h3>
+  <video controls>
+  <source src="08. ND001 C01 L01 05 Attributes-MkQYZwCDgIU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. ND001 C01 L01 05 Attributes-MkQYZwCDgIU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="08. ND001 C01 L01 05 Attributes-MkQYZwCDgIU.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Attributes</p></h3>
+  <div>
+  <p>All HTML elements can have attributes. Attributes provide additional information about an element, and are always specified in the start tag.<br />
+Attributes usually come in name/value pairs like <code>name="value"</code><br />
+Here are some popular ways attributes are used that we'll be covering in the sections to come!</p>
+<h3 id="images">Images</h3>
+<ul>
+<li>The “source” (URL or file location) from where an image is taken through the <code>src</code> attribute</li>
+<li>The image’s alternative text (often a description for those with accessibility needs) is provided through the <code>alt</code> attribute</li>
+<li>The image size can be adjusted through the <code>width</code> and <code>height</code> attributes</li>
+<li>Images are self-closing - you add a slash at the end, instead of another <code>&lt;/img&gt;</code> tag as we have seen before</li>
+</ul>
+<p>In the example below, we are using a JPG image called “nefertiti”.</p>
+<pre><code>&lt;img
+  src="images/nefertiti.jpg"
+  alt="A smiling Labrador Retriever"
+  width="480"
+  height="320"
+/&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Labrador image</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/nefertiti.png" alt="A smiling Labrador Retriever" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>A smiling Labrador Retriever</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Attributes II</p></h3>
+  <div>
+  <h3 id="links">Links</h3>
+<p>Links are essential in HTML, as the Web was initially designed to be an information network of documents “linked” between each other - you navigate from one document to another by clicking on links.</p>
+<p>The “HyperText” part of HTML defines what kind of links we use: hypertext links, a.k.a hyperlinks.</p>
+<p>In HTML, links are inline elements written with the <code>&lt;a&gt;</code> tag. The <code>href</code> attribute (hypertext reference) is used to define the destination of the link (where you navigate to when you click).</p>
+<p>There are 3 types of destinations you can define:</p>
+<ul>
+<li>anchor targets, to navigate within the same page </li>
+<li>relative URLs, usually to navigate within the same website </li>
+<li>absolute URLs, usually to navigate to another website</li>
+</ul>
+<p>You can also use additional attributes besides <code>a</code> and <code>href</code>:</p>
+<ul>
+<li>specify the relationship between the current and linked document with the <code>rel</code> attribute</li>
+<li>specify where to open the linked document with the <code>target</code> attribute</li>
+</ul>
+<p>In the example below, we are setting the URL destination to The Labrador Club website, preventing this website from being able to access the <code>window.opener</code> property and ensuring it runs in a separate process with the <code>noopener</code> rel value. Finally we are requesting that the link open in a new window instead of the same one with the <code>_blank</code> target value.</p>
+<pre><code>&lt;a href="https://thelabradorclub.com" rel="noopener" target="_blank"
+  &gt;Join The Labrador Retriever Club&lt;/a&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Comments</p></h3>
+  <div>
+  <h3 id="comments">Comments</h3>
+<p>If you write something in your code without changing how your website will be displayed by the browser, you're writing comments.</p>
+<p>Comments will be ignored by the browser and are only helpful to us people who write the code. They can help with readability both for yourself in the future, as well as others who are looking at your code, such as teammates and managers.</p>
+<p>A comment starts with <code>&lt;!--</code> and ends with <code>--&gt;</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Self Enclosing Elements</p></h3>
+  <div>
+  <h2 id="self-enclosing-elements">Self-Enclosing Elements</h2>
+<p>Some HTML elements only have an opening tag:</p>
+<pre><code class="html language-html">&lt;!-- line-break --&gt;
+&lt;br /&gt;
+&lt;!-- image --&gt;
+&lt;img src="//dog.com/image.png" alt="Description" /&gt;
+&lt;!-- text input --&gt;
+&lt;input type="text" /&gt;</code></pre>
+<p>Because they don’t have a closing tag and consequently can’t contain anything inside them, self-enclosing elements usually carry a few attributes, to provide them with additional information.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Attributes Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following is true about HTML attributes:</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="907868" id="rbk1">
+        <label for="rbk1"><p>All HTML elements can have attributes, which define aspects of a particular element-- examples include: <code>src</code> for <code>img</code> elements, and <code>href</code> for <code>a</code> elements.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="907868" id="rbk2">
+        <label for="rbk2"><p>Only special HTML elements can be given attributes, which define aspects of special elements with custom CSS rules.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    All HTML elements can have attributes, which define aspects of a particular element-- examples include: `src` for `img` elements, and `href` for `a` elements.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Further Resources</p></h3>
+  <div>
+  <h2 id="the-html-element-rabbit-hole">The HTML Element Rabbit Hole</h2>
+<p>For more information on HTML elements, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" rel="noopener noreferrer" target="_blank">here</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. The DOM.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Attributes')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

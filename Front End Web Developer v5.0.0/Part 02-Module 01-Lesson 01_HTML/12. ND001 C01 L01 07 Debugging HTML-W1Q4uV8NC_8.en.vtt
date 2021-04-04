@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.370 --> 00:00:06.209
+Debugging HTML, debugging HTML
+
+00:00:06.209 --> 00:00:11.070
+I think is just one of the best ways that you could possibly learn how to code.
+
+00:00:11.070 --> 00:00:15.030
+As a developer, you spent a great deal of time debugging your code,
+
+00:00:15.029 --> 00:00:18.750
+trying to figure out where the errors are and how your code could be improved.
+
+00:00:18.750 --> 00:00:21.359
+Debugging can often feel like a nuisance,
+
+00:00:21.359 --> 00:00:23.309
+but it's really one of the foundations of
+
+00:00:23.309 --> 00:00:26.399
+programming and offers a great opportunity for learning.
+
+00:00:26.399 --> 00:00:32.280
+Debugging HTML is unique because there are no commands for feedback the way JavaScript,
+
+00:00:32.280 --> 00:00:35.120
+for example, has some built in error messaging and you
+
+00:00:35.119 --> 00:00:38.509
+can console.log functions out to help debug.
+
+00:00:38.509 --> 00:00:42.469
+Debugging HTML often means just reading through
+
+00:00:42.469 --> 00:00:47.089
+your code line by line and looking for possible errors spots.
+
+00:00:47.090 --> 00:00:48.950
+So before I go too far in,
+
+00:00:48.950 --> 00:00:52.280
+let's make sure we understand what debugging is.
+
+00:00:52.280 --> 00:00:57.620
+Debugging is a term that implies that when programs aren't working the way we want,
+
+00:00:57.619 --> 00:01:00.934
+it's because there's bugs or errors,
+
+00:01:00.935 --> 00:01:02.390
+there's issues in them.
+
+00:01:02.390 --> 00:01:08.000
+So debugging is the process of looking through your code to try to find the places where
+
+00:01:08.000 --> 00:01:14.614
+these bugs or errors are and then to resolve them in some way, and that's debugging.
+
+00:01:14.614 --> 00:01:19.589
+So what are some common HTML bugs?
+
+00:01:19.590 --> 00:01:25.100
+Mismatch opening and closing tags are probably the ones I've seen most often.
+
+00:01:25.099 --> 00:01:27.515
+Now these are particularly dangerous because
+
+00:01:27.515 --> 00:01:30.980
+the browser will still render them without any issue.
+
+00:01:30.980 --> 00:01:35.105
+So you just won't see what you expect and you won't know what's going on.
+
+00:01:35.105 --> 00:01:38.240
+So here, if you look closely,
+
+00:01:38.239 --> 00:01:44.219
+you can see that I have an h1 opener tag but an h2 closing tag,
+
+00:01:44.219 --> 00:01:47.719
+very easy mistake to make when I do all the time,
+
+00:01:47.719 --> 00:01:54.039
+and very important to come through and closely look to make sure it's this an h1 or h2.
+
+00:01:54.040 --> 00:01:56.505
+I actually want it to be an h1.
+
+00:01:56.504 --> 00:01:58.784
+Now, this is an example,
+
+00:01:58.784 --> 00:02:00.944
+a missing closing tag,
+
+00:02:00.944 --> 00:02:06.529
+which you see it's such a terrible error that if I uncomment it,
+
+00:02:06.530 --> 00:02:11.360
+it messes up the rest of my code because it's waiting here for that.
+
+00:02:11.360 --> 00:02:13.060
+But without a closing block,
+
+00:02:13.060 --> 00:02:14.330
+it's going to keep reading.
+
+00:02:14.330 --> 00:02:16.400
+So essentially it thinks I'm trying to say,
+
+00:02:16.400 --> 00:02:19.219
+my h2 is all of this,
+
+00:02:19.219 --> 00:02:22.384
+and then all of this and all the way through.
+
+00:02:22.384 --> 00:02:25.699
+So looking for closing tags can be a very,
+
+00:02:25.699 --> 00:02:28.369
+very, very important part of debugging.
+
+00:02:28.370 --> 00:02:35.129
+I would say the third most common thing I see is quotation errors,
+
+00:02:35.129 --> 00:02:38.689
+because we use strings when we're writing.
+
+00:02:38.689 --> 00:02:42.680
+Strings are texts that are wrapped in between quotation marks.
+
+00:02:42.680 --> 00:02:47.990
+So to not have a closing one means that your string is going to go on forever.
+
+00:02:47.990 --> 00:02:55.430
+There's what we want. Now we have the string here wrapped around in
+
+00:02:55.430 --> 00:03:03.340
+quotations and our string here wrapped around in quotations, and we're good to go.
+
+00:03:03.340 --> 00:03:06.629
+Now, the question, is do you think you're
+
+00:03:06.629 --> 00:03:10.174
+going to be able to debug an HTML file on your own?
+
+00:03:10.175 --> 00:03:12.990
+I'm confidence you can.
+

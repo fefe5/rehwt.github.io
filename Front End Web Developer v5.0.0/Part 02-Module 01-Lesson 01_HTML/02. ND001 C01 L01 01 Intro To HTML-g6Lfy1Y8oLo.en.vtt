@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.070 --> 00:00:05.105
+Welcome everybody to Intro to HTML.
+
+00:00:05.105 --> 00:00:06.610
+In this fabulous course,
+
+00:00:06.610 --> 00:00:08.940
+we're going to take you through the fundamentals and
+
+00:00:08.939 --> 00:00:11.274
+building blocks to create a web page,
+
+00:00:11.275 --> 00:00:14.384
+and ultimately for you to become your own developer.
+
+00:00:14.384 --> 00:00:19.219
+The first step is to learn HTML which will let us lay out our elements,
+
+00:00:19.219 --> 00:00:23.250
+and then we'll go through some CSS which will allow us to style our elements.
+
+00:00:23.250 --> 00:00:26.100
+Then will go even further and we'll do some advanced stuff,
+
+00:00:26.100 --> 00:00:28.605
+so we can create layouts and we can set
+
+00:00:28.605 --> 00:00:31.844
+each of our elements to be distributed how we want.
+
+00:00:31.844 --> 00:00:36.869
+This is how we put together the pieces to make a pixel perfect web page,
+
+00:00:36.869 --> 00:00:41.304
+and you are going to be able to do just that. Let's hop in.
+
+00:00:41.304 --> 00:00:44.450
+So to start Intro to HTML,
+
+00:00:44.450 --> 00:00:47.145
+let's ask the big questions,
+
+00:00:47.145 --> 00:00:50.265
+like what does HTML stand for?
+
+00:00:50.265 --> 00:00:52.155
+What is HTML?
+
+00:00:52.155 --> 00:00:54.465
+Why even learn HTML?
+
+00:00:54.465 --> 00:00:58.430
+Well, HTML is the basis for all web pages.
+
+00:00:58.429 --> 00:01:01.100
+Without HTML, you would not be able to organize
+
+00:01:01.100 --> 00:01:04.295
+text or add pictures or videos to your web page's.
+
+00:01:04.295 --> 00:01:10.760
+HTML is the start of all you need to understand and build engaging web pages.
+
+00:01:10.760 --> 00:01:13.325
+Now, what it stands for, get ready.
+
+00:01:13.325 --> 00:01:19.129
+Hyper Text Markup Language, HTML.
+
+00:01:19.129 --> 00:01:23.719
+Hyper Text Markup Language. Got that?
+
+00:01:23.719 --> 00:01:31.039
+You will soon. Hypertext implies that it uses the HTTP portion of internet markup,
+
+00:01:31.039 --> 00:01:34.280
+meaning the code you write is annotated with keywords.
+
+00:01:34.280 --> 00:01:37.700
+These keywords allow the browser to read your code
+
+00:01:37.700 --> 00:01:42.079
+and then to produce it as a set of visual experiences for a user.
+
+00:01:42.079 --> 00:01:45.349
+The fact that HTML ends in
+
+00:01:45.349 --> 00:01:50.464
+language implies that it can be read both by a person and a computer.
+
+00:01:50.465 --> 00:01:54.950
+Like any language HTML comes with a set of rules.
+
+00:01:54.950 --> 00:01:57.350
+So before we get into those rules,
+
+00:01:57.349 --> 00:02:02.688
+let's take a little bit of a higher level picture at HTML and say that HTML
+
+00:02:02.688 --> 00:02:08.479
+is a sequence of tags that tell web browsers how to make or show a web page.
+
+00:02:08.479 --> 00:02:11.899
+An example of a tag might be a paragraph tag,
+
+00:02:11.900 --> 00:02:14.840
+which tells the browser that the next data that
+
+00:02:14.840 --> 00:02:19.039
+follows should be a paragraph of text shown in the browser.
+
+00:02:19.039 --> 00:02:24.019
+Learning some useful and exceptional HTML tags,
+
+00:02:24.020 --> 00:02:27.185
+it's a great way to begin constructing your web pages.
+
+00:02:27.185 --> 00:02:28.870
+So that's just what we're going to do,
+
+00:02:28.870 --> 00:02:31.490
+we are going to hop in and we're going to look at what
+
+00:02:31.490 --> 00:02:34.700
+the elements are that make up this HTML.
+
+00:02:34.699 --> 00:02:39.064
+But lastly, before we do that, why HTML?
+
+00:02:39.064 --> 00:02:41.590
+Why would you want to learn HTML?
+
+00:02:41.590 --> 00:02:46.990
+Well, HTML is the standard markup language for creating web pages and web apps.
+
+00:02:46.990 --> 00:02:51.275
+You can put HTML with two other programming languages,
+
+00:02:51.275 --> 00:02:58.055
+CSS and JavaScript, to create full stack interactive web experiences.
+
+00:02:58.055 --> 00:03:01.310
+Those three come together, CSS, JavaScript,
+
+00:03:01.310 --> 00:03:05.789
+and HTML to create the foundation of the Web
+

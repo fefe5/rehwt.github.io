@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.250 --> 00:00:05.879
+Not everything that's put on the web is text,
+
+00:00:05.879 --> 00:00:07.830
+but a lot of it is.
+
+00:00:07.830 --> 00:00:13.245
+So a lot of the way HTML has been set up it's about using text elements.
+
+00:00:13.244 --> 00:00:15.059
+But once you start to think about it,
+
+00:00:15.060 --> 00:00:19.094
+there are so many different kinds of text, right?
+
+00:00:19.094 --> 00:00:21.239
+Just think about how you use it yourself.
+
+00:00:21.239 --> 00:00:25.229
+Sometimes you write big bold headlines if you want to catch attention,
+
+00:00:25.230 --> 00:00:28.980
+sometimes you use bulleted lists if you want to lay out a few things,
+
+00:00:28.980 --> 00:00:30.600
+sometimes you use numbers,
+
+00:00:30.600 --> 00:00:32.414
+sometimes you use quotations.
+
+00:00:32.414 --> 00:00:36.585
+There's all sorts of ways that we can really express ourselves with language and
+
+00:00:36.585 --> 00:00:40.859
+HTML helps unlock that with some built in element types.
+
+00:00:40.859 --> 00:00:45.229
+Some examples are an H1 which is
+
+00:00:45.229 --> 00:00:50.839
+a top level header which is built in to be the biggest boldest texts that you have,
+
+00:00:50.840 --> 00:00:53.555
+a P element which I've talked about a couple of times.
+
+00:00:53.554 --> 00:00:58.295
+This is the most traditional form of text element, and a div.
+
+00:00:58.295 --> 00:01:01.625
+A div is the most basic thing you can do.
+
+00:01:01.625 --> 00:01:05.075
+So lets say that we don't have the kind of text element that you want.
+
+00:01:05.075 --> 00:01:08.180
+If you don't want a header and you don't want a paragraph tag,
+
+00:01:08.180 --> 00:01:13.820
+you can use the div HTML element to create your own text element.
+
+00:01:13.819 --> 00:01:16.539
+How exciting is that?
+
