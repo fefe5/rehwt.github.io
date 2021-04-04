@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.520 --> 00:00:05.955
+CSS grid has so many advanced features.
+
+00:00:05.955 --> 00:00:10.754
+It really gives you control over every aspect of how content is laid out.
+
+00:00:10.755 --> 00:00:13.410
+In fact, there's so many things you can do.
+
+00:00:13.410 --> 00:00:15.044
+It can be a bit overwhelming.
+
+00:00:15.044 --> 00:00:19.370
+So I wanted to try to take you through some of the new concepts and syntax
+
+00:00:19.370 --> 00:00:23.900
+that CSS grid introduces that you might not otherwise be familiar with.
+
+00:00:23.899 --> 00:00:29.959
+These are algorithmic values and powerful tools for creating dynamic layouts on the web.
+
+00:00:29.960 --> 00:00:32.840
+These are things that include the FR unit,
+
+00:00:32.840 --> 00:00:36.770
+which is something that's going to allow us to take up the rest of the available space,
+
+00:00:36.770 --> 00:00:39.260
+track sizing using min-max,
+
+00:00:39.259 --> 00:00:45.259
+which lets us set ranges for our rows and columns so that they don't have to be set.
+
+00:00:45.259 --> 00:00:47.629
+Let's take a look at these things in practice.
+
+00:00:47.630 --> 00:00:52.960
+These are the small things that really turn your work into something elegant.
+

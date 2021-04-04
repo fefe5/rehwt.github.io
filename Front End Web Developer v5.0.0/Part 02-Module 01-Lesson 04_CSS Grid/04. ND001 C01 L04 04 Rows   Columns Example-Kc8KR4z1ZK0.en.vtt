@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.520 --> 00:00:05.955
+Okay. Rows and columns and CSS grid.
+
+00:00:05.955 --> 00:00:08.985
+The longest journey begins with the first step.
+
+00:00:08.985 --> 00:00:14.295
+So here we have set up a container element with display grid.
+
+00:00:14.295 --> 00:00:20.670
+Then in our HTML we have three divs with a class box inside of our container.
+
+00:00:20.670 --> 00:00:23.160
+You can see that CSS grid right out of
+
+00:00:23.160 --> 00:00:26.655
+the box comes with some distribution and alignment.
+
+00:00:26.655 --> 00:00:28.860
+We have box one, box two,
+
+00:00:28.860 --> 00:00:32.595
+box three here in one column along three rows.
+
+00:00:32.595 --> 00:00:36.530
+Before we do anything else let's look at the grid gap quickly.
+
+00:00:36.530 --> 00:00:39.230
+Again the grid gap is what allows you to put
+
+00:00:39.230 --> 00:00:42.410
+more or less space between each element in a grid.
+
+00:00:42.410 --> 00:00:46.880
+So right now these elements have 50 px in between them each.
+
+00:00:46.880 --> 00:00:50.305
+But for example if we did a 150 pixels,
+
+00:00:50.305 --> 00:00:53.010
+you can see that they spread out much further.
+
+00:00:53.010 --> 00:00:56.350
+If we did 15 pixels,
+
+00:00:56.350 --> 00:00:58.520
+they become much closer together.
+
+00:00:58.520 --> 00:01:01.910
+These are called the gutters inside the tracks.
+
+00:01:01.910 --> 00:01:04.325
+Tracks are what setup rows and columns,
+
+00:01:04.325 --> 00:01:06.710
+and gutters are the space in between.
+
+00:01:06.710 --> 00:01:11.750
+So what if instead of having one column with three rows,
+
+00:01:11.750 --> 00:01:15.230
+what if we actually wanted to have three columns.
+
+00:01:15.230 --> 00:01:17.630
+Inside of our container div,
+
+00:01:17.630 --> 00:01:25.250
+we could use the grid template columns property and then we could set three columns.
+
+00:01:25.250 --> 00:01:29.510
+The way that you do that is simply by entering three values.
+
+00:01:29.510 --> 00:01:31.820
+So 300 Px is the first column,
+
+00:01:31.820 --> 00:01:38.325
+300 Px is the second column and let's make the third column a little shorter,
+
+00:01:38.325 --> 00:01:41.215
+we'll say 200 pixels.
+
+00:01:41.215 --> 00:01:45.005
+So now we can see that we have three elements,
+
+00:01:45.005 --> 00:01:48.385
+three columns and they are outside of our grid a little bit,
+
+00:01:48.385 --> 00:01:54.185
+and that's because our width of our grid is less than the total of the columns.
+
+00:01:54.185 --> 00:01:58.865
+To fix that we can easily just increase the width of our grid.
+
+00:01:58.865 --> 00:02:01.930
+For now I'll make it 100 percent.
+
+00:02:01.930 --> 00:02:05.390
+So now we can see our grid is plenty wide and we
+
+00:02:05.390 --> 00:02:08.539
+have three elements each of them here in columns.
+
+00:02:08.539 --> 00:02:13.595
+Another thing we could do is change the grid template rows.
+
+00:02:13.595 --> 00:02:17.360
+Here we can see we've set up three rows,
+
+00:02:17.360 --> 00:02:20.240
+so there's one column in the middle and each of
+
+00:02:20.240 --> 00:02:25.655
+these boxes has taken on the height of the row we set.
+
+00:02:25.655 --> 00:02:30.600
+So the first box is 300 pixels,
+
+00:02:30.600 --> 00:02:37.710
+the second box smaller is 250 pixels and the third box is large, 600 pixels.
+
+00:02:37.710 --> 00:02:39.485
+That is easy to change.
+
+00:02:39.485 --> 00:02:43.790
+For instance if we wanted our first row to be much
+
+00:02:43.790 --> 00:02:48.605
+bigger and our last row to be much smaller we could simply change the entries.
+
+00:02:48.605 --> 00:02:52.700
+So now the first row is 600 pixels which means
+
+00:02:52.700 --> 00:02:57.275
+that the first box in our first row will be 600 pixels.
+
+00:02:57.275 --> 00:03:00.325
+The second box is 250,
+
+00:03:00.325 --> 00:03:03.845
+and then our third box is tiny, it's 60 pixels.
+
+00:03:03.845 --> 00:03:08.285
+Now you might think why would a 60 pixel row be necessary?
+
+00:03:08.285 --> 00:03:10.580
+But the truth is think about the web.
+
+00:03:10.580 --> 00:03:12.625
+Say footers for example.
+
+00:03:12.625 --> 00:03:16.865
+Every website has at least one bar on the bottom line that's really small,
+
+00:03:16.865 --> 00:03:19.190
+and this is a great way to set that up.
+
+00:03:19.190 --> 00:03:22.040
+By setting up our rows like this you can create
+
+00:03:22.040 --> 00:03:25.835
+content tracks that makes sense for the type of content that you make.
+
+00:03:25.835 --> 00:03:28.100
+That's just a little bit what you can do with
+
+00:03:28.100 --> 00:03:30.875
+grid template rows and grid template columns.
+
+00:03:30.875 --> 00:03:33.725
+Coming up we're going to learn how to put them together
+
+00:03:33.725 --> 00:03:36.560
+to create grid areas which allow you to setup
+
+00:03:36.560 --> 00:03:38.735
+columns and rows to create
+
+00:03:38.735 --> 00:03:43.440
+a whole system that you can then use to put your elements into.
+

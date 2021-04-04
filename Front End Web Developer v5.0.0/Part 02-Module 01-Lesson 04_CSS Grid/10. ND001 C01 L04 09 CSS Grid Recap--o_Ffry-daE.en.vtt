@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.370 --> 00:00:06.075
+CSS Grid, have you started to buy in?
+
+00:00:06.075 --> 00:00:08.940
+We've already covered how you can create a grid using
+
+00:00:08.939 --> 00:00:12.504
+the display property of an element and setting it to grid,
+
+00:00:12.505 --> 00:00:18.480
+then we covered creating rows and column templates and named grid areas.
+
+00:00:18.480 --> 00:00:21.868
+We then covered some advanced CSS Grid techniques,
+
+00:00:21.868 --> 00:00:25.440
+which lead us perfectly into our next lesson which will be on using
+
+00:00:25.440 --> 00:00:29.804
+CSS Grid and flexbox to create responsive layouts.
+
+00:00:29.804 --> 00:00:34.469
+Responsive layouts are a must these days in front-end web development.
+
+00:00:34.469 --> 00:00:38.129
+I'll make my pitch to you for my CSS Grid is
+
+00:00:38.130 --> 00:00:43.120
+the best option and perfect solution for responsive web design.
+

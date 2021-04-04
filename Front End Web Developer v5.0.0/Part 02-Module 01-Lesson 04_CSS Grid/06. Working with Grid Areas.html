@@ -1,0 +1,282 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Working with Grid Areas</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>CSS Grid</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Grid vs Flexbox.html">01. Grid vs Flexbox</a>
+    </li>
+    <li class="">
+      <a href="02. An Example of Grid vs Flexbox.html">02. An Example of Grid vs Flexbox</a>
+    </li>
+    <li class="">
+      <a href="03. Rows &amp; Columns.html">03. Rows &amp; Columns</a>
+    </li>
+    <li class="">
+      <a href="04. Rows &amp; Columns in Action.html">04. Rows &amp; Columns in Action</a>
+    </li>
+    <li class="">
+      <a href="05. Grid Areas.html">05. Grid Areas</a>
+    </li>
+    <li class="">
+      <a href="06. Working with Grid Areas.html">06. Working with Grid Areas</a>
+    </li>
+    <li class="">
+      <a href="07. Working with Grid Areas II.html">07. Working with Grid Areas II</a>
+    </li>
+    <li class="">
+      <a href="08. Advanced Grid.html">08. Advanced Grid</a>
+    </li>
+    <li class="">
+      <a href="09. Advanced Grid Playground.html">09. Advanced Grid Playground</a>
+    </li>
+    <li class="">
+      <a href="10. Recap.html">10. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Working with Grid Areas</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Grid Areas Example Prep</p></h3>
+  <div>
+  <h1 id="working-with-grid-areas">Working with Grid Areas</h1>
+<p>The <code>grid-area</code> property defines the space an element takes up in the grid by setting values for the row it starts and ends in, and the column it starts and ends in. In practice it could look like this:</p>
+<pre><code class="css language-css">  #one { 
+    /* row start/column start/ row end/ column end */
+    grid-area: 1/2/3/3;
+  }</code></pre>
+<p>In this example the element with the <code>id</code>, <code>one</code> would start at the first row and the first column, and end at the third row (which is the end of the second row if there is no third row) and the third column.</p>
+<p>Let's take a look at this in action.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND001 C01 L04 06 Grid Areas Example</p></h3>
+  <video controls>
+  <source src="06. ND001 C01 L04 06 Grid Areas Example-vYnJd53LQB0.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="06. ND001 C01 L04 06 Grid Areas Example-vYnJd53LQB0.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="06. ND001 C01 L04 06 Grid Areas Example-vYnJd53LQB0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="06. ND001 C01 L04 06 Grid Areas Example-vYnJd53LQB0.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Grid Areas Example Summary</p></h3>
+  <div>
+  <p>The <code>grid-area</code> CSS property is a shorthand property for <code>grid-row-start</code>,<code>grid-column-start</code>, <code>grid-row-end</code>and <code>grid-column-end</code>, and it defines the area that an element occupies in a grid.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Grid Areas Summary</p></h3>
+  <div>
+  <h3 id="grid-areas-summary">Grid Areas Summary</h3>
+<p><code>grid-template-areas</code> is the property used to name the rows and columns of a grid and to set its layout. It could look like this:</p>
+<pre><code class="css language-css">  .container {
+      display:grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 250px 600px;
+      grid-template-areas: 
+      "hd hd hd hd hd hd hd hd"
+      "sd sd sd main main main main main"
+      "ft ft ft ft ft ft ft ft";
+  }</code></pre>
+<p>The named areas in the grid are then assigned to each element according to where you want them to be displayed in the grid:</p>
+<pre><code class="css language-css">.header {
+  grid-area: hd;
+}</code></pre>
+<p>In the example above the element with the class <code>header</code> will stretch across the entire first row of columns because we have assigned it the <code>grid-area</code> <code>hd</code>, and we have defined the area <code>hd</code> with the value for <code>grid-template-areas</code> in the parent element.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Grid Areas Problem Set</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which accurately describes the placement of an item with the following CSS rule applied:<br />
+ <code>grid-area: 2 / 1 / 2 / 4;</code></p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="909260" id="rbk1">
+        <label for="rbk1"><p>Row 2 &amp; Columns 1-3</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="909260" id="rbk2">
+        <label for="rbk2"><p>Row 1-2 &amp; Columns 2-4</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="909260" id="rbk3">
+        <label for="rbk3"><p>Columns 1-2 &amp; Rows 2-4</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Row 2 & Columns 1-3
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Working with Grid Areas II.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Working with Grid Areas')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

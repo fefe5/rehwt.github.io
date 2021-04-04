@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.310 --> 00:00:06.794
+So here we have our container which is set to grid.
+
+00:00:06.794 --> 00:00:09.480
+Let's make it as wide as possible.
+
+00:00:09.480 --> 00:00:13.679
+As you're used to, we have grid template rows and grid template columns,
+
+00:00:13.679 --> 00:00:15.254
+followed by a grid gap.
+
+00:00:15.255 --> 00:00:19.274
+The new part here is grid template areas.
+
+00:00:19.274 --> 00:00:21.434
+For this grid template area,
+
+00:00:21.434 --> 00:00:23.489
+I've simply used top top,
+
+00:00:23.489 --> 00:00:25.364
+bottom left, bottom right.
+
+00:00:25.364 --> 00:00:31.654
+Now, here we can see I've given each of the elements an id.
+
+00:00:31.655 --> 00:00:38.344
+This id can be used to put each of these elements into the place on the grid we want.
+
+00:00:38.344 --> 00:00:47.394
+So for example, if I want let's say box 1 to be on top all the way,
+
+00:00:47.395 --> 00:00:50.540
+I can just say grid area top which is
+
+00:00:50.539 --> 00:00:54.049
+defined here as taking up two columns on the top row,
+
+00:00:54.049 --> 00:00:59.719
+and then I'm going to put two on the bottom left
+
+00:00:59.719 --> 00:01:06.379
+and three on the bottom right boom.
+
+00:01:06.379 --> 00:01:08.614
+There you can see. In our top,
+
+00:01:08.614 --> 00:01:10.354
+we have box 1,
+
+00:01:10.355 --> 00:01:13.415
+which is going across both the columns in the first row.
+
+00:01:13.415 --> 00:01:15.830
+Here we have grid template area's top top,
+
+00:01:15.829 --> 00:01:20.584
+and then box two which has been put on the bottom left if here on the bottom left,
+
+00:01:20.584 --> 00:01:23.644
+and three is here on the bottom right.
+
+00:01:23.644 --> 00:01:25.924
+It's very easy to switch these around.
+
+00:01:25.924 --> 00:01:31.750
+So we could just say actually we want one on the bottom left,
+
+00:01:31.750 --> 00:01:34.754
+and we want two on the top.
+
+00:01:34.754 --> 00:01:37.409
+Now we have box 2 on the top,
+
+00:01:37.409 --> 00:01:39.314
+box 1 on the bottom left,
+
+00:01:39.314 --> 00:01:41.765
+and box 3 on the bottom right.
+
+00:01:41.765 --> 00:01:47.885
+This is an example of using named grid areas in order to create your master layout.
+
+00:01:47.885 --> 00:01:50.600
+But this is just a basic example.
+
+00:01:50.599 --> 00:01:55.250
+Let's take a look at one that maybe has a little more practical.
+
+00:01:55.250 --> 00:02:01.340
+Here you can see I've set up what could be the wire frame for a very basic blog.
+
+00:02:01.340 --> 00:02:03.185
+We have a header, a sidebar,
+
+00:02:03.185 --> 00:02:05.135
+content, and a footer.
+
+00:02:05.135 --> 00:02:09.110
+Here, I've set up my grid template columns,
+
+00:02:09.110 --> 00:02:11.230
+my grid template rows.
+
+00:02:11.229 --> 00:02:13.254
+Now in grid template areas,
+
+00:02:13.254 --> 00:02:16.625
+I've set up a grid that actually uses 1,
+
+00:02:16.625 --> 00:02:19.250
+2, 3, 4, 5, 6,
+
+00:02:19.250 --> 00:02:22.064
+7, 8 columns across.
+
+00:02:22.064 --> 00:02:26.525
+As you'll notice, it's eight columns across on each line 1,
+
+00:02:26.525 --> 00:02:34.360
+2, 3, 4, 5, 6, 7, 8.
+
+00:02:34.360 --> 00:02:39.350
+It's very important that when making named grid template areas,
+
+00:02:39.349 --> 00:02:41.164
+you have to stay consistent.
+
+00:02:41.164 --> 00:02:44.000
+So you can't have three columns on
+
+00:02:44.000 --> 00:02:47.724
+the first row without matching it to the second and the third.
+
+00:02:47.724 --> 00:02:51.949
+Here we can see we've given each of them a grid
+
+00:02:51.949 --> 00:02:56.644
+area corresponding to the grid that we've set up.
+
+00:02:56.645 --> 00:02:59.689
+So we have our header going all the way across,
+
+00:02:59.689 --> 00:03:03.395
+sidebar here, and then our main is in content.
+
+00:03:03.395 --> 00:03:06.185
+So one issue you may have noticed is that
+
+00:03:06.185 --> 00:03:10.520
+our sidebar was actually taking up more room than our content here,
+
+00:03:10.520 --> 00:03:13.705
+which is an issue with the way that we have set up the columns.
+
+00:03:13.705 --> 00:03:16.969
+So what I've done in the code is I've come back to the columns,
+
+00:03:16.969 --> 00:03:20.210
+and I've set it so that our first column is just 30
+
+00:03:20.210 --> 00:03:23.629
+pixels wide which are sidebar stretching across,
+
+00:03:23.629 --> 00:03:27.049
+and then our second column is 300 pixels wide.
+
+00:03:27.050 --> 00:03:32.450
+So we can see here that the only one that this divides up is our sidebar and content.
+
+00:03:32.449 --> 00:03:36.889
+Because here we have our header stretching across the whole entire top,
+
+00:03:36.889 --> 00:03:40.549
+and our footer stretching across the whole entire bottom.
+
+00:03:40.550 --> 00:03:44.960
+Another thing that I think we can do we'll find out together is we could change our grid
+
+00:03:44.960 --> 00:03:49.980
+here so that our main-content took up more of the grid that we set up.
+
+00:03:49.979 --> 00:03:51.334
+That works very well.
+
+00:03:51.335 --> 00:03:54.094
+Now we can see that the sidebar is taking up even less room,
+
+00:03:54.094 --> 00:04:00.185
+and maybe what we want to do is only give it one column in our location setup.
+
+00:04:00.185 --> 00:04:02.539
+Maybe we want to keep it at two.
+
+00:04:02.539 --> 00:04:05.959
+So this is how you can use CSS grid with
+
+00:04:05.960 --> 00:04:09.860
+grid template areas to create your own custom layouts.
+
+00:04:09.860 --> 00:04:11.840
+Coming up in the next lessons,
+
+00:04:11.840 --> 00:04:14.360
+we're going to look at how to fill out some of the content in
+
+00:04:14.360 --> 00:04:17.479
+here to create first your own blog page,
+
+00:04:17.478 --> 00:04:21.680
+and then second a series of linked pages to individual posts.
+
+00:04:21.680 --> 00:04:25.040
+This is made so much easier by creating a head
+
+00:04:25.040 --> 00:04:28.580
+of time layouts with CSS grid for each page.
+
+00:04:28.579 --> 00:04:31.769
+Let's learn more about what that could look like.
+

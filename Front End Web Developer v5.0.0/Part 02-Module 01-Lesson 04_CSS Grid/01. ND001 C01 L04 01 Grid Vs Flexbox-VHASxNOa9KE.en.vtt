@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.310 --> 00:00:07.500
+Welcome everyone to the showdown we've all been waiting for.
+
+00:00:07.500 --> 00:00:11.535
+In this corner is the new young upstart CSS grid.
+
+00:00:11.535 --> 00:00:15.509
+In this corner, it's the old favorite that originally changed the game;
+
+00:00:15.509 --> 00:00:17.204
+flexbox.
+
+00:00:17.204 --> 00:00:19.734
+Okay, spoiler alert.
+
+00:00:19.734 --> 00:00:22.350
+Despite much speculation and drama on the web,
+
+00:00:22.350 --> 00:00:27.225
+the truth is that CSS grid does not replace flexbox.
+
+00:00:27.225 --> 00:00:32.510
+That is, each can achieve things that the other is not capable of and in fact,
+
+00:00:32.509 --> 00:00:35.989
+a true master can use flexbox and CSS grid
+
+00:00:35.990 --> 00:00:40.520
+together in harmony to create the ultimate web page layout.
+
+00:00:40.520 --> 00:00:43.100
+In this section, we'll quickly cover some of
+
+00:00:43.100 --> 00:00:46.210
+the differences between CSS grid and flexbox,
+
+00:00:46.210 --> 00:00:48.195
+highlight how they can work together,
+
+00:00:48.195 --> 00:00:53.210
+and then you'll take a deeper dive into the mechanics and syntax of CSS grid.
+
+00:00:53.210 --> 00:00:55.039
+At the highest level,
+
+00:00:55.039 --> 00:00:58.789
+CSS grid excels at creating layouts for a web page.
+
+00:00:58.789 --> 00:01:02.075
+While flexbox is a master of content flow for
+
+00:01:02.075 --> 00:01:07.350
+each element that makes up the page layout. Let's learn some more.
+

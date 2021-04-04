@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.429 --> 00:00:06.059
+In addition to setting the rows and columns of the grid,
+
+00:00:06.059 --> 00:00:10.844
+CSS grid allows you to explicitly place items within that grid.
+
+00:00:10.845 --> 00:00:15.120
+To understand this, we'll use the grid area concept to define
+
+00:00:15.119 --> 00:00:19.469
+the space across rows and columns that elements take up.
+
+00:00:19.469 --> 00:00:25.320
+The grid area CSS property is actually a shorthand property for grid row start,
+
+00:00:25.320 --> 00:00:27.750
+grid columns start, grid row end,
+
+00:00:27.750 --> 00:00:29.594
+and grid column end.
+
+00:00:29.594 --> 00:00:31.710
+But instead of using each of these,
+
+00:00:31.710 --> 00:00:34.664
+we can actually just use named grid areas,
+
+00:00:34.664 --> 00:00:38.030
+which I think our CSS grid is most powerful feature.
+
+00:00:38.030 --> 00:00:41.535
+That's where we're going to spend some time right now.
+
+00:00:41.534 --> 00:00:46.819
+So name grid spaces allow you to develop and create an actual grid in your code with
+
+00:00:46.820 --> 00:00:52.445
+names paces that can be added to the grid area property of individual items on that grid.
+
+00:00:52.445 --> 00:00:55.850
+Don't worry. I'm going to show you what this looks like in practice.
+
+00:00:55.850 --> 00:00:57.530
+But right now you can take a look,
+
+00:00:57.530 --> 00:00:59.478
+and you'll be familiar with our columns,
+
+00:00:59.478 --> 00:01:01.945
+and our rows, and our grid gap,
+
+00:01:01.945 --> 00:01:04.670
+and the new part here is the grid template area,
+
+00:01:04.670 --> 00:01:08.480
+which is actually just laid out here using strength.
+
+00:01:08.480 --> 00:01:10.505
+It's creating a grid, saying,
+
+00:01:10.504 --> 00:01:13.399
+there are two columns on the top,
+
+00:01:13.400 --> 00:01:16.000
+two columns on the bottom row,
+
+00:01:16.000 --> 00:01:20.659
+and then we could associate these with particular items in the grid.
+
+00:01:20.659 --> 00:01:23.759
+Let's see what this looks like in action.
+

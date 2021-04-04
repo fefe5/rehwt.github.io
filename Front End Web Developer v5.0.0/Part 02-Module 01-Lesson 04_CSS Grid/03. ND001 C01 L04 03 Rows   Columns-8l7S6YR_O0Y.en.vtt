@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.250 --> 00:00:05.775
+Okay. Let's get into working with CSS grid itself.
+
+00:00:05.775 --> 00:00:10.230
+CSS grid is a two-dimensional design system for the web,
+
+00:00:10.230 --> 00:00:16.365
+which means you can organize content layout into rows and columns,
+
+00:00:16.364 --> 00:00:19.934
+which really means you can do almost anything.
+
+00:00:19.934 --> 00:00:23.113
+Rows and columns come together to make areas,
+
+00:00:23.114 --> 00:00:24.464
+which can be named.
+
+00:00:24.464 --> 00:00:26.039
+Oh my, CSS grid,
+
+00:00:26.039 --> 00:00:27.960
+there is so much fun to be had.
+
+00:00:27.960 --> 00:00:29.984
+But we need to start with the basics.
+
+00:00:29.984 --> 00:00:33.104
+Everything starts with rows and columns.
+
+00:00:33.104 --> 00:00:36.584
+After setting the display property of your container grid,
+
+00:00:36.585 --> 00:00:39.070
+your container div to grid,
+
+00:00:39.070 --> 00:00:42.429
+the next step is to set the rows and columns in your grid,
+
+00:00:42.429 --> 00:00:46.810
+which can be done with the CSS properties, grid template columns,
+
+00:00:46.810 --> 00:00:50.219
+grid template rows, and if you see here,
+
+00:00:50.219 --> 00:00:55.114
+grid gap defines the distance in between each row and column.
+
+00:00:55.115 --> 00:00:56.495
+So in this example,
+
+00:00:56.494 --> 00:00:58.339
+we would have two columns,
+
+00:00:58.340 --> 00:01:03.484
+two rows, and each of them would be separated by 15 pixels.
+
+00:01:03.484 --> 00:01:08.180
+That's what we call the gutter between the rows and columns.
+
+00:01:08.180 --> 00:01:14.190
+Let's see an example of what rows and columns and CSS grid looked like in the real world.
+
