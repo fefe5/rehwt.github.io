@@ -1,0 +1,402 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Select Page Elements By Class Or Tag</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>The Document Object Model</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. The DOM.html">02. The DOM</a>
+    </li>
+    <li class="">
+      <a href="03. Selecting Page Elements With CSS Selectors.html">03. Selecting Page Elements With CSS Selectors</a>
+    </li>
+    <li class="">
+      <a href="04. Select Page Element By ID.html">04. Select Page Element By ID</a>
+    </li>
+    <li class="">
+      <a href="05. Select Page Elements By Class Or Tag.html">05. Select Page Elements By Class Or Tag</a>
+    </li>
+    <li class="">
+      <a href="06. Nodes, Elements, and Interfaces...Oh My!.html">06. Nodes, Elements, and Interfaces...Oh My!</a>
+    </li>
+    <li class="">
+      <a href="07. More Ways To Access Elements.html">07. More Ways To Access Elements</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Summary.html">08. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Select Page Elements By Class Or Tag</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="selecting-multiple-elements-at-once">Selecting Multiple Elements At Once</h2>
+<p>As I'm sure you remember from learning both HTML structure and CSS styling, an ID should be <em>unique</em> - meaning two or more elements should never have the same ID. Since IDs are unique, and since there will be only one element in the HTML with that ID, <code>document.getElementById()</code> will only ever return at most one element. So how would we select multiple DOM elements?</p>
+<p>The next two DOM methods that we'll be looking at that both return multiple elements are:</p>
+<ul>
+<li><code>.getElementsByClassName()</code></li>
+<li><code>.getElementsByTagName()</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="accessing-elements-by-their-class">Accessing Elements By Their Class</h2>
+<p>The first method we'll look at is <code>.getElementsByClassName()</code>:</p>
+<pre><code class="js language-js">document.getElementsByClassName();</code></pre>
+<p>Similarly to <code>.getElementById()</code>, if we ran the code above in the console, we wouldn't get anything, because we did not tell it the class to search for! Also just like <code>.getElementById()</code>, <code>.getElementsByClassName()</code> is expecting that we call it with a string of the class we want it to search for/return:</p>
+<pre><code class="js language-js">document.getElementsByClassName('brand-color');</code></pre>
+<p>If you'd like to read more about this method, check out its documentation page on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName</a></p>
+<p>Let's use this MDN documentation page to try out using this method.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L1 40 - GetElementsByClassName</p></h3>
+  <video controls>
+  <source src="05. DOM L1 40 - GetElementsByClassName-mP04gbpghpY.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. DOM L1 40 - GetElementsByClassName-mP04gbpghpY.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. DOM L1 40 - GetElementsByClassName-mP04gbpghpY.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. DOM L1 40 - GetElementsByClassName-mP04gbpghpY.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. DOM L1 40 - GetElementsByClassName-mP04gbpghpY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="05. DOM L1 40 - GetElementsByClassName-mP04gbpghpY.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h3 id="beware-of-the-s">Beware of the S!</h3>
+</blockquote>
+<blockquote>
+  <p>I know we haven't looked at <code>.getElementsByTagName()</code> just yet, but there's something different about <code>.getElementById()</code> compared with both <code>.getElementsByClassName()</code> and <code>.getElementsByTagName()</code> that I want to point out because it can be easy to miss; both <code>.getElementsByClassName()</code> and <code>.getElementsByTagName()</code> have an extra "s" in their name.</p>
+</blockquote>
+<blockquote>
+  <p>The method's name is <code>.getElementsByClassName()</code>, not <code>.getElementByClassName()</code>. Notice the word right in the middle, it's "Elements" not "Element". If you think about it, this actually makes a lot of sense! Since both <code>.getElementsByClassName()</code> and <code>.getElementsByTagName()</code> could return multiple items, their method names tell us that directly. Now compare this with <code>.getElementById()</code> that will only ever return at most <em>one</em> element. Its name has the singular "Element" in it.</p>
+</blockquote>
+<blockquote>
+  <p>I just wanted to point this out because I've been bitten by that missing "s" many-a-time when running code like:</p>
+</blockquote>
+<blockquote>
+<pre><code class="js language-js">document.getElementByClassName('highlight-spanned');</code></pre>
+</blockquote>
+<blockquote>
+  <p>This code above will <em>not</em> work, because there is no DOM method <code>.getElementByClassName()</code> (with singular "Element").</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="accessing-elements-by-their-tag">Accessing Elements By Their Tag</h2>
+<p>After looking at both <code>.getElementById()</code> and <code>.getElementsByClassName()</code>, the new <code>.getElementsByTagName()</code> method should seem quite easy on the eyes:</p>
+<pre><code class="js language-js">document.getElementsByTagName('p');</code></pre>
+<p>Let's use this MDN documentation page to try out using this method: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L1 43 - GetElementsByTagName</p></h3>
+  <video controls>
+  <source src="05. DOM L1 43 - GetElementsByTagName-cxqIYlQ4tu8.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. DOM L1 43 - GetElementsByTagName-cxqIYlQ4tu8.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="05. DOM L1 43 - GetElementsByTagName-cxqIYlQ4tu8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. DOM L1 43 - GetElementsByTagName-cxqIYlQ4tu8.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="05. DOM L1 43 - GetElementsByTagName-cxqIYlQ4tu8.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following would correctly select all elements with class: <code>'splort'</code>?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512229334841" name="467473" id="a1512229334841">
+      <label for="a1512229334841"><p><code>document.getElementsByClassName('splort');</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512229356804" name="467473" id="a1512229356804">
+      <label for="a1512229356804"><p><code>document.getElementsByClassname('splort');</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512229357753" name="467473" id="a1512229357753">
+      <label for="a1512229357753"><p><code>document.getElementsByClassName('.splort');</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512229358395" name="467473" id="a1512229358395">
+      <label for="a1512229358395"><p><code>document.getElementByClassName('splort');</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`document.getElementsByClassName('splort');`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write the DOM code to select all <code>&lt;article&gt;</code> elements.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write the DOM code to select all elements with class: <code>fancy-footer</code>.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="whats-returned">What's Returned?</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L1 48 - Returns An Array Like</p></h3>
+  <video controls>
+  <source src="05. DOM L1 48 - Returns An Array Like-vMFA3Tja6XU.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. DOM L1 48 - Returns An Array Like-vMFA3Tja6XU.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. DOM L1 48 - Returns An Array Like-vMFA3Tja6XU.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. DOM L1 48 - Returns An Array Like-vMFA3Tja6XU.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. DOM L1 48 - Returns An Array Like-vMFA3Tja6XU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="05. DOM L1 48 - Returns An Array Like-vMFA3Tja6XU.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We just saw that <code>.getElementsByClassName()</code> returns an array-like data structure of elements. But what exactly is an element?</p>
+<p>In the next section, we'll take the plunge and look at Elements and Nodes.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="selecting-multiple-elements-at-once-recap">Selecting Multiple Elements At Once Recap</h2>
+<p>In this section, we learned two ways to select multiple DOM elements:</p>
+<ul>
+<li><code>.getElementsByClassName()</code></li>
+<li><code>.getElementsByTagName()</code></li>
+</ul>
+<p>There are a few important things to keep in mind about these two methods:</p>
+<ul>
+<li>both methods use the <code>document</code> object</li>
+<li>both return multiple items</li>
+<li>the list that's returned is not an array</li>
+</ul>
+<pre><code class="js language-js">// select all elements that have the class "accent-color"
+document.getElementsByClassName('accent-color');
+
+// select all "span" elements
+document.getElementsByTagName('span');</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" rel="noopener noreferrer" target="_blank">.getElementsByClassName()</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName" rel="noopener noreferrer" target="_blank">.getElementsByTagName()</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Nodes, Elements, and Interfaces...Oh My!.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Select Page Elements By Class Or Tag')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

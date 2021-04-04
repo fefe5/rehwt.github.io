@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.125
+So, what exactly is a node?
+
+00:00:02.125 --> 00:00:04.964
+If you have any experience with object-oriented programming,
+
+00:00:04.964 --> 00:00:12.274
+then Node with a capital N is like a class and node with a lowercase n is like an object.
+
+00:00:12.275 --> 00:00:14.324
+If you don't know object-oriented programming and
+
+00:00:14.324 --> 00:00:17.204
+all of that sounded like random words, don't worry.
+
+00:00:17.204 --> 00:00:20.669
+This might seem a little tricky at first, but stick with me.
+
+00:00:20.670 --> 00:00:24.360
+Capital N in Node is like the blueprint for a building.
+
+00:00:24.359 --> 00:00:26.989
+This blueprint can have the data about the building,
+
+00:00:26.989 --> 00:00:28.589
+which we'll call properties.
+
+00:00:28.589 --> 00:00:31.079
+And it has a list of the building's capabilities,
+
+00:00:31.079 --> 00:00:33.299
+which we'll call methods.
+
+00:00:33.299 --> 00:00:36.547
+Some properties might be the color of the building,
+
+00:00:36.548 --> 00:00:38.160
+the number of doors it has,
+
+00:00:38.159 --> 00:00:40.559
+or the number of windows it has.
+
+00:00:40.560 --> 00:00:44.160
+Some methods might be an alarm system that's guarding
+
+00:00:44.159 --> 00:00:49.074
+the house or the sprinkler system that's watering the grass.
+
+00:00:49.075 --> 00:00:54.230
+Now, let's say that this blueprint is a model for lots of real buildings.
+
+00:00:54.229 --> 00:00:58.000
+Another word we can use instead of blueprint is interface.
+
+00:00:58.000 --> 00:01:00.119
+An interface tells us the properties and
+
+00:01:00.119 --> 00:01:03.570
+methods that are applied to the individual items.
+
+00:01:03.570 --> 00:01:05.810
+Now, back to Node and nodes.
+
+00:01:05.810 --> 00:01:11.609
+Capital N Node is the blueprint or interface with the properties and methods.
+
+00:01:11.609 --> 00:01:17.010
+The lowercase n in nodes are the real objects built from the blueprint.
+
+00:01:17.010 --> 00:01:18.885
+Don't worry if this is all kind of hazy.
+
+00:01:18.885 --> 00:01:21.225
+We'll be digging into this stuff a lot more.
+
+00:01:21.224 --> 00:01:25.000
+Actually, let's take a look at Node's properties and methods right now.
+

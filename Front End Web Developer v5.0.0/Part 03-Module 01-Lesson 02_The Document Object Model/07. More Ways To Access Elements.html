@@ -1,0 +1,425 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>More Ways To Access Elements</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>The Document Object Model</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. The DOM.html">02. The DOM</a>
+    </li>
+    <li class="">
+      <a href="03. Selecting Page Elements With CSS Selectors.html">03. Selecting Page Elements With CSS Selectors</a>
+    </li>
+    <li class="">
+      <a href="04. Select Page Element By ID.html">04. Select Page Element By ID</a>
+    </li>
+    <li class="">
+      <a href="05. Select Page Elements By Class Or Tag.html">05. Select Page Elements By Class Or Tag</a>
+    </li>
+    <li class="">
+      <a href="06. Nodes, Elements, and Interfaces...Oh My!.html">06. Nodes, Elements, and Interfaces...Oh My!</a>
+    </li>
+    <li class="">
+      <a href="07. More Ways To Access Elements.html">07. More Ways To Access Elements</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Summary.html">08. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. More Ways To Access Elements</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We've been looking at the:</p>
+<ul>
+<li><code>.getElementById()</code></li>
+<li><code>.getElementsByClassName()</code></li>
+<li>and <code>.getElementsByTagName()</code></li>
+</ul>
+<p>Now these DOM methods are standardized. However, not all browsers support every standard. They do <em>now</em>, for these three methods, but there are hundreds of other methods with varying levels of support.</p>
+<p>That's why almost every method on MDN has a Browser compatibility table that lists when each browser started supporting that specific method.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud117-l1-browser-compatibility-table.jpg" alt="_The Browser compatibility table for the &#x60;.getElementsByClassName()&#x60; method._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>The Browser compatibility table for the <code>.getElementsByClassName()</code> method.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Thankfully, all browsers have pretty much aligned to support the official standard.</p>
+<p>However, back in the day, that wasn't the case. You had to write different code to perform the same action in different browsers. Then you had to write code to check which browser you were in to run the correct code for that browser. Let me tell you, it was a bit of a nightmare.</p>
+<p>Several JavaScript libraries came along to help mitigate these issues. Let's take a brief look at the <a href="https://jquery.com/" rel="noopener noreferrer" target="_blank">jQuery library</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 76 HS - JQuery'S Influence</p></h3>
+  <video controls>
+  <source src="07. L1 76 HS - JQuery&#x27;S Influence-FjpYmoQlYgI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="07. L1 76 HS - JQuery&#x27;S Influence-FjpYmoQlYgI.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="07. L1 76 HS - JQuery&#x27;S Influence-FjpYmoQlYgI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="07. L1 76 HS - JQuery&#x27;S Influence-FjpYmoQlYgI.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="07. L1 76 HS - JQuery&#x27;S Influence-FjpYmoQlYgI.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We already reviewed this in a previous section, but let's recap it one more time!</p>
+<pre><code class="css language-css">#header {
+    color: 'red';
+}
+
+.header {
+    color: 'red';
+}
+
+header {
+    color: 'red';
+}</code></pre>
+<p>Each one of these sets the color to red. The only difference is in the selector; selecting by ID, selecting by class, and selecting by tag. Got it? Good!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You've already learned the DOM methods to select by ID, class, and tag, too:</p>
+<ul>
+<li><code>.document.getElementById()</code></li>
+<li><code>.document.getElementsByClassName()</code></li>
+<li><code>.document.getElementsByTagName()</code></li>
+</ul>
+<p>Three different methods that do almost the exact same thing. Wouldn't it be awesome if there were a way to do element selecting similar to how CSS does it?</p>
+<p>Wait for it - there is!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-queryselector-method">The querySelector Method</h2>
+<p>We can use the <code>.querySelector()</code> method to select elements just like we do with CSS. We use the <code>.querySelector()</code> method and pass it a string that's just like a CSS selector:</p>
+<pre><code class="js language-js">// find and return the element with an ID of "header"
+document.querySelector('#header');
+
+// find and return the first element with the class "header"
+document.querySelector('.header');
+
+// find and return the first &lt;header&gt; element
+document.querySelector('header');</code></pre>
+<p>Check out the <code>.querySelector()</code> method on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h3 id="⚠️-queryselector-returns-a-single-element-⚠️">⚠️ <code>.querySelector()</code> Returns A Single Element ⚠️</h3>
+</blockquote>
+<blockquote>
+  <p>I want to point out one potentially tricky thing - the <code>.querySelector()</code> method only returns <em>one</em> element. This makes sense if you use it to search for an element by ID. However, even though <code>.getElementsByClassName()</code> and <code>.getElementsByTagName()</code> both return a list of multiple elements, using <code>.querySelector()</code> with a class selector or a tag selector will still only return the <em>first</em> item it finds.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L1 81 - QuerySelector</p></h3>
+  <video controls>
+  <source src="07. DOM L1 81 - QuerySelector-L5SbgvM0VCQ.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="07. DOM L1 81 - QuerySelector-L5SbgvM0VCQ.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="07. DOM L1 81 - QuerySelector-L5SbgvM0VCQ.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="07. DOM L1 81 - QuerySelector-L5SbgvM0VCQ.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="07. DOM L1 81 - QuerySelector-L5SbgvM0VCQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="07. DOM L1 81 - QuerySelector-L5SbgvM0VCQ.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write the <code>.querySelector()</code> code to find the first item with an ID of: <code>fanciful-butterfly</code>.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write the <code>.querySelector()</code> code to find the first paragraph element that <em>also</em> has a class of: <code>callout</code></p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-queryselectorall-method">The querySelectorAll Method</h2>
+<p>The <code>.querySelector()</code> method returns only <em>one</em> element from the DOM (if it exists). However, there are definitely times when you will want to get a list of all elements with a certain class or all of one type of element (e.g. all <code>&lt;tr&gt;</code> tags). We can use the <code>.querySelectorAll()</code> method to do this!</p>
+<pre><code class="js language-js">// find and return a list of elements with the class "header"
+document.querySelectorAll('.header');
+
+// find and return a list of &lt;header&gt; elements
+document.querySelectorAll('header');</code></pre>
+<p>Here's the <code>.querySelectorAll()</code> method on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L1 85 - QuerySelectorAll</p></h3>
+  <video controls>
+  <source src="07. DOM L1 85 - QuerySelectorAll-XrS6vzAfBSk.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="07. DOM L1 85 - QuerySelectorAll-XrS6vzAfBSk.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="07. DOM L1 85 - QuerySelectorAll-XrS6vzAfBSk.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="07. DOM L1 85 - QuerySelectorAll-XrS6vzAfBSk.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="07. DOM L1 85 - QuerySelectorAll-XrS6vzAfBSk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="07. DOM L1 85 - QuerySelectorAll-XrS6vzAfBSk.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write the <code>.querySelectorAll()</code> code to find all paragraph elements that are descendents of elements that have the class: <code>articles</code></p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="recap">Recap</h2>
+<p>In this section, we took a brief look the history of browser support for standard DOM methods, the rise of the jQuery library, and how jQuery's success brought about new DOM methods. The new DOM methods we looked at are</p>
+<ul>
+<li><code>.querySelector()</code> - returns a single element</li>
+<li><code>.querySelectorAll()</code> - returns a list of elements</li>
+</ul>
+<pre><code class="js language-js">// find and return the element with an ID of "header"
+document.querySelector('#header');
+
+// find and return a list of elements with the class "header"
+document.querySelectorAll('.header');</code></pre>
+<p>We also took a brief look that the list returned by <code>.querySelectorAll()</code> is a NodeList. We saw that it is possible to loop over a NodeList with either its <code>.forEach()</code> method, or the humble <code>for</code> loop:</p>
+<pre><code class="js language-js">const allHeaders = document.querySelectorAll('header');
+
+for(let i = 0; i &lt; allHeaders.length; i++){
+    console.dir(allHeaders[i]);
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://jquery.com/" rel="noopener noreferrer" target="_blank">jQuery website</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" rel="noopener noreferrer" target="_blank">.querySelector() method on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" rel="noopener noreferrer" target="_blank">.querySelectorAll() method on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" rel="noopener noreferrer" target="_blank">NodeList on MDN</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. More Ways To Access Elements')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

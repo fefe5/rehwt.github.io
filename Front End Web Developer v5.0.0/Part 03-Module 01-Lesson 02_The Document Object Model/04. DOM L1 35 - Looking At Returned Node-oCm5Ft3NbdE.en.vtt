@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.150
+I have this "GimmeNumber" function and all it does is return a number.
+
+00:00:05.150 --> 00:00:07.799
+Now if I call this function,
+
+00:00:07.799 --> 00:00:11.960
+and store it in a variable,
+
+00:00:11.960 --> 00:00:17.935
+it runs, it returned 17 which gets stored in this variable and then I can just check it.
+
+00:00:17.934 --> 00:00:22.554
+And we get the number 17.
+
+00:00:22.554 --> 00:00:32.950
+Similarly, if I use document.getElementByID and select the main heading up here,
+
+00:00:32.950 --> 00:00:37.969
+that will actually return the element.
+
+00:00:38.640 --> 00:00:41.895
+And just like with number,
+
+00:00:41.895 --> 00:00:49.270
+we can store this heading inside of a variable and then access that element later.
+

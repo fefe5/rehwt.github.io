@@ -1,0 +1,86 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:01.860
+Men hozir Dom sahifasining kirish qismidaman
+
+00:00:01.860 --> 00:00:03.870
+va agar bu sahifa bo‘ylab yuradigan bo‘lsam,
+
+00:00:03.870 --> 00:00:05.370
+biz u yerda kodning bir nechta namunalari borligini ko‘ramiz. 
+
+00:00:05.370 --> 00:00:12.150
+Mana bu yerda boshqalari ham berilgan.
+
+00:00:12.150 --> 00:00:15.089
+keling, bularning bittasini qarab chiqamiz, demak, 
+
+00:00:15.089 --> 00:00:17.070
+o‘ng tomonni bosaman va tekshirish elementini tanlayman. 
+
+00:00:17.070 --> 00:00:19.770
+Biz elementlar panelida ular pre teglardan  
+
+00:00:19.770 --> 00:00:22.199
+foydalanayotganini ko‘rishimiz mumkin, demak, 
+
+00:00:22.199 --> 00:00:24.840
+mana bu yerda bitta pre tegi ishlatilgan, keling, 
+
+00:00:24.840 --> 00:00:26.730
+qolgan barcha pre teglarni izlash uchun  
+
+00:00:26.730 --> 00:00:29.490
+get elements by dan foydalanamiz.
+ 
+12
+00:00:29,490 --&gt; 00:00:31,470
+Men konsolni escape bilan ocha olaman va    
+
+00:00:31.470 --> 00:00:35.430
+keyin document nuqta get elements by deb teg nomini yozib olaman
+
+00:00:35.430 --> 00:00:41.910
+Keyin pre teglarni izlayman va
+
+00:00:41.910 --> 00:00:43.440
+bu oltita elementdan iborat ro‘yxatga qaytishini ko‘rishimiz mumkin.
+
+00:00:43.440 --> 00:00:45.780
+Endi, agar biz bularning har biri  
+
+00:00:45.780 --> 00:00:47.820
+DOMning qayeridaligini ko‘rmoqchi bo‘lsak,
+
+00:00:47.820 --> 00:00:49.230
+men elementlardan birortasining o‘ng tomonini bosaman va
+
+00:00:49.230 --> 00:00:52.410
+elementlar panelidan revealni tanlayman va
+
+00:00:52.410 --> 00:00:53.969
+u elementlar panelidagi to‘g‘ri manzilga sakraydi
+
+00:00:53.969 --> 00:00:56.190
+shundan so‘ng, mana bu yerda men o‘ng tomonni bosaman
+
+00:00:56.190 --> 00:00:58.440
+va viewga o‘tishni tanlayman.
+
+00:00:58.440 --> 00:01:00.570
+U o‘sha elementni bizga ko‘rsatish uchun
+
+00:01:00.570 --> 00:01:03.629
+sahifani viewga o‘tkazadi va mana u
+
+00:01:03.629 --> 00:01:05.820
+demak, mana bu yerda biz uni belgilash orqali 
+
+00:01:05.820 --> 00:01:07.650
+va mana bu yerda o‘sha belgilangan element bo‘ylab 
+
+00:01:07.650 --> 00:01:10.939
+sichqonchani yurgizish orqali ko‘rishimiz mumkin.
+

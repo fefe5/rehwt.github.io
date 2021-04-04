@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.068 --> 00:00:03.424
+Estou na página
+Document.getElementsByClassName().
+
+00:00:03.466 --> 00:00:06.160
+Vamos descer só um pouco.
+
+00:00:06.202 --> 00:00:09.760
+Nos exemplos,
+vemos alguns códigos.
+
+00:00:09.802 --> 00:00:11.425
+Vejamos um deles.
+
+00:00:12.055 --> 00:00:15.443
+Vemos uma tag pre
+com algumas classes,
+
+00:00:15.485 --> 00:00:18.195
+mas nós buscaremos
+a line-numbers.
+
+00:00:18.237 --> 00:00:21.499
+Aqui há uma tag com line-numbers,
+aqui há outra,
+
+00:00:21.541 --> 00:00:24.091
+outra aqui e mais uma aqui.
+
+00:00:24.133 --> 00:00:27.924
+Existem alguns itens nesta página
+com a classe line-numbers.
+
+00:00:27.966 --> 00:00:31.532
+Vamos usar o getElementsByClassName
+para encontrá-los.
+
+00:00:35.525 --> 00:00:38.794
+Invocar esta função
+retornará 5 itens.
+
+00:00:38.836 --> 00:00:41.291
+Observando este caractere,
+este colchete,
+
+00:00:41.333 --> 00:00:45.172
+parece que um array
+foi retornado, mas não foi.
+
+00:00:45.214 --> 00:00:46.477
+Se abrirmos isto,
+
+00:00:46.519 --> 00:00:49.987
+veremos que é
+uma coleção de HTML.
+
+00:00:50.029 --> 00:00:52.563
+Observando a documentação,
+
+00:00:52.605 --> 00:00:55.962
+vemos a explicação
+sobre como compor,
+
+00:00:56.004 --> 00:00:58.107
+que retornará elementos.
+
+00:00:58.149 --> 00:01:00.986
+Os elementos
+são uma coleção de HTMLs vivos
+
+00:01:01.028 --> 00:01:04.521
+de todos os elementos da página
+com o mesmo nome de classe.
+
+00:01:04.563 --> 00:01:07.675
+O getElementsByClassName
+não retornou um array,
+
+00:01:07.717 --> 00:01:10.067
+mas uma coleção de HTMLs.
+

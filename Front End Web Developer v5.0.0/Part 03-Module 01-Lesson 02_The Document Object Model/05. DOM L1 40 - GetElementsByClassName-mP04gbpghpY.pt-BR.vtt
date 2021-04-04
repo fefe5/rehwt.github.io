@@ -1,0 +1,45 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.129 --> 00:00:02.341
+Vejamos este texto.
+
+00:00:02.383 --> 00:00:04.978
+Clico com o botão direito
+e seleciono Inspecionar.
+
+00:00:05.020 --> 00:00:08.937
+No painel Elements,
+vemos este elemento h2
+
+00:00:08.979 --> 00:00:11.744
+com a classe
+highlight-spanned.
+
+00:00:11.786 --> 00:00:14.302
+Vamos usar o método
+getElementsByClassName
+
+00:00:14.344 --> 00:00:18.769
+para selecionar os elementos
+com a classe highlight-spanned.
+
+00:00:18.811 --> 00:00:21.703
+Pressiono esc no teclado
+para abrir o console,
+
+00:00:21.745 --> 00:00:23.833
+desço um pouco...
+
+00:00:27.263 --> 00:00:31.544
+Vamos digitar
+document.getElementsByClassName
+
+00:00:31.586 --> 00:00:36.489
+e procurar por
+highlight-spanned.
+
+00:00:37.218 --> 00:00:42.032
+Vemos uma lista com 5 itens.
+

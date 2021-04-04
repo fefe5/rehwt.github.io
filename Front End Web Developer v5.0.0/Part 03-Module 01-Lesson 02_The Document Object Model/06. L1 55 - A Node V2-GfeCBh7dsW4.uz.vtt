@@ -1,0 +1,110 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.520
+Demak, Object-oriented programmingda 
+ozgina amaliy tajribangiz bo‘lsa,
+
+00:00:02.520 --> 00:00:04.200
+node aynan nimani anglatadi?
+
+00:00:04.200 --> 00:00:06.720
+Bosh harf bilan boshlangan 
+
+00:00:06.720 --> 00:00:09.389
+node bu class degani va kichkina  
+
+00:00:09.389 --> 00:00:12.570
+harf bilan boshlangannode esa obyekt ni bildiradi. Agar siz
+
+00:00:12.570 --> 00:00:13.920
+object-oriented programming ni bilmasangiz
+
+00:00:13.920 --> 00:00:15.540
+yuqoridagi hamma so‘zlar sizga tushunarsiz bo‘lishi mumkin.
+
+00:00:15.540 --> 00:00:18.390
+Xavotir olmang, bu dastlab qiyin 
+
+00:00:18.390 --> 00:00:20.390
+bo‘lib tuyulishi mumkin, lekin men bilan birga davom eting.
+
+00:00:20.390 --> 00:00:23.340
+Bosh harf bilan boshlanadigan  node- bu bino
+
+00:00:23.340 --> 00:00:25.800
+loyihasi deb tasavvur qilsak. Ushbu loyihada
+
+00:00:25.800 --> 00:00:27.630
+biz xususiyatlar deb ataydigan, ya’ni, bino haqida ma’lumotlar 
+
+00:00:27.630 --> 00:00:29.939
+bo‘lishi mumkin va loyihada biz methods deb ataydigan, 
+
+00:00:29.939 --> 00:00:31.679
+ya’ni, binoning imkoniyatlari
+
+00:00:31.679 --> 00:00:35.100
+ro‘yxati mavjud. Ba’zi xususiyatlar 
+
+00:00:35.100 --> 00:00:37.110
+binoning rangi, undagi eshiklar soni
+
+00:00:37.110 --> 00:00:39.809
+bo‘lishi mumkin yoki derazalar
+
+00:00:39.809 --> 00:00:43.110
+soni. Ba'zi  methodlar bu uyni q‘riqlaydigan 
+
+00:00:43.110 --> 00:00:45.690
+signal tizimi bo‘lishi mumkin yoki
+
+00:00:45.690 --> 00:00:47.820
+o‘tlarni sug‘oradigan purkagich
+
+00:00:47.820 --> 00:00:51.090
+tizimi. Aytaylik, ushbu loyiha
+
+00:00:51.090 --> 00:00:53.550
+hayotdagi ko‘plab binolar uchun namuna.
+
+00:00:53.550 --> 00:00:55.530
+Loyiha so‘zining o‘rniga foydalanishimiz mumkin
+
+00:00:55.530 --> 00:00:58.739
+bo‘lgan yana bir so‘z bu - interfeys. Interfeys
+
+00:00:58.739 --> 00:01:00.840
+bizga alohida elementlarga nisbatan qo‘llanilgan 
+
+00:01:00.840 --> 00:01:03.660
+xususiyatlar va methodlarni ko‘rsatib beradi. 
+
+00:01:03.660 --> 00:01:07.170
+Endi, node ga qaytaylik. Bosh harf bilan boshlanuvchi  node
+
+00:01:07.170 --> 00:01:09.960
+-bu xususiyatlar va methods lardan 
+
+00:01:09.960 --> 00:01:12.330
+iborat bo‘lgan loyiha yoki interfeysdir. Kichkina harf bilan boshlanuvchi
+
+00:01:12.330 --> 00:01:15.360
+nodelar - bu loyihadagi haqiqiy
+
+00:01:15.360 --> 00:01:17.700
+obyektlardir. Agar bular tushunarsiz va qiyin ko‘ringan bo‘lsa,
+
+00:01:17.700 --> 00:01:19.680
+xavotir olmang. Mavzuga yaxshiroq kirib borib,
+
+00:01:19.680 --> 00:01:22.350
+Ko‘proq narsalarni o‘rganishga harakat qilamiz. 
+
+00:01:22.350 --> 00:01:24.090
+Hozir node  xususiyatlari va methodslarini
+
+00:01:24.090 --> 00:01:26.750
+ko‘rib chiqamiz.
+

@@ -1,0 +1,110 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.082 --> 00:00:02.144
+O que é um nó?
+
+00:00:02.186 --> 00:00:05.050
+Se você conhece
+a Programação Orientada a Objeto,
+
+00:00:05.092 --> 00:00:08.481
+então Nó, com letra maiúscula,
+seria uma classe
+
+00:00:08.523 --> 00:00:12.122
+e nó, com N minúsculo,
+seria um objeto.
+
+00:00:12.164 --> 00:00:13.979
+Se você não conhece
+nada disso,
+
+00:00:14.021 --> 00:00:17.403
+e tudo pareceu palavras aleatórias,
+não se preocupe,
+
+00:00:17.445 --> 00:00:20.738
+pois isso pode parecer difícil,
+mas eu explicarei.
+
+00:00:20.780 --> 00:00:24.411
+Nó, com N maiúsculo,
+é como a planta de um prédio,
+
+00:00:24.453 --> 00:00:26.711
+que contém os dados
+da construção,
+
+00:00:26.753 --> 00:00:28.510
+e que chamamos
+de "propriedades".
+
+00:00:28.552 --> 00:00:33.062
+Além das capacidades do prédio,
+que chamamos de "métodos".
+
+00:00:33.104 --> 00:00:36.469
+As propriedades
+podem ser a cor do prédio,
+
+00:00:36.511 --> 00:00:38.239
+a quantidade de portas
+
+00:00:38.281 --> 00:00:40.710
+ou a quantidade de janelas.
+
+00:00:40.752 --> 00:00:45.021
+Os métodos podem ser
+o sistema de alarme
+
+00:00:45.063 --> 00:00:48.780
+ou o sistema de irrigação,
+que molha a grama.
+
+00:00:48.822 --> 00:00:51.822
+Digamos que esta planta
+seja um modelo
+
+00:00:51.864 --> 00:00:54.133
+para prédios reais.
+
+00:00:54.175 --> 00:00:58.132
+Em vez de chamarmos de "planta",
+chamamos de "interface",
+
+00:00:58.174 --> 00:01:00.717
+e ela informa as propriedades
+e os métodos
+
+00:01:00.759 --> 00:01:03.421
+aplicados
+aos itens individuais.
+
+00:01:03.463 --> 00:01:05.852
+De volta ao Nó e ao nó.
+
+00:01:05.894 --> 00:01:09.571
+Nó é a planta ou a interface
+
+00:01:09.613 --> 00:01:11.538
+com as propriedades
+e os métodos.
+
+00:01:11.580 --> 00:01:16.861
+Os nós são os objetos
+construídos a partir da planta.
+
+00:01:16.903 --> 00:01:19.058
+Não se preocupe
+se tudo ficou confuso,
+
+00:01:19.100 --> 00:01:21.229
+pois falaremos muito mais
+sobre isso.
+
+00:01:21.271 --> 00:01:24.917
+Na verdade, vejamos as propriedades
+e os métodos dos Nós.
+

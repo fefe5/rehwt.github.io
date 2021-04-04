@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.129
+I am on the Introduction to the DOM page.
+
+00:00:02.129 --> 00:00:04.070
+And if I just scroll through this page,
+
+00:00:04.070 --> 00:00:09.272
+we'll see that there are several instances of code.
+
+00:00:09.272 --> 00:00:12.955
+Here and here are some others.
+
+00:00:12.955 --> 00:00:14.980
+Let us look at one of these.
+
+00:00:14.980 --> 00:00:17.685
+Right click and choose "inspect" element.
+
+00:00:17.684 --> 00:00:21.629
+We can see in the elements panel that they are using pre tags.
+
+00:00:21.629 --> 00:00:23.605
+So here is a pre tag and here is a pre tag.
+
+00:00:23.605 --> 00:00:28.410
+let's you use "getElementsByTagName" to search for all of these pre tags.
+
+00:00:28.410 --> 00:00:30.870
+I could open up the console with escape and
+
+00:00:30.870 --> 00:00:36.314
+then type out "document.getElementsByTagName",
+
+00:00:36.314 --> 00:00:40.400
+and I can search for the pre tags.
+
+00:00:40.401 --> 00:00:44.420
+And we can see that this returns a list of six items.
+
+00:00:44.420 --> 00:00:47.500
+Now if we want to see where each one of these are in the DOM,
+
+00:00:47.500 --> 00:00:51.549
+I can actually right click on one of them and choose "Reveal in elements panel",
+
+00:00:51.549 --> 00:00:55.029
+and that will jump to the correct location and the elements panel.
+
+00:00:55.030 --> 00:00:58.645
+And then from here, I can right click and choose "Scroll into view",
+
+00:00:58.645 --> 00:01:02.856
+and that will scroll the page into view to show us that element.
+
+00:01:02.856 --> 00:01:04.334
+And there it is.
+
+00:01:04.334 --> 00:01:06.409
+So we can see by highlighting here.
+
+00:01:06.409 --> 00:01:09.399
+And by masking it over here it highlights the same element.
+

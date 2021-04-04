@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.730
+Keling, query selector methodidan foydalanib, 
+
+00:00:02.730 --> 00:00:12.509
+barcha h2 elementlarni tanlab olamiz.
+
+00:00:12.509 --> 00:00:13.920
+Shunchaki, elementlar nomiga o‘tish bizga 
+
+00:00:13.920 --> 00:00:21.949
+uni bironta teg nomi bilan tanlab olish imkonini beradi.
+
+00:00:21.949 --> 00:00:23.970
+Boshqachasiga biz uni frontdagi bironta davr  
+
+00:00:23.970 --> 00:00:25.830
+bilan birga sinfning nomidan o‘tib,
+
+00:00:25.830 --> 00:00:29.640
+uning sinfi orqali tanlashimiz mumkin va 
+
+00:00:29.640 --> 00:00:31.109
+bularning ikkalasi ham bironta aniq 
+
+00:00:31.109 --> 00:00:32.969
+elementga qaytadi. Bittasi elementni  
+
+00:00:32.969 --> 00:00:34.620
+teg orqali tanlayapti, boshqasi 
+
+00:00:34.620 --> 00:00:36.780
+uning sinfi orqali tanlayapti, ammo
+
+00:00:36.780 --> 00:00:38.670
+ikkala namunada ham biz 
+
+00:00:38.670 --> 00:00:41.420
+query selector methodini ishlatayapmiz.
+

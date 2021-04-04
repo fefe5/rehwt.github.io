@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.415
+Let's look at this text right here,
+
+00:00:02.415 --> 00:00:07.205
+and "right click" and choose "inspect" and then over here in the elements pane,
+
+00:00:07.205 --> 00:00:11.544
+we've got this H2 element with a class of highlighted spanned.
+
+00:00:11.544 --> 00:00:14.789
+Let's use the ".getElementsByClassName" method to select
+
+00:00:14.789 --> 00:00:18.405
+all of the elements with the class highlighted spanned on the page.
+
+00:00:18.405 --> 00:00:20.550
+I'll press the "escape" key on my keyboard to open up
+
+00:00:20.550 --> 00:00:23.580
+the console and I'll bring this down just a bit.
+
+00:00:23.579 --> 00:00:31.289
+And let's use "document.getElementsByClassName"
+
+00:00:31.289 --> 00:00:36.899
+and then we'll search for the highlighted spanned.
+
+00:00:36.899 --> 00:00:39.750
+We can see here that a list of four,
+
+00:00:39.750 --> 00:00:42.000
+five items was returned.
+

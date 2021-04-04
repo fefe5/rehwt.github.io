@@ -1,0 +1,59 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.690 --> 00:00:03.289
+Um dos objetivos
+da biblioteca jQuery
+
+00:00:03.331 --> 00:00:06.865
+é eliminar as diferenças
+entre diferentes navegadores.
+
+00:00:06.907 --> 00:00:10.105
+Como desenvolvedores, compomos
+métodos específicos jQuery,
+
+00:00:10.147 --> 00:00:13.512
+e o jQuery determinará o navegador
+que está sendo usado
+
+00:00:13.554 --> 00:00:15.974
+e aplicará o código adequado
+para o navegador.
+
+00:00:16.016 --> 00:00:18.526
+Como o jQuery facilitou
+compor códigos
+
+00:00:18.568 --> 00:00:20.895
+que executam bem
+em diferentes navegadores,
+
+00:00:20.937 --> 00:00:23.216
+ele se tornou muito popular.
+
+00:00:23.258 --> 00:00:26.672
+Como todo navegador atual
+tenta se adequar aos padrões,
+
+00:00:26.714 --> 00:00:28.819
+as pessoas passaram
+a usar menos o jQuery
+
+00:00:28.861 --> 00:00:31.559
+e passaram a usar
+os métodos DOM nativos.
+
+00:00:31.601 --> 00:00:33.807
+Porém, devido à popularidade
+do jQuery,
+
+00:00:33.849 --> 00:00:35.734
+novos métodos DOM
+foram criados.
+
+00:00:35.776 --> 00:00:37.984
+Vejamos alguns
+desses métodos novos.
+

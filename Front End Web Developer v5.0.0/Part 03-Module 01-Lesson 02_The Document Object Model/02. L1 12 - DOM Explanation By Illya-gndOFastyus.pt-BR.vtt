@@ -1,0 +1,114 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.010 --> 00:00:02.978
+A especificação HTML
+contém um conjunto de regras
+
+00:00:03.020 --> 00:00:05.690
+de como devemos processar
+os dados recebidos.
+
+00:00:05.732 --> 00:00:08.665
+Por exemplo, o texto entre
+colchetes angulares
+
+00:00:08.707 --> 00:00:11.567
+tem significado especial no HTML,
+ele é uma tag.
+
+00:00:11.609 --> 00:00:13.787
+Como resultado,
+sempre que houver uma tag,
+
+00:00:13.829 --> 00:00:18.207
+o navegador emitirá um token,
+que aqui será StartTag: html,
+
+00:00:18.249 --> 00:00:22.223
+e depois será o token
+StartTag: head, e assim por diante.
+
+00:00:22.265 --> 00:00:25.063
+Esse processo é feito
+pelo tokenizer.
+
+00:00:25.105 --> 00:00:28.527
+Enquanto ele realiza o trabalho,
+há outro processo
+
+00:00:28.569 --> 00:00:33.241
+que consome os tokens e os converte
+para objetos nó.
+
+00:00:33.283 --> 00:00:36.783
+Por exemplo, convertemos
+o primeiro token html
+
+00:00:36.825 --> 00:00:39.233
+e criamos o nó html.
+
+00:00:39.275 --> 00:00:43.038
+Depois consumimos o próximo token
+e criamos o nó head.
+
+00:00:43.080 --> 00:00:45.322
+Existe alguma relação
+entre os nós?
+
+00:00:45.364 --> 00:00:49.265
+Existe. Perceba que o tokenizer
+emite tokens de início e de fim,
+
+00:00:49.307 --> 00:00:51.662
+e isso nos informa
+a relação entre os nós.
+
+00:00:51.704 --> 00:00:56.178
+O token StartTag: head
+vem antes do token EndTag: html,
+
+00:00:56.220 --> 00:01:00.705
+e isso nos informa que o token head
+é um filho do html.
+
+00:01:00.747 --> 00:01:05.760
+Da mesma forma que os nós meta
+e link são filhos do nó head,
+
+00:01:05.802 --> 00:01:06.954
+e assim por diante.
+
+00:01:06.996 --> 00:01:09.290
+Após consumirmos
+todos os tokens,
+
+00:01:09.332 --> 00:01:12.167
+teremos o modelo de objeto
+do documento, DOM,
+
+00:01:12.209 --> 00:01:14.868
+que é uma estrutura de árvore
+que contém o conteúdo
+
+00:01:14.910 --> 00:01:19.401
+e as propriedades do HTML,
+além das relações entre os nós.
+
+00:01:19.443 --> 00:01:21.994
+Perceba que os objetos
+contêm propriedades.
+
+00:01:22.036 --> 00:01:25.994
+Por exemplo, o nó img
+tem um atributo src,
+
+00:01:26.036 --> 00:01:31.307
+e este nó aqui
+também terá a mesma propriedade.
+
+00:01:31.349 --> 00:01:35.495
+A DOM é a representação
+da marcação do HTML.
+

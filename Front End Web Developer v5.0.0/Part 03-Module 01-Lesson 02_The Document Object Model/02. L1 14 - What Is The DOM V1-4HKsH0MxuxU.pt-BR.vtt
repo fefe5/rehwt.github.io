@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.515 --> 00:00:04.338
+D-O-M significa
+Modelo de Objeto de Documento,
+
+00:00:04.380 --> 00:00:07.491
+mas é normalmente abreviada
+como "DOM".
+
+00:00:07.533 --> 00:00:09.282
+Mas o que é isso?
+
+00:00:09.324 --> 00:00:12.125
+Seriam os elementos clicáveis
+no painel Elements
+
+00:00:12.167 --> 00:00:15.083
+ou o HTML
+que o navegador exibe?
+
+00:00:15.125 --> 00:00:16.890
+Para entender o que é a DOM,
+
+00:00:16.932 --> 00:00:19.675
+é importante saber como passamos
+da fonte HTML
+
+00:00:19.717 --> 00:00:21.411
+para o que vemos
+no navegador.
+
+00:00:21.453 --> 00:00:24.483
+Confira o vídeo a seguir
+do Ilya Grigorik, do Google,
+
+00:00:24.525 --> 00:00:27.003
+explicando o que acontece
+com a página HTML
+
+00:00:27.045 --> 00:00:28.899
+depois que solicitamos
+um site.
+

@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.845
+Just like the note interface,
+
+00:00:01.845 --> 00:00:06.359
+the Element interface contains a list of all of the properties and
+
+00:00:06.360 --> 00:00:11.970
+a list of all of the methods available to an element.
+
+00:00:11.970 --> 00:00:13.440
+Let's check out some of the properties for
+
+00:00:13.439 --> 00:00:17.304
+this element and go to right click on it and choose Inspect.
+
+00:00:17.304 --> 00:00:19.405
+Then I'll scroll down a bit here,
+
+00:00:19.405 --> 00:00:20.920
+so that's in view,
+
+00:00:20.920 --> 00:00:23.875
+and I'll select the H2 element over here.
+
+00:00:23.875 --> 00:00:26.745
+Pressing Escape brings up the console and
+
+00:00:26.745 --> 00:00:31.125
+one little trick here is that if you selected an element in the elements pane,
+
+00:00:31.125 --> 00:00:35.734
+$0 refers to that element.
+
+00:00:35.734 --> 00:00:37.600
+So this is the H2.
+
+00:00:37.600 --> 00:00:39.715
+$0 refers to the highlighted element.
+
+00:00:39.715 --> 00:00:42.465
+So if I select this and then say $0,
+
+00:00:42.465 --> 00:00:44.615
+it will now be that span.
+
+00:00:44.615 --> 00:00:47.910
+So let's click on the heading, too.
+
+00:00:47.909 --> 00:00:54.434
+And let's check out these headings, class name attribute.
+
+00:00:54.435 --> 00:00:55.975
+We see class name over here.
+
+00:00:55.975 --> 00:00:57.925
+Let's pick on that class name.
+
+00:00:57.924 --> 00:01:00.824
+And we can see that it has highlighted spanned,
+
+00:01:00.825 --> 00:01:04.230
+which is have added span right up here.
+
+00:01:04.230 --> 00:01:07.895
+Now, let's pick another property to try out.
+
+00:01:07.894 --> 00:01:10.640
+Actually, let's move down to one of the methods.
+
+00:01:10.640 --> 00:01:13.469
+Let's look at this has attribute method.
+
+00:01:13.469 --> 00:01:15.408
+So we'll use $0, and again,
+
+00:01:15.408 --> 00:01:19.060
+that refers to the element that we have selected in the elements pane.
+
+00:01:19.060 --> 00:01:21.075
+So right now, it's the H2.
+
+00:01:21.075 --> 00:01:27.930
+And we'll call hasAttribute, and we'll see.
+
+00:01:27.930 --> 00:01:30.140
+Does it have a class, a name, or probably
+
+00:01:30.140 --> 00:01:31.650
+it has all three of these, so let's just check one.
+
+00:01:31.650 --> 00:01:33.895
+I must just check class.
+
+00:01:33.894 --> 00:01:36.000
+So does this have a class?
+
+00:01:36.000 --> 00:01:39.295
+And it says it does.
+
+00:01:39.295 --> 00:01:41.655
+And again, this is the element interface,
+
+00:01:41.655 --> 00:01:47.829
+and every single method and property on this page is available to every single element.
+

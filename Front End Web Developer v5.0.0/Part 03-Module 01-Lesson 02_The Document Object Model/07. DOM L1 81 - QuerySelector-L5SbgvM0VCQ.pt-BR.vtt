@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.338 --> 00:00:05.281
+Vamos selecionar os elementos h2
+usando o método querySelector.
+
+00:00:12.289 --> 00:00:16.391
+Passando o nome do elemento,
+selecionaremos o elemento com a tag.
+
+00:00:22.248 --> 00:00:25.941
+Podemos selecioná-lo pela classe
+passando o nome da classe
+
+00:00:25.983 --> 00:00:27.864
+com um ponto na frente.
+
+00:00:29.104 --> 00:00:32.262
+Esses dois retornarão
+o mesmo elemento.
+
+00:00:32.304 --> 00:00:36.646
+Um selecionará o elemento pela tag,
+o outro, pela classe.
+
+00:00:36.688 --> 00:00:39.672
+Mas, nos dois casos,
+usamos o método querySelector.
+

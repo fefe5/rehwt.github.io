@@ -1,0 +1,92 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.070
+Men get elements by sinf nomi
+
+00:00:02.070 --> 00:00:04.170
+sahifasidagi hujjatdaman va mana bu yerdan 
+
+00:00:04.170 --> 00:00:07.230
+biroz pastga tushamiz, shunda, mana bu namunalardan pastda
+
+00:00:07.230 --> 00:00:08.700
+biz ba’zi kodlar bilan birgalikda namunalar juftligini 
+
+00:00:08.700 --> 00:00:11.240
+ko‘rishimiz mumkin va keling, ulardan birini qarab chiqamiz. 
+
+00:00:11.240 --> 00:00:13.740
+Bu turli xil sinflar bilan kelgan bitta 
+
+00:00:13.740 --> 00:00:15.719
+pre tegi ekanligini ko‘rishimiz mumkin, ammo
+
+00:00:15.719 --> 00:00:17.310
+biz ko‘rmoqchi bo‘lganimiz bu chiziqli sonlar.
+
+00:00:17.310 --> 00:00:19.439
+Shunday qilib, mana bu yerda chiziqli sonlar bilan 
+
+00:00:19.439 --> 00:00:21.000
+bitta pre tegi, mana bu yerda bittasi
+
+00:00:21.000 --> 00:00:23.430
+bu yerda ham bittasi va mana yana boshqasi
+
+00:00:23.430 --> 00:00:25.380
+demak, bu sahifada chiziqli sonlar sinfiga kiradigan 
+
+00:00:25.380 --> 00:00:27.260
+ko‘plab elementlar bor ekan.
+
+00:00:27.260 --> 00:00:29.760
+Keling, ularni ko‘rib chiqish uchun
+
+00:00:29.760 --> 00:00:36.239
+get elements by sinf nomi methodidan foydalanamiz.
+
+00:00:36.239 --> 00:00:39.270
+Mana bu funksiyani chaqirish beshta elementga qaytadi.
+
+00:00:39.270 --> 00:00:41.010
+Mana bu yerdagi belgilarni qarab chiqadigan bo‘lsak, 
+
+00:00:41.010 --> 00:00:43.230
+mana bu qavs uni qaytadigan arrayga o‘xshatib qo‘yadi,
+
+00:00:43.230 --> 00:00:45.360
+lekin aslida unaqa emas, agar biz 
+
+00:00:45.360 --> 00:00:48.480
+mana buni ochib ko‘rsak, bu bitta HTML colectioni
+
+00:00:48.480 --> 00:00:51.180
+ekanligini ko‘rishimiz mumkin va mana bu yerdagi
+
+00:00:51.180 --> 00:00:53.340
+hujjatga qarab uni qanday qilib yozish 
+
+00:00:53.340 --> 00:00:55.020
+mana bu yerdagi hujjatda berilagnligini
+
+00:00:55.020 --> 00:00:57.629
+ko‘rishimiz mumkin va u elementlarga qaytadi.
+
+00:00:57.629 --> 00:01:01.140
+HTML collectionining elementlari 
+
+00:01:01.140 --> 00:01:02.550
+o‘sha sinf nomli sahifada topilgan 
+
+00:01:02.550 --> 00:01:05.189
+elementlarning barchasi, demak,
+
+00:01:05.189 --> 00:01:07.080
+get elements by sinf nomi methodi
+
+00:01:07.080 --> 00:01:11.869
+hech qanday arrayga qaytmaydi, 
+u bironta HTML collectionga qaytadi.
+

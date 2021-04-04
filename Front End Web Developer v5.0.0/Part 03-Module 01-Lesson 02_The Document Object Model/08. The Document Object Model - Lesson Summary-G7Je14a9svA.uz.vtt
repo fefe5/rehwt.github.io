@@ -1,0 +1,30 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.475
+Xo‘sh, sizga bu dars yoqyaptimi?
+
+00:00:02.475 --> 00:00:04.245
+Siz Web haqida ozgina bo‘lsa ham ma’lumotga ega bo‘ldingiz.
+
+00:00:04.245 --> 00:00:05.642
+DOM haqida, u qanday tuzilgan,  qanday tashkillashtirilgan,
+
+00:00:05.642 --> 00:00:10.589
+ID, class, tag lar bo‘yicha qanday qilib tanlashni o‘rgandingiz.
+
+00:00:10.589 --> 00:00:13.974
+Va Node interface va Element interface lar 
+haqida ham o‘rgandingiz.
+
+00:00:13.974 --> 00:00:15.279
+Kelgusi darsda,
+
+00:00:15.279 --> 00:00:19.920
+sahifaning tarkibiy qismlariga o‘zgartirish kiritish 
+va uni boshqarishning yangi DOM methodlarini o‘rganasiz.
+
+00:00:19.920 --> 00:00:22.000
+Darslarimiz judayam qiziq davom etmoqda, shunaqami?
+

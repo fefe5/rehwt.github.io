@@ -1,0 +1,32 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:02.250 --> 00:00:05.995
+alohida ma’nosi bor va bu teg deb ataladi
+
+00:00:05.995 --> 00:00:08.099
+Natijada, qachon biz tegga duch kelganimizda,
+
+00:00:08.099 --> 00:00:09.449
+brauzer tegga alohida belgi beradi.
+
+00:00:09.449 --> 00:00:12.734
+Bu holda, bu StartTag:HTML tegidir.
+
+00:00:12.734 --> 00:00:16.879
+Undan keyin, StartTag HTML bosh va 
+asosiy tegini olamiz va davom etamiz.
+
+00:00:16.879 --> 00:00:19.530
+Ushbu butun jarayon tokenizer&lt;/&gt; tomonidan  amalga oshiriladi.
+
+00:00:19.530 --> 00:00:21.625
+Tokenizer&lt;/&gt; ushbu jarayonni amalga oshirayotgan bir paytda,
+
+00:00:21.625 --> 00:00:24.660
+xuddi shu teglarni ishlatayotgan va 
+
+00:00:24.660 --> 00:00:27.240
+node obyektlarga aylantirayotgan yana bir jarayon mavjud.
+

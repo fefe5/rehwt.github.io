@@ -1,0 +1,59 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.375
+Men hozir Node interfeysi uchun hujjatlar berilgan sahifadaman, 
+
+00:00:03.375 --> 00:00:05.370
+va biz mana bu yerda, pastda uning xususiyatlarini ko‘rishimiz mumkin.
+
+00:00:05.370 --> 00:00:07.559
+Keling, biroz pastga tushamiz.
+
+00:00:07.559 --> 00:00:09.960
+Bu yerda Nodening ba’zi xususiyatlari keltirilgan 
+
+00:00:09.960 --> 00:00:15.089
+va yana pastroq tushsak, methodlarga duch kelamiz. 
+
+00:00:15.089 --> 00:00:19.835
+Keling, bir daqiqaga orqaga, yuqoriga chiqamiz.
+
+00:00:19.835 --> 00:00:23.410
+Biz har bir Node ".baseURL" xususiyatiga ega ekanligini ko‘rishimiz mumkin,
+
+00:00:23.410 --> 00:00:26.179
+keling, uni body elementida tekshirib ko‘ramiz.
+
+00:00:26.179 --> 00:00:30.359
+view, developer va keyin Javascript consoleiga 
+
+00:00:30.359 --> 00:00:32.820
+borish orqali konsolni ochib olamiz, 
+
+00:00:32.820 --> 00:00:38.512
+demak, men document.body deb yozish orqali bodyga bora olaman.
+
+00:00:38.512 --> 00:00:42.575
+Ammo aslida, keling uni bironta o‘zgaruvchiga saqlaymiz.
+
+00:00:42.575 --> 00:00:48.350
+Endi "bodyElement" elementida .baseURIni chaqiramiz,
+
+00:00:48.350 --> 00:00:57.015
+va bu veb-sahifaning URLi ekanligini ko‘ramiz.
+
+00:00:57.015 --> 00:01:01.759
+Keling, biroz pastga tushamiz va mana bu yerdan Node turlariga boramiz.
+
+00:01:01.759 --> 00:01:08.670
+bodyElement.nodetypeni ko‘radigan bo‘lsak, u bittasini beradi. 
+
+00:01:08.670 --> 00:01:12.040
+Bu bizga u bitta Node elementi ekanligini aytadi.
+
+00:01:12.040 --> 00:01:18.000
+Demak, har bitta Nodening mana bu sahifada ko‘rsatilgan 
+xususiyatlari va methodlari bor.
+

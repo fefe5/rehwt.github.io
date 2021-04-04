@@ -1,0 +1,370 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The DOM</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>The Document Object Model</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. The DOM.html">02. The DOM</a>
+    </li>
+    <li class="">
+      <a href="03. Selecting Page Elements With CSS Selectors.html">03. Selecting Page Elements With CSS Selectors</a>
+    </li>
+    <li class="">
+      <a href="04. Select Page Element By ID.html">04. Select Page Element By ID</a>
+    </li>
+    <li class="">
+      <a href="05. Select Page Elements By Class Or Tag.html">05. Select Page Elements By Class Or Tag</a>
+    </li>
+    <li class="">
+      <a href="06. Nodes, Elements, and Interfaces...Oh My!.html">06. Nodes, Elements, and Interfaces...Oh My!</a>
+    </li>
+    <li class="">
+      <a href="07. More Ways To Access Elements.html">07. More Ways To Access Elements</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Summary.html">08. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. The DOM</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="the-dom">The DOM</h1>
+<p>In this section, we'll look at the Document Object Model - otherwise known as the DOM.</p>
+<p>The words "the DOM" are used all over developer documentation sites and tutorials on writing interactive JavaScript code. But what is it? Perhaps you've even used the DOM and still aren't quite sure what it is. Is it the browser? Is it a special part of JavaScript? ¯\_(ツ)_/¯</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Take a couple of minutes think about what you think "the DOM" is/refers to, and write out a description of the DOM.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for taking the time! The DOM is incredibly powerful, but it's helpful to really know what it is, so let's dig into it!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 14 - What Is The DOM V1</p></h3>
+  <video controls>
+  <source src="02. L1 14 - What Is The DOM V1-4HKsH0MxuxU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. L1 14 - What Is The DOM V1-4HKsH0MxuxU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. L1 14 - What Is The DOM V1-4HKsH0MxuxU.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="uz" src="02. L1 14 - What Is The DOM V1-4HKsH0MxuxU.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="CN" src="02. L1 14 - What Is The DOM V1-4HKsH0MxuxU.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 12 - DOM Explanation By Illya</p></h3>
+  <video controls>
+  <source src="02. L1 12 - DOM Explanation By Illya-gndOFastyus.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L1 12 - DOM Explanation By Illya-gndOFastyus.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. L1 12 - DOM Explanation By Illya-gndOFastyus.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L1 12 - DOM Explanation By Illya-gndOFastyus.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="02. L1 12 - DOM Explanation By Illya-gndOFastyus.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>To recap the video, the following steps happen:</p>
+<ul>
+<li>HTML is received</li>
+<li>HTML tags are converted to tokens</li>
+<li>Tokens are converted to Nodes</li>
+<li>Nodes are converted to the DOM</li>
+</ul>
+<p>When you request a website, no matter what backend language is powering that website, it will respond with HTML. The browser receives a stream of HTML. The bytes are run through a complicated (but fully documented) parsing process that determines the different characters (e.g. the start tag character <code>&lt;</code>, an attribute like <code>href</code>, a closing angle bracket like <code>&gt;</code>). After parsing has occurred, a process called <strong>tokenization</strong> begins. Tokenization takes one character at a time and builds up <strong>tokens</strong>. The tokens are:</p>
+<ul>
+<li>DOCTYPE</li>
+<li>start tag</li>
+<li>end tag</li>
+<li>comment</li>
+<li>character</li>
+<li>end-of-file</li>
+</ul>
+<p>Let's take a break for a second. At this state, the browser has received the bytes that've been sent by a server. The browser has converted the bytes to tags and has read through the tags to create a list of tokens.</p>
+<p>This list of tokens then goes through the tree construction stage. The output of this stage is a tree-like structure - this is the DOM!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>I want to point out two important quotes that Illya said in the video:</p>
+<blockquote>
+  <p>a tree structure that captures the content and properties of the HTML and all the relationships between the nodes</p>
+</blockquote>
+<blockquote>
+  <p>the DOM is the full, parsed representation of the HTML</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>So the DOM is a model (representation) of the relationships and attributes of the HTML document that was received. Remember that DOM stands for "Document Object Model". Something that I've found to be true as I've been learning is that to break something down, just read the thing backwards:</p>
+<p>Document Object Model</p>
+<p>…would become…</p>
+<p>Object Model of the Document!</p>
+<p>Remember that a JavaScript object is a tree-like structure that has properties and values. So the DOM can be accessed using a special object provided by the browser: <code>document</code></p>
+<p>Try this:</p>
+<ol>
+<li>open the console on this page</li>
+</ol>
+<ul>
+<li>type out the word <code>document</code><ul>
+<li>careful not to declare it (<code>const document</code>)</li>
+<li>careful not to wrap it in quotes (<code>"document"</code>)</li></ul></li>
+<li>press enter</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud117-l1-document-object-in-console.jpg" alt="_Viewing the &#x60;document&#x60; object in the DevTools&#x27; Console pane._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Viewing the <code>document</code> object in the DevTools' Console pane.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The <code>document</code> object is provided by the browser and is a representation of the HTML document. This object is <em>not</em> provided by the JavaScript language. ECMAScript is the language specification that JavaScript is based on, and it only references the document object model in one place, in its "Global Object" section:</p>
+<blockquote>
+  <p>In addition to the properties defined in this specification the global object may have additional host defined properties. This may include a property whose value is the global object itself; for example, in the HTML document object model the window property of the global object is the global object itself. (<a href="https://www.ecma-international.org/ecma-262/#sec-global-object" rel="noopener noreferrer" target="_blank">source</a>)</p>
+</blockquote>
+<p>Basically, this says that the <code>document</code> object is not part of JavaScript, but is expected to <em>already exist</em> and be freely accessible to JavaScript code.  </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The DOM is standardized by the W3C. There are a number of specifications that make up the DOM, here are few:</p>
+<ul>
+<li>Core Specification</li>
+<li>Events Specification</li>
+<li>Style Specification</li>
+<li>Validation Specification</li>
+<li>Load and Save Specification</li>
+</ul>
+<p>To see the full list of DOM specs, check out the standard at: <a href="https://www.w3.org/standards/techs/dom#w3c_all" rel="noopener noreferrer" target="_blank">https://www.w3.org/standards/techs/dom#w3c_all</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Ok, so do not scroll back up or review what you just read. Just take a moment, think about everything you've learned about the DOM and the document object and, in your own words, write an explanation of what "the DOM" is.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for taking the time! Hopefully, the DOM makes much more sense <em>now</em> than it did at the beginning of this section.</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-dom-recap">The DOM Recap</h2>
+<p>The DOM stands for "Document Object Model" and is a tree-like structure that is a representation of the HTML document, the relationship between elements, and contains the content and properties of the elements.</p>
+<p>The DOM is <em>not</em>:</p>
+<ul>
+<li>part of the JavaScript language</li>
+</ul>
+<p>The DOM is:</p>
+<ul>
+<li>constructed from the browser</li>
+<li>is globally accessible by JavaScript code using the <code>document</code> object</li>
+</ul>
+<p>The DOM is used all of the time and is what we'll be using throughout this course!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" rel="noopener noreferrer" target="_blank">DOM Introduction</a></li>
+<li><a href="https://www.w3.org/TR/html5/syntax.html#parsing" rel="noopener noreferrer" target="_blank">Section 8.2 Parsing HTML documents</a> from the W3C's HTML Documentation</li>
+<li><a href="https://www.w3.org/standards/techs/dom#w3c_all" rel="noopener noreferrer" target="_blank">DOM Specification</a> on W3C</li>
+<li><a href="https://www.ecma-international.org/ecma-262/#sec-global-object" rel="noopener noreferrer" target="_blank">HTML Document Object Model mentioned in the ECMAScript Specification</a> - the language specification used by JavaScript</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Selecting Page Elements With CSS Selectors.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. The DOM')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

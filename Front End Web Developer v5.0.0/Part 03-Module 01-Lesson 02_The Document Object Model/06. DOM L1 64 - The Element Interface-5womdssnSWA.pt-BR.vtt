@@ -1,0 +1,117 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.088 --> 00:00:01.877
+Assim como
+a interface do Nó,
+
+00:00:01.919 --> 00:00:05.508
+a interface do Elemento contém
+uma lista das propriedades
+
+00:00:05.550 --> 00:00:09.543
+e dos métodos disponíveis
+para um elemento.
+
+00:00:11.745 --> 00:00:14.615
+Vejamos algumas propriedades
+deste elemento.
+
+00:00:14.657 --> 00:00:17.301
+Clico com o botão direito
+e seleciono Inspecionar.
+
+00:00:17.343 --> 00:00:21.047
+Vamos descer um pouco,
+para podermos ver isto.
+
+00:00:21.089 --> 00:00:23.951
+Vamos selecionar
+o elemento h2.
+
+00:00:23.993 --> 00:00:26.230
+Apertando esc,
+o console aparecerá.
+
+00:00:26.272 --> 00:00:31.222
+Se selecionarmos um elemento
+no painel Elements,
+
+00:00:31.264 --> 00:00:34.888
+o $0 fará referência
+ao elemento.
+
+00:00:35.735 --> 00:00:40.156
+Este é o h2, e $0 faz referência
+ao item em destaque.
+
+00:00:40.198 --> 00:00:44.459
+Se eu selecionar e digitar $0,
+esse será o span.
+
+00:00:44.501 --> 00:00:47.105
+Vamos clicar
+no cabeçalho também...
+
+00:00:49.185 --> 00:00:54.521
+para conferir o atributo className
+do cabeçalho.
+
+00:00:54.563 --> 00:00:58.444
+Vemos className aqui.
+Então vamos pegar ele.
+
+00:00:58.486 --> 00:01:02.981
+Vemos highlight-spanned.
+Ele está aqui em cima.
+
+00:01:04.140 --> 00:01:07.947
+Vamos experimentar
+outra propriedade.
+
+00:01:07.989 --> 00:01:10.707
+Na verdade,
+vejamos um dos métodos.
+
+00:01:10.749 --> 00:01:13.243
+Vejamos
+este método hasAttribute.
+
+00:01:13.285 --> 00:01:17.987
+Usaremos $0, que faz referência
+ao elemento selecionado
+
+00:01:18.029 --> 00:01:20.837
+no painel Elements,
+que, no momento, é h2.
+
+00:01:21.644 --> 00:01:26.049
+Chamaremos hasAttribute...
+
+00:01:26.091 --> 00:01:30.628
+Como ele tem uma classe,
+um nome e uma propriedade,
+
+00:01:30.670 --> 00:01:33.852
+vamos escolher só um deles,
+só a classe.
+
+00:01:33.894 --> 00:01:35.701
+Ele tem classe?
+
+00:01:36.470 --> 00:01:37.925
+Aqui diz que tem.
+
+00:01:39.262 --> 00:01:41.681
+Esta é
+a interface do Elemento,
+
+00:01:41.723 --> 00:01:44.810
+e todo método ou propriedade
+nesta página
+
+00:01:44.852 --> 00:01:47.291
+está disponível
+para qualquer elemento.
+

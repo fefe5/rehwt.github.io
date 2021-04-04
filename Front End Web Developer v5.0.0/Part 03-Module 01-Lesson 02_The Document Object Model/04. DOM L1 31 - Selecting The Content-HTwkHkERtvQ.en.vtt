@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.990
+I'm on MDN and looking at the "GetElementById" page.
+
+00:00:03.990 --> 00:00:08.315
+Now let's open up the console and use this method.
+
+00:00:08.314 --> 00:00:12.309
+Let's switch to the elements pane real quickly and we're going
+
+00:00:12.310 --> 00:00:15.073
+to search for this DOM element right here,
+
+00:00:15.073 --> 00:00:17.375
+the one that has the ID of content.
+
+00:00:17.375 --> 00:00:19.515
+So, I'm going to hit the escape key to bring up
+
+00:00:19.515 --> 00:00:22.904
+the console and I'll move this up just a bit.
+
+00:00:22.905 --> 00:00:24.457
+And now, let's just type out
+
+00:00:24.457 --> 00:00:32.000
+document.getElementById and will pass it the string of "content."
+

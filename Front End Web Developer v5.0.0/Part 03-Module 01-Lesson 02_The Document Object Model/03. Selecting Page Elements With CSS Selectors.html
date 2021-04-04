@@ -1,0 +1,328 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Selecting Page Elements With CSS Selectors</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>The Document Object Model</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. The DOM.html">02. The DOM</a>
+    </li>
+    <li class="">
+      <a href="03. Selecting Page Elements With CSS Selectors.html">03. Selecting Page Elements With CSS Selectors</a>
+    </li>
+    <li class="">
+      <a href="04. Select Page Element By ID.html">04. Select Page Element By ID</a>
+    </li>
+    <li class="">
+      <a href="05. Select Page Elements By Class Or Tag.html">05. Select Page Elements By Class Or Tag</a>
+    </li>
+    <li class="">
+      <a href="06. Nodes, Elements, and Interfaces...Oh My!.html">06. Nodes, Elements, and Interfaces...Oh My!</a>
+    </li>
+    <li class="">
+      <a href="07. More Ways To Access Elements.html">07. More Ways To Access Elements</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Summary.html">08. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Selecting Page Elements With CSS Selectors</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="a-css-mindset">A CSS Mindset</h2>
+<p>You're probably used to seeing (and writing!) a lot of this kinda stuff:</p>
+<pre><code class="css language-css">.header {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.header.header--clone .header__navbar {
+    height: 4.5rem
+}
+
+.header.header--stick {
+    top: 0;
+    background-color: #ffffff;
+    z-index: 8000;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.1)
+}
+
+.header__navbar {
+    max-width: 73.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4.5rem;
+    padding: 0 1.5em
+}</code></pre>
+<p>…you know, CSS! The skills that you've learned writing CSS will help you in this section!</p>
+<p>With this in mind, let's make sure that you're comfortable answering the following questions.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following will style an element by its ID?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512191070510" name="467452" id="a1512191070510">
+      <label for="a1512191070510"><p><code>.left-nav { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191079023" name="467452" id="a1512191079023">
+      <label for="a1512191079023"><p><code>.id { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191080783" name="467452" id="a1512191080783">
+      <label for="a1512191080783"><p><code>#footer { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191089096" name="467452" id="a1512191089096">
+      <label for="a1512191089096"><p><code>p { ... }</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`#footer { ... }`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following will style an element by its class?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512191173490" name="467453" id="a1512191173490">
+      <label for="a1512191173490"><p><code>.left-nav { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191183610" name="467453" id="a1512191183610">
+      <label for="a1512191183610"><p><code>.id { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191185591" name="467453" id="a1512191185591">
+      <label for="a1512191185591"><p><code>#footer { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191186312" name="467453" id="a1512191186312">
+      <label for="a1512191186312"><p><code>p { ... }</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`.left-nav { ... }`</li>
+      <li>`.id { ... }`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following will style an element by targeting the tag name?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512191236100" name="467454" id="a1512191236100">
+      <label for="a1512191236100"><p><code>.left-nav { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191247179" name="467454" id="a1512191247179">
+      <label for="a1512191247179"><p><code>.id { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191247757" name="467454" id="a1512191247757">
+      <label for="a1512191247757"><p><code>#footer { ... }</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512191248446" name="467454" id="a1512191248446">
+      <label for="a1512191248446"><p><code>p { ... }</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`p { ... }`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>So this was a quick review on how to select elements by ID, class, and tag. Believe it or not, being able to select HTML elements this way is actually going to be a vital skill in this section where we learn how to access page elements using JavaScript and the DOM! </p>
+<p>If you struggled a little bit with this section, perhaps you should do a quick review of CSS by reviewing the <a href="https://www.udacity.com/course/intro-to-html-and-css--ud001" rel="noopener noreferrer" target="_blank">HTML and CSS course</a>.</p>
+<p>Alrighty - let's get right to it and let the fun begin! 🙌🏼 </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Select Page Element By ID.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Selecting Page Elements With CSS Selectors')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.580
+Node interfeys elementiga o‘xshab,
+
+00:00:02.580 --> 00:00:04.200
+interfeys bironta element uchun 
+
+00:00:04.200 --> 00:00:07.350
+yaroqli bo‘lgan barcha xususiyatlar va 
+
+00:00:07.350 --> 00:00:11.250
+methodlarning ro‘yxatiga qaytadi.
+
+00:00:11.250 --> 00:00:13.270
+Keling, mana bu element uchun ba’zi xususiyatlarni 
+
+00:00:13.270 --> 00:00:15.010
+tekshirib chiqamiz. Uning o‘ng tomonini bosmoqchiman 
+
+00:00:15.010 --> 00:00:16.529
+va inspectni tanlayman.
+
+00:00:16.529 --> 00:00:19.689
+Keyin mana bu yerdan biroz pastga tushaman, shunda,
+
+00:00:19.689 --> 00:00:22.570
+u ko‘rinadi va men mana bu yerdagi
+
+00:00:22.570 --> 00:00:24.910
+HDL eventini tanlayman. Escapeni bosish 
+
+00:00:24.910 --> 00:00:27.760
+konsolga olib keladi va bu yerdagi bitta kichik hiyla, dollar nol,
+
+00:00:27.760 --> 00:00:29.980
+bu agar siz elementlar panelidan bironta
+
+00:00:29.980 --> 00:00:33.160
+elementni tanlagan bo‘lsangiz, 
+
+00:00:33.160 --> 00:00:37.960
+o‘sha elementga ishora qiladi, shunda bu H ikki.
+
+00:00:37.960 --> 00:00:39.730
+Dollar nol belgilangan elementga ishora qiladi,
+
+00:00:39.730 --> 00:00:41.980
+u holda agar men mana buni tanlasam va 
+
+00:00:41.980 --> 00:00:44.979
+dollar nol deb yozsam bu o‘sha spanga aylanadi.
+
+00:00:44.979 --> 00:00:49.780
+Demak, h2ga bosamiz va keling,
+
+00:00:49.780 --> 00:00:54.190
+bu sarlavhaning class name attributeini tekshirib ko‘ramiz.
+
+00:00:54.190 --> 00:00:56.680
+Mana bu yerda sinflashtirishni ko‘rayapmiz. Keling, o‘sha sinf
+
+00:00:56.680 --> 00:00:59.470
+nomini tanlab olamiz va ko‘rishimiz mumkinki, 
+
+00:00:59.470 --> 00:01:01.479
+unda uning mana bu yedagi bandini belgilab beradigan 
+
+00:01:01.479 --> 00:01:04.900
+belgilangan span mavjud. Endi, 
+
+00:01:04.900 --> 00:01:08.110
+sinab ko‘rish uchun boshqa bir xususiyatni tanlaymiz. 
+
+00:01:08.110 --> 00:01:10.080
+Pastga, methodlardan biriga tushamiz.
+
+00:01:10.080 --> 00:01:12.760
+Keling, mana bu method attributei boriga qaraymiz, 
+
+00:01:12.760 --> 00:01:15.580
+shunday qilib, biz dollar nolni ishlatamiz va 
+
+00:01:15.580 --> 00:01:17.440
+u yana biz elementlar panelida tanlagan 
+
+00:01:17.440 --> 00:01:19.270
+ushbu elementga ishora qiladi, shunday qilib,
+
+00:01:19.270 --> 00:01:22.630
+hozirda u h2 va biz attribute sifatida
+
+00:01:22.630 --> 00:01:27.210
+has attributeini chaqiramiz va 
+
+00:01:27.210 --> 00:01:30.190
+unda bironta sinf, nom, xususiyat yoki
+
+00:01:30.190 --> 00:01:31.300
+bularning uchchalasi bor yo‘qligini ko‘ramiz.
+
+00:01:31.300 --> 00:01:34.060
+Demak, keling, shunchaki birni va sinfni tekshiramiz
+
+00:01:34.060 --> 00:01:37.300
+shunday qilib, bunda bironta sinf bormi? va u
+
+00:01:37.300 --> 00:01:40.840
+borligini aytayapti va yana bu element interfeysi,
+
+00:01:40.840 --> 00:01:43.120
+bu sahifadagi har bir yagona method va 
+
+00:01:43.120 --> 00:01:45.580
+xususiyat har bir yagona 
+
+00:01:45.580 --> 00:01:48.750
+element uchun yaroqlidir.
+

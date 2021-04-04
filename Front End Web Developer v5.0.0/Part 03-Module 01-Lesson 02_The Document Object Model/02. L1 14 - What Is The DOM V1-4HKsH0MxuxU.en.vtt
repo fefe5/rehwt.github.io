@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.605
+D O M stands for Document Object Model but it's commonly abbreviated to just "the DOM".
+
+00:00:07.605 --> 00:00:09.355
+But, what is it exactly?
+
+00:00:09.355 --> 00:00:12.015
+Is it the set of clickable things in the Element pane?
+
+00:00:12.015 --> 00:00:14.900
+Or is it the HTML that the browser displays?
+
+00:00:14.900 --> 00:00:16.844
+To understand what the DOM is,
+
+00:00:16.844 --> 00:00:21.669
+it's helpful to know how we got from the HTML source to what we see in the browser.
+
+00:00:21.670 --> 00:00:25.070
+Check out the following video of Ilya Grigorik from Google explaining
+
+00:00:25.070 --> 00:00:29.000
+what happens with the HTML page after you request the website.
+

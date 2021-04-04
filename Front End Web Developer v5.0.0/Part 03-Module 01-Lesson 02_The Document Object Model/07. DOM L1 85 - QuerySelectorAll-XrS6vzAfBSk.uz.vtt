@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.310
+Keling, sahifadagi barcha h2 elementlarini tanlash uchun 
+
+00:00:02.310 --> 00:00:04.380
+query selector all methodidan foydalanamiz,
+
+00:00:04.380 --> 00:00:11.700
+shunda, ishlab turgan query selector all
+
+00:00:11.700 --> 00:00:14.040
+hujjat va keyin biron h2ga o‘tish 
+
+00:00:14.040 --> 00:00:15.960
+sahifadagi barcha h2 elementlarining ro‘yxatiga qaytadi.
+
+00:00:15.960 --> 00:00:17.880
+Hozir, bu aslida array emas node list
+
+00:00:17.880 --> 00:00:20.430
+deb ataladigan maxsus ro‘yxat.
+
+00:00:20.430 --> 00:00:23.850
+U aslida array bo‘lmagani uchun 
+
+00:00:23.850 --> 00:00:25.619
+biz arraydagi elementlar bo‘ylab  
+
+00:00:25.619 --> 00:00:28.050
+borishda array methodidan 
+
+00:00:28.050 --> 00:00:30.390
+foydalana olmaymiz. Ammo, node listchi?
+
+00:00:30.390 --> 00:00:34.200
+Keling, shuni ko‘ramiz, u uni qayerdaligini ta’minlaydi
+
+00:00:34.200 --> 00:00:37.469
+Mana bu yerda bitta for each methodi va bu 
+
+00:00:37.469 --> 00:00:39.210
+for each array methodining 
+
+00:00:39.210 --> 00:00:41.579
+for eachiga o‘xshash, biroq, biz mana bu yerga
+
+00:00:41.579 --> 00:00:45.270
+pastga tushsak, bu brauzer hamma brauzer  
+
+00:00:45.270 --> 00:00:47.670
+ham to‘liq ishlatavermaydigan 
+
+00:00:47.670 --> 00:00:50.370
+for each methodni ishlatadi, ammo
+
+00:00:50.370 --> 00:00:52.050
+hammasi joyida, agar biz ro‘yxatdagi elementlarimiz 
+
+00:00:52.050 --> 00:00:54.390
+bo‘ylab borishni xohlasak, biz shunchaki for loopdan 
+
+00:00:54.390 --> 00:00:56.940
+foydalana olamiz. Birinchi keling, bironta elementga  
+
+00:00:56.940 --> 00:01:04.949
+qaytilgan barcha elementlarni saqlab olamiz.
+
+00:01:04.949 --> 00:01:06.180
+Siz meni for loop yozib o‘tirishimni 
+
+00:01:06.180 --> 00:01:08.340
+ko‘rishni xohlamaysiz,
+
+00:01:08.340 --> 00:01:10.110
+shunday qilib, bu elementlar ro‘yxatidagi 
+
+00:01:10.110 --> 00:01:15.119
+barcha elementlar bo‘ylab aylanib chiqadi. Agar mana bu yerda 
+
+00:01:15.119 --> 00:01:17.759
+yuqoriga qarab orqaga qaytsak, biz 
+
+00:01:17.759 --> 00:01:19.560
+ro‘yxatdagi birinchi element mana bu yerdagi 
+
+00:01:19.560 --> 00:01:22.280
+sarlavha ekanligini ko‘rishimiz mumkin.
+

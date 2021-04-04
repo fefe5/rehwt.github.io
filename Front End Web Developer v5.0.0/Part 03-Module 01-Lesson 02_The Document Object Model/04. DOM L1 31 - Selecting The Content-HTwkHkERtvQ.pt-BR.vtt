@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.947
+Estou no MDN,
+na página getElementById.
+
+00:00:03.989 --> 00:00:07.411
+Vamos abrir o console
+e usar este método.
+
+00:00:09.499 --> 00:00:15.009
+Vamos para o painel Elements
+para procurar por este elemento DOM,
+
+00:00:15.051 --> 00:00:17.450
+o que tem o ID do conteúdo.
+
+00:00:17.492 --> 00:00:20.258
+Vou apertar esc
+para seguir para o console
+
+00:00:20.300 --> 00:00:23.146
+e mover isto um pouco
+para cima.
+
+00:00:23.188 --> 00:00:28.874
+Vamos digitar
+document.getElementById
+
+00:00:28.916 --> 00:00:31.483
+e passar a string "content".
+

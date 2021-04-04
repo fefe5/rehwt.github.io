@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.299
+I'm on the Document.getElementsByClassName page.
+
+00:00:03.299 --> 00:00:06.059
+And let's scroll down here just a bit.
+
+00:00:06.059 --> 00:00:07.289
+So, under these examples,
+
+00:00:07.290 --> 00:00:09.720
+we can see a couple of examples with some code,
+
+00:00:09.720 --> 00:00:12.025
+and let's look at one of them.
+
+00:00:12.025 --> 00:00:15.500
+We can see that it's a 'pre' tag with a number of different classes on it.
+
+00:00:15.500 --> 00:00:18.195
+But the one we're going to look at is line numbers.
+
+00:00:18.195 --> 00:00:19.859
+So, here's a 'pre' tag with line numbers.
+
+00:00:19.859 --> 00:00:21.629
+Here is a 'pre' tag with line numbers.
+
+00:00:21.629 --> 00:00:24.089
+Here's one and here's another one.
+
+00:00:24.089 --> 00:00:28.050
+So, there are a number of items on this page with the class of line numbers.
+
+00:00:28.050 --> 00:00:33.160
+Let's use the getElementsByClassName to take a look at them.
+
+00:00:33.640 --> 00:00:38.850
+Invoking this function returns five items.
+
+00:00:38.850 --> 00:00:40.200
+Looking at this character right here,
+
+00:00:40.200 --> 00:00:43.815
+this bracket, makes it look like it's an array that's returned.
+
+00:00:43.814 --> 00:00:45.149
+But it's actually not.
+
+00:00:45.149 --> 00:00:46.379
+If we open this up,
+
+00:00:46.380 --> 00:00:50.050
+we can see that this is an HTML collection.
+
+00:00:50.049 --> 00:00:53.589
+And looking at the documentation up here, we can see that,
+
+00:00:53.590 --> 00:00:58.109
+here's the documentation for how to write it out and it returns elements.
+
+00:00:58.109 --> 00:01:01.170
+Elements is a live HTML collection of
+
+00:01:01.170 --> 00:01:04.540
+all of the elements that were found on the page with that class name.
+
+00:01:04.540 --> 00:01:07.730
+So, getElementsByClassName doesn't return an array,
+
+00:01:07.730 --> 00:01:10.000
+it returns an HTML collection.
+

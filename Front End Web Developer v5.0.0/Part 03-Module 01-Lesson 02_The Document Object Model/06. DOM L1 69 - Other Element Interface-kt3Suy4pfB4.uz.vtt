@@ -1,0 +1,123 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.070
+Biz Node interfeysi va element enterfeyslarni ko‘rib chiqdik, 
+
+00:00:02.070 --> 00:00:04.380
+ammo, bundan tashqari yana ko‘plab interfeyslar bor
+
+00:00:04.380 --> 00:00:06.810
+shunchaki anchor va heading 
+
+00:00:06.810 --> 00:00:09.719
+elementlari haqida o‘ylang,
+
+00:00:09.719 --> 00:00:11.580
+bularning har biri o‘zining interfeysi orqali  
+
+00:00:11.580 --> 00:00:13.740
+xususiyat va methodlari bilan birga
+
+00:00:13.740 --> 00:00:15.780
+barcha interfeyslar ro‘yxatini ko‘rish uchun ortga qaytadi.
+
+00:00:15.780 --> 00:00:18.779
+Keling, veb apining sahifasini tekshirib ko‘ramiz.
+
+00:00:18.779 --> 00:00:20.279
+mana bu yerda biroz pastga tushamiz
+
+00:00:20.279 --> 00:00:22.260
+va kategoriyaning oxirida nodeni topamiz
+
+00:00:22.260 --> 00:00:25.170
+va biz yana biroz pastga tushishimiz mumkin,
+
+00:00:25.170 --> 00:00:26.820
+shunda sahifaning chap tomonida
+
+00:00:26.820 --> 00:00:29.580
+interface elementini topishimiz mumkin.
+
+00:00:29.580 --> 00:00:32.279
+Keling, mana bu yerdagi HTML interfeysni qarab chiqamiz.
+
+00:00:32.279 --> 00:00:38.250
+Mana bu yerdan HTML elementiga boramiz,
+
+00:00:38.250 --> 00:00:41.610
+endi, mana bu interfeysga qaraymiz.
+
+00:00:41.610 --> 00:00:43.500
+Bu interfeysda biz u nodedan meros qilib olingan 
+
+00:00:43.500 --> 00:00:46.110
+elementdan meros qilinayotganini ko‘rishimiz mumkin.
+
+00:00:46.110 --> 00:00:48.840
+demak, har bir yagona HTML elementi 
+
+00:00:48.840 --> 00:00:51.239
+bu xususiyat va methodlarni meros qilib oladi
+
+00:00:51.239 --> 00:00:53.070
+va HTML element interfeysi o‘zining shaxsiy 
+
+00:00:53.070 --> 00:00:59.340
+xususiyatlari va methodlariga ega.
+
+00:00:59.340 --> 00:01:02.039
+Endi ularning barchasining ro‘yxatiga qaytib,
+
+00:01:02.039 --> 00:01:03.390
+bironta maxsus, mana bu o‘ng tomondagi anchor 
+something specific like the anchor
+
+00:01:03.390 --> 00:01:07.020
+elementiga o‘xshagan narsani qarab chiqamiz. Demak, anchor
+
+00:01:07.020 --> 00:01:10.020
+elementi HTML elementidan meros qilib oladi.
+
+00:01:10.020 --> 00:01:12.960
+Keling, orqaga qaytib, u yerda bironta video bormi yo‘qmi ko‘ramiz
+
+00:01:12.960 --> 00:01:15.900
+bu yerda HTML video yorlig‘ini pastga siljitish kerak 
+
+00:01:15.900 --> 00:01:19.200
+va bu yerda HTML video elementlari interfeysi
+
+00:01:19.200 --> 00:01:22.170
+va bu element nodedan meros qilib olingan
+
+00:01:22.170 --> 00:01:24.030
+HTML elementidan meros qilib oladigan
+HTML media element which inherits from
+
+00:01:24.030 --> 00:01:25.799
+HTML media elementidan meros qilib oladi
+
+00:01:25.799 --> 00:01:28.740
+va bu HTML video element
+
+00:01:28.740 --> 00:01:30.869
+interfeysi bizga har bir yagona video teg uchun
+
+00:01:30.869 --> 00:01:32.820
+xususiyatlar va methodlar beradi.
+
+00:01:32.820 --> 00:01:37.799
+Demak, haqiqatdan ham turli xil xususiyat 
+
+00:01:37.799 --> 00:01:39.329
+va methodlarga ega bo‘lgan 
+
+00:01:39.329 --> 00:01:41.189
+tonnalab interfeyslar mavjud, shuning uchun
+
+00:01:41.189 --> 00:01:44.449
+siz aniq bu sahifani tekshirib ko‘rishingiz kerak.
+

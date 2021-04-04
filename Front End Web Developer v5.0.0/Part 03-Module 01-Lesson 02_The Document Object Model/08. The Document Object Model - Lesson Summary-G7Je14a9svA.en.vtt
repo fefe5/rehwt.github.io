@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.475
+So, how'd you like this lesson?
+
+00:00:02.475 --> 00:00:04.245
+You learned quite a bit about the Web.
+
+00:00:04.245 --> 00:00:05.642
+You learned about the DOM,
+
+00:00:05.642 --> 00:00:10.589
+how it's constructed, how to select by ID, class and tag.
+
+00:00:10.589 --> 00:00:13.974
+And you learned about the Node interface and the Element interface.
+
+00:00:13.974 --> 00:00:15.279
+In the next lesson,
+
+00:00:15.279 --> 00:00:19.919
+you learn new DOM methods that will let you alter and control page content.
+
+00:00:19.920 --> 00:00:22.000
+It's really getting exciting now, isn't it?
+

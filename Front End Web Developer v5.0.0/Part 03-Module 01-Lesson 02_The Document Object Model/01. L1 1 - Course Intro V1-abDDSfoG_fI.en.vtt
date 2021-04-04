@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.515
+So you built a number of web sites.
+
+00:00:02.515 --> 00:00:05.064
+You know HTML, which provides this structure for a site.
+
+00:00:05.065 --> 00:00:08.855
+You've used CSS to style sites and make them look good.
+
+00:00:08.855 --> 00:00:09.980
+You've got it some nice font,
+
+00:00:09.980 --> 00:00:11.859
+a splash of color here.
+
+00:00:11.859 --> 00:00:15.094
+You've also learned the greatest programming language in the world.
+
+00:00:15.095 --> 00:00:18.685
+It's obviously JavaScript, but how did the worlds of
+
+00:00:18.684 --> 00:00:22.869
+HTML and CSS and the world of JavaScript come together?
+
+00:00:22.870 --> 00:00:26.500
+Well, that is exactly what you will be learning about in this course.
+
+00:00:26.500 --> 00:00:29.829
+HTML and CSS are fantastic at what they do.
+
+00:00:29.829 --> 00:00:32.570
+The problem is that they are kind of static.
+
+00:00:32.570 --> 00:00:34.323
+Once you write the HTML for a page,
+
+00:00:34.323 --> 00:00:35.920
+it does not change.
+
+00:00:35.920 --> 00:00:39.070
+That scintillating purple background color you added to the footer element,
+
+00:00:39.070 --> 00:00:40.945
+unless you change it in the style sheet,
+
+00:00:40.945 --> 00:00:43.480
+it is always going to be that shade of purple.
+
+00:00:43.479 --> 00:00:46.239
+Static, it is kind of boring.
+
+00:00:46.240 --> 00:00:47.950
+We want change, we want motion,
+
+00:00:47.950 --> 00:00:50.505
+and we want to control them programmatically.
+
+00:00:50.505 --> 00:00:53.800
+In this course, you will learn to use JavaScript and a new web
+
+00:00:53.799 --> 00:00:57.604
+API called the DOM to control the website.
+
+00:00:57.604 --> 00:01:00.009
+Being able to control the way a website responds to
+
+00:01:00.009 --> 00:01:02.859
+its users is a fundamental skill of a web developer,
+
+00:01:02.859 --> 00:01:05.954
+and you do not have to go very far on the web to see it in action either.
+
+00:01:05.954 --> 00:01:09.950
+An image slider, most kinds of form validation, a rating system,
+
+00:01:09.950 --> 00:01:14.073
+commenting system, all of these are powered by the skills you will learn,
+
+00:01:14.072 --> 00:01:15.994
+but let me highlight just a few of them.
+
+00:01:15.995 --> 00:01:17.928
+You will learn about the DOM,
+
+00:01:17.927 --> 00:01:20.414
+how to update and style page content.
+
+00:01:20.415 --> 00:01:21.970
+You will learn about the hidden world of
+
+00:01:21.969 --> 00:01:25.084
+browser events and how to hook into them and respond to them.
+
+00:01:25.084 --> 00:01:27.219
+You will also learn about the JavaScript event loop,
+
+00:01:27.219 --> 00:01:30.609
+which will help you to write better, more performing code.
+
+00:01:30.609 --> 00:01:33.459
+Now, why should I be teaching you about all of this?
+
+00:01:33.459 --> 00:01:35.799
+I am Richard Kalehoff, a Senior Content Developer here at
+
+00:01:35.799 --> 00:01:39.619
+Udacity and the Curriculum Lead for the front-end Nanodegree program.
+
+00:01:39.620 --> 00:01:41.400
+I have been developing on the web for,
+
+00:01:41.400 --> 00:01:43.950
+gosh, well over a decade.
+
+00:01:43.950 --> 00:01:46.795
+I have also taught this content for years at the graduate level,
+
+00:01:46.795 --> 00:01:49.795
+and I actually use this stuff every single day.
+
+00:01:49.795 --> 00:01:54.189
+For example, there is a site I use all the time to watch some educational videos,
+
+00:01:54.189 --> 00:01:57.739
+but the instructor talks way too slowly for me,
+
+00:01:57.739 --> 00:02:01.079
+but there is no option or button to change the speed of the video.
+
+00:02:01.079 --> 00:02:04.135
+That is not a problem though. Using the skills in this course,
+
+00:02:04.135 --> 00:02:07.750
+I create my own button and I am able to alter the speed of the video.
+
+00:02:07.750 --> 00:02:10.580
+I can jump forward or backward in time.
+
+00:02:10.580 --> 00:02:14.540
+So, see, this skills are incredibly useful. Let's get started.
+

@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.112 --> 00:00:02.231
+Estou na página
+de Introdução à DOM.
+
+00:00:02.273 --> 00:00:07.749
+Se rolarmos a página, veremos
+algumas instâncias de código.
+
+00:00:11.037 --> 00:00:12.940
+Aqui vemos mais algumas.
+
+00:00:12.982 --> 00:00:15.005
+Vamos ver um desses códigos.
+
+00:00:15.047 --> 00:00:17.725
+Clico com o botão direito
+e seleciono Inspecionar.
+
+00:00:17.767 --> 00:00:21.725
+Vemos, no painel Elements,
+que usaram a tag pre.
+
+00:00:21.767 --> 00:00:24.100
+Vemos uma aqui e outra aqui.
+
+00:00:24.142 --> 00:00:28.573
+Vamos usar getElementsByTagName
+para buscar todas as tags pre.
+
+00:00:28.615 --> 00:00:30.781
+Abro o console
+pressionando esc,
+
+00:00:30.823 --> 00:00:35.997
+digito
+document.getElementsByTagName
+
+00:00:36.741 --> 00:00:39.174
+e busco pela tag pre.
+
+00:00:41.630 --> 00:00:44.468
+Vemos uma lista com 6 itens.
+
+00:00:44.510 --> 00:00:47.515
+Se quisermos ver
+onde cada um deles está na DOM,
+
+00:00:47.557 --> 00:00:49.898
+basta clicar com o botão direito
+e selecionar
+
+00:00:49.940 --> 00:00:51.993
+"Reveal in Elements panel".
+
+00:00:52.035 --> 00:00:55.009
+Isso mostrará a localização
+no painel Elements.
+
+00:00:55.051 --> 00:00:58.713
+Daqui, clico com o botão direito
+e escolho "Scroll into view".
+
+00:00:58.755 --> 00:01:02.225
+Isso mostrará o elemento
+na página.
+
+00:01:03.242 --> 00:01:04.473
+Aqui está ele.
+
+00:01:04.515 --> 00:01:09.226
+Ele fica em destaque ao passarmos
+com o mouse aqui ou aqui.
+

@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.060 --> 00:00:02.820
+jQuery kutubxonasining asosiy maqsadlaridan
+
+00:00:02.820 --> 00:00:04.680
+biri - bu  dasturchi sifatida  
+
+00:00:04.680 --> 00:00:06.359
+turli xil brauzerlar orasidagi farqlarni
+
+00:00:06.359 --> 00:00:09.059
+mavhumlashtirish edi. Siz avval, JQuery ning maxsus 
+
+00:00:09.059 --> 00:00:11.280
+methodlarini yozardingiz, keyin jQuery 
+
+00:00:11.280 --> 00:00:12.900
+qaysi brauzer ishlatilganini aniqlar edi va
+
+00:00:12.900 --> 00:00:14.670
+o‘sha brauzer uchun to‘g‘ri koddan foydalanar edi.
+
+00:00:14.670 --> 00:00:17.490
+Hozir esa,  jQuery bir nechta brauzerlarga
+
+00:00:17.490 --> 00:00:19.680
+mos keladigan va to‘g‘ri ishlaydigan kod yozishni 
+
+00:00:19.680 --> 00:00:21.930
+osonlashtirganligi sababli, ko‘pchilik orasida 
+
+00:00:21.930 --> 00:00:24.750
+ommaviylashib bordi. Barcha brauzerlar rasmiy standartlarni
+
+00:00:24.750 --> 00:00:26.150
+qo‘llab-quvvatlaganligi sababli, JQuery Zeusdan
+
+00:00:26.150 --> 00:00:28.800
+ foydalanish asta-sekin kamayib bordi va
+
+00:00:28.800 --> 00:00:30.929
+mahalliy  DOM methodlari bilan almashtirildi.
+
+00:00:30.929 --> 00:00:33.660
+Ammo, menda hali ham JQueryga bo‘lgan qiziqish so‘nmagan.
+
+00:00:33.660 --> 00:00:36.210
+Endi, DOMning 
+
+00:00:36.210 --> 00:00:39.500
+yangi methodlarini ko‘rib chiqamiz.
+

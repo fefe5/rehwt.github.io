@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.550 --> 00:00:02.406
+Gostou da aula?
+
+00:00:02.448 --> 00:00:04.348
+Vimos muitas coisas
+sobre a internet.
+
+00:00:04.390 --> 00:00:06.220
+Vimos a DOM,
+
+00:00:06.262 --> 00:00:07.533
+como ela é construída,
+
+00:00:07.575 --> 00:00:10.644
+como selecionar por ID,
+por classe e por tag,
+
+00:00:10.686 --> 00:00:14.188
+e vimos a interface do Nó
+e a do Elemento.
+
+00:00:14.230 --> 00:00:16.628
+Na próxima aula,
+veremos novos métodos DOM
+
+00:00:16.670 --> 00:00:19.845
+que permitirão alterar
+e controlar o conteúdo da página.
+
+00:00:19.887 --> 00:00:21.785
+Está ficando interessante,
+não acha?
+

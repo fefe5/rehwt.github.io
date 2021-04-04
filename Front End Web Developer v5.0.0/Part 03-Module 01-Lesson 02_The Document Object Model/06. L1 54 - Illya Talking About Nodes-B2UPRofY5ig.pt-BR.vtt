@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.105 --> 00:00:03.146
+Por exemplo, o texto
+entre colchetes angulares
+
+00:00:03.188 --> 00:00:06.160
+tem significado especial no HTML,
+e se torna uma tag.
+
+00:00:06.202 --> 00:00:09.624
+Sempre que houver uma tag,
+o navegador emitirá um token,
+
+00:00:09.666 --> 00:00:12.688
+que, neste caso, será o token
+StartTag: html.
+
+00:00:12.730 --> 00:00:15.269
+A seguir,
+haverá o token StartTag: head,
+
+00:00:15.311 --> 00:00:16.781
+e assim por diante.
+
+00:00:16.823 --> 00:00:19.581
+Esse processo é realizado
+pelo tokenizer.
+
+00:00:19.623 --> 00:00:21.572
+Enquanto ele realiza
+esse trabalho,
+
+00:00:21.614 --> 00:00:27.160
+outro processo consumirá os tokens
+e os converterá em objetos nós.
+

@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.259
+Let's select all of the H2 elements using the query selector method.
+
+00:00:10.279 --> 00:00:22.324
+Passing just the elements name will let us select it with just the tag name.
+
+00:00:22.324 --> 00:00:24.519
+Alternatively, we can select it by its class by
+
+00:00:24.519 --> 00:00:28.570
+passing the name of the class with a period in the front.
+
+00:00:28.570 --> 00:00:32.034
+And both of these will actually return the exact same element.
+
+00:00:32.034 --> 00:00:34.149
+One is selecting the element by the tag,
+
+00:00:34.149 --> 00:00:36.504
+the other is selecting the element by its class,
+
+00:00:36.505 --> 00:00:40.000
+but for both instances where using the query selector Method.
+

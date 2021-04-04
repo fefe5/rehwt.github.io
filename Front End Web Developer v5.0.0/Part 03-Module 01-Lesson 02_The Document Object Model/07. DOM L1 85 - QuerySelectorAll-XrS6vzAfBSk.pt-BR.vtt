@@ -1,0 +1,78 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.119 --> 00:00:05.319
+Vamos usar o método querySelectorAll
+para selecionar os elementos h2.
+
+00:00:09.528 --> 00:00:13.537
+Executar document.querySelectorAll
+passando h2
+
+00:00:13.579 --> 00:00:16.760
+retornará uma lista
+dos elementos h2 da página.
+
+00:00:16.802 --> 00:00:19.384
+Lembre-se que isto não é
+um array,
+
+00:00:19.426 --> 00:00:23.481
+mas uma lista especial
+chamada "NodeList".
+
+00:00:23.523 --> 00:00:27.289
+Como não é um array,
+não podemos usar o método array .map
+
+00:00:27.331 --> 00:00:29.400
+para realizar o loop
+nos itens do array.
+
+00:00:29.442 --> 00:00:33.886
+Entretanto, NodeList fornece -
+
+00:00:33.928 --> 00:00:36.654
+onde ele está? -
+um método forEach,
+
+00:00:36.696 --> 00:00:40.280
+que é muito parecido
+com o forEach do método array.
+
+00:00:40.322 --> 00:00:43.359
+Porém, se formos
+até a parte de baixo...
+
+00:00:44.815 --> 00:00:50.173
+O método forEach não é suportado
+por todos os navegadores.
+
+00:00:50.215 --> 00:00:53.710
+Não tem problema, se quisermos
+usar o loop nesta lista,
+
+00:00:53.752 --> 00:00:55.486
+podemos usar um loop for.
+
+00:00:55.528 --> 00:00:59.423
+Vamos armazenar os elementos
+retornados em uma variável.
+
+00:01:04.775 --> 00:01:08.162
+Não vou compor um loop for,
+vou copiá-lo de algum código.
+
+00:01:08.204 --> 00:01:12.211
+Isto fará um loop em cada item
+da lista listOfElements.
+
+00:01:14.243 --> 00:01:16.953
+Se voltarmos
+até a parte de cima,
+
+00:01:16.995 --> 00:01:20.563
+veremos que o primeiro item da lista
+será este cabeçalho aqui.
+

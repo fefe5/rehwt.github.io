@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.375
+I'm on the documentation page for the Node interface,
+
+00:00:03.375 --> 00:00:05.370
+and we can see down here are the properties.
+
+00:00:05.370 --> 00:00:07.560
+Let's just scroll down a bit.
+
+00:00:07.559 --> 00:00:09.959
+Here are some of the properties of Node
+
+00:00:09.960 --> 00:00:15.089
+and farther down on the page we can get to the methods.
+
+00:00:15.089 --> 00:00:19.835
+Let's scroll back up to the properties for just a second.
+
+00:00:19.835 --> 00:00:23.410
+We can see that every Node has a ".baseURI" property,
+
+00:00:23.410 --> 00:00:26.179
+let's check that out on the body element.
+
+00:00:26.179 --> 00:00:30.359
+Let's open up the console by going to "view", "developer",
+
+00:00:30.359 --> 00:00:32.820
+and then "Javascript console",
+
+00:00:32.820 --> 00:00:38.512
+so I can access the body by typing out "document.body".
+
+00:00:38.512 --> 00:00:42.575
+But actually let's store this in a variable.
+
+00:00:42.575 --> 00:00:48.350
+Now on "bodyElement", let's call the ".baseURI",
+
+00:00:48.350 --> 00:00:57.015
+and we can see that this is the URI of the web page.
+
+00:00:57.015 --> 00:01:01.759
+Let's scroll down a bit and get to the Node types here.
+
+00:01:01.759 --> 00:01:08.670
+So looking at "bodyElement.nodetype," gives us one.
+
+00:01:08.670 --> 00:01:12.040
+This tells us that it is an Element Node.
+
+00:01:12.040 --> 00:01:18.000
+So every node has the properties and methods listed on this page.
+

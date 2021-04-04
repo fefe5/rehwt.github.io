@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.139
+Let's use the "querySelectorAll" method to select all of the "h2" elements on the page.
+
+00:00:07.320 --> 00:00:12.740
+So running a "document.querySelectAll" and then passing an
+
+00:00:12.740 --> 00:00:16.844
+"h2" will return a list of all of "h2" elements on the page.
+
+00:00:16.844 --> 00:00:19.364
+Now it's important to remember that this is not an array.
+
+00:00:19.364 --> 00:00:23.089
+This is actually a special list called a "NodeList."
+
+00:00:23.089 --> 00:00:25.050
+Because it's not actually an array,
+
+00:00:25.050 --> 00:00:29.365
+we can't use the array method ".map" to loop over the items in the array.
+
+00:00:29.364 --> 00:00:31.793
+However, NodeList, let's look at it,
+
+00:00:31.794 --> 00:00:34.880
+does provide a, where is it here?
+
+00:00:34.880 --> 00:00:40.330
+"forEach" method and this "forEach" is very similar to the "forEach" of the array method.
+
+00:00:40.329 --> 00:00:43.964
+However, if we scroll down to the bottom here,
+
+00:00:43.965 --> 00:00:49.825
+the browser support for the "forEach" method is not fully supported by every browser.
+
+00:00:49.825 --> 00:00:53.725
+But that's all right. If we wanted to loop over our items in this list,
+
+00:00:53.725 --> 00:00:55.570
+we can just use a "for loop."
+
+00:00:55.570 --> 00:01:00.920
+First, let's store all of the returned elements in a variable.
+
+00:01:02.840 --> 00:01:07.984
+You don't want to watch me write a "for loop," so let me just paste it in some code.
+
+00:01:07.984 --> 00:01:11.650
+So this will loop over every item in the "listOfElements" list.
+
+00:01:11.650 --> 00:01:17.124
+If we scroll back up here towards the top,
+
+00:01:17.123 --> 00:01:21.000
+we can see that the first item in the list is this heading right here.
+

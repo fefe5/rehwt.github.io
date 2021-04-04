@@ -1,0 +1,386 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Select Page Element By ID</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>The Document Object Model</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. The DOM.html">02. The DOM</a>
+    </li>
+    <li class="">
+      <a href="03. Selecting Page Elements With CSS Selectors.html">03. Selecting Page Elements With CSS Selectors</a>
+    </li>
+    <li class="">
+      <a href="04. Select Page Element By ID.html">04. Select Page Element By ID</a>
+    </li>
+    <li class="">
+      <a href="05. Select Page Elements By Class Or Tag.html">05. Select Page Elements By Class Or Tag</a>
+    </li>
+    <li class="">
+      <a href="06. Nodes, Elements, and Interfaces...Oh My!.html">06. Nodes, Elements, and Interfaces...Oh My!</a>
+    </li>
+    <li class="">
+      <a href="07. More Ways To Access Elements.html">07. More Ways To Access Elements</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Summary.html">08. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Select Page Element By ID</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="select-an-element-by-id">Select An Element By ID</h2>
+<p>Let's take a look at how we can use JavaScript and the DOM to gain access to specific elements using their ID attribute.</p>
+<p>Remember the <code>document</code> object from the previous section? Well, we're going to start using it! Remember the <code>document</code> object is an object, just like a JavaScript object. This means it has key/value pairs. Some of the values are just pieces of data, while others are functions (also known as <strong>methods</strong>!) that provide some type of functionality. The first DOM method that we'll be looking at is the <code>.getElementById()</code> method:</p>
+<pre><code class="js language-js">document.getElementById();</code></pre>
+<p>If we ran the code above in the console, we wouldn't get anything, because we did not tell it the ID of any element to get! We need to pass a string to <code>.getElementById()</code> of the ID of the element that we want it to find and subsequently return to us:</p>
+<pre><code class="js language-js">document.getElementById('footer');</code></pre>
+<p>One thing to notice right off the bat, is that we're passing <code>'footer'</code>, not <code>'#footer'</code>. It already knows that it's searching for an ID (its name is "getElementById", for a reason!).</p>
+<p>If you'd like to read more about this method, check out its documentation page on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById</a></p>
+<p>Let's use this MDN documentation page to try out using this method.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L1 31 - Selecting The Content</p></h3>
+  <video controls>
+  <source src="04. DOM L1 31 - Selecting The Content-HTwkHkERtvQ.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. DOM L1 31 - Selecting The Content-HTwkHkERtvQ.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="04. DOM L1 31 - Selecting The Content-HTwkHkERtvQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. DOM L1 31 - Selecting The Content-HTwkHkERtvQ.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="04. DOM L1 31 - Selecting The Content-HTwkHkERtvQ.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>To recap what we just did:</p>
+<ul>
+<li>we opened the DevTools for the page we were looking at</li>
+<li>we switched to the Console pane</li>
+<li>we ran <code>document.getElementById('content');</code> on the console</li>
+</ul>
+<p>Running this code caused the <code>document</code> object to search through its entire tree-like structure for the element that has an ID of "content".</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Now it's your turn!</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--0">
+        <label for="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--0"><p>I loaded the HTML page</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--1">
+        <label for="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--1"><p>I opened the DevTools</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--2">
+        <label for="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--2"><p>I switched to the Console pane</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--3">
+        <label for="a8a9d4d5-c4f5-42aa-87aa-0f42a7af4cbe--3"><p>I used <code>document.getElementById()</code> to locate an element by its ID</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic work! That wasn't too hard, was it!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Now, what do you think will happen if you used <code>document.getElementById('&lt;some-nonexistent-ID&gt;')</code> to search for some ID that doesn't actually exist in the HTML page? <be> </p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512192518941" name="467461" id="a1512192518941">
+        <label for="a1512192518941"><p>a dummy element will be returned</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512192530208" name="467461" id="a1512192530208">
+        <label for="a1512192530208"><p><code>false</code> will be returned</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512192530826" name="467461" id="a1512192530826">
+        <label for="a1512192530826"><p><code>null</code> will be returned</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512192533535" name="467461" id="a1512192533535">
+        <label for="a1512192533535"><p>it will cause an error</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `null` will be returned
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L1 35 - Looking At Returned Node</p></h3>
+  <video controls>
+  <source src="04. DOM L1 35 - Looking At Returned Node-oCm5Ft3NbdE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. DOM L1 35 - Looking At Returned Node-oCm5Ft3NbdE.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="04. DOM L1 35 - Looking At Returned Node-oCm5Ft3NbdE.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. DOM L1 35 - Looking At Returned Node-oCm5Ft3NbdE.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="04. DOM L1 35 - Looking At Returned Node-oCm5Ft3NbdE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="04. DOM L1 35 - Looking At Returned Node-oCm5Ft3NbdE.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following will select the element with the ID of <code>logo</code>?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512192626366" name="467463" id="a1512192626366">
+      <label for="a1512192626366"><p><code>document.getElementById('logo');</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512192629323" name="467463" id="a1512192629323">
+      <label for="a1512192629323"><p><code>document.getElementByID('logo');</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512192629910" name="467463" id="a1512192629910">
+      <label for="a1512192629910"><p><code>document.getElementById('#logo');</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`document.getElementById('logo');`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write the DOM code to select the element with ID <code>strawberry-banner</code>.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="selecting-by-id-recap">Selecting By ID Recap</h2>
+<p>In this section, we learned how to select a DOM element by its ID:</p>
+<ul>
+<li><code>.getElementById()</code></li>
+</ul>
+<p>There are a couple of important things to keep in mind about this method:</p>
+<ul>
+<li>it is called on the <code>document</code> object</li>
+<li>it returns a <em>single</em> item</li>
+</ul>
+<pre><code class="js language-js">// select the element with the ID "callout"
+document.getElementById('callout');</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" rel="noopener noreferrer" target="_blank">.getElementById()</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Select Page Elements By Class Or Tag.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Select Page Element By ID')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

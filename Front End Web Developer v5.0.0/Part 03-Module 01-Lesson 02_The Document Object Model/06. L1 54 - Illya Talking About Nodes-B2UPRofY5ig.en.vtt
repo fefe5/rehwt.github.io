@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.250
+For example, the text contained within
+
+00:00:02.250 --> 00:00:05.995
+the angle brackets has special meaning in HTML and is sets to be a tag.
+
+00:00:05.995 --> 00:00:08.099
+As a result, whenever we encounter attack,
+
+00:00:08.099 --> 00:00:09.449
+the browser emits token.
+
+00:00:09.449 --> 00:00:12.734
+In this case, it is the "StartTag:HTML" token.
+
+00:00:12.734 --> 00:00:16.879
+Next, we would get the "StartTag:head" token, and so on.
+
+00:00:16.879 --> 00:00:19.529
+This entire process is done by the tokenizer.
+
+00:00:19.530 --> 00:00:21.625
+And while the tokenizer is doing this work,
+
+00:00:21.625 --> 00:00:24.660
+there is another process that is consuming these tokens,
+
+00:00:24.660 --> 00:00:27.240
+and is converting them to node objects.
+

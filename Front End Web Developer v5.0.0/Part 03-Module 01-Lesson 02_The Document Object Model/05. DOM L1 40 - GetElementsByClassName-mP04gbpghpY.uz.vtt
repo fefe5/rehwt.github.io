@@ -1,0 +1,50 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.580
+Keling, mana bu yerdagi matnga qaraymiz va
+
+00:00:02.580 --> 00:00:05.009
+o‘ngni bosamiz va inspectni tanlaymiz va keyin,
+
+00:00:05.009 --> 00:00:07.589
+mana bu yerda, elementlar panelida bizda
+
+00:00:07.589 --> 00:00:09.809
+belgilangan bironta span sinfi bilan birga 
+
+00:00:09.809 --> 00:00:12.719
+mana bu h2 elementi mavjud.
+
+00:00:12.719 --> 00:00:14.639
+Endi, ushbu sahifada span qilib belgilangan  
+
+00:00:14.639 --> 00:00:16.109
+sinfga ega barcha elementlarni tanlash uchun 
+
+00:00:16.109 --> 00:00:18.869
+get elements by sinf nomi methodidan foydalanamiz.
+
+00:00:18.869 --> 00:00:20.279
+Men konsolni ochish uchun klaviaturamdagi 
+
+00:00:20.279 --> 00:00:22.230
+Escape tugmasini bosaman va uni 
+
+00:00:22.230 --> 00:00:28.740
+biroz pastroqqa tushiraman va keling, 
+
+00:00:28.740 --> 00:00:32.009
+document nuqta get elements by sinf nomi
+hujjatini ishlatamiz va keyin
+
+00:00:32.009 --> 00:00:36.440
+belgilangan spanni qidiramiz.
+
+00:00:36.440 --> 00:00:40.530
+Biz mana bu yerda uni uch-to‘rtta element ro‘yxatiga 
+
+00:00:40.530 --> 00:00:43.550
+qaytilganini ko‘rishimiz mumkin.
+

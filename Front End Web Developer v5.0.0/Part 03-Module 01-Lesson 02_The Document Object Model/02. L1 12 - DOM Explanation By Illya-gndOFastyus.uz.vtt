@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.640
+HTMLning texnik xususiyatlari, olingan ma’lumotlarni ustida
+
+00:00:02.640 --> 00:00:05.634
+ishlashning bir qator qoidalarini o‘z ichiga oladi.
+
+00:00:05.634 --> 00:00:07.710
+Masalan, HTML da, burchakli qavs ichida joylashgan matnning 
+
+00:00:07.710 --> 00:00:11.669
+alohida ma’nosi bor va bu tag deb ataladi.
+
+00:00:11.669 --> 00:00:13.574
+Natijada, qachon biz  tegga duch kelganimizda,
+
+00:00:13.574 --> 00:00:15.009
+brauzer trgga alohida belgi beradi.
+
+00:00:15.009 --> 00:00:17.922
+Bu holda, bu StartTag HTML tegidir.
+
+00:00:17.922 --> 00:00:21.960
+Undan keyin, StartTag HTML head  tegini olamiz va davom etamiz.
+
+00:00:21.960 --> 00:00:25.178
+Ushbu butun jarayon tokenizer&lt;/&gt; tomonidan  amalga oshiriladi.
+
+00:00:25.178 --> 00:00:27.120
+ Tokenizer&lt;/&gt; ushbu jarayonni amalga oshirayotgan bir paytda,
+
+00:00:27.120 --> 00:00:29.519
+xuddi shu teglarni ishlatayotgan va 
+
+00:00:29.519 --> 00:00:33.479
+node obyektlarga aylantirayotgan yana bir jarayon mavjud.
+
+00:00:33.479 --> 00:00:39.145
+Masalan, biz birinchi HTML tegini obyektga aylantiramiz and HTML node ni yaratamiz.
+
+00:00:39.145 --> 00:00:42.630
+Keyin navbatdagi tegni ishlatamiz va head node ni yaratamiz.
+
+00:00:42.630 --> 00:00:45.366
+Node lar o‘rtasida bog‘liqlik mavjudmi?
+
+00:00:45.366 --> 00:00:49.295
+Ha. E’tibor bering, Tokenizer boshlang‘ich va tugash tegiga alohida belgi beradi,
+
+00:00:49.295 --> 00:00:51.490
+va bu nodelar o‘rtasidagi bog‘liqlikni anglatadi.
+
+00:00:51.490 --> 00:00:56.149
+StartTag head tegi EndTag HTML tegidan oldin keladi
+
+00:00:56.149 --> 00:01:00.554
+va bu  head  teg HTML ning bir qismi ekanligini anglatadi.
+
+00:01:00.554 --> 00:01:06.920
+Xuddi shunday, meta va link nodes lar   head node ning bir qismidir.
+
+00:01:06.920 --> 00:01:09.340
+Natijada, biz barcha teglarni ishlatib bo‘lganimizdan so‘ng,
+
+00:01:09.340 --> 00:01:12.314
+HTMLning tarkibi va xususiyatlarini, nodelar o‘rtasidagi
+
+00:01:12.314 --> 00:01:15.780
+bog‘liqlikni o‘ziga jam qilgan daraxt tuzilishini anglatuvchi
+
+00:01:15.780 --> 00:01:19.439
+Document Object Model yoki oddiygina DOM ga yetib kelamiz.
+
+00:01:19.439 --> 00:01:21.974
+E’tibor bering, ushbu obyektlar ularning barcha xususiyatlarini o‘z ichiga oladi.
+
+00:01:21.974 --> 00:01:25.724
+Masalan, image nodei source attributini o‘z ichiga oladi va
+
+00:01:25.724 --> 00:01:31.477
+ushbu node xuddi shu xususiyatga ega bo‘lishi mumkin.
+
+00:01:31.477 --> 00:01:35.399
+DOM - HTML markupning to‘liq tarkibiy qismidir.
+

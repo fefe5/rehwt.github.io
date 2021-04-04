@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.210 --> 00:00:04.354
+Temos esta função gimmeNumber
+que retorna um número.
+
+00:00:05.515 --> 00:00:07.321
+Se eu chamá-la
+
+00:00:08.483 --> 00:00:10.394
+e armazená-la em uma variável,
+
+00:00:11.662 --> 00:00:15.317
+ela será executada e retornará 17,
+que será armazenado nesta variável.
+
+00:00:15.359 --> 00:00:16.898
+Vamos conferir.
+
+00:00:19.658 --> 00:00:21.722
+Obtemos o número 17.
+
+00:00:23.690 --> 00:00:27.804
+De forma parecida,
+se eu usar document.getElementById,
+
+00:00:29.467 --> 00:00:32.379
+e selecionar
+o cabeçalho principal,
+
+00:00:33.780 --> 00:00:36.467
+isso retornará o elemento.
+
+00:00:40.554 --> 00:00:41.986
+Assim como com o número,
+
+00:00:42.028 --> 00:00:45.090
+podemos armazenar isso
+em uma variável
+
+00:00:46.451 --> 00:00:48.618
+e acessar o elemento
+posteriormente.
+

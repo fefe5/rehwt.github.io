@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.990
+Men hozir MDNdaman va GetElementById sahifasiga qarayapman.
+
+00:00:03.990 --> 00:00:08.314
+Hozir, keling, konsolni ochamiz va mana bu methodni ishlatamiz
+
+00:00:08.314 --> 00:00:12.310
+Tezlik bilan elementlar paneliga o‘tamiz va biz mana bu yerdagi 
+
+00:00:12.310 --> 00:00:15.073
+tarkibiy qismning IDsiga ega bo‘lgan, 
+
+00:00:15.073 --> 00:00:17.375
+DOM elementini izlamoqchimiz.
+
+00:00:17.375 --> 00:00:19.515
+Demak, men konsolga olib borishi uchun mana bu escape tugmasini bosmoqchiman 
+
+00:00:19.515 --> 00:00:22.905
+va men buni biroz yuqoriga siljitaman.
+
+00:00:22.905 --> 00:00:24.457
+Endi, keling, document.getElementById deb yozaman va 
+
+00:00:24.457 --> 00:00:32.000
+uni content.ning stringiga o‘tkazib olaman.
+

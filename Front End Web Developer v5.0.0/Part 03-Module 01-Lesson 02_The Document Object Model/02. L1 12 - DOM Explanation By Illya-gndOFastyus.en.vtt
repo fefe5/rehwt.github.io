@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.640
+The HTML specification contains a set of rules
+
+00:00:02.640 --> 00:00:05.634
+for how we should process the received data.
+
+00:00:05.634 --> 00:00:07.710
+For example, the text contained within
+
+00:00:07.710 --> 00:00:11.669
+the angle brackets has special meaning in HTML and is set to be a tag.
+
+00:00:11.669 --> 00:00:13.574
+As a result, whenever we encounter or a tag,
+
+00:00:13.574 --> 00:00:15.009
+the browser emits a token.
+
+00:00:15.009 --> 00:00:17.922
+In this case it is the StartTag HTML token.
+
+00:00:17.922 --> 00:00:21.960
+Next, we will get the StartTag head token and so on.
+
+00:00:21.960 --> 00:00:25.178
+This entire process is done by the tokenizer.
+
+00:00:25.178 --> 00:00:27.120
+And while tokenizer is doing this work,
+
+00:00:27.120 --> 00:00:29.519
+there is another process that is consuming
+
+00:00:29.519 --> 00:00:33.479
+these tokens and is converting them to node objects.
+
+00:00:33.479 --> 00:00:39.144
+For example, we convert the first HTML token and create the HTML node.
+
+00:00:39.145 --> 00:00:42.630
+Then we consume the next token and create the head node.
+
+00:00:42.630 --> 00:00:45.367
+Is there a relationship between the nodes?
+
+00:00:45.366 --> 00:00:49.294
+Yes. Notice that the tokenizer emits start and end tokens,
+
+00:00:49.295 --> 00:00:51.490
+which tells us the relationship between the nodes.
+
+00:00:51.490 --> 00:00:56.150
+The StartTag head token comes before EndTag HTML token,
+
+00:00:56.149 --> 00:01:00.554
+which tells us that the head token is a child of HTML.
+
+00:01:00.554 --> 00:01:06.920
+Similarly, the meta and link nodes are children of the head node and so on.
+
+00:01:06.920 --> 00:01:09.340
+Eventually, once we consume all of the tokens,
+
+00:01:09.340 --> 00:01:12.314
+we arrive at the Document Object Model or simply DOM,
+
+00:01:12.314 --> 00:01:15.780
+which is a tree structure that captures the content and properties
+
+00:01:15.780 --> 00:01:19.439
+of the HTML and all the relationships between the nodes.
+
+00:01:19.439 --> 00:01:21.974
+Note that these objects contain all of their properties.
+
+00:01:21.974 --> 00:01:25.724
+For example, the image node has a source attribute
+
+00:01:25.724 --> 00:01:31.477
+and this node right here would also have the same property.
+
+00:01:31.477 --> 00:01:35.399
+The DOM is the full parse representation of the HTML markup.
+
