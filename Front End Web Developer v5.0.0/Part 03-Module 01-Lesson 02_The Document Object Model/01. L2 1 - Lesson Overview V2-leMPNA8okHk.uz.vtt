@@ -1,0 +1,63 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.875
+Bu sizni qo‘lingizdan keldi. Shu yergacha yetib kela oldik.
+
+00:00:02.875 --> 00:00:04.900
+Ushbu darsimizda Javascriptda ishlash va
+
+00:00:04.900 --> 00:00:07.785
+hujjat obyekt modelini boshqarish tartiblarini  o‘rganishni boshlaymiz
+
+00:00:07.785 --> 00:00:10.490
+Oxirgi darsimizda DOM,
+
+00:00:10.490 --> 00:00:11.980
+the Document Object Model larni o‘rgangan edik,
+
+00:00:11.980 --> 00:00:16.635
+va bundan tashqari, DOM dagi elementlarni tanlashning bir necha usullari,
+".getElementByID()",
+
+00:00:16.635 --> 00:00:21.730
+".getElementsByClassName()",  ".querySelector()", va boshqalarnini o‘rgandik .
+
+00:00:21.730 --> 00:00:25.120
+Bundan tashqari, Node va  Element interfeyslari va
+9
+00:00:25,120 --&gt; 00:00:29,469
+ushbu interfeyslarning o‘ziga tegishli elementlari bilan bog‘lanish 
+method va usullarini ko‘rib chiqqan edik.
+
+00:00:29.469 --> 00:00:30.850
+Boshida aytganimdek,
+
+00:00:30.850 --> 00:00:34.840
+Ushbu darsda,  DOM elemtlarini yaratish, ular ustida ishlash,  
+
+00:00:34.840 --> 00:00:37.420
+o‘chirish kabi amallarni bajarishda Javascript va DOM ni ishlatamiz 
+
+00:00:37.420 --> 00:00:38.899
+Ushbu mavzuni o‘rganish jarayoni bilan bir vaqtda,
+
+00:00:38.899 --> 00:00:40.479
+siz Javascript va DOMni bir-biriga bog‘lashning haqiqiy 
+
+00:00:40.479 --> 00:00:43.734
+kuchi haqida tushunchaga ega bo‘lasiz.
+
+00:00:43.734 --> 00:00:46.640
+Agar bundan xabaringiz bo‘lmasa, oldindan aytishim mumkin, bu juda qiziqarli.
+
+00:00:46.640 --> 00:00:48.145
+Hozir eng birinchi qiladigan ishimiz bu -
+
+00:00:48.145 --> 00:00:52.000
+butun kursimiz davomida foydalanadigan loyihani yuklab olishimiz kerak.
+
+00:00:52.000 --> 00:00:54.100
+Tayyormisiz? Yaxshi. Qani boshladik.
+

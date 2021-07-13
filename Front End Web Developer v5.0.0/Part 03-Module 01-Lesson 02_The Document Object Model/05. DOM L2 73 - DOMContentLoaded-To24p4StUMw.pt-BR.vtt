@@ -1,0 +1,108 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.204 --> 00:00:02.330
+Quero mostrar algo bem rápido.
+
+00:00:02.372 --> 00:00:05.745
+Selecionei este cabeçalho
+na variável communityHeading
+
+00:00:05.787 --> 00:00:09.090
+e modifiquei o tamanho da fonte
+e as propriedades de cor.
+
+00:00:09.132 --> 00:00:12.355
+Vamos salvar o arquivo
+para ver como ficou.
+
+00:00:12.397 --> 00:00:16.433
+Se eu descer
+e recarregar a página,
+
+00:00:16.475 --> 00:00:20.698
+vemos que o cabeçalho ficará assim
+após recarregarmos.
+
+00:00:20.740 --> 00:00:23.491
+Clico com o botão direito,
+seleciono Inspecionar
+
+00:00:23.533 --> 00:00:25.962
+e vejo que ele adicionou
+o tamanho da fonte
+
+00:00:26.004 --> 00:00:28.139
+e as propriedades de cor.
+
+00:00:28.828 --> 00:00:31.082
+Vejo os estilos
+aplicados aqui também.
+
+00:00:31.124 --> 00:00:32.899
+Vamos retornar
+ao editor de código
+
+00:00:32.941 --> 00:00:35.331
+e mudar para o arquivo index.
+
+00:00:36.403 --> 00:00:40.060
+O arquivo JavaScript
+estará lá no final.
+
+00:00:41.899 --> 00:00:43.978
+Vou subir isto.
+
+00:00:45.347 --> 00:00:49.002
+Vemos que,
+das 1.206 linhas de código,
+
+00:00:49.044 --> 00:00:52.618
+ele está na linha 1.203.
+Eis o arquivo JavaScript.
+
+00:00:52.660 --> 00:00:56.740
+Vamos cortar isto
+e mover para head.
+
+00:01:03.172 --> 00:01:06.674
+Vou salvar o arquivo
+e recarregar o navegador.
+
+00:01:06.716 --> 00:01:09.011
+Estamos nele,
+agora vamos recarregar.
+
+00:01:10.627 --> 00:01:14.410
+O cabeçalho está como antes,
+da forma original,
+
+00:01:14.452 --> 00:01:17.162
+pois não foi modificado
+pelo JavaScript.
+
+00:01:17.204 --> 00:01:20.812
+Vemos o seguinte erro
+no DevTools:
+
+00:01:21.410 --> 00:01:24.955
+"Erro não identificado, incapaz
+de ler a propriedade style de null."
+
+00:01:24.997 --> 00:01:27.711
+Do que sabemos da DOM
+sobre como manipular as coisas
+
+00:01:27.753 --> 00:01:29.404
+e do carregamento
+do JavaScript,
+
+00:01:29.446 --> 00:01:31.898
+tente descobrir
+por que isso aconteceu.
+
+00:01:31.940 --> 00:01:34.755
+Veremos e consertaremos isso
+na próxima seção.
+

@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.700 --> 00:00:05.196
+A indústria da internet tenta
+separar as coisas.
+
+00:00:05.229 --> 00:00:07.621
+O HTML deve ser
+um arquivo HTML,
+
+00:00:07.654 --> 00:00:09.876
+o estilo deve estar
+em um arquivo CSS
+
+00:00:09.909 --> 00:00:12.763
+e a interatividade
+deve estar em um arquivo JavaScript.
+
+00:00:12.796 --> 00:00:15.279
+E é melhor não misturá-los.
+
+00:00:15.312 --> 00:00:18.390
+Então pode soar errado
+colocar o estilo da página
+
+00:00:18.423 --> 00:00:20.254
+no arquivo JavaScript.
+
+00:00:20.287 --> 00:00:22.766
+Quer saber? Eu concordo.
+
+00:00:22.799 --> 00:00:25.014
+Os estilos devem estar
+na folha de estilos,
+
+00:00:25.047 --> 00:00:28.405
+porém precisaremos unir
+um pouco as coisas.
+
+00:00:28.438 --> 00:00:31.590
+Por exemplo, uma classe
+é adicionada ao HTML,
+
+00:00:31.623 --> 00:00:33.789
+que aplicará o estilo
+ao elemento,
+
+00:00:33.822 --> 00:00:37.516
+e poderemos procurar uma classe
+na DOM usando o JavaScript.
+
+00:00:37.549 --> 00:00:40.526
+Em vez de escrevermos os estilos
+no JavaScript,
+
+00:00:40.559 --> 00:00:44.646
+deixamos o JavaScript controlar
+o atributo de classe de um elemento.
+

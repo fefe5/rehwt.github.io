@@ -1,0 +1,33 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.126 --> 00:00:04.148
+Há muita coisa acontecendo aqui,
+mas vemos que o elemento âncora
+
+00:00:04.190 --> 00:00:08.421
+é este cartão aqui
+com classe card.
+
+00:00:08.463 --> 00:00:11.758
+Vamos buscar no console
+pelo elemento card.
+
+00:00:12.789 --> 00:00:13.992
+Estou buscando na DOM
+
+00:00:14.034 --> 00:00:16.009
+o primeiro elemento
+com classe card,
+
+00:00:16.051 --> 00:00:18.316
+que salvarei na variável card.
+
+00:00:18.358 --> 00:00:20.805
+Vamos chamar .innerHTML.
+
+00:00:23.686 --> 00:00:27.766
+Todos os HTMLs daqui
+são feitos aqui.
+

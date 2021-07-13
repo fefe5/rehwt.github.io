@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.640
+This is the "insertAdjacentHTML" documentation page.
+
+00:00:03.640 --> 00:00:04.995
+If I scroll down just a bit,
+
+00:00:04.995 --> 00:00:09.390
+we can see that this method needs to be called on a parent element.
+
+00:00:09.390 --> 00:00:11.850
+This method also needs to be called with two arguments,
+
+00:00:11.849 --> 00:00:13.859
+the position, and the text.
+
+00:00:13.859 --> 00:00:16.469
+Now, it's important to realize that this is actually text.
+
+00:00:16.469 --> 00:00:18.919
+Similar to the text content property,
+
+00:00:18.920 --> 00:00:20.875
+this has to be text and not HTML.
+
+00:00:20.875 --> 00:00:24.690
+If you pass HTML, then that HTML will actually be displayed.
+
+00:00:24.690 --> 00:00:25.855
+Now this position property,
+
+00:00:25.855 --> 00:00:29.658
+it's easier to see when we look at where they go.
+
+00:00:29.658 --> 00:00:34.950
+These are the four items right here: "beforebegin",
+
+00:00:34.950 --> 00:00:37.630
+"afterbegin", "beforeend", and "afterend".
+
+00:00:37.630 --> 00:00:41.685
+But let's actually just check out the visualization down here.
+
+00:00:41.685 --> 00:00:45.304
+So, if the element in question is this paragraph tank,
+
+00:00:45.304 --> 00:00:47.549
+these are where the four positions go.
+
+00:00:47.549 --> 00:00:50.454
+"beforebegin" will appear before the element.
+
+00:00:50.454 --> 00:00:52.814
+"afterbegin" will appear right after it,
+
+00:00:52.814 --> 00:00:54.239
+as the first child.
+
+00:00:54.240 --> 00:00:57.179
+"beforeend" will appear right before the closing tag,
+
+00:00:57.179 --> 00:00:59.045
+as its last child.
+
+00:00:59.045 --> 00:01:03.030
+And then, "afterend" will appear right after the paragraph element, as a sibling.
+

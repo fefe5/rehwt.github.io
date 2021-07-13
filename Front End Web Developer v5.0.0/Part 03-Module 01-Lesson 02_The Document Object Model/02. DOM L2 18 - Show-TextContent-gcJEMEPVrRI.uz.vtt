@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.030 --> 00:00:02.040
+Keling, Domda so‘rov o‘tkazish va mana bu  
+
+00:00:02.040 --> 00:00:04.259
+karta sinfi bilan birinchi anchorni izlash orqali 
+
+00:00:04.259 --> 00:00:10.440
+mana bu kartani tanlaymiz. Endi,
+
+00:00:10.440 --> 00:00:16.020
+matnining tarkibiy qismini tekshirib olamiz.
+
+00:00:16.020 --> 00:00:18.029
+Ko‘rishimiz mumkinki, matn tarkibining xususiyati
+
+00:00:18.029 --> 00:00:21.180
+faqatgina elementning matnini tasvirlaydi.
+
+00:00:21.180 --> 00:00:23.300
+Keling, hozir buni biroz yuqoriga siljitamiz va keyin
+
+00:00:23.300 --> 00:00:26.400
+buni innerHTML kartalarining xususiyati bilan taqqoslaymiz.
+
+00:00:26.400 --> 00:00:31.260
+Ko‘rishingiz mumkinki, innerHTML xususiyati
+
+00:00:31.260 --> 00:00:33.690
+barcha HTMLni inner elementlar 
+
+00:00:33.690 --> 00:00:36.090
+bilan taminlaydi. Lekin, matn tarkibi
+
+00:00:36.090 --> 00:00:38.370
+faqatgina karta elementining matnini
+
+00:00:38.370 --> 00:00:40.820
+ta’minlaydi.
+

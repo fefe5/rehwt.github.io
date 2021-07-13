@@ -1,0 +1,45 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.083 --> 00:00:02.489
+Temos o cabeçalho
+"Learn ARKit",
+
+00:00:02.531 --> 00:00:05.490
+mas vamos adicionar mais texto
+ao final.
+
+00:00:05.532 --> 00:00:08.530
+Criaremos uma tag span
+para armazenar esse texto.
+
+00:00:10.138 --> 00:00:11.873
+Criaremos um elemento span
+
+00:00:11.915 --> 00:00:14.130
+que armazenaremos
+em uma variável.
+
+00:00:18.010 --> 00:00:20.317
+Criamos um span,
+fizemos o log-out
+
+00:00:20.359 --> 00:00:22.428
+e vemos que temos
+um elemento span.
+
+00:00:22.470 --> 00:00:24.781
+Vamos adicionar texto ao span.
+
+00:00:31.053 --> 00:00:33.819
+Criamos o elemento span
+e adicionamos texto a ele,
+
+00:00:33.861 --> 00:00:37.397
+mas como o adicionamos à página,
+para que ele apareça aqui?
+
+00:00:37.439 --> 00:00:38.933
+É isso que veremos a seguir.
+

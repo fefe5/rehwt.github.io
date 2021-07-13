@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.020 --> 00:00:02.100
+Hozirgina ushbu bo‘limda mavjud tarkibni
+
+00:00:02.100 --> 00:00:05.220
+o‘zgartirish haqida bilib oldingiz. Endi, 
+
+00:00:05.220 --> 00:00:06.810
+yangi tarkiblar yaratib, yanada
+
+00:00:06.810 --> 00:00:09.059
+ko‘proq o‘rganishga harakat qilamiz va uni  methodlar yaratish,
+
+00:00:09.059 --> 00:00:11.400
+matn node yaratish,
+
+00:00:11.400 --> 00:00:13.950
+appendchild metod va adjacent HTMLni
+
+00:00:13.950 --> 00:00:16.619
+qo‘shish kabi metodlari mavjud bo‘lgan
+
+00:00:16.619 --> 00:00:19.619
+sahifaga qo‘shib qo‘yamiz. Ushbu dastlabki
+
+00:00:19.619 --> 00:00:21.090
+uchta method lar o‘z nomlari bo‘yicha 
+
+00:00:21.090 --> 00:00:23.340
+nima qilishlarini aytib bera olishingiz kerak. Ammo bularning
+
+00:00:23.340 --> 00:00:25.619
+hammasini batafsil ko‘rib chiqamiz. Birinchi navbatda,
+
+00:00:25.619 --> 00:00:27.750
+element yaratish method ni ko‘rib chiqamiz, lekin 
+
+00:00:27.750 --> 00:00:29.340
+men ushbu mavzu bo‘yicha o‘zingiz ma’lumot topib
+
+00:00:29.340 --> 00:00:31.970
+harakat qilishingizni xohlayman.
+

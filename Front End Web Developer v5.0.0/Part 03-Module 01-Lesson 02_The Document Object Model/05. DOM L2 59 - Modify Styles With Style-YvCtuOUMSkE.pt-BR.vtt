@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.168 --> 00:00:04.609
+Vamos selecionar este cabeçalho
+na DOM.
+
+00:00:09.625 --> 00:00:12.303
+Este cinza não está
+muito na moda,
+
+00:00:12.345 --> 00:00:15.858
+então vamos mudar para algo
+mais alegre, como o laranja.
+
+00:00:20.585 --> 00:00:23.816
+Executar o comando
+alterou o texto para laranja
+
+00:00:23.858 --> 00:00:26.695
+e agora ele tem
+uma propriedade style aqui.
+
+00:00:26.737 --> 00:00:31.037
+Se abrirmos isto,
+veremos que o estilo está aqui.
+
+00:00:31.079 --> 00:00:33.906
+Vamos abrir
+um pouco mais de espaço.
+
+00:00:35.699 --> 00:00:38.555
+O cabeçalho ficou bom,
+mas está pequeno demais,
+
+00:00:38.597 --> 00:00:40.683
+então vamos aumentar
+a fonte.
+
+00:00:49.332 --> 00:00:53.827
+Bem melhor,
+e vemos font-size aqui e aqui.
+
+00:00:54.748 --> 00:00:57.732
+Vejamos o heading.style
+para ver o que aparece.
+
+00:01:01.172 --> 00:01:05.387
+Vemos que esta propriedade
+retorna CSSStyleDeclaration.
+
+00:01:05.429 --> 00:01:07.020
+Vamos abri-la.
+
+00:01:08.364 --> 00:01:12.347
+Vemos que a maioria
+das coisas está vazia.
+
+00:01:12.389 --> 00:01:14.450
+Vemos a cor que adicionamos,
+
+00:01:14.492 --> 00:01:18.396
+e, em algum lugar,
+estará o tamanho da fonte. Aqui.
+
+00:01:19.429 --> 00:01:21.234
+Se subirmos um pouco,
+
+00:01:21.276 --> 00:01:26.420
+haverá este cssText,
+que veremos em alguns minutos.
+

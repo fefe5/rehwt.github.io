@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.310
+Here's a really quick thing I want to show you.
+
+00:00:02.310 --> 00:00:05.835
+I've selected this heading stored it in the community heading variable,
+
+00:00:05.835 --> 00:00:08.935
+and modified its font size and color properties.
+
+00:00:08.935 --> 00:00:12.165
+Let's save this file and then see what that looks like.
+
+00:00:12.164 --> 00:00:16.140
+So if I scroll down here and refresh the page,
+
+00:00:16.140 --> 00:00:20.480
+we can see that this is what the heading would look like after reloading the page.
+
+00:00:20.480 --> 00:00:23.423
+And I can right click this and choose inspect element,
+
+00:00:23.423 --> 00:00:28.869
+and I can see that it's added the font size and the color properties.
+
+00:00:28.870 --> 00:00:30.905
+I can see those styles applied here too.
+
+00:00:30.905 --> 00:00:35.923
+Now, let's go back to the code editor and let's switch over to the index file.
+
+00:00:35.923 --> 00:00:40.840
+Now the javascript file is all the way at the bottom.
+
+00:00:40.840 --> 00:00:44.763
+Let me just move this up a bit.
+
+00:00:44.762 --> 00:00:46.429
+So we can see this here,
+
+00:00:46.429 --> 00:00:49.094
+out of 1206 lines of code,
+
+00:00:49.094 --> 00:00:50.759
+this is it, 1203,
+
+00:00:50.759 --> 00:00:52.625
+here's the javascript file.
+
+00:00:52.625 --> 00:00:58.420
+Now, let's actually cut this for a second and move it up to the head.
+
+00:01:01.219 --> 00:01:06.689
+So let me save this file and reload the browser.
+
+00:01:06.689 --> 00:01:09.584
+Here we are in the browser, now let's reload.
+
+00:01:09.584 --> 00:01:13.214
+We can see that our heading is what it used to be,
+
+00:01:13.215 --> 00:01:17.145
+the original way, it hasn't been modified by the javascript at all.
+
+00:01:17.144 --> 00:01:21.224
+And we can see in our div tools that we have an error,
+
+00:01:21.224 --> 00:01:24.949
+uncaught type error, cannot read property style of null.
+
+00:01:24.950 --> 00:01:27.210
+From what you know about the DOM and how to manipulate
+
+00:01:27.209 --> 00:01:29.459
+things in the loading of JavaScript,
+
+00:01:29.459 --> 00:01:31.989
+try and think about why this might be.
+
+00:01:31.989 --> 00:01:35.000
+We'll look at how to fix this in the next section.
+

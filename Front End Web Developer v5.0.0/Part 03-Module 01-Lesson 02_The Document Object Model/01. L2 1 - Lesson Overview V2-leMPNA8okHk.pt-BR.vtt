@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.728 --> 00:00:02.726
+Você conseguiu.
+Nós estamos aqui.
+
+00:00:02.759 --> 00:00:06.646
+Nesta aula começaremos a controlar
+o modelo de objeto de documento
+
+00:00:06.679 --> 00:00:07.926
+com o JavaScript.
+
+00:00:07.959 --> 00:00:10.390
+Na última aula,
+conhecemos a DOM,
+
+00:00:10.423 --> 00:00:12.138
+o modelo
+de objeto de documento,
+
+00:00:12.171 --> 00:00:15.108
+e vimos formas
+de selecionar itens na DOM:
+
+00:00:15.141 --> 00:00:16.667
+o .getElementById,
+
+00:00:16.700 --> 00:00:18.819
+o .getElementsByClassName,
+
+00:00:18.852 --> 00:00:21.802
+o .querySelector,
+entre outros.
+
+00:00:21.835 --> 00:00:24.466
+Vimos as interfaces
+do Nó e do Elemento
+
+00:00:24.499 --> 00:00:29.322
+e a lista de propriedades
+e métodos dos elementos.
+
+00:00:29.355 --> 00:00:30.723
+Como disse no início,
+
+00:00:30.756 --> 00:00:34.746
+nesta aula, usaremos o JavaScript
+e os métodos DOM para criar,
+
+00:00:34.779 --> 00:00:37.506
+deletar
+e manipular elementos DOM.
+
+00:00:37.539 --> 00:00:39.021
+Durante o processo,
+
+00:00:39.054 --> 00:00:43.840
+veremos a potência da combinação
+do JavaScript com a DOM.
+
+00:00:43.873 --> 00:00:46.603
+Isso será muito empolgante.
+
+00:00:46.636 --> 00:00:48.073
+Antes de começarmos,
+
+00:00:48.106 --> 00:00:51.681
+precisamos baixar o projeto
+que usaremos durante o curso.
+
+00:00:51.714 --> 00:00:54.153
+Está pronto? Vamos começar.
+

@@ -1,0 +1,38 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.034 --> 00:00:01.777
+Obtemos o texto de um elemento
+
+00:00:01.819 --> 00:00:04.403
+usando
+a propriedade .textContent.
+
+00:00:05.884 --> 00:00:07.634
+Alteramos o texto
+de um elemento
+
+00:00:07.676 --> 00:00:09.995
+configurando
+a propriedade .textContent.
+
+00:00:15.891 --> 00:00:18.314
+Em vez de obtermos
+.textContent,
+
+00:00:18.356 --> 00:00:20.914
+configuramos a propriedade aqui
+para esta string,
+
+00:00:20.956 --> 00:00:23.931
+e vemos que o texto
+aparecerá aqui.
+
+00:00:23.973 --> 00:00:26.123
+Podemos conferir isto
+no painel Elements,
+
+00:00:26.165 --> 00:00:28.267
+que vemos aqui.
+

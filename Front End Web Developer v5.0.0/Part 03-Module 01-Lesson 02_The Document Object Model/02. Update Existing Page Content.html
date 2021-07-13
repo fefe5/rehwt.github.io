@@ -1,0 +1,547 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Update Existing Page Content</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Creating Content with JavaScript</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Update Existing Page Content.html">02. Update Existing Page Content</a>
+    </li>
+    <li class="">
+      <a href="03. Add New Page Content.html">03. Add New Page Content</a>
+    </li>
+    <li class="">
+      <a href="04. Remove Page Content.html">04. Remove Page Content</a>
+    </li>
+    <li class="">
+      <a href="05. Style Page Content.html">05. Style Page Content</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Update Existing Page Content</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L2 6 - What You'Ll Learn V2</p></h3>
+  <video controls>
+  <source src="02. L2 6 - What You&#x27;Ll Learn V2-J_e_k_e__LM.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L2 6 - What You&#x27;Ll Learn V2-J_e_k_e__LM.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. L2 6 - What You&#x27;Ll Learn V2-J_e_k_e__LM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L2 6 - What You&#x27;Ll Learn V2-J_e_k_e__LM.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="02. L2 6 - What You&#x27;Ll Learn V2-J_e_k_e__LM.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's jump right into it. Open up the project in your browser. There's only one HTML file (<code>index.html</code>) so this is what it should look like after you open it:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud117-l1-project.jpg" alt="_The index page of the Udacity website loaded in a browser._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>The index page of the Udacity website loaded in a browser.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡project-code-💡">💡Project Code 💡</h2>
+  <p>Instructions and a walkthrough of the project were in the previous section. You can clone the project from the GitHub link below. Look back at the previous section to see detailed information about the project and a walkthrough video.</p>
+  <p>Project repository: <a href="https://github.com/udacity/course-JS-and-the-DOM" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-JS-and-the-DOM</a></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h3 id="indexhtml"><code>index.html</code></h3>
+  <p><br><br />
+  The <code>index.html</code> serves as a starter template for you to get started. There might be a slight mismatch between the actual content of <code>index.html</code> file downloaded from GitHub vs. the one shown in the demo. However, the mismatch would not block you from practicing the classroom instructions. </p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write the DOM code necessary to select the <em>first</em> element with class: <code>card</code></p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's store the first <code>.card</code> element in a variable for easy access:</p>
+<pre><code class="js language-js">const nanodegreeCard = document.querySelector('.card');</code></pre>
+<p>Now that we've stored the first card element in the <code>nanodegreeCard</code> variable, we can use <code>nanodegreeCard</code> to refer to this element instead of having to use <code>document.querySelector('.card')</code> to select the element every time we need access to it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="an-elements-inner-html">An Element's Inner HTML</h2>
+<p>Every element inherits properties and methods from the Element Interface (remember this from the previous lesson!). This means that every element has an <code>.innerHTML</code> property. This property, as it's rightly named, represents the markup of the element's content. We can use this property to:</p>
+<ul>
+<li>get an element's (and all of its descendants!) HTML content</li>
+<li>set an element's HTML content</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 13 - Show InnerHTML</p></h3>
+  <video controls>
+  <source src="02. DOM L2 13 - Show InnerHTML-go3zrL6BBos.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. DOM L2 13 - Show InnerHTML-go3zrL6BBos.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. DOM L2 13 - Show InnerHTML-go3zrL6BBos.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. DOM L2 13 - Show InnerHTML-go3zrL6BBos.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="02. DOM L2 13 - Show InnerHTML-go3zrL6BBos.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is <code>.innerHTML</code>?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512259988329" name="467534" id="a1512259988329">
+      <label for="a1512259988329"><p>a property</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512259990707" name="467534" id="a1512259990707">
+      <label for="a1512259990707"><p>a method</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512259991591" name="467534" id="a1512259991591">
+      <label for="a1512259991591"><p>an element</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512259992275" name="467534" id="a1512259992275">
+      <label for="a1512259992275"><p>an interface</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>a property</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What does <code>.innerHTML</code> return?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512260053104" name="467535" id="a1512260053104">
+      <label for="a1512260053104"><p>a DOM element</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512260055459" name="467535" id="a1512260055459">
+      <label for="a1512260055459"><p>a Node</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512260056041" name="467535" id="a1512260056041">
+      <label for="a1512260056041"><p>a string</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512260056604" name="467535" id="a1512260056604">
+      <label for="a1512260056604"><p>an array</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512260063167" name="467535" id="a1512260063167">
+      <label for="a1512260063167"><p>an object</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>a string</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="💡-innie-vs-outie-💡">💡 Innie vs Outie 💡</h3>
+<p>The <code>.innerHTML</code> property sets or returns the HTML content <em>inside</em> the selected element (i.e. between the tags).</p>
+<p>There's also the rarely used <code>.outerHTML</code> property. <code>.outerHTML</code> represents the HTML element itself, <em>as well as its children</em>.</p>
+<pre><code class="js language-js">&lt;h1 id="pick-me"&gt;Greetings To &lt;span&gt;All&lt;/span&gt;!&lt;/h1&gt;
+
+const innerResults = document.querySelector('#pick-me').innerHTML;
+console.log(innerResults); // logs the string: "Greetings To &lt;span&gt;All&lt;/span&gt;!"
+
+const outerResults = document.querySelector('#pick-me').outerHTML;
+console.log(outerResults); // logs the string: "&lt;h1 id="pick-me"&gt;Greetings To &lt;span&gt;All&lt;/span&gt;!&lt;/h1&gt;"</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="an-elements-text-content">An Element's Text Content</h2>
+<p>So <code>.innerHTML</code> will get/set an element's <em>HTML</em> content. If we just want the text content, we can use the fantastically named <code>.textContent</code> property!</p>
+<p>The <code>.textContent</code> property will:</p>
+<ul>
+<li>set the text content of an element and all its descendants</li>
+<li>return the text content of an element and all its descendants</li>
+</ul>
+<p>Let's check it out!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 18 - Show-TextContent</p></h3>
+  <video controls>
+  <source src="02. DOM L2 18 - Show-TextContent-gcJEMEPVrRI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. DOM L2 18 - Show-TextContent-gcJEMEPVrRI.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. DOM L2 18 - Show-TextContent-gcJEMEPVrRI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. DOM L2 18 - Show-TextContent-gcJEMEPVrRI.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="02. DOM L2 18 - Show-TextContent-gcJEMEPVrRI.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Check out the <code>.textContent</code>'s documentation page on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" rel="noopener noreferrer" target="_blank">textContent docs</a></p>
+<p>Setting an element's text content is easy, just set it like you would any other property:</p>
+<pre><code class="js language-js">nanodegreeCard.textContent = "I will be the updated text for the nanodegreeCard element!";</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 20 - Setting Content</p></h3>
+  <video controls>
+  <source src="02. DOM L2 20 - Setting Content-P3DuE86cTiU.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. DOM L2 20 - Setting Content-P3DuE86cTiU.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. DOM L2 20 - Setting Content-P3DuE86cTiU.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. DOM L2 20 - Setting Content-P3DuE86cTiU.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. DOM L2 20 - Setting Content-P3DuE86cTiU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="02. DOM L2 20 - Setting Content-P3DuE86cTiU.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><pre><code class="html language-html">&lt;h1 id="test"&gt;Ice Cream Flavors&lt;/h1&gt;</code></pre>
+<p>Given the HTML above, what will be the <code>.textContent</code> value after running this code:</p>
+<pre><code class="js language-js">const myElement = document.querySelector('#test');
+myElement.textContent = 'The &lt;strong&gt;Greatest&lt;/strong&gt; Ice Cream Flavors';</code></pre></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512260297528" name="467541" id="a1512260297528">
+      <label for="a1512260297528"><p>Ice Cream Flavors</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512260302558" name="467541" id="a1512260302558">
+      <label for="a1512260302558"><p>The Greatest Ice Cream Flavors</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512260303247" name="467541" id="a1512260303247">
+      <label for="a1512260303247"><p>The < strong >Greatest</ strong > Ice Cream Flavors</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512260303861" name="467541" id="a1512260303861">
+      <label for="a1512260303861"><p>running this code will cause an error</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The < strong >Greatest</ strong > Ice Cream Flavors</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We just saw that passing text that contains HTML characters to <code>.textContent</code> will not display the content as HTML. Instead, it will still display everything as text - even the HTML characters!</p>
+<p>If you'd like to update an element, <em>including</em> its HTML, then you need to use the <code>.innerHTML</code> property:</p>
+<pre><code class="js language-js">myElement.textContent = 'The &lt;strong&gt;Greatest&lt;/strong&gt; Ice Cream Flavors'; // doesn't work as expected
+
+myElement.innerHTML = 'The &lt;strong&gt;Greatest&lt;/strong&gt; Ice Cream Flavors';  // works as expected</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 23 - TextContent Vs InnerHTML</p></h3>
+  <video controls>
+  <source src="02. DOM L2 23 - TextContent Vs InnerHTML-PbT6va8NLbI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. DOM L2 23 - TextContent Vs InnerHTML-PbT6va8NLbI.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. DOM L2 23 - TextContent Vs InnerHTML-PbT6va8NLbI.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. DOM L2 23 - TextContent Vs InnerHTML-PbT6va8NLbI.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. DOM L2 23 - TextContent Vs InnerHTML-PbT6va8NLbI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="02. DOM L2 23 - TextContent Vs InnerHTML-PbT6va8NLbI.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="an-elements-text-content---version-2">An Element's Text Content - Version 2!</h2>
+<p>We can't close this section out without looking at the <code>.innerText</code> property!</p>
+<p>Like the <code>.textContent</code> property, the <code>.innerText</code> property can be used to get/set an element's text content, but there are some important differences between the two properties.</p>
+<p><code>.textContent</code> sets/gets the text content of an element…pretty clear and simple.</p>
+<p><code>.innerText</code>, on the other hand, is a little tricker. Let's see this in action and then we'll discuss it!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 25 - Demo-InnerText</p></h3>
+  <video controls>
+  <source src="02. DOM L2 25 - Demo-InnerText-x_F1R-VGxeE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. DOM L2 25 - Demo-InnerText-x_F1R-VGxeE.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. DOM L2 25 - Demo-InnerText-x_F1R-VGxeE.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. DOM L2 25 - Demo-InnerText-x_F1R-VGxeE.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. DOM L2 25 - Demo-InnerText-x_F1R-VGxeE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="02. DOM L2 25 - Demo-InnerText-x_F1R-VGxeE.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>As you saw, <code>.innerText</code> will get the <em>visible</em> text of the element. This is an important distinction! If CSS is used to hide any text inside that element, <code>.innerText</code> <em>will not</em> return that text, while <code>.textContent</code> <em>will</em> return it. And it's not just the hiding/showing nature of CSS that <code>.innerText</code> adheres to, <code>.innerText</code> will also honor changes to things like capitalization.</p>
+<p>The <code>.textContent</code> property has been a standard for quite a long time. Conversely, <code>.innerText</code> property is a relatively new addition to the HTML specification. It has been around for a while but was not fully supported by all browsers because it was not a part of the HTML specification.</p>
+<p>Between <code>.textContent</code> and <code>.innerText</code>, you probably want to use <code>.textContent</code> since that will return all of the text no matter what. Rarely will you actually want <em>only</em> the <em>visible</em> text.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="update-existing-content-recap">Update Existing Content Recap</h2>
+<p>In this section, we looked at multiple ways to change page content:</p>
+<ul>
+<li><code>.innerHTML</code></li>
+<li><code>.textContent</code></li>
+<li><code>.innerText</code></li>
+</ul>
+<p>We saw that to set HTML content for an element, out of the three properties list above, we can only use <code>.innerHTML</code>. Using <code>.textContent</code> will erroneously include the HTML characters as plain text inside the element.</p>
+<p>We also looked at the difference between <code>.textContent</code> and <code>.innerText</code>. <code>.textContent</code> completely ignores any CSS styling and returns all of the element's HTML just as it's listed in the HTML. On the other hand, the <code>.innerText</code> property will take CSS styling into consideration and will return the text that is visibly rendered on the page.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" rel="noopener noreferrer" target="_blank">innerHTML on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" rel="noopener noreferrer" target="_blank">textContent on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/innerText" rel="noopener noreferrer" target="_blank">innerText on MDN</a></li>
+<li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/" rel="noopener noreferrer" target="_blank">Article: The poor, misunderstood innerText</a></li>
+<li><a href="https://kellegous.com/j/2013/02/27/innertext-vs-textcontent/" rel="noopener noreferrer" target="_blank">Article: innertext vs. textcontent</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Add New Page Content.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Update Existing Page Content')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

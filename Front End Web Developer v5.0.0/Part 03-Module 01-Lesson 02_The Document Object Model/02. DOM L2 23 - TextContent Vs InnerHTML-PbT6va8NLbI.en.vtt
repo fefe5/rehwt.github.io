@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.919
+Let's scroll down here and update this headings text.
+
+00:00:04.919 --> 00:00:06.753
+Now, to make it a bit easier to read.
+
+00:00:06.753 --> 00:00:10.599
+I'm just going to bump up the font size a bit.
+
+00:00:14.480 --> 00:00:18.382
+Now that I've selected the element in the DOM,
+
+00:00:18.382 --> 00:00:26.500
+let's use the "$0" trick to store this element in a variable.
+
+00:00:26.500 --> 00:00:28.594
+Now that I've stored this element in a variable,
+
+00:00:28.594 --> 00:00:29.849
+which we can see here,
+
+00:00:29.850 --> 00:00:33.810
+let's update the text of this element.
+
+00:00:35.780 --> 00:00:40.704
+Using the "textContent" property and setting it to this string,
+
+00:00:40.704 --> 00:00:44.244
+we can see that even though we're adding HTML right here.
+
+00:00:44.244 --> 00:00:49.390
+That HTML is still being displayed over here in the actual rendered page.
+
+00:00:49.390 --> 00:00:51.804
+Now, let's compare the "textContent" property
+
+00:00:51.804 --> 00:00:56.604
+with setting the same string with the "innerHTML" property.
+
+00:00:56.604 --> 00:01:01.467
+So, using the same string with the HTML characters,
+
+00:01:01.468 --> 00:01:06.905
+this now shows up as rendered HTML because we're using the "innerHTML" property.
+
+00:01:06.905 --> 00:01:10.430
+So "textContent" displays everything as text
+
+00:01:10.430 --> 00:01:15.000
+while "innerHTML" will render any HTML in the string.
+

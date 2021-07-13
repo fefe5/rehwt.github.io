@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.089
+I've stored the "Our Amazing Community" heading,
+
+00:00:03.089 --> 00:00:06.139
+this DOM element, into the heading variable.
+
+00:00:06.139 --> 00:00:11.759
+Now let's use the "classList" property to fiddle around with this DOM element.
+
+00:00:11.759 --> 00:00:18.809
+We can see that this DOM element has a class attribute with the class "text-center",
+
+00:00:18.809 --> 00:00:22.390
+but we can have the "classList" property tell us that.
+
+00:00:22.390 --> 00:00:26.030
+Checking to see if the heading contains this class,
+
+00:00:26.030 --> 00:00:27.710
+this tells us it does.
+
+00:00:27.710 --> 00:00:31.050
+Let's add our own class.
+
+00:00:32.810 --> 00:00:37.507
+Using the "classList" property's "add" property,
+
+00:00:37.506 --> 00:00:39.640
+we can say add the "ice cream" class,
+
+00:00:39.640 --> 00:00:42.100
+and we can see that it added it up here.
+
+00:00:42.100 --> 00:00:44.185
+Now we don't have any styling for the "ice cream" class,
+
+00:00:44.185 --> 00:00:48.560
+but it's still been added. Let's remove that.
+
+00:00:49.020 --> 00:00:53.356
+And calling "remove", and passing the class we want to remove,
+
+00:00:53.356 --> 00:00:55.515
+we can see it removed that "ice cream" class.
+
+00:00:55.515 --> 00:00:57.289
+And last, but definitely not least,
+
+00:00:57.289 --> 00:01:00.509
+is the "toggle method."
+
+00:01:02.219 --> 00:01:07.112
+Toggling it once takes it off,
+
+00:01:07.112 --> 00:01:10.629
+and toggling it again puts it back on.
+

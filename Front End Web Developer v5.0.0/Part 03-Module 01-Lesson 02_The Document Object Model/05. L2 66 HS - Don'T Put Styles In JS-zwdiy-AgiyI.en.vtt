@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.480
+Now the web industry as a whole tries to stress the separation of concerns.
+
+00:00:05.480 --> 00:00:07.605
+HTML should be in the HTML file.
+
+00:00:07.605 --> 00:00:09.794
+Styling should be in a CSS file.
+
+00:00:09.794 --> 00:00:12.615
+And interactivity should be in a JavaScript file.
+
+00:00:12.615 --> 00:00:15.405
+And it's best not to mix these together.
+
+00:00:15.404 --> 00:00:20.254
+So it might feel a little wrong to be putting your page styling in your JavaScript file.
+
+00:00:20.254 --> 00:00:22.625
+And you know what, I totally agree.
+
+00:00:22.625 --> 00:00:25.355
+Styles should be in a style sheet.
+
+00:00:25.355 --> 00:00:28.519
+However we do have to tie these together just a little.
+
+00:00:28.519 --> 00:00:31.414
+For example, a class is added in your HTML,
+
+00:00:31.414 --> 00:00:33.679
+which will apply styling to the element,
+
+00:00:33.679 --> 00:00:37.670
+and we can search through the DOM to find a class using JavaScript.
+
+00:00:37.670 --> 00:00:40.850
+So instead of writing our styles in JavaScript let's
+
+00:00:40.850 --> 00:00:45.000
+just have our JavaScript control the class attribute for an element.
+

@@ -1,0 +1,53 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.614 --> 00:00:03.939
+Já preencheu um formulário
+na internet? Acho que sim.
+
+00:00:03.972 --> 00:00:06.075
+Eu faço isso várias vezes
+ao dia.
+
+00:00:06.108 --> 00:00:09.236
+Já percebeu o que acontece
+quando comete um erro?
+
+00:00:09.269 --> 00:00:10.853
+Uma mensagem pode aparecer
+
+00:00:10.886 --> 00:00:13.276
+ou um campo
+pode ficar com a borda vermelha.
+
+00:00:13.309 --> 00:00:15.516
+Tudo isso são mudanças
+de estilo.
+
+00:00:15.549 --> 00:00:18.426
+Nesta aula, veremos como controlar
+o estilo da página
+
+00:00:18.459 --> 00:00:20.939
+usando o JavaScript
+e os métodos da DOM.
+
+00:00:20.972 --> 00:00:24.947
+Veremos a propriedade style,
+o método text CSS
+
+00:00:24.980 --> 00:00:26.835
+e a propriedade classList.
+
+00:00:26.868 --> 00:00:28.409
+Diferente das outras seções,
+
+00:00:28.442 --> 00:00:31.474
+controlaremos mais
+as alterações visuais da página.
+
+00:00:31.507 --> 00:00:34.620
+Espero que esteja pronto
+e animado. Vamos começar.
+

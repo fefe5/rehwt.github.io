@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.060 --> 00:00:02.070
+Men bu sahifa elementini karta o‘zgaruvchisining 
+
+00:00:02.070 --> 00:00:04.980
+ichida saqlab olganman. Endi, karta matni tarkibining
+
+00:00:04.980 --> 00:00:07.560
+xususiyatini uning inner matnining 
+
+00:00:07.560 --> 00:00:09.840
+xususiyati bilan taqqoslaymiz, ammo,
+
+00:00:09.840 --> 00:00:11.370
+biz bunday qilamiz, keling mana bu yerdagi
+
+00:00:11.370 --> 00:00:19.980
+CSS bilan matnning ba’zi qismini yashiramiz.
+
+00:00:19.980 --> 00:00:22.619
+Biz yangi ma’lumotlar asoslari juda ham kichik darajada 
+
+00:00:22.619 --> 00:00:24.630
+ekanligini ko‘rishimiz mumkin va 
+ro‘yxatdan o‘tish hozircha matn holatida
+
+00:00:24.630 --> 00:00:26.550
+ammo, mana bu yerda elementning o‘zida biz 
+
+00:00:26.550 --> 00:00:28.439
+faqatgina kichik darajadagi ma’lumotlar asosini ko‘ramiz
+
+00:00:28.439 --> 00:00:30.689
+biz aslida pastda yozilgan ro‘yxatdan o‘tish 
+
+00:00:30.689 --> 00:00:32.759
+so‘zlarini ko‘rmaymiz chunki, men ularni 
+
+00:00:32.759 --> 00:00:36.660
+CSS display:none bilan bekitib qo‘yganman. 
+
+00:00:36.660 --> 00:00:41.790
+Shunday qilib, kartalar matnining xususiyatini tekshirib olamiz
+
+00:00:41.790 --> 00:00:43.410
+va bu element matnining barchasini ko‘rsatadi
+
+00:00:43.410 --> 00:00:46.309
+Endi, uni inner matn bilan taqqoslaymiz.
+
+00:00:46.309 --> 00:00:48.750
+Hozir, biz inner matn xususiyatida 
+
+00:00:48.750 --> 00:00:51.420
+ro‘yxatdan o‘tish matni yo‘qligini ko‘rishimiz mumkin.
+
+00:00:51.420 --> 00:00:53.190
+U mana bu yerda pastda tashlab ketilgan, ammo
+
+00:00:53.190 --> 00:00:56.129
+barchasi bosh harflarda bo‘lgan new ham bor 
+
+00:00:56.129 --> 00:00:59.070
+lekin, aslida biz yuqorida ko‘rganimizdek, 
+faqatgina n bosh harfda bo‘lishi kerak
+
+00:00:59.070 --> 00:01:01.649
+CSSga qaramasdan, matn tarkibiy qismining 
+
+00:01:01.649 --> 00:01:03.449
+xususiyati barcha matnga qaytadi.
+
+00:01:03.449 --> 00:01:06.119
+inner matn xususiyati esa u vizual
+
+00:01:06.119 --> 00:01:09.409
+holatda ko‘rinishi mumkin bo‘lgan matnga qaytadi.
+

@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.090 --> 00:00:02.649
+Vamos selecionar o cartão
+consultando a DOM
+
+00:00:02.691 --> 00:00:07.003
+e buscando pelo primeiro elemento
+âncora com a classe card.
+
+00:00:09.859 --> 00:00:12.698
+Agora vejamos
+o conteúdo de texto.
+
+00:00:15.482 --> 00:00:17.817
+A propriedade
+do conteúdo de texto
+
+00:00:17.859 --> 00:00:21.002
+exibe somente
+o texto do elemento.
+
+00:00:21.044 --> 00:00:23.306
+Vamos subir isto um pouco
+
+00:00:23.348 --> 00:00:27.882
+e comparar com a propriedade
+.innerHTML do cartão.
+
+00:00:30.187 --> 00:00:33.450
+Vemos que a propriedade
+.innerHTML fornece o HTML
+
+00:00:33.492 --> 00:00:35.129
+do elemento inner,
+
+00:00:35.171 --> 00:00:39.130
+enquanto o conteúdo de texto fornece
+apenas o texto do elemento card.
+

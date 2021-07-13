@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.248 --> 00:00:03.696
+Armazenei este elemento
+na variável card.
+
+00:00:03.738 --> 00:00:07.088
+Vamos comparar a propriedade
+textContent do cartão
+
+00:00:07.130 --> 00:00:09.120
+com a propriedade innerText.
+
+00:00:09.162 --> 00:00:12.704
+Antes disso, vamos ocultar
+uma parte do texto com o CSS.
+
+00:00:18.841 --> 00:00:20.647
+Aqui vemos o texto "New!",
+
+00:00:20.689 --> 00:00:23.888
+o "Data Foundations Nanodegree"
+e o "Enroll Now",
+
+00:00:23.930 --> 00:00:28.047
+mas no elemento só vemos "New!"
+e "Data Foundations Nanodegree".
+
+00:00:28.089 --> 00:00:31.584
+Não vemos o "Enroll Now",
+que estava aqui embaixo,
+
+00:00:31.626 --> 00:00:35.696
+pois eu o escondi com o CSS
+display: none.
+
+00:00:35.738 --> 00:00:38.961
+Vejamos a propriedade
+textContent do cartão.
+
+00:00:41.336 --> 00:00:43.927
+Vemos todo o texto
+do elemento.
+
+00:00:43.969 --> 00:00:47.112
+Vamos comparar isso
+com innerText.
+
+00:00:47.154 --> 00:00:51.174
+Vemos que a propriedade .innerText
+não tem o texto "Enroll Now" -
+
+00:00:51.216 --> 00:00:52.518
+ele não está aqui -,
+
+00:00:52.560 --> 00:00:55.535
+mas que "New!"
+está todo em caixa-alta,
+
+00:00:55.577 --> 00:00:58.551
+sendo que somente o N
+deveria estar em maiúsculo,
+
+00:00:58.593 --> 00:01:00.201
+como vemos aqui.
+
+00:01:00.243 --> 00:01:02.690
+A propriedade .textContent
+retorna todo o texto,
+
+00:01:02.732 --> 00:01:04.361
+independente do CSS.
+
+00:01:04.403 --> 00:01:06.410
+A propriedade .innerText
+retorna o texto
+
+00:01:06.452 --> 00:01:08.167
+como ele é exibido.
+

@@ -19,7 +19,7 @@
   <div class="wrapper">
     <nav id="sidebar">
   <div class="sidebar-header">
-    <h3>The Document Object Model</h3>
+    <h3>Creating Content with JavaScript</h3>
   </div>
 
   <ul class="sidebar-list list-unstyled CTAs">
@@ -33,25 +33,19 @@
       <a href="01. Introduction.html">01. Introduction</a>
     </li>
     <li class="">
-      <a href="02. The DOM.html">02. The DOM</a>
+      <a href="02. Update Existing Page Content.html">02. Update Existing Page Content</a>
     </li>
     <li class="">
-      <a href="03. Selecting Page Elements With CSS Selectors.html">03. Selecting Page Elements With CSS Selectors</a>
+      <a href="03. Add New Page Content.html">03. Add New Page Content</a>
     </li>
     <li class="">
-      <a href="04. Select Page Element By ID.html">04. Select Page Element By ID</a>
+      <a href="04. Remove Page Content.html">04. Remove Page Content</a>
     </li>
     <li class="">
-      <a href="05. Select Page Elements By Class Or Tag.html">05. Select Page Elements By Class Or Tag</a>
+      <a href="05. Style Page Content.html">05. Style Page Content</a>
     </li>
     <li class="">
-      <a href="06. Nodes, Elements, and Interfaces...Oh My!.html">06. Nodes, Elements, and Interfaces...Oh My!</a>
-    </li>
-    <li class="">
-      <a href="07. More Ways To Access Elements.html">07. More Ways To Access Elements</a>
-    </li>
-    <li class="">
-      <a href="08. Lesson Summary.html">08. Lesson Summary</a>
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
     </li>
   </ul>
 
@@ -85,20 +79,15 @@
         <div class="row">
           <div class="col-12">
             <div class="ud-atom">
-  <h3></h3>
-  <div>
-  <h1 id="introduction">Introduction</h1>
-</div>
-
-</div>
-<div class="divider"></div><div class="ud-atom">
-  <h3><p>L1 1 - Course Intro V1</p></h3>
+  <h3><p>L2 1 - Lesson Overview V2</p></h3>
   <video controls>
-  <source src="01. L1 1 - Course Intro V1-abDDSfoG_fI.mp4" type="video/mp4">
+  <source src="01. L2 1 - Lesson Overview V2-leMPNA8okHk.mp4" type="video/mp4">
 
-  <track default="true" kind="subtitles" srclang="en" src="01. L1 1 - Course Intro V1-abDDSfoG_fI.en.vtt" label="en">
-  <track default="false" kind="subtitles" srclang="BR" src="01. L1 1 - Course Intro V1-abDDSfoG_fI.pt-BR.vtt" label="BR">
-  <track default="false" kind="subtitles" srclang="CN" src="01. L1 1 - Course Intro V1-abDDSfoG_fI.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. L2 1 - Lesson Overview V2-leMPNA8okHk.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="01. L2 1 - Lesson Overview V2-leMPNA8okHk.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="01. L2 1 - Lesson Overview V2-leMPNA8okHk.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="01. L2 1 - Lesson Overview V2-leMPNA8okHk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="uz" src="01. L2 1 - Lesson Overview V2-leMPNA8okHk.uz.vtt" label="uz">
 </video>
 
 
@@ -106,123 +95,89 @@
 <div class="divider"></div><div class="ud-atom">
   <h3></h3>
   <div>
-  <h2 id="course-outline">Course Outline</h2>
-<p>You'll be learning so many things in this course! Here are the topics for each lesson:</p>
+  <h2 id="need-to-know">Need to Know</h2>
+<p>To be successful in this section, there are a couple of things from the previous section that you need to know. You need to have a solid grasp of selecting DOM elements using:</p>
 <ul>
-<li><strong>Lesson 1</strong> - The Document Object Model</li>
-<li><strong>Lesson 2</strong> - Creating Content with JavaScript</li>
-<li><strong>Lesson 3</strong> - Working with Browser Events</li>
-<li><strong>Lesson 4</strong> - Performance</li>
+<li><code>document.getElementById()</code></li>
+<li><code>document.querySelector()</code></li>
 </ul>
-<p>In Lesson 1, we'll take a dive into what the Document Object Model (DOM) is, how it gets created, and how we can access it with JavaScript.</p>
-<p>In Lesson 2, you'll learn to interact with page content using JavaScript. You'll use the skills gained from the first lesson to JavaScript and the DOM to update existing page content, create new page content, add new content to the page, programmatically remove page content, and finally how to style page elements.</p>
-<p>In Lesson 3, you'll learn about browser events. There is an entire world of thousands of browser events that are happening when you interact with a website. You can't see them directly, but you'll learn about them, how to listen for them, and how to respond when they occur.</p>
-<p>In Lesson 4, you'll learn about Performance. It's never too early to start thinking about the performance implications of code. In this course we'll be writing code that can drastically change website (both its content and its looks!), so we need to make sure that the code we write is both functional and efficient.</p>
-<p>As you can see, this course is packed with a ton of information! I hope you're excited to begin!</p>
+<p>Also, remember the Node Interface and the Element interface we went over in the previous section? Understanding how an interface determines the properties and methods for an element <em>and</em> understanding how to research an interface's properties and methods will be vital in this lesson.</p>
+<p>If you get stuck, just jump back to the previous section that's giving you a bit of trouble.</p>
 </div>
 
 </div>
 <div class="divider"></div><div class="ud-atom">
   <h3></h3>
   <div>
-  <h2 id="being-successful">Being Successful</h2>
-<p>To be successful in this program, there are a number of technologies that you need to know how to use:</p>
+  <h2 id="project-repository">Project Repository</h2>
+<p>Throughout this course, you'll learn skills and techniques to access and modify page content. There's no better way to demonstrate these skills than through trying them out on a real website! So I've created a copy of <em>just</em> the Udacity homepage on GitHub - <a href="https://github.com/udacity/course-JS-and-the-DOM" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-JS-and-the-DOM</a>. You can call this as a <strong><em>remote repository</em></strong>. Now, you can do either of the following:</p>
 <ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
+<li>Clone the remote repository to your local machine so that you can follow along. To clone, you can use <code>git clone https://github.com/udacity/course-JS-and-the-DOM</code> command on your terminal. When you clone a remote repository, you get an identical copy locally, where you can make desired changes. </li>
+<li>Fork the remote repository to your own online account.  When you fork a remote repository, a new duplicate copy of the remote repository is created in your account. </li>
 </ul>
-<p>With JavaScript, though, it's imperative that you understand the basics of the language (variables, data types, loops, etc.). The course is called "JavaScript and the DOM", so JavaScript knowledge is vital for you to succeed.</p>
-<p>The following are a few quiz questions to get you back in the mindset of writing JavaScript.</p>
+<p>A detailed course on Git &amp; GitHub is available in <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/e36917bf-8075-4d97-8045-f610b37f041f" rel="noopener noreferrer" target="_blank">the extracurricular section</a> of this nano-degree. </p>
 </div>
 
 </div>
 <div class="divider"></div><div class="ud-atom">
   <h3></h3>
   <div>
+  <figure class="figure">
+    <img src="img/screenshot-2020-04-20-at-4.05.17-pm.png" alt="A snapshot of Udacity&#x27;s project repository" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>A snapshot of Udacity's project repository</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>DOM L2 04 - Project Walkthrough</p></h3>
+  <video controls>
+  <source src="01. DOM L2 04 - Project Walkthrough--dHH1fP2YWE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="01. DOM L2 04 - Project Walkthrough--dHH1fP2YWE.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="01. DOM L2 04 - Project Walkthrough--dHH1fP2YWE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="01. DOM L2 04 - Project Walkthrough--dHH1fP2YWE.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="uz" src="01. DOM L2 04 - Project Walkthrough--dHH1fP2YWE.uz.vtt" label="uz">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
   <form>
     <fieldset>
-      <legend><p>Which of the following is the correct way to declare a variable in JavaScript? (assume each line is run in isolation)</p></legend>
-    </fieldset>
+      <legend>Task List:</legend>
 
-    <div>
-      <input type="checkbox" value="a1512189715740" name="467420" id="a1512189715740">
-      <label for="a1512189715740"><p><code>name: 'Dominique';</code></p></label>
-    </div>
-    <div>
-      <input type="checkbox" value="a1512189737449" name="467420" id="a1512189737449">
-      <label for="a1512189737449"><p><code>const name = 'Miguel';</code></p></label>
-    </div>
-    <div>
-      <input type="checkbox" value="a1512189738051" name="467420" id="a1512189738051">
-      <label for="a1512189738051"><p><code>var name = 'Orvin';</code></p></label>
-    </div>
-    <div>
-      <input type="checkbox" value="a1512189770833" name="467420" id="a1512189770833">
-      <label for="a1512189770833"><p><code>set(name, 'Kagure');</code></p></label>
-    </div>
+      <div>
+        <input type="checkbox" id="d8acc3c8-9f8e-467e-8fb8-56ae107a45b4--0">
+        <label for="d8acc3c8-9f8e-467e-8fb8-56ae107a45b4--0"><p>I have cloned the project</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d8acc3c8-9f8e-467e-8fb8-56ae107a45b4--1">
+        <label for="d8acc3c8-9f8e-467e-8fb8-56ae107a45b4--1"><p>I understand that this project is <em>just</em> the index page of the Udacity site.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d8acc3c8-9f8e-467e-8fb8-56ae107a45b4--2">
+        <label for="d8acc3c8-9f8e-467e-8fb8-56ae107a45b4--2"><p>I understand that the code in this repo is not representative of how Udacity builds its site. ;-)</p></label>
+      </div>
+    </fieldset>
   </form>
 
-  <details>
-    <summary><strong>SOLUTION:</strong></summary>
-    <ul>
-      <li>`const name = 'Miguel';`</li>
-      <li>`var name = 'Orvin';`</li>
-  </ul>
-  </details>
-</div>
-
-</div>
-<div class="divider"></div><div class="ud-atom">
-  <h3></h3>
   <div>
-  <form>
-    <fieldset>
-      <legend><p>Using the code below, which of the following correctly access the string <code>'Malaysia'</code>?</p>
-<pre><code class="js language-js">const locations = ['Florida', 'England', 'Malaysia', 'South Africa', 'Fiji', 'China'];</code></pre></legend>
-    </fieldset>
+    <h4>Task Feedback:</h4>
 
-    <div>
-      <input type="checkbox" value="a1512190027439" name="467422" id="a1512190027439">
-      <label for="a1512190027439"><p><code>locations['Malaysia'];</code></p></label>
-    </div>
-    <div>
-      <input type="checkbox" value="a1512190032331" name="467422" id="a1512190032331">
-      <label for="a1512190032331"><p><code>locations[2];</code></p></label>
-    </div>
-    <div>
-      <input type="checkbox" value="a1512190032933" name="467422" id="a1512190032933">
-      <label for="a1512190032933"><p><code>locations[3];</code></p></label>
-    </div>
-  </form>
 
-  <details>
-    <summary><strong>SOLUTION:</strong></summary>
-    <ul>
-      <li>`locations[2];`</li>
-  </ul>
-  </details>
+    <p>Fantastic job!</p>
+  </div>
 </div>
 
-</div>
-<div class="divider"></div><div class="ud-atom">
-  <h3></h3>
-  <div>
-  <blockquote>
-  <h2 id="want-to-brush-up">Want to Brush Up?</h2>
-  <p>Hopefully these JavaScript challenges were not too rough for you! These are some of the JavaScript skills that you'll need throughout this course.</p>
-  <p>If you did find some of these a bit challenging, it's probably a good idea to brush up a bit on some of your JavaScript. Check out <a href="https://www.udacity.com/course/intro-to-javascript--ud803" rel="noopener noreferrer" target="_blank">Intro to JavaScript</a> for a refresher on these techniques!</p>
-</blockquote>
-</div>
-
-</div>
-<div class="divider"></div><div class="ud-atom">
-  <h3></h3>
-  <div>
-  <p>Throughout this course, you'll be using lot of fundamental JavaScript skills, so if you're feeling a bit rusty, make sure to brush up on them now before we start diving into this new content.</p>
-<p>And speaking of this new content, we're going to be covering some really exciting stuff!</p>
-<p>Throughout this course, you'll level up not only your web knowledge, but also your browser and JavaScript knowledge, so get excited!</p>
-</div>
 
 </div>
 <div class="divider"></div>
@@ -230,7 +185,7 @@
 
           <div class="col-12">
             <p class="text-right">
-              <a href="02. The DOM.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+              <a href="02. Update Existing Page Content.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
             </p>
           </div>
         </div>

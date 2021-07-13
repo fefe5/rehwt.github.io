@@ -1,0 +1,66 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.089
+Men Our Amazing Community sarlavhasini 
+sarlavha o‘zgaruvchisi ichida, 
+
+00:00:03.089 --> 00:00:06.139
+mana bu DOM elementi qilib saqlab qo‘yganman.
+
+00:00:06.139 --> 00:00:11.759
+Endi, bu DOM element bilan ba’zi 
+bir kichik amallarni bajarish uchun classList 
+xususiyatini ishlatamiz.
+
+00:00:11.759 --> 00:00:18.809
+Biz bu DOM elementi text-center 
+sinfi bilan birga bironta sinf attributeiga 
+ega ekanligini ko‘rishimiz mumkin,
+
+00:00:18.809 --> 00:00:22.390
+ammo, bizda buni aytadigan classlist xususiyati mavjud.
+
+00:00:22.390 --> 00:00:26.030
+Ushbu sarlavha bu sinfdan tashkil topganmi yo‘qmi ko‘rish uchun tekshirib, 
+
+00:00:26.030 --> 00:00:27.710
+bu bizga shunaqa bo‘lishini aytadi.
+00:00:27,710 --&gt; 00:00:32,810
+Keling, bizning shaxsiy sinfimizni qo‘shamiz.
+
+00:00:32.810 --> 00:00:37.506
+classList xususiyatining add xususiyatidan foydalanib, 
+
+00:00:37.506 --> 00:00:39.640
+aytaylik, biz ice cream sinfini qo‘sha olamiz, 
+
+00:00:39.640 --> 00:00:42.100
+va u uni mana bu yerga qo‘shib qo‘yganini ko‘rishimiz mumkin.
+
+00:00:42.100 --> 00:00:44.185
+Hozir bizda, ice cream sinfi uchun 
+bironta ham dizaynlashtirish yo‘q, 
+
+00:00:44.185 --> 00:00:49.020
+ammo, u hanuzgacha qo‘shilgan. Keling, uni olib tashlaymiz.
+
+00:00:49.020 --> 00:00:53.356
+remove ni chaqirib va biz olib tashlamoqchi bo‘lgan sinfga o‘tib, 
+
+00:00:53.356 --> 00:00:55.515
+u ice cream sinfini olib tashlaganini ko‘rishimiz mumkin.
+
+00:00:55.515 --> 00:00:57.289
+Va nihoyat, eng so‘ngisi 
+
+00:00:57.289 --> 00:01:02.219
+bu toggle method
+
+00:01:02.219 --> 00:01:07.112
+Uni bir marta almashtirish uni o‘chiradi,
+
+00:01:07.112 --> 00:01:10.628
+va uni yana almashtirish uni orqaga qaytaradi.
+

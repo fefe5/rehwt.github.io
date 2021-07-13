@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.663 --> 00:00:03.797
+Nesta seção,
+veremos o .innerHTML,
+
+00:00:03.830 --> 00:00:05.609
+que obtém o conteúdo HTML
+
+00:00:05.642 --> 00:00:08.498
+e configura o conteúdo HTML
+de um elemento.
+
+00:00:08.531 --> 00:00:10.164
+Também veremos
+o .textContent,
+
+00:00:10.197 --> 00:00:13.595
+que obtém e configura
+o conteúdo de texto de um elemento.
+
+00:00:13.628 --> 00:00:15.055
+E veremos o .innerText,
+
+00:00:15.088 --> 00:00:18.697
+que também contém e configura
+o conteúdo de texto de um elemento.
+
+00:00:18.730 --> 00:00:21.435
+Tanto o .textContent
+quanto o .innerText
+
+00:00:21.468 --> 00:00:24.083
+controlam o conteúdo
+de texto de um elemento,
+
+00:00:24.116 --> 00:00:27.523
+mas existem algumas diferenças
+entre os dois métodos.
+
+00:00:27.556 --> 00:00:28.868
+Ao fim desta seção,
+
+00:00:28.901 --> 00:00:31.252
+saberemos como alterar
+o conteúdo HTML
+
+00:00:31.285 --> 00:00:35.147
+e o texto de qualquer elemento
+de qualquer site.
+
+00:00:35.180 --> 00:00:37.837
+Acho isso bem legal.
+Vamos começar.
+

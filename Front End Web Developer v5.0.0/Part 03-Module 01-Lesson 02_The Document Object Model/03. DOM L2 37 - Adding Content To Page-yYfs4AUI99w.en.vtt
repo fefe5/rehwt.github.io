@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.040
+I have used.createElement to create
+
+00:00:02.040 --> 00:00:05.564
+a span element and store it in the newSpanElement variable.
+
+00:00:05.565 --> 00:00:09.384
+Then I have set its textContent to comma right now.
+
+00:00:09.384 --> 00:00:13.410
+Walking it out shows us that we have a span with comma right now as the text.
+
+00:00:13.410 --> 00:00:17.050
+Now the span element is not actually added anywhere to the current DOM.
+
+00:00:17.050 --> 00:00:20.693
+I want to add this text right after the learn ARKit text.
+
+00:00:20.693 --> 00:00:26.618
+So I need to select this DOM element and append this span.
+
+00:00:26.618 --> 00:00:29.983
+Now that I have selected the element,
+
+00:00:29.983 --> 00:00:34.530
+now I can just append the newSpanElement element.
+
+00:00:35.609 --> 00:00:41.780
+So appending this span to the heading shows the text right here on the page.
+
