@@ -75,5 +75,5 @@ app.get 是 Express 的一个方法 用来处理 HTTP GET 请求
 这时在浏览器里访问主页
 
 00:01:38.754 --> 00:01:42.129
-就可以看到 hello world
+就可以看到 hello world。最新课程跟课件还有一对一辅导请加wx：udacity6
 

@@ -75,5 +75,5 @@ we've added the line res.send that's our response.send hello world.
 Following this example, if we went to our browser and went to the home URL,
 
 00:01:38.754 --> 00:01:42.129
-we would see hello world presented to us.
+we would see hello world presented to us.最新课程跟课件还有一对一辅导请加wx：udacity6
 
