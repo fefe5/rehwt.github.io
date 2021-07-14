@@ -1,0 +1,256 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Creating a Local Server I</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Node &amp; Express Environment</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Node.js Overview.html">01. Node.js Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Using Node.html">02. Using Node</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Node and Package Installation.html">03. Exercise: Node and Package Installation</a>
+    </li>
+    <li class="">
+      <a href="04. Express Overview.html">04. Express Overview</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Including Packages.html">05. Exercise: Including Packages</a>
+    </li>
+    <li class="">
+      <a href="06. Creating a Local Server I.html">06. Creating a Local Server I</a>
+    </li>
+    <li class="">
+      <a href="07. Creating a Local Server II.html">07. Creating a Local Server II</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise Server Set-up.html">08. Exercise: Server Set-up</a>
+    </li>
+    <li class="">
+      <a href="09. Servers-File Structure Hierarchy.html">09. Servers-File Structure Hierarchy</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Creating a Local Server I</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Server Heading</p></h3>
+  <div>
+  <h1 id="creating-a-local-server-with-node--express">Creating A Local Server With Node &amp; Express</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND#0001 C3 L02 A07 Server</p></h3>
+  <video controls>
+  <source src="06. ND0001 C3 L02 A07 Server-z-2dxTVYnT4.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="06. ND#0001 C3 L02 A07 Server-z-2dxTVYnT4.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="06. ND#0001 C3 L02 A07 Server-z-2dxTVYnT4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Another way you might see this same server code written is with an arrow function. Here is an example of the same code using an arrow function:</p>
+<pre><code class="js language-js">const server = app.listen(port, ()=&gt;{console.log(`running on localhost: ${port}`)})</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="whats-an-arrow-function">What's an arrow function?</h2>
+<p>Arrow functions are a shorter, more efficient way to write functions.  </p>
+<p>Here's another example of a regular function and then we'll write it as an arrow function: </p>
+<p>**Regular Function **</p>
+<p><code>function addition(number){
+     return 4 + number
+}</code></p>
+<p><code>addition(4);</code><br />
+` </p>
+<p><strong>Arrow Function</strong></p>
+<p><code>const addition = number =&gt; 4 + number</code></p>
+<p><code>addition(4);</code></p>
+<p>As you can see, there is less need for parenthesis and return statements, allowing the syntax to be much more compact. Both are acceptable ways of writing functions, and best practice would be for you to be consistent in how you write your code. Even if you choose not to write your code with arrow functions, you should still be aware of how they are written. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Curly brackets aren’t required if only one expression is present, and parentheses are optional if there is only one parameter. So, our previous example could also be written as:</p>
+<pre><code class="js language-js">const addition = number =&gt; 4 + number</code></pre>
+<p>As you can see, there is less need for parenthesis and return statements, allowing the syntax to be much more compact. Both are acceptable ways of writing functions, and best practice would be for you to be consistent in how you write your code. Even if you choose not to write your code with arrow functions, you should still be aware of how they are written.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="steps-to-creating-a-local-server">Steps to creating a local server</h2>
+<p>#### Set your variables </p>
+<p>In this example, we set our variable to port 8000. </p>
+<p><code>const port = 8000;</code></p>
+<h4 id="utilize-the-listen-method">Utilize the <code>.listen()</code> method</h4>
+<p>Set your variable named server, and pass the listen method with two arguments port and listening. </p>
+<p><code>const server = app.listen(port, listening);</code></p>
+<p>The <strong>port</strong> argument refers to the port variable we set above. The <em>listening</em> argument refers to a callback function we create. </p>
+<h4 id="the-listening-function">The listening function</h4>
+<p>This function will run when we execute the listen method to let you know that the server is running and on which port by logging messages to the console. </p>
+<pre><code>function listening(){
+     console.log("server running"); 
+     console.log(`running on localhost: {$port}`);
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Creating a Local Server II.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Creating a Local Server I')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
